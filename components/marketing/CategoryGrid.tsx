@@ -1,0 +1,87 @@
+import Image from "next/image";
+import Link from "next/link";
+import { ROUTES } from "@/lib/constants/routes";
+
+// Product category images
+const categories = [
+  {
+    title: "Apvalūs kubilai",
+    subtitle: "Klasikinis dizainas 4-8 asmenims",
+    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCQF0iRK4nuaXgoWoUcoeqbc0VhwTG4AXksk1m0L7Thh6otUpVrgsu4MINOL7PufWmw3qR7lo_0e1Q8D7fcLN6jOH3HHqdFr4LDtd6KAG8NZ11nxfi1yo8i08OBtdk86dqf3yuwNJCjrUj0VKgp82BVhCxKVvY58gL0eSpb3NMQ9-u8c-iErj0wu8Y5ilIuUu23pewjzF3MU6fzd8aLApTZtqP7yciLq2qFd5p3tCOr_4pxSBEx8UvYdgUJGCINnyzoIugf4deHPAA",
+    href: `${ROUTES.CATALOG}?shape=round`,
+    size: "large",
+  },
+  {
+    title: "Kvadratiniai kubilai",
+    subtitle: "Monaco, Cuba, Macau serijos",
+    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDLCc95wXpJ75aZGgdFs7-vwoxe7RUHJj_1qxTUcRhI8zvh50gXSTicNSCeEakXuZr6M-L0CAEuOF56Ni331j6V5e_abs6QbLivsIgdM11i2bzey0UUIqL085Q5ys_zzmevwPiIUfAcqzlrmW5U3uoHugJqkPYwYBzM8GPWS8h3CAidDwYufn0XDN7cuU27BW0FcyrjSSQ7VvSZoau2zMURoggFxV5i3wkxZ2Qz93B8slLgXIgBPjqMWnvPoj4IFsswbEEJyHRwhik",
+    href: `${ROUTES.CATALOG}?shape=square`,
+    size: "small",
+  },
+  {
+    title: "Šalčio terapija",
+    subtitle: "Arctic ir Ofuro modeliai",
+    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuA6jvWC4VZKtz1BGxZ5gQ1yVxY1DdSl1F4GXvNwBK6o3CpcQYDO7AhE8iSeXYJ9SrUNmnNRTamaYMchE15wbQwzAZsGzQ0hf7dkGYu9TKVKq0forlJnmWsZwiL1pWZ_7Qf6JD_OQ0mdfJgjwFRXpM1m0dVkPmt_JGGvSYldwHsJ3hXY8uOAPRVLd4lR2ytTkiNC9h9U7bEFFl3yraid1VDtjeqCgsuxYJouhOefOwBeBwDv_6Yf8ldPeDnitcPkJkSEz75hUrkvfR4",
+    href: `${ROUTES.CATALOG}?type=cold-therapy`,
+    size: "small",
+  },
+];
+
+export function CategoryGrid() {
+  return (
+    <section className="py-20 bg-surface-container-low">
+      <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-8 items-stretch">
+        {/* Large Card */}
+        <div className="md:col-span-8 relative aspect-[16/9] md:aspect-auto md:min-h-[500px] bg-surface overflow-hidden group">
+          <Image
+            src={categories[0].image}
+            alt={categories[0].title}
+            fill
+            className="object-cover transition-transform duration-700 group-hover:scale-105"
+          />
+          <div className="absolute inset-0 bg-black/30 flex flex-col justify-end p-12">
+            <h3 className="text-white font-headline text-3xl mb-2">
+              {categories[0].title}
+            </h3>
+            <p className="text-white/80 text-sm mb-6">{categories[0].subtitle}</p>
+            <Link
+              href={categories[0].href}
+              className="w-fit border-b border-white text-white text-xs font-bold tracking-widest uppercase pb-2 hover:opacity-70 transition-opacity"
+            >
+              PERŽIŪRĖTI
+            </Link>
+          </div>
+        </div>
+
+        {/* Small Cards */}
+        <div className="md:col-span-4 flex flex-col gap-8">
+          {categories.slice(1).map((category) => (
+            <div
+              key={category.title}
+              className="flex-1 relative bg-surface overflow-hidden group min-h-[240px]"
+            >
+              <Image
+                src={category.image}
+                alt={category.title}
+                fill
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-black/30 flex flex-col justify-end p-8">
+                <h3 className="text-white font-headline text-2xl mb-1">
+                  {category.title}
+                </h3>
+                <p className="text-white/80 text-sm mb-4">{category.subtitle}</p>
+                <Link
+                  href={category.href}
+                  className="w-fit border-b border-white text-white text-xs font-bold tracking-widest uppercase pb-2 hover:opacity-70 transition-opacity"
+                >
+                  PERŽIŪRĖTI
+                </Link>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
