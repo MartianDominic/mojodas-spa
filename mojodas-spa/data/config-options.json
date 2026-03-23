@@ -1,0 +1,219 @@
+{
+  "version": "1.1.0",
+  "lastUpdated": "2026-03-23T00:00:00.000Z",
+  "configOptions": {
+    "acrylicColor": {
+      "id": "acrylicColor",
+      "name": "Akrilo įdėklo spalvos pasirinkimas",
+      "description": "Pasirinkite kubilo vidaus spalvą",
+      "type": "single",
+      "required": true,
+      "options": [
+        {
+          "id": "perlamutrinė-pilka",
+          "name": "Perlamutrinė pilka",
+          "description": "Elegantiškas perlamutro atspalvis",
+          "priceModifier": 0,
+          "isDefault": true,
+          "image": "https://mojodasspa.com/wp-content/uploads/2024/01/round-in-1.png"
+        },
+        {
+          "id": "perlamutrinė-balta",
+          "name": "Perlamutrinė balta",
+          "description": "Klasikinis baltas perlamutras",
+          "priceModifier": 0,
+          "isDefault": false,
+          "image": "https://mojodasspa.com/wp-content/uploads/2024/01/round-in-sch.png"
+        },
+        {
+          "id": "mėlyna",
+          "name": "Mėlyna",
+          "description": "Ryškus mėlynas atspalvis",
+          "priceModifier": 150,
+          "isDefault": false,
+          "image": "https://mojodasspa.com/wp-content/uploads/2024/01/round-in3-1.png"
+        },
+        {
+          "id": "sidabrinė",
+          "name": "Sidabrinė",
+          "description": "Metalinis sidabrinis blizgesys",
+          "priceModifier": 150,
+          "isDefault": false,
+          "image": "https://mojodasspa.com/wp-content/uploads/2024/01/round-in2-1.png"
+        },
+        {
+          "id": "pilka-šlifuota",
+          "name": "Pilka šlifuota",
+          "description": "Moderni šlifuota pilka tekstūra",
+          "priceModifier": 150,
+          "isDefault": false,
+          "image": "https://mojodasspa.com/wp-content/uploads/2024/01/round-in4-1.png"
+        },
+        {
+          "id": "juoda-šlifuota",
+          "name": "Juoda šlifuota",
+          "description": "Prabangus šlifuotas juodas paviršius",
+          "priceModifier": 150,
+          "isDefault": false,
+          "image": "https://mojodasspa.com/wp-content/uploads/2024/01/round-in5-1.png"
+        }
+      ]
+    },
+    "woodFinish": {
+      "id": "woodFinish",
+      "name": "Kubilo apdailos pasirinkimas",
+      "description": "Pasirinkite išorinę medienos apdailą",
+      "type": "single",
+      "required": true,
+      "options": [
+        {
+          "id": "silbergrau",
+          "name": "Silbergrau",
+          "description": "Sidabrinė pilka apdaila",
+          "priceModifier": 0,
+          "isDefault": true,
+          "image": "https://mojodasspa.com/wp-content/uploads/2024/01/silbergrau.jpg",
+          "badge": "Standartas"
+        },
+        {
+          "id": "pine",
+          "name": "Pine",
+          "description": "Natūrali pušies apdaila",
+          "priceModifier": 0,
+          "isDefault": false,
+          "image": "https://mojodasspa.com/wp-content/uploads/2024/01/pinie-1.jpg"
+        },
+        {
+          "id": "teak",
+          "name": "Teak",
+          "description": "Premium tikmedžio apdaila",
+          "priceModifier": 200,
+          "isDefault": false,
+          "image": "https://mojodasspa.com/wp-content/uploads/2024/01/teak-1.jpg"
+        },
+        {
+          "id": "charcoal",
+          "name": "Charcoal",
+          "description": "Tamsiai pilka anglies apdaila",
+          "priceModifier": 250,
+          "isDefault": false,
+          "image": "https://mojodasspa.com/wp-content/uploads/2024/01/charcoal.jpg"
+        },
+        {
+          "id": "oak",
+          "name": "Oak",
+          "description": "Ąžuolo medienos apdaila",
+          "priceModifier": 300,
+          "isDefault": false,
+          "image": "https://mojodasspa.com/wp-content/uploads/2024/01/oak.jpg",
+          "badge": "Premium"
+        }
+      ]
+    },
+    "heatingSystem": {
+      "id": "heatingSystem",
+      "name": "Sildymo Sistema",
+      "description": "Pasirinkite sildymo sistema",
+      "type": "single",
+      "required": true,
+      "options": [
+        {
+          "id": "external-wood-304",
+          "name": "Isorine malkine krosnele (AISI 304)",
+          "description": "Klasikinis pasirinkimas, uztikrinantis greita vandens pasildyma.",
+          "priceModifier": 0,
+          "isDefault": false
+        },
+        {
+          "id": "external-wood-316",
+          "name": "Isorine malkine krosnele (AISI 316)",
+          "description": "Tomai, tai kritinis pasirinkimas ilgaamziskumui, jei planuojate naudoti chemines dezinfekcijos priemones.",
+          "priceModifier": 320,
+          "isDefault": true,
+          "badge": "Atspariausia chlorui"
+        },
+        {
+          "id": "electric-3kw",
+          "name": "Elektrinis sildytuvas (3kW)",
+          "description": "Automatizuota temperaturos kontrole Jusu patogumui.",
+          "priceModifier": 650,
+          "isDefault": false
+        }
+      ]
+    },
+    "massage": {
+      "id": "massage",
+      "name": "Masazas ir Apsvietimas",
+      "description": "Pasirinkite masazo ir apsvietimo opcijas",
+      "type": "multiple",
+      "required": false,
+      "options": [
+        {
+          "id": "water-jets",
+          "name": "Vandens purkstukai (8 vnt.)",
+          "description": "Intensyvus raumenu atpalaidavimas",
+          "priceModifier": 450,
+          "isDefault": true
+        },
+        {
+          "id": "air-jets",
+          "name": "Oro purkstukai (12 vnt.)",
+          "description": "Svelnus Pearl masazo efektas",
+          "priceModifier": 390,
+          "isDefault": false
+        },
+        {
+          "id": "led-stars",
+          "name": "LED Zvaigzdes (6 vnt.)",
+          "description": "Magiska atmosfera sutemose",
+          "priceModifier": 180,
+          "isDefault": true
+        },
+        {
+          "id": "multi-led",
+          "name": "Multi LED Lempu sistema",
+          "description": "Dinaminiu spalvu terapija",
+          "priceModifier": 250,
+          "isDefault": false
+        }
+      ]
+    },
+    "accessories": {
+      "id": "accessories",
+      "name": "Technologijos ir Priedai",
+      "description": "Pasirinkite papildomus priedus",
+      "type": "multiple",
+      "required": false,
+      "options": [
+        {
+          "id": "touch-control",
+          "name": "Jutimine Kontrole 4 IN 1",
+          "description": "Pilna valdymo sistema viename",
+          "priceModifier": 580,
+          "isDefault": false
+        },
+        {
+          "id": "audio-bluetooth",
+          "name": "Audio (Bluetooth) sistema",
+          "description": "Aukstos kokybes garso sistema",
+          "priceModifier": 420,
+          "isDefault": false
+        },
+        {
+          "id": "premium-cover",
+          "name": "Premium Termo Dangtis",
+          "description": "Auksciausios kokybes izoliuotas dangtis",
+          "priceModifier": 350,
+          "isDefault": true
+        },
+        {
+          "id": "hidden-filtration",
+          "name": "Filtravimo Deze (Paslepta)",
+          "description": "Paslepta filtravimo sistema",
+          "priceModifier": 190,
+          "isDefault": false
+        }
+      ]
+    }
+  }
+}

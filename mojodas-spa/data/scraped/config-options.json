@@ -1,0 +1,79 @@
+{
+  "scrapedAt": "2026-03-22T23:13:57.535169Z",
+  "acrylicColors": {
+    "title": "Akrilo įdėklo spalvos pasirinkimas",
+    "options": [
+      {
+        "id": "perlamutrinė-pilka",
+        "name": "Perlamutrinė pilka",
+        "image": "images/config/acrylic/acrylic-1.png",
+        "originalUrl": "https://mojodasspa.com/wp-content/uploads/2024/01/round-in-1.png"
+      },
+      {
+        "id": "perlamutrinė-balta",
+        "name": "Perlamutrinė balta",
+        "image": "images/config/acrylic/acrylic-2.png",
+        "originalUrl": "https://mojodasspa.com/wp-content/uploads/2024/01/round-in-sch.png"
+      },
+      {
+        "id": "mėlyna",
+        "name": "Mėlyna",
+        "image": "images/config/acrylic/acrylic-3.png",
+        "originalUrl": "https://mojodasspa.com/wp-content/uploads/2024/01/round-in3-1.png"
+      },
+      {
+        "id": "sidabrinė",
+        "name": "Sidabrinė",
+        "image": "images/config/acrylic/acrylic-4.png",
+        "originalUrl": "https://mojodasspa.com/wp-content/uploads/2024/01/round-in2-1.png"
+      },
+      {
+        "id": "pilka-šlifuota",
+        "name": "Pilka šlifuota",
+        "image": "images/config/acrylic/acrylic-5.png",
+        "originalUrl": "https://mojodasspa.com/wp-content/uploads/2024/01/round-in4-1.png"
+      },
+      {
+        "id": "juoda-šlifuota",
+        "name": "Juoda šlifuota",
+        "image": "images/config/acrylic/acrylic-6.png",
+        "originalUrl": "https://mojodasspa.com/wp-content/uploads/2024/01/round-in5-1.png"
+      }
+    ]
+  },
+  "woodFinishes": {
+    "title": "Kubilo apdailos pasirinkimas",
+    "options": [
+      {
+        "id": "silbergrau",
+        "name": "Silbergrau",
+        "image": "images/config/wood/wood-1.jpg",
+        "originalUrl": "https://mojodasspa.com/wp-content/uploads/2024/01/silbergrau.jpg"
+      },
+      {
+        "id": "pine",
+        "name": "Pine",
+        "image": "images/config/wood/wood-2.jpg",
+        "originalUrl": "https://mojodasspa.com/wp-content/uploads/2024/01/pinie-1.jpg"
+      },
+      {
+        "id": "teak",
+        "name": "Teak",
+        "image": "images/config/wood/wood-3.jpg",
+        "originalUrl": "https://mojodasspa.com/wp-content/uploads/2024/01/teak-1.jpg"
+      },
+      {
+        "id": "charcoal",
+        "name": "Charcoal",
+        "image": "images/config/wood/wood-4.jpg",
+        "originalUrl": "https://mojodasspa.com/wp-content/uploads/2024/01/charcoal.jpg"
+      },
+      {
+        "id": "oak",
+        "name": "Oak",
+        "image": "images/config/wood/wood-5.jpg",
+        "originalUrl": "https://mojodasspa.com/wp-content/uploads/2024/01/oak.jpg"
+      }
+    ]
+  }
+}

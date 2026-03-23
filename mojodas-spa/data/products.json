@@ -1,0 +1,566 @@
+{
+  "products": [
+    {
+      "id": "prod_monaco_horizon",
+      "slug": "monaco-horizon",
+      "name": "Monaco Horizon",
+      "collection": "monaco",
+      "variant": "horizon",
+      "tagline": "8-10 asmenu | Integruojamas | Panoraminis dizainas",
+      "shortDescription": "Flagmaninis modelis su panoraminiu dizainu",
+      "longDescription": "Monaco Horizon - tai musu flagmano modelis, sukurtas tiems, kurie siekia auksciausios prabangos ir funkcionalumo.",
+      "badges": [
+        { "text": "Bestseleris", "variant": "primary" },
+        { "text": "Premium", "variant": "accent" }
+      ],
+      "shape": "square",
+      "capacity": { "min": 8, "max": 10 },
+      "heaterType": "external",
+      "basePrice": 4890,
+      "monthlyPayment": 136,
+      "currency": "EUR",
+      "specs": {
+        "capacity": { "min": 8, "max": 10 },
+        "weight": "180 kg",
+        "dimensions": { "external": 2200, "internal": 1800, "height": 1000, "unit": "mm" },
+        "heater": { "type": "Integruota malkine", "power": "35 kW", "material": "AISI 316" },
+        "waterCapacity": "1800 L"
+      },
+      "images": [
+        { "url": "/images/products/monaco-horizon-1.jpg", "alt": "Monaco Horizon kublas" }
+      ],
+      "thumbnail": { "url": "/images/products/monaco-horizon-thumb.jpg", "alt": "Monaco Horizon" },
+      "configurableOptions": ["acrylicColor", "woodFinish", "heatingSystem", "massage", "accessories"],
+      "relatedProducts": ["monaco-in", "monaco-out", "grande-round-horizon"],
+      "isActive": true,
+      "isFeatured": true,
+      "stockStatus": "made_to_order"
+    },
+    {
+      "id": "prod_monaco_in",
+      "slug": "monaco-in",
+      "name": "Monaco In",
+      "collection": "monaco",
+      "variant": "in",
+      "tagline": "6-8 asmenu | Vidine krosnele | Kompaktiskas dizainas",
+      "shortDescription": "Elegantiskas kublas su vidine sildymo sistema",
+      "longDescription": "Monaco In - tai elegantiskas kublas su vidine sildymo sistema.",
+      "badges": [
+        { "text": "Populiarus", "variant": "secondary" }
+      ],
+      "shape": "square",
+      "capacity": { "min": 6, "max": 8 },
+      "heaterType": "internal",
+      "basePrice": 3290,
+      "monthlyPayment": 92,
+      "currency": "EUR",
+      "specs": {
+        "capacity": { "min": 6, "max": 8 },
+        "weight": "150 kg",
+        "dimensions": { "external": 2000, "internal": 1600, "height": 950, "unit": "mm" },
+        "heater": { "type": "Integruota malkine", "power": "30 kW", "material": "AISI 304" },
+        "waterCapacity": "1400 L"
+      },
+      "images": [
+        { "url": "/images/products/monaco-in-1.jpg", "alt": "Monaco In kublas" }
+      ],
+      "thumbnail": { "url": "/images/products/monaco-in-thumb.jpg", "alt": "Monaco In" },
+      "configurableOptions": ["acrylicColor", "woodFinish", "massage", "accessories"],
+      "relatedProducts": ["monaco-horizon", "monaco-out", "paris-in"],
+      "isActive": true,
+      "isFeatured": false,
+      "stockStatus": "made_to_order"
+    },
+    {
+      "id": "prod_monaco_out",
+      "slug": "monaco-out",
+      "name": "Monaco Out",
+      "collection": "monaco",
+      "variant": "out",
+      "tagline": "6-8 asmenu | Isorine krosnele | Erdvus dizainas",
+      "shortDescription": "Erdvus kublas su isorine sildymo sistema",
+      "longDescription": "Monaco Out - tai erdvus kublas su isorine sildymo sistema.",
+      "badges": [
+        { "text": "Erdvus", "variant": "secondary" }
+      ],
+      "shape": "square",
+      "capacity": { "min": 6, "max": 8 },
+      "heaterType": "external",
+      "basePrice": 3890,
+      "monthlyPayment": 108,
+      "currency": "EUR",
+      "specs": {
+        "capacity": { "min": 6, "max": 8 },
+        "weight": "160 kg",
+        "dimensions": { "external": 2000, "internal": 1700, "height": 950, "unit": "mm" },
+        "heater": { "type": "Isorine malkine", "power": "35 kW", "material": "AISI 304" },
+        "waterCapacity": "1500 L"
+      },
+      "images": [
+        { "url": "/images/products/monaco-out-1.jpg", "alt": "Monaco Out kublas" }
+      ],
+      "thumbnail": { "url": "/images/products/monaco-out-thumb.jpg", "alt": "Monaco Out" },
+      "configurableOptions": ["acrylicColor", "woodFinish", "heatingSystem", "massage", "accessories"],
+      "relatedProducts": ["monaco-horizon", "monaco-in", "cuba-out"],
+      "isActive": true,
+      "isFeatured": false,
+      "stockStatus": "made_to_order"
+    },
+    {
+      "id": "prod_classic_round_horizon",
+      "slug": "classic-round-horizon",
+      "name": "Classic Round Horizon",
+      "collection": "classic-round",
+      "variant": "horizon",
+      "tagline": "4-6 asmenu | Integruojamas | Klasikinis apvalus",
+      "shortDescription": "Klasikinis apvalus kublas su panoraminiu dizainu",
+      "longDescription": "Classic Round Horizon - tai klasikinis apvalus kublas su integruojamu dizainu.",
+      "badges": [
+        { "text": "Klasika", "variant": "secondary" },
+        { "text": "Panoraminis", "variant": "accent" }
+      ],
+      "shape": "round",
+      "capacity": { "min": 4, "max": 6 },
+      "heaterType": "internal",
+      "basePrice": 3490,
+      "monthlyPayment": 97,
+      "currency": "EUR",
+      "specs": {
+        "capacity": { "min": 4, "max": 6 },
+        "weight": "120 kg",
+        "dimensions": { "external": 1800, "internal": 1500, "height": 950, "unit": "mm" },
+        "heater": { "type": "Integruota malkine", "power": "28 kW", "material": "AISI 304" },
+        "waterCapacity": "1200 L"
+      },
+      "images": [
+        { "url": "/images/products/classic-round-horizon-1.jpg", "alt": "Classic Round Horizon kublas" }
+      ],
+      "thumbnail": { "url": "/images/products/classic-round-horizon-thumb.jpg", "alt": "Classic Round Horizon" },
+      "configurableOptions": ["acrylicColor", "woodFinish", "massage", "accessories"],
+      "relatedProducts": ["classic-round-in", "classic-round-out", "grande-round-horizon"],
+      "isActive": true,
+      "isFeatured": true,
+      "stockStatus": "made_to_order"
+    },
+    {
+      "id": "prod_classic_round_in",
+      "slug": "classic-round-in",
+      "name": "Classic Round In",
+      "collection": "classic-round",
+      "variant": "in",
+      "tagline": "4-6 asmenu | Vidine krosnele | Geriausias kainos santykis",
+      "shortDescription": "Ekonomiskas apvalus kublas su vidine krosnele",
+      "longDescription": "Classic Round In - tai musu ekonomiskiausias apvalus kublas su vidine krosnele.",
+      "badges": [
+        { "text": "Geriausias kainos santykis", "variant": "primary" }
+      ],
+      "shape": "round",
+      "capacity": { "min": 4, "max": 6 },
+      "heaterType": "internal",
+      "basePrice": 1990,
+      "monthlyPayment": 56,
+      "currency": "EUR",
+      "specs": {
+        "capacity": { "min": 4, "max": 6 },
+        "weight": "100 kg",
+        "dimensions": { "external": 1700, "internal": 1400, "height": 900, "unit": "mm" },
+        "heater": { "type": "Integruota malkine", "power": "25 kW", "material": "AISI 304" },
+        "waterCapacity": "1000 L"
+      },
+      "images": [
+        { "url": "/images/products/classic-round-in-1.jpg", "alt": "Classic Round In kublas" }
+      ],
+      "thumbnail": { "url": "/images/products/classic-round-in-thumb.jpg", "alt": "Classic Round In" },
+      "configurableOptions": ["acrylicColor", "woodFinish", "massage", "accessories"],
+      "relatedProducts": ["classic-round-horizon", "classic-round-out", "paris-in"],
+      "isActive": true,
+      "isFeatured": true,
+      "stockStatus": "in_stock"
+    },
+    {
+      "id": "prod_classic_round_out",
+      "slug": "classic-round-out",
+      "name": "Classic Round Out",
+      "collection": "classic-round",
+      "variant": "out",
+      "tagline": "4-6 asmenu | Isorine krosnele | Daugiau erdves viduje",
+      "shortDescription": "Klasikinis apvalus kublas su isorine krosnele",
+      "longDescription": "Classic Round Out - tai klasikinis apvalus kublas su isorine krosnele.",
+      "badges": [
+        { "text": "Erdvus vidus", "variant": "secondary" }
+      ],
+      "shape": "round",
+      "capacity": { "min": 4, "max": 6 },
+      "heaterType": "external",
+      "basePrice": 2490,
+      "monthlyPayment": 70,
+      "currency": "EUR",
+      "specs": {
+        "capacity": { "min": 4, "max": 6 },
+        "weight": "110 kg",
+        "dimensions": { "external": 1800, "internal": 1550, "height": 900, "unit": "mm" },
+        "heater": { "type": "Isorine malkine", "power": "28 kW", "material": "AISI 304" },
+        "waterCapacity": "1100 L"
+      },
+      "images": [
+        { "url": "/images/products/classic-round-out-1.jpg", "alt": "Classic Round Out kublas" }
+      ],
+      "thumbnail": { "url": "/images/products/classic-round-out-thumb.jpg", "alt": "Classic Round Out" },
+      "configurableOptions": ["acrylicColor", "woodFinish", "heatingSystem", "massage", "accessories"],
+      "relatedProducts": ["classic-round-in", "classic-round-horizon", "grande-round-out"],
+      "isActive": true,
+      "isFeatured": false,
+      "stockStatus": "made_to_order"
+    },
+    {
+      "id": "prod_grande_round_horizon",
+      "slug": "grande-round-horizon",
+      "name": "Grande Round Horizon",
+      "collection": "grande-round",
+      "variant": "horizon",
+      "tagline": "6-8 asmenu | Integruojamas | Didelis apvalus",
+      "shortDescription": "Didelis apvalus kublas su panoraminiu vaizdu",
+      "longDescription": "Grande Round Horizon - tai didelis apvalus kublas su integruojamu panoraminiu dizainu.",
+      "badges": [
+        { "text": "Premium", "variant": "primary" },
+        { "text": "Panoraminis", "variant": "accent" }
+      ],
+      "shape": "round",
+      "capacity": { "min": 6, "max": 8 },
+      "heaterType": "internal",
+      "basePrice": 4290,
+      "monthlyPayment": 120,
+      "currency": "EUR",
+      "specs": {
+        "capacity": { "min": 6, "max": 8 },
+        "weight": "150 kg",
+        "dimensions": { "external": 2000, "internal": 1700, "height": 1000, "unit": "mm" },
+        "heater": { "type": "Integruota malkine", "power": "32 kW", "material": "AISI 316" },
+        "waterCapacity": "1500 L"
+      },
+      "images": [
+        { "url": "/images/products/grande-round-horizon-1.jpg", "alt": "Grande Round Horizon kublas" }
+      ],
+      "thumbnail": { "url": "/images/products/grande-round-horizon-thumb.jpg", "alt": "Grande Round Horizon" },
+      "configurableOptions": ["acrylicColor", "woodFinish", "massage", "accessories"],
+      "relatedProducts": ["grande-round-in", "grande-round-out", "monaco-horizon"],
+      "isActive": true,
+      "isFeatured": true,
+      "stockStatus": "made_to_order"
+    },
+    {
+      "id": "prod_grande_round_in",
+      "slug": "grande-round-in",
+      "name": "Grande Round In",
+      "collection": "grande-round",
+      "variant": "in",
+      "tagline": "6-8 asmenu | Vidine krosnele | Erdvus ir patogus",
+      "shortDescription": "Didelis apvalus kublas su vidine krosnele",
+      "longDescription": "Grande Round In - tai didelis apvalus kublas su vidine krosnele.",
+      "badges": [],
+      "shape": "round",
+      "capacity": { "min": 6, "max": 8 },
+      "heaterType": "internal",
+      "basePrice": 2890,
+      "monthlyPayment": 81,
+      "currency": "EUR",
+      "specs": {
+        "capacity": { "min": 6, "max": 8 },
+        "weight": "130 kg",
+        "dimensions": { "external": 1900, "internal": 1600, "height": 950, "unit": "mm" },
+        "heater": { "type": "Integruota malkine", "power": "30 kW", "material": "AISI 304" },
+        "waterCapacity": "1300 L"
+      },
+      "images": [
+        { "url": "/images/products/grande-round-in-1.jpg", "alt": "Grande Round In kublas" }
+      ],
+      "thumbnail": { "url": "/images/products/grande-round-in-thumb.jpg", "alt": "Grande Round In" },
+      "configurableOptions": ["acrylicColor", "woodFinish", "massage", "accessories"],
+      "relatedProducts": ["grande-round-horizon", "grande-round-out", "classic-round-in"],
+      "isActive": true,
+      "isFeatured": false,
+      "stockStatus": "made_to_order"
+    },
+    {
+      "id": "prod_grande_round_out",
+      "slug": "grande-round-out",
+      "name": "Grande Round Out",
+      "collection": "grande-round",
+      "variant": "out",
+      "tagline": "6-8 asmenu | Isorine krosnele | Maksimali erdve",
+      "shortDescription": "Didelis apvalus kublas su isorine krosnele",
+      "longDescription": "Grande Round Out - tai didelis apvalus kublas su isorine krosnele.",
+      "badges": [
+        { "text": "Erdviausias", "variant": "accent" }
+      ],
+      "shape": "round",
+      "capacity": { "min": 6, "max": 8 },
+      "heaterType": "external",
+      "basePrice": 3190,
+      "monthlyPayment": 89,
+      "currency": "EUR",
+      "specs": {
+        "capacity": { "min": 6, "max": 8 },
+        "weight": "140 kg",
+        "dimensions": { "external": 2000, "internal": 1750, "height": 950, "unit": "mm" },
+        "heater": { "type": "Isorine malkine", "power": "32 kW", "material": "AISI 304" },
+        "waterCapacity": "1450 L"
+      },
+      "images": [
+        { "url": "/images/products/grande-round-out-1.jpg", "alt": "Grande Round Out kublas" }
+      ],
+      "thumbnail": { "url": "/images/products/grande-round-out-thumb.jpg", "alt": "Grande Round Out" },
+      "configurableOptions": ["acrylicColor", "woodFinish", "heatingSystem", "massage", "accessories"],
+      "relatedProducts": ["grande-round-in", "grande-round-horizon", "classic-round-out"],
+      "isActive": true,
+      "isFeatured": false,
+      "stockStatus": "made_to_order"
+    },
+    {
+      "id": "prod_paris_in",
+      "slug": "paris-in",
+      "name": "Paris In",
+      "collection": "paris",
+      "variant": "in",
+      "tagline": "4-6 asmenu | Vidine krosnele | Elegancija",
+      "shortDescription": "Elegantiskas kvadratinis kublas",
+      "longDescription": "Paris In - tai elegantiskas kvadratinis kublas su vidine krosnele.",
+      "badges": [
+        { "text": "Elegantiskas", "variant": "secondary" }
+      ],
+      "shape": "square",
+      "capacity": { "min": 4, "max": 6 },
+      "heaterType": "internal",
+      "basePrice": 2690,
+      "monthlyPayment": 75,
+      "currency": "EUR",
+      "specs": {
+        "capacity": { "min": 4, "max": 6 },
+        "weight": "120 kg",
+        "dimensions": { "external": 1800, "internal": 1500, "height": 900, "unit": "mm" },
+        "heater": { "type": "Integruota malkine", "power": "28 kW", "material": "AISI 304" },
+        "waterCapacity": "1100 L"
+      },
+      "images": [
+        { "url": "/images/products/paris-in-1.jpg", "alt": "Paris In kublas" }
+      ],
+      "thumbnail": { "url": "/images/products/paris-in-thumb.jpg", "alt": "Paris In" },
+      "configurableOptions": ["acrylicColor", "woodFinish", "massage", "accessories"],
+      "relatedProducts": ["andorra-in", "monaco-in", "classic-round-in"],
+      "isActive": true,
+      "isFeatured": false,
+      "stockStatus": "made_to_order"
+    },
+    {
+      "id": "prod_andorra_in",
+      "slug": "andorra-in",
+      "name": "Andorra In",
+      "collection": "andorra",
+      "variant": "in",
+      "tagline": "4-6 asmenu | Vidine krosnele | Modernus dizainas",
+      "shortDescription": "Kublas su moderniu dizainu",
+      "longDescription": "Andorra In - tai kublas su moderniu dizainu ir vidine krosnele.",
+      "badges": [
+        { "text": "Modernus dizainas", "variant": "secondary" }
+      ],
+      "shape": "square",
+      "capacity": { "min": 4, "max": 6 },
+      "heaterType": "internal",
+      "basePrice": 2890,
+      "monthlyPayment": 81,
+      "currency": "EUR",
+      "specs": {
+        "capacity": { "min": 4, "max": 6 },
+        "weight": "125 kg",
+        "dimensions": { "external": 1850, "internal": 1550, "height": 900, "unit": "mm" },
+        "heater": { "type": "Integruota malkine", "power": "28 kW", "material": "AISI 304" },
+        "waterCapacity": "1150 L"
+      },
+      "images": [
+        { "url": "/images/products/andorra-in-1.jpg", "alt": "Andorra In kublas" }
+      ],
+      "thumbnail": { "url": "/images/products/andorra-in-thumb.jpg", "alt": "Andorra In" },
+      "configurableOptions": ["acrylicColor", "woodFinish", "massage", "accessories"],
+      "relatedProducts": ["paris-in", "monaco-in", "macau-in"],
+      "isActive": true,
+      "isFeatured": false,
+      "stockStatus": "made_to_order"
+    },
+    {
+      "id": "prod_cuba_out",
+      "slug": "cuba-out",
+      "name": "Cuba Out",
+      "collection": "cuba",
+      "variant": "out",
+      "tagline": "6-8 asmenu | Isorine krosnele | Seimoms",
+      "shortDescription": "Erdvus kublas su isorine krosnele",
+      "longDescription": "Cuba Out - tai erdvus kublas su isorine krosnele.",
+      "badges": [
+        { "text": "Seimoms", "variant": "secondary" }
+      ],
+      "shape": "square",
+      "capacity": { "min": 6, "max": 8 },
+      "heaterType": "external",
+      "basePrice": 3590,
+      "monthlyPayment": 100,
+      "currency": "EUR",
+      "specs": {
+        "capacity": { "min": 6, "max": 8 },
+        "weight": "155 kg",
+        "dimensions": { "external": 2000, "internal": 1700, "height": 950, "unit": "mm" },
+        "heater": { "type": "Isorine malkine", "power": "32 kW", "material": "AISI 304" },
+        "waterCapacity": "1400 L"
+      },
+      "images": [
+        { "url": "/images/products/cuba-out-1.jpg", "alt": "Cuba Out kublas" }
+      ],
+      "thumbnail": { "url": "/images/products/cuba-out-thumb.jpg", "alt": "Cuba Out" },
+      "configurableOptions": ["acrylicColor", "woodFinish", "heatingSystem", "massage", "accessories"],
+      "relatedProducts": ["monaco-out", "macau-in", "grande-round-out"],
+      "isActive": true,
+      "isFeatured": false,
+      "stockStatus": "made_to_order"
+    },
+    {
+      "id": "prod_macau_in",
+      "slug": "macau-in",
+      "name": "Macau In",
+      "collection": "macau",
+      "variant": "in",
+      "tagline": "6-8 asmenu | Vidine krosnele | Premium klase",
+      "shortDescription": "Premium klases kublas",
+      "longDescription": "Macau In - tai premium klases kublas su vidine krosnele.",
+      "badges": [
+        { "text": "Premium", "variant": "primary" }
+      ],
+      "shape": "square",
+      "capacity": { "min": 6, "max": 8 },
+      "heaterType": "internal",
+      "basePrice": 3190,
+      "monthlyPayment": 89,
+      "currency": "EUR",
+      "specs": {
+        "capacity": { "min": 6, "max": 8 },
+        "weight": "145 kg",
+        "dimensions": { "external": 1950, "internal": 1650, "height": 950, "unit": "mm" },
+        "heater": { "type": "Integruota malkine", "power": "30 kW", "material": "AISI 316" },
+        "waterCapacity": "1350 L"
+      },
+      "images": [
+        { "url": "/images/products/macau-in-1.jpg", "alt": "Macau In kublas" }
+      ],
+      "thumbnail": { "url": "/images/products/macau-in-thumb.jpg", "alt": "Macau In" },
+      "configurableOptions": ["acrylicColor", "woodFinish", "massage", "accessories"],
+      "relatedProducts": ["cuba-out", "monaco-in", "andorra-in"],
+      "isActive": true,
+      "isFeatured": false,
+      "stockStatus": "made_to_order"
+    },
+    {
+      "id": "prod_arctic",
+      "slug": "arctic",
+      "name": "Arctic",
+      "collection": "arctic",
+      "variant": "standard",
+      "tagline": "1-2 asmenu | Salto vandens | Atsinaujinimo ritualas",
+      "shortDescription": "Salto vandens kublas kontrastinei terapijai",
+      "longDescription": "Arctic - tai salto vandens kublas, sukurtas tiems, kurie praktikuoja kontrastine terapija.",
+      "badges": [
+        { "text": "Sveikatai", "variant": "accent" },
+        { "text": "Kompaktiskas", "variant": "secondary" }
+      ],
+      "shape": "therapeutic",
+      "capacity": { "min": 1, "max": 2 },
+      "heaterType": "none",
+      "basePrice": 1490,
+      "monthlyPayment": 42,
+      "currency": "EUR",
+      "specs": {
+        "capacity": { "min": 1, "max": 2 },
+        "weight": "50 kg",
+        "dimensions": { "external": 1000, "internal": 800, "height": 900, "unit": "mm" },
+        "waterCapacity": "400 L"
+      },
+      "images": [
+        { "url": "/images/products/arctic-1.jpg", "alt": "Arctic kublas" }
+      ],
+      "thumbnail": { "url": "/images/products/arctic-thumb.jpg", "alt": "Arctic" },
+      "configurableOptions": ["woodFinish", "accessories"],
+      "relatedProducts": ["arctic-chiller", "ofuro"],
+      "isActive": true,
+      "isFeatured": false,
+      "stockStatus": "in_stock"
+    },
+    {
+      "id": "prod_arctic_chiller",
+      "slug": "arctic-chiller",
+      "name": "Arctic Chiller",
+      "collection": "arctic",
+      "variant": "chiller",
+      "tagline": "1-2 asmenu | Su ausintuvu | Profesionalus lygis",
+      "shortDescription": "Profesionalus salto vandens kublas su ausinimo sistema",
+      "longDescription": "Arctic Chiller - tai profesionalaus lygio salto vandens kublas su integruota ausinimo sistema.",
+      "badges": [
+        { "text": "Su saldytuvu", "variant": "primary" },
+        { "text": "Profesionalams", "variant": "accent" }
+      ],
+      "shape": "therapeutic",
+      "capacity": { "min": 1, "max": 2 },
+      "heaterType": "electric",
+      "basePrice": 5990,
+      "monthlyPayment": 167,
+      "currency": "EUR",
+      "specs": {
+        "capacity": { "min": 1, "max": 2 },
+        "weight": "80 kg",
+        "dimensions": { "external": 1000, "internal": 800, "height": 900, "unit": "mm" },
+        "heater": { "type": "Chiller", "power": "1.5 kW", "material": "AISI 316" },
+        "waterCapacity": "400 L"
+      },
+      "images": [
+        { "url": "/images/products/arctic-chiller-1.jpg", "alt": "Arctic Chiller kublas" }
+      ],
+      "thumbnail": { "url": "/images/products/arctic-chiller-thumb.jpg", "alt": "Arctic Chiller" },
+      "configurableOptions": ["woodFinish", "accessories"],
+      "relatedProducts": ["arctic", "ofuro"],
+      "isActive": true,
+      "isFeatured": true,
+      "stockStatus": "made_to_order"
+    },
+    {
+      "id": "prod_ofuro",
+      "slug": "ofuro",
+      "name": "Ofuro",
+      "collection": "ofuro",
+      "variant": "standard",
+      "tagline": "1-2 asmenu | Japoniska tradicija | Meditacija",
+      "shortDescription": "Tradicinis japoniskas maudymosi kublas",
+      "longDescription": "Ofuro - tai tradicinis japoniskas maudymosi kublas, sukurtas pagal senovines japonu tradicijas.",
+      "badges": [
+        { "text": "Japoniska tradicija", "variant": "accent" }
+      ],
+      "shape": "therapeutic",
+      "capacity": { "min": 1, "max": 2 },
+      "heaterType": "external",
+      "basePrice": 1890,
+      "monthlyPayment": 53,
+      "currency": "EUR",
+      "specs": {
+        "capacity": { "min": 1, "max": 2 },
+        "weight": "60 kg",
+        "dimensions": { "external": 1200, "internal": 1000, "height": 800, "unit": "mm" },
+        "heater": { "type": "Isorine malkine", "power": "15 kW", "material": "AISI 304" },
+        "waterCapacity": "500 L"
+      },
+      "images": [
+        { "url": "/images/products/ofuro-1.jpg", "alt": "Ofuro kublas" }
+      ],
+      "thumbnail": { "url": "/images/products/ofuro-thumb.jpg", "alt": "Ofuro" },
+      "configurableOptions": ["woodFinish", "heatingSystem", "accessories"],
+      "relatedProducts": ["arctic", "arctic-chiller"],
+      "isActive": true,
+      "isFeatured": false,
+      "stockStatus": "made_to_order"
+    }
+  ]
+}
