@@ -34,7 +34,7 @@ export function ConfigSummary({ product }: ConfigSummaryProps) {
           return (
             <div key={step.id} className="flex justify-between items-start py-3 border-b border-outline-variant/30">
               <div>
-                <p className="text-[10px] uppercase tracking-widest text-secondary mb-1">
+                <p className="text-xs uppercase tracking-widest text-secondary mb-1">
                   {step.title}
                 </p>
                 <p className="text-sm font-medium">{displayNames}</p>
@@ -50,7 +50,7 @@ export function ConfigSummary({ product }: ConfigSummaryProps) {
       <div className="pt-4 border-t border-outline-variant">
         <div className="flex justify-between items-center">
           <div>
-            <p className="text-[10px] uppercase tracking-widest text-secondary mb-1">
+            <p className="text-xs uppercase tracking-widest text-secondary mb-1">
               Bazinė kaina
             </p>
             <p className="text-sm">{product.name}</p>

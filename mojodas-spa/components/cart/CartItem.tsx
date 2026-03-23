@@ -60,7 +60,7 @@ export function CartItem({ item, onRemove, onUpdateQuantity }: CartItemProps) {
           <h3 className="font-headline text-lg leading-tight mb-1 text-[#1A1A1A]">
             {item.product.name}
           </h3>
-          <p className="text-[10px] text-gray-400 font-medium uppercase tracking-wider mb-2">
+          <p className="text-xs text-gray-400 font-medium uppercase tracking-wider mb-2">
             {item.configurationSummary || "Standartinė konfigūracija"}
           </p>
         </div>
@@ -73,7 +73,7 @@ export function CartItem({ item, onRemove, onUpdateQuantity }: CartItemProps) {
 
             {/* Quantity Controls */}
             {onUpdateQuantity && item.quantity > 1 && (
-              <div className="flex items-center gap-2 text-[10px] text-gray-400">
+              <div className="flex items-center gap-2 text-xs text-gray-400">
                 <button
                   onClick={handleDecrement}
                   className="w-5 h-5 flex items-center justify-center border border-black/10 rounded hover:bg-black hover:text-white transition-all"
@@ -97,7 +97,7 @@ export function CartItem({ item, onRemove, onUpdateQuantity }: CartItemProps) {
 
           <button
             onClick={() => onRemove(item.id)}
-            className="text-[10px] text-gray-400 uppercase tracking-widest font-bold border-b border-transparent hover:border-gray-400 transition-all"
+            className="text-xs text-gray-400 uppercase tracking-widest font-bold border-b border-transparent hover:border-gray-400 transition-all"
           >
             Pašalinti
           </button>

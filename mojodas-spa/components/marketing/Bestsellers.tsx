@@ -69,7 +69,7 @@ export function Bestsellers() {
               </div>
               <div className="md:w-1/2 p-10 flex flex-col justify-center">
                 <div>
-                  <span className="text-[10px] bg-black text-white px-3 py-1 uppercase tracking-widest inline-block mb-4">
+                  <span className="text-xs bg-black text-white px-3 py-1 uppercase tracking-widest inline-block mb-4">
                     {featured.badge}
                   </span>
                   <h3 className="font-headline text-4xl md:text-5xl mb-4">
@@ -77,7 +77,7 @@ export function Bestsellers() {
                   </h3>
                   <p className="text-sm text-gray-500 mb-6">{featured.tagline}</p>
                   <div className="mb-8">
-                    <p className="text-[10px] uppercase tracking-widest font-bold mb-3">
+                    <p className="text-xs uppercase tracking-widest font-bold mb-3">
                       Spalvų pasirinkimai:
                     </p>
                     <div className="flex gap-3">
@@ -122,7 +122,7 @@ export function Bestsellers() {
                 className="h-64 object-cover w-full"
               />
               <div className="p-8">
-                <span className="text-[10px] bg-black text-white px-3 py-1 uppercase tracking-widest inline-block mb-4">
+                <span className="text-xs bg-black text-white px-3 py-1 uppercase tracking-widest inline-block mb-4">
                   {product.badge}
                 </span>
                 <h3 className="font-headline text-2xl mb-2">{product.name}</h3>

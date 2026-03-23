@@ -57,7 +57,7 @@ export function CheckoutActions({ className, onSubmit }: CheckoutActionsProps) {
         Patvirtinti ir Sumokėti
       </button>
 
-      <p className="mt-4 text-[10px] text-on-surface-variant uppercase tracking-widest text-center md:text-left">
+      <p className="mt-4 text-xs text-on-surface-variant uppercase tracking-widest text-center md:text-left">
         Paspausdami patvirtinate paslaugų teikimo taisykles.
       </p>
     </div>

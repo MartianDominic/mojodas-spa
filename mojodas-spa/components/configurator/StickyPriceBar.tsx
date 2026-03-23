@@ -24,7 +24,7 @@ export function StickyPriceBar({ product }: StickyPriceBarProps) {
   return (
     <div className="fixed bottom-0 left-0 w-full flex justify-between items-center px-12 py-6 bg-white/70 dark:bg-neutral-900/70 backdrop-blur-2xl z-50 shadow-[0_-10px_40px_rgba(0,0,0,0.06)] border-t border-neutral-200/20">
       <div className="flex flex-col">
-        <span className="text-[10px] text-secondary font-semibold uppercase tracking-widest mb-1">
+        <span className="text-xs text-secondary font-semibold uppercase tracking-widest mb-1">
           Dabartinė kaina
         </span>
         <span className="text-2xl font-light font-headline tracking-tight text-neutral-900 dark:text-neutral-100">

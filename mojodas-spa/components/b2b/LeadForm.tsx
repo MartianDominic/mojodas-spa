@@ -77,7 +77,7 @@ export function LeadForm() {
     return (
       <div className="space-y-12">
         <div>
-          <span className="text-primary font-bold tracking-[0.2em] text-[10px] uppercase block mb-4">
+          <span className="text-primary font-bold tracking-[0.2em] text-xs uppercase block mb-4">
             UŽKLAUSA IŠSIŲSTA
           </span>
           <h2 className="font-display text-4xl mb-4">Ačiū už jūsų susidomėjimą!</h2>
@@ -93,7 +93,7 @@ export function LeadForm() {
   return (
     <div className="space-y-12">
       <div>
-        <span className="text-primary font-bold tracking-[0.2em] text-[10px] uppercase block mb-4">
+        <span className="text-primary font-bold tracking-[0.2em] text-xs uppercase block mb-4">
           VASAROS SEZONAS JAU ČIA PAT
         </span>
         <h2 className="font-display text-4xl mb-4">
@@ -106,7 +106,7 @@ export function LeadForm() {
           <div className="space-y-2">
             <label
               htmlFor="name"
-              className="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant"
+              className="text-xs font-bold uppercase tracking-widest text-on-surface-variant"
             >
               Vardas Pavardė
             </label>
@@ -124,7 +124,7 @@ export function LeadForm() {
           <div className="space-y-2">
             <label
               htmlFor="company"
-              className="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant"
+              className="text-xs font-bold uppercase tracking-widest text-on-surface-variant"
             >
               Įmonės Pavadinimas
             </label>
@@ -145,7 +145,7 @@ export function LeadForm() {
           <div className="space-y-2">
             <label
               htmlFor="email"
-              className="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant"
+              className="text-xs font-bold uppercase tracking-widest text-on-surface-variant"
             >
               El. Paštas
             </label>
@@ -163,7 +163,7 @@ export function LeadForm() {
           <div className="space-y-2">
             <label
               htmlFor="phone"
-              className="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant"
+              className="text-xs font-bold uppercase tracking-widest text-on-surface-variant"
             >
               Telefono numeris
             </label>
@@ -183,7 +183,7 @@ export function LeadForm() {
         <div className="space-y-2">
           <label
             htmlFor="quantity"
-            className="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant"
+            className="text-xs font-bold uppercase tracking-widest text-on-surface-variant"
           >
             Planuojamas kiekis
           </label>

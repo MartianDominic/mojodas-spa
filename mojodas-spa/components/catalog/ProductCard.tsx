@@ -64,7 +64,7 @@ export function ProductCard({ product, className }: ProductCardProps) {
 
       {/* Top Right Badge - Shape */}
       <div className="absolute top-8 right-8">
-        <span className="bg-[#1A1A1A] text-white text-[10px] font-black tracking-widest uppercase px-5 py-2 rounded-full">
+        <span className="bg-[#1A1A1A] text-white text-xs font-black tracking-widest uppercase px-5 py-2 rounded-full">
           {shapeLabel}
         </span>
       </div>
@@ -96,7 +96,7 @@ export function ProductCard({ product, className }: ProductCardProps) {
             <Button
               variant="dark"
               size="sm"
-              className="w-full xl:w-auto px-6 py-3 text-[10px] font-black tracking-[0.2em] rounded-xl"
+              className="w-full xl:w-auto px-6 py-3 text-xs font-black tracking-[0.2em] rounded-xl"
             >
               KONFIGURUOTI
             </Button>

@@ -38,9 +38,9 @@ export function ConfiguratorForm({ product }: ConfiguratorFormProps) {
     <div className="space-y-16">
       {/* Product Header */}
       <header>
-        <nav className="flex items-center space-x-2 text-[10px] uppercase tracking-widest text-secondary mb-4">
+        <nav className="flex items-center space-x-2 text-xs uppercase tracking-widest text-secondary mb-4">
           <span>Kolekcijos</span>
-          <span className="material-symbols-outlined text-[12px]">chevron_right</span>
+          <span className="material-symbols-outlined text-sm">chevron_right</span>
           <span className="text-primary font-semibold">{product.name}</span>
         </nav>
         <h1 className="font-headline text-5xl font-light tracking-tight leading-none mb-4 italic">

@@ -33,7 +33,7 @@ export function EmptyCart({ onClose }: EmptyCartProps) {
         </Link>
         <button
           onClick={onClose}
-          className="text-[10px] text-gray-400 uppercase tracking-widest font-bold border-b border-transparent hover:border-gray-400 transition-all w-full py-2"
+          className="text-xs text-gray-400 uppercase tracking-widest font-bold border-b border-transparent hover:border-gray-400 transition-all w-full py-2"
         >
           Tęsti naršymą
         </button>

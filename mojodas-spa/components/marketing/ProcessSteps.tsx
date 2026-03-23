@@ -29,7 +29,7 @@ export function ProcessSteps() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
           {steps.map((step) => (
             <div key={step.number} className="group">
-              <div className="text-[120px] font-headline text-primary/10 leading-none mb-[-40px] select-none">
+              <div className="text-8xl font-headline text-primary/10 leading-none mb-[-40px] select-none">
                 {step.number}
               </div>
               <h3 className="font-headline text-2xl mb-4 relative z-10">

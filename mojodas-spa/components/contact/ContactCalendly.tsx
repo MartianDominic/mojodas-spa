@@ -7,7 +7,7 @@ export function ContactCalendly() {
       {/* Background Image */}
       <div className="absolute inset-0 opacity-5 grayscale">
         <Image
-          src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJCX8eoMkbZDS6IiTq8SmsQlABPsbKqzGuikyHa0OAlLF4trbbUmGrfye2SmD0zcO7OhjPhzmPXzT4ytM5GJZVxUr_GDYhHO4ynuK3nOlsUmE-ummouAnRdsQfi8acnOxm_D6ibNkUimuJUKIdUhDQgfThln4tbfFGLjZSjBdOdnqpga8EwY6n1OR4wkRmm_ScMFZbUlpesYe2mmsYqeZY9Hq9DwjY9DDXy8SxRnQi9_b354AurFx27DDm6RWOG1Kf-rt4EOsQcVw"
+          src="/images/b2b/calendly-bg.jpg"
           alt="Customer consultation"
           fill
           className="object-cover"
@@ -40,7 +40,7 @@ export function ContactCalendly() {
             </div>
             <div className="h-24 bg-outline-variant/5 rounded w-full" />
           </div>
-          <span className="text-[10px] font-bold tracking-widest uppercase mt-6 opacity-60">
+          <span className="text-xs font-bold tracking-widest uppercase mt-6 opacity-60">
             [ CALENDLY / GHL CALENDAR EMBED ]
           </span>
         </div>

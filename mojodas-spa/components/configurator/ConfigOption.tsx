@@ -70,7 +70,7 @@ export function ConfigOption({
         )}
       >
         <span className="text-xs font-bold leading-tight">{option.name}</span>
-        <span className="text-[10px] text-primary font-bold mt-4">
+        <span className="text-xs text-primary font-bold mt-4">
           {option.priceModifier > 0 ? `+ ${option.priceModifier}€` : "Įskaičiuota"}
         </span>
         {isSelected && (
@@ -108,7 +108,7 @@ export function ConfigOption({
           <div className="flex flex-col items-start">
             <span className="font-medium">{option.name}</span>
             {option.badge && (
-              <span className="text-[9px] bg-primary text-white px-1.5 py-0.5 mt-1 tracking-tighter uppercase">
+              <span className="text-xs bg-primary text-white px-1.5 py-0.5 mt-1 tracking-tighter uppercase">
                 {option.badge}
               </span>
             )}
@@ -147,7 +147,7 @@ export function ConfigOption({
       <div className="flex flex-col">
         <span className="text-sm font-semibold">{option.name}</span>
         {option.description && (
-          <span className="text-[10px] text-secondary">{option.description}</span>
+          <span className="text-xs text-secondary">{option.description}</span>
         )}
       </div>
       <span className="ml-auto text-xs font-bold">+ {option.priceModifier}€</span>

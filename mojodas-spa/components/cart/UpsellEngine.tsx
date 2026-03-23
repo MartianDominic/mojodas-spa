@@ -41,7 +41,7 @@ export function UpsellEngine({ onAddItem }: UpsellEngineProps) {
 
   return (
     <section className="pt-8 border-t border-black/[0.03]">
-      <h4 className="text-[10px] tracking-widest font-bold uppercase text-gray-400 mb-6">
+      <h4 className="text-xs tracking-widest font-bold uppercase text-gray-400 mb-6">
         IŠBAIGTAI PATIRTIAI
       </h4>
       <div className="space-y-4">
@@ -53,17 +53,17 @@ export function UpsellEngine({ onAddItem }: UpsellEngineProps) {
             <div className="flex items-center gap-4">
               <Icon name={item.icon} className="text-primary/80" />
               <div>
-                <p className="text-[12px] font-bold text-[#1A1A1A]">
+                <p className="text-sm font-bold text-[#1A1A1A]">
                   {item.name}
                 </p>
-                <p className="text-[11px] text-primary font-bold">
+                <p className="text-sm text-primary font-bold">
                   + {formatPrice(item.price)}
                 </p>
               </div>
             </div>
             <button
               onClick={() => handleAddItem(item)}
-              className="text-[10px] font-bold text-[#050505] tracking-tighter px-2 py-1 border border-black/5 hover:bg-black hover:text-white transition-all rounded"
+              className="text-xs font-bold text-[#050505] tracking-tighter px-2 py-1 border border-black/5 hover:bg-black hover:text-white transition-all rounded"
             >
               [ + PRIDĖTI ]
             </button>

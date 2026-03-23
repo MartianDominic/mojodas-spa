@@ -9,8 +9,7 @@ const models = [
     badge: "GLAMPINGAMS",
     description:
       "2 asmenims, greitas įšilimas. Idealu porų poilsiui ir mažoms erdvėms.",
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuDLCc95wXpJ75aZGgdFs7-vwoxe7RUHJj_1qxTUcRhI8zvh50gXSTicNSCeEakXuZr6M-L0CAEuOF56Ni331j6V5e_abs6QbLivsIgdM11i2bzey0UUIqL085Q5ys_zzmevwPiIUfAcqzlrmW5U3uoHugJqkPYwYBzM8GPWS8h3CAidDwYufn0XDN7cuU27BW0FcyrjSSQ7VvSZoau2zMURoggFxV5i3wkxZ2Qz93B8slLgXIgBPjqMWnvPoj4IFsswbEEJyHRwhik",
+    image: "/images/b2b/ofuro-model.jpg",
   },
   {
     slug: "classic-round-out",
@@ -18,8 +17,7 @@ const models = [
     badge: "POPULIARIAUSIAS VERSLUI",
     description:
       "4-6 vietos, išorinė krosnelė. Universaliausias pasirinkimas sodyboms.",
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuCQF0iRK4nuaXgoWoUcoeqbc0VhwTG4AXksk1m0L7Thh6otUpVrgsu4MINOL7PufWmw3qR7lo_0e1Q8D7fcLN6jOH3HHqdFr4LDtd6KAG8NZ11nxfi1yo8i08OBtdk86dqf3yuwNJCjrUj0VKgp82BVhCxKVvY58gL0eSpb3NMQ9-u8c-iErj0wu8Y5ilIuUu23pewjzF3MU6fzd8aLApTZtqP7yciLq2qFd5p3tCOr_4pxSBEx8UvYdgUJGCINnyzoIugf4deHPAA",
+    image: "/images/b2b/modern-cabin.jpg",
   },
   {
     slug: "grande-round-out",
@@ -27,8 +25,7 @@ const models = [
     badge: "DIDELĖMS KOMPANIJOMS",
     description:
       "6-8 vietos, galinga krosnelė. Skirta didelių grupių talpinimui ir pramogoms.",
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuA6jvWC4VZKtz1BGxZ5gQ1yVxY1DdSl1F4GXvNwBK6o3CpcQYDO7AhE8iSeXYJ9SrUNmnNRTamaYMchE15wbQwzAZsGzQ0hf7dkGYu9TKVKq0forlJnmWsZwiL1pWZ_7Qf6JD_OQ0mdfJgjwFRXpM1m0dVkPmt_JGGvSYldwHsJ3hXY8uOAPRVLd4lR2ytTkiNC9h9U7bEFFl3yraid1VDtjeqCgsuxYJouhOefOwBeBwDv_6Yf8ldPeDnitcPkJkSEz75hUrkvfR4",
+    image: "/images/b2b/grande-model.jpg",
   },
 ];
 
@@ -51,7 +48,7 @@ export function B2BModels() {
         {models.map((model) => (
           <div key={model.slug} className="group">
             <div className="relative aspect-[3/4] overflow-hidden mb-8 bg-surface-container">
-              <span className="absolute top-6 left-6 z-20 bg-primary text-white text-[10px] font-bold tracking-widest px-3 py-1 uppercase">
+              <span className="absolute top-6 left-6 z-20 bg-primary text-white text-xs font-bold tracking-widest px-3 py-1 uppercase">
                 {model.badge}
               </span>
               <Image

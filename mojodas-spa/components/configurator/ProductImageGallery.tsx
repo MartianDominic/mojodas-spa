@@ -63,17 +63,17 @@ export function ProductImageGallery({ product }: ProductImageGalleryProps) {
         <h3 className="font-headline text-2xl mb-8">Techninė Specifikacija</h3>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-y-10 gap-x-8">
           <div>
-            <p className="text-[10px] uppercase tracking-widest text-secondary mb-1">Talpa</p>
+            <p className="text-xs uppercase tracking-widest text-secondary mb-1">Talpa</p>
             <p className="font-medium text-on-surface">
               {product.specs.capacity.min}-{product.specs.capacity.max} Žmonės
             </p>
           </div>
           <div>
-            <p className="text-[10px] uppercase tracking-widest text-secondary mb-1">Svoris</p>
+            <p className="text-xs uppercase tracking-widest text-secondary mb-1">Svoris</p>
             <p className="font-medium text-on-surface">{product.specs.weight}</p>
           </div>
           <div>
-            <p className="text-[10px] uppercase tracking-widest text-secondary mb-1">
+            <p className="text-xs uppercase tracking-widest text-secondary mb-1">
               Diametras (Išorinis)
             </p>
             <p className="font-medium text-on-surface">
@@ -81,7 +81,7 @@ export function ProductImageGallery({ product }: ProductImageGalleryProps) {
             </p>
           </div>
           <div>
-            <p className="text-[10px] uppercase tracking-widest text-secondary mb-1">
+            <p className="text-xs uppercase tracking-widest text-secondary mb-1">
               Diametras (Vidinis)
             </p>
             <p className="font-medium text-on-surface">
@@ -89,13 +89,13 @@ export function ProductImageGallery({ product }: ProductImageGalleryProps) {
             </p>
           </div>
           <div>
-            <p className="text-[10px] uppercase tracking-widest text-secondary mb-1">Aukštis</p>
+            <p className="text-xs uppercase tracking-widest text-secondary mb-1">Aukštis</p>
             <p className="font-medium text-on-surface">
               {product.specs.dimensions.height} {product.specs.dimensions.unit}
             </p>
           </div>
           <div>
-            <p className="text-[10px] uppercase tracking-widest text-secondary mb-1">
+            <p className="text-xs uppercase tracking-widest text-secondary mb-1">
               Vandens tūris
             </p>
             <p className="font-medium text-on-surface">{product.specs.waterCapacity}</p>
