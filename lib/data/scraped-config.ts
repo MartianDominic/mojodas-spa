@@ -17,8 +17,9 @@ import scrapedConfigData from "@/data/scraped/config-options.json";
 interface ScrapedConfigOption {
   id: string;
   name: string;
+  type?: string;
   image: string;
-  originalUrl: string;
+  price: number;
 }
 
 interface ScrapedConfigGroup {
@@ -28,8 +29,14 @@ interface ScrapedConfigGroup {
 
 interface ScrapedConfigData {
   scrapedAt: string;
+  sourceUrl: string;
   acrylicColors: ScrapedConfigGroup;
   woodFinishes: ScrapedConfigGroup;
+  thermoCover?: ScrapedConfigGroup;
+  accessories?: {
+    title: string;
+    options: Array<ScrapedConfigOption & { category?: string }>;
+  };
 }
 
 const scrapedConfig = scrapedConfigData as ScrapedConfigData;
@@ -65,7 +72,7 @@ function transformAcrylicColors(): ConfigOptionGroup {
     description: ACRYLIC_DESCRIPTIONS[opt.id] || `${opt.name} akrilo spalva`,
     priceModifier: ACRYLIC_PRICE_MODIFIERS[opt.id] ?? 0,
     isDefault: index === 0, // First option is default
-    image: `/${opt.image}`,
+    image: opt.image,
     badge: ACRYLIC_PRICE_MODIFIERS[opt.id] && ACRYLIC_PRICE_MODIFIERS[opt.id] > 0 ? "Premium" : undefined,
   }));
 
@@ -117,7 +124,7 @@ function transformWoodFinishes(): ConfigOptionGroup {
     description: WOOD_DESCRIPTIONS[opt.id] || `${opt.name} medienos apdaila`,
     priceModifier: WOOD_PRICE_MODIFIERS[opt.id] ?? 0,
     isDefault: index === 0, // First option (Silbergrau) is default
-    image: `/${opt.image}`,
+    image: opt.image,
     badge: WOOD_BADGES[opt.id],
   }));
 
