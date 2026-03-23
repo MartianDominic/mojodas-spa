@@ -32,7 +32,7 @@
           "min": 4,
           "max": 6
         },
-        "weight": "~260 kg",
+        "weight": "200kg",
         "dimensions": {
           "external": 2000,
           "internal": 1700,
@@ -73,7 +73,17 @@
       ],
       "isActive": true,
       "isFeatured": true,
-      "stockStatus": "in_stock"
+      "stockStatus": "in_stock",
+      "filterableSpecs": {
+        "hasWaterJets": false,
+        "hasAirJets": false,
+        "hasLED": false,
+        "hasFiltration": false,
+        "hasElectricHeater": false,
+        "isColdTherapy": false,
+        "weightKg": 200,
+        "externalSizeMm": 2000
+      }
     },
     {
       "id": "prod_classic_round_out",
@@ -104,19 +114,19 @@
           "min": 4,
           "max": 6
         },
-        "weight": "~240 kg",
+        "weight": "180kg",
         "dimensions": {
           "external": 2000,
-          "internal": 1800,
+          "internal": 1700,
           "height": 1050,
           "unit": "mm"
         },
         "heater": {
           "type": "Išorinė malkinė",
-          "power": "28 kW",
+          "power": "25 kW",
           "material": "AISI 304"
         },
-        "waterCapacity": "1100 L",
+        "waterCapacity": "1000 L",
         "filtration": {
           "type": "Smėlio filtras",
           "flow": "6 m³/h"
@@ -146,7 +156,17 @@
       ],
       "isActive": true,
       "isFeatured": false,
-      "stockStatus": "made_to_order"
+      "stockStatus": "made_to_order",
+      "filterableSpecs": {
+        "hasWaterJets": false,
+        "hasAirJets": false,
+        "hasLED": false,
+        "hasFiltration": false,
+        "hasElectricHeater": false,
+        "isColdTherapy": false,
+        "weightKg": 180,
+        "externalSizeMm": 2000
+      }
     },
     {
       "id": "prod_classic_round_horizon",
@@ -181,7 +201,7 @@
           "min": 4,
           "max": 6
         },
-        "weight": "~270 kg",
+        "weight": "190kg",
         "dimensions": {
           "external": 2000,
           "internal": 1700,
@@ -189,11 +209,11 @@
           "unit": "mm"
         },
         "heater": {
-          "type": "Integruota malkinė",
-          "power": "28 kW",
+          "type": "Integruota Horizon",
+          "power": "25 kW",
           "material": "AISI 304"
         },
-        "waterCapacity": "1200 L",
+        "waterCapacity": "1000 L",
         "filtration": {
           "type": "Smėlio filtras",
           "flow": "8 m³/h"
@@ -222,7 +242,17 @@
       ],
       "isActive": true,
       "isFeatured": true,
-      "stockStatus": "made_to_order"
+      "stockStatus": "made_to_order",
+      "filterableSpecs": {
+        "hasWaterJets": false,
+        "hasAirJets": false,
+        "hasLED": false,
+        "hasFiltration": false,
+        "hasElectricHeater": false,
+        "isColdTherapy": false,
+        "weightKg": 190,
+        "externalSizeMm": 2000
+      }
     },
     {
       "id": "prod_grande_round_in",
@@ -246,24 +276,40 @@
       "specs": {
         "capacity": {
           "min": 6,
-          "max": 8
+          "max": 6
         },
-        "weight": "~320 kg",
+        "weight": "~300 kg",
         "dimensions": {
-          "external": 2200,
-          "internal": 1900,
-          "height": 1100,
+          "external": 2250,
+          "internal": 2000,
+          "height": 1050,
           "unit": "mm"
         },
         "heater": {
           "type": "Integruota malkinė",
           "power": "30 kW",
-          "material": "AISI 304"
+          "material": "AISI 304/316"
         },
-        "waterCapacity": "1300 L",
+        "waterCapacity": "1000 L",
         "filtration": {
-          "type": "Smėlio filtras",
-          "flow": "8 m³/h"
+          "type": "Filtravimo išvestys / Montuojama filtravimo dežė"
+        },
+        "electricHeater": true,
+        "ledStars": {
+          "min": 6,
+          "max": 24
+        },
+        "ledLamps": {
+          "min": 1,
+          "max": 2
+        },
+        "airJets": {
+          "min": 12,
+          "max": 18
+        },
+        "waterJets": {
+          "min": 6,
+          "max": 24
         }
       },
       "images": [
@@ -289,7 +335,17 @@
       ],
       "isActive": true,
       "isFeatured": false,
-      "stockStatus": "made_to_order"
+      "stockStatus": "made_to_order",
+      "filterableSpecs": {
+        "hasWaterJets": true,
+        "hasAirJets": true,
+        "hasLED": true,
+        "hasFiltration": true,
+        "hasElectricHeater": true,
+        "isColdTherapy": false,
+        "weightKg": 300,
+        "externalSizeMm": 2250
+      }
     },
     {
       "id": "prod_grande_round_out",
@@ -320,22 +376,30 @@
           "min": 6,
           "max": 8
         },
-        "weight": "~300 kg",
+        "weight": "~240 kg",
         "dimensions": {
-          "external": 2200,
-          "internal": 2000,
-          "height": 1100,
+          "external": 2000,
+          "internal": 1700,
+          "height": 1050,
           "unit": "mm"
         },
         "heater": {
           "type": "Išorinė malkinė",
-          "power": "32 kW",
-          "material": "AISI 304"
+          "power": "25 kW",
+          "material": "AISI 304/316"
         },
-        "waterCapacity": "1450 L",
+        "waterCapacity": "1000 L",
         "filtration": {
           "type": "Smėlio filtras",
           "flow": "8 m³/h"
+        },
+        "ledStars": {
+          "min": 7,
+          "max": 15
+        },
+        "ledLamps": {
+          "min": 1,
+          "max": 2
         }
       },
       "images": [
@@ -362,7 +426,17 @@
       ],
       "isActive": true,
       "isFeatured": false,
-      "stockStatus": "made_to_order"
+      "stockStatus": "made_to_order",
+      "filterableSpecs": {
+        "hasWaterJets": false,
+        "hasAirJets": false,
+        "hasLED": true,
+        "hasFiltration": false,
+        "hasElectricHeater": false,
+        "isColdTherapy": false,
+        "weightKg": 240,
+        "externalSizeMm": null
+      }
     },
     {
       "id": "prod_grande_round_horizon",
@@ -397,19 +471,19 @@
           "min": 6,
           "max": 8
         },
-        "weight": "~330 kg",
+        "weight": "~250 kg",
         "dimensions": {
-          "external": 2200,
-          "internal": 1900,
-          "height": 1100,
+          "external": 2000,
+          "internal": 1700,
+          "height": 1050,
           "unit": "mm"
         },
         "heater": {
-          "type": "Integruota malkinė",
-          "power": "32 kW",
-          "material": "AISI 316"
+          "type": "Integruota Horizon",
+          "power": "25 kW",
+          "material": "AISI 304/316"
         },
-        "waterCapacity": "1500 L",
+        "waterCapacity": "1000 L",
         "filtration": {
           "type": "Smėlio filtras",
           "flow": "10 m³/h"
@@ -438,7 +512,17 @@
       ],
       "isActive": true,
       "isFeatured": true,
-      "stockStatus": "made_to_order"
+      "stockStatus": "made_to_order",
+      "filterableSpecs": {
+        "hasWaterJets": false,
+        "hasAirJets": false,
+        "hasLED": false,
+        "hasFiltration": false,
+        "hasElectricHeater": false,
+        "isColdTherapy": false,
+        "weightKg": null,
+        "externalSizeMm": null
+      }
     },
     {
       "id": "prod_paris_in",
@@ -466,13 +550,13 @@
       "currency": "EUR",
       "specs": {
         "capacity": {
-          "min": 4,
-          "max": 6
+          "min": 5,
+          "max": 5
         },
-        "weight": "~280 kg",
+        "weight": "~250 kg",
         "dimensions": {
-          "external": 1900,
-          "internal": 1600,
+          "external": 2250,
+          "internal": 2000,
           "height": 1000,
           "unit": "mm"
         },
@@ -481,10 +565,9 @@
           "power": "28 kW",
           "material": "AISI 304"
         },
-        "waterCapacity": "1100 L",
+        "waterCapacity": "1000 L",
         "filtration": {
-          "type": "Smėlio filtras",
-          "flow": "6 m³/h"
+          "type": "Skimeris / UVC"
         }
       },
       "images": [
@@ -510,7 +593,17 @@
       ],
       "isActive": true,
       "isFeatured": false,
-      "stockStatus": "made_to_order"
+      "stockStatus": "made_to_order",
+      "filterableSpecs": {
+        "hasWaterJets": false,
+        "hasAirJets": false,
+        "hasLED": false,
+        "hasFiltration": true,
+        "hasElectricHeater": false,
+        "isColdTherapy": false,
+        "weightKg": null,
+        "externalSizeMm": 2250
+      }
     },
     {
       "id": "prod_andorra",
@@ -538,14 +631,14 @@
       "currency": "EUR",
       "specs": {
         "capacity": {
-          "min": 4,
-          "max": 6
+          "min": 8,
+          "max": 9
         },
-        "weight": "~290 kg",
+        "weight": "~250 kg",
         "dimensions": {
-          "external": 1950,
-          "internal": 1650,
-          "height": 1000,
+          "external": 2000,
+          "internal": 1700,
+          "height": 1100,
           "unit": "mm"
         },
         "heater": {
@@ -553,7 +646,7 @@
           "power": "28 kW",
           "material": "AISI 304"
         },
-        "waterCapacity": "1150 L",
+        "waterCapacity": "1000 L",
         "filtration": {
           "type": "Smėlio filtras",
           "flow": "6 m³/h"
@@ -582,7 +675,17 @@
       ],
       "isActive": true,
       "isFeatured": false,
-      "stockStatus": "made_to_order"
+      "stockStatus": "made_to_order",
+      "filterableSpecs": {
+        "hasWaterJets": false,
+        "hasAirJets": false,
+        "hasLED": false,
+        "hasFiltration": false,
+        "hasElectricHeater": false,
+        "isColdTherapy": false,
+        "weightKg": null,
+        "externalSizeMm": 2000
+      }
     },
     {
       "id": "prod_cuba_out",
@@ -610,25 +713,40 @@
       "currency": "EUR",
       "specs": {
         "capacity": {
-          "min": 6,
-          "max": 8
+          "min": 4,
+          "max": 4
         },
-        "weight": "~340 kg",
+        "weight": "~230 kg",
         "dimensions": {
-          "external": 2100,
-          "internal": 1800,
-          "height": 1050,
+          "external": 2000,
+          "internal": 1700,
+          "height": 1100,
           "unit": "mm"
         },
         "heater": {
           "type": "Išorinė malkinė",
-          "power": "32 kW",
-          "material": "AISI 304"
+          "power": "25 kW",
+          "material": "AISI 304/316"
         },
-        "waterCapacity": "1400 L",
+        "waterCapacity": "950 L",
         "filtration": {
-          "type": "Smėlio filtras",
-          "flow": "8 m³/h"
+          "type": "Skimeris / UVC"
+        },
+        "ledStars": {
+          "min": 7,
+          "max": 24
+        },
+        "ledLamps": {
+          "min": 1,
+          "max": 2
+        },
+        "airJets": {
+          "min": 12,
+          "max": 18
+        },
+        "waterJets": {
+          "min": 6,
+          "max": 24
         }
       },
       "images": [
@@ -655,7 +773,17 @@
       ],
       "isActive": true,
       "isFeatured": false,
-      "stockStatus": "made_to_order"
+      "stockStatus": "made_to_order",
+      "filterableSpecs": {
+        "hasWaterJets": true,
+        "hasAirJets": true,
+        "hasLED": true,
+        "hasFiltration": true,
+        "hasElectricHeater": false,
+        "isColdTherapy": false,
+        "weightKg": 230,
+        "externalSizeMm": 2000
+      }
     },
     {
       "id": "prod_monaco_in",
@@ -684,24 +812,39 @@
       "specs": {
         "capacity": {
           "min": 6,
-          "max": 8
+          "max": 6
         },
-        "weight": "~350 kg",
+        "weight": "~400 kg",
         "dimensions": {
-          "external": 2100,
-          "internal": 1750,
+          "external": 2200,
+          "internal": 1700,
           "height": 1050,
           "unit": "mm"
         },
         "heater": {
           "type": "Integruota malkinė",
           "power": "30 kW",
-          "material": "AISI 304"
+          "material": "AISI 304/316"
         },
-        "waterCapacity": "1400 L",
+        "waterCapacity": "1100 L",
         "filtration": {
-          "type": "Smėlio filtras",
-          "flow": "8 m³/h"
+          "type": "Skimeris / UVC"
+        },
+        "ledStars": {
+          "min": 6,
+          "max": 24
+        },
+        "ledLamps": {
+          "min": 1,
+          "max": 2
+        },
+        "airJets": {
+          "min": 12,
+          "max": 24
+        },
+        "waterJets": {
+          "min": 6,
+          "max": 24
         }
       },
       "images": [
@@ -727,7 +870,17 @@
       ],
       "isActive": true,
       "isFeatured": false,
-      "stockStatus": "made_to_order"
+      "stockStatus": "made_to_order",
+      "filterableSpecs": {
+        "hasWaterJets": true,
+        "hasAirJets": true,
+        "hasLED": true,
+        "hasFiltration": true,
+        "hasElectricHeater": false,
+        "isColdTherapy": false,
+        "weightKg": 400,
+        "externalSizeMm": 2200
+      }
     },
     {
       "id": "prod_monaco_out",
@@ -756,24 +909,39 @@
       "specs": {
         "capacity": {
           "min": 6,
-          "max": 8
+          "max": 6
         },
-        "weight": "~330 kg",
+        "weight": "~350 kg",
         "dimensions": {
-          "external": 2100,
-          "internal": 1900,
+          "external": 2200,
+          "internal": 1700,
           "height": 1050,
           "unit": "mm"
         },
         "heater": {
           "type": "Išorinė malkinė",
-          "power": "35 kW",
-          "material": "AISI 304"
+          "power": "25 kW",
+          "material": "AISI 304/316"
         },
-        "waterCapacity": "1500 L",
+        "waterCapacity": "1100 L",
         "filtration": {
-          "type": "Smėlio filtras",
-          "flow": "8 m³/h"
+          "type": "Skimeris / UVC"
+        },
+        "ledStars": {
+          "min": 6,
+          "max": 24
+        },
+        "ledLamps": {
+          "min": 1,
+          "max": 2
+        },
+        "airJets": {
+          "min": 12,
+          "max": 24
+        },
+        "waterJets": {
+          "min": 6,
+          "max": 24
         }
       },
       "images": [
@@ -800,7 +968,17 @@
       ],
       "isActive": true,
       "isFeatured": false,
-      "stockStatus": "made_to_order"
+      "stockStatus": "made_to_order",
+      "filterableSpecs": {
+        "hasWaterJets": true,
+        "hasAirJets": true,
+        "hasLED": true,
+        "hasFiltration": true,
+        "hasElectricHeater": false,
+        "isColdTherapy": false,
+        "weightKg": 350,
+        "externalSizeMm": 2200
+      }
     },
     {
       "id": "prod_monaco_horizon",
@@ -832,25 +1010,40 @@
       "currency": "EUR",
       "specs": {
         "capacity": {
-          "min": 8,
-          "max": 10
+          "min": 6,
+          "max": 6
         },
-        "weight": "~380 kg",
+        "weight": "~400 kg",
         "dimensions": {
           "external": 2200,
-          "internal": 1900,
-          "height": 1100,
+          "internal": 1700,
+          "height": 1050,
           "unit": "mm"
         },
         "heater": {
-          "type": "Integruota malkinė",
-          "power": "35 kW",
-          "material": "AISI 316"
+          "type": "Integruota Horizon",
+          "power": "25 kW",
+          "material": "AISI 304/316"
         },
-        "waterCapacity": "1800 L",
+        "waterCapacity": "1100 L",
         "filtration": {
-          "type": "Smėlio filtras",
-          "flow": "10 m³/h"
+          "type": "Skimeris / UVC"
+        },
+        "ledStars": {
+          "min": 6,
+          "max": 24
+        },
+        "ledLamps": {
+          "min": 1,
+          "max": 2
+        },
+        "airJets": {
+          "min": 12,
+          "max": 24
+        },
+        "waterJets": {
+          "min": 6,
+          "max": 24
         }
       },
       "images": [
@@ -876,7 +1069,17 @@
       ],
       "isActive": true,
       "isFeatured": true,
-      "stockStatus": "made_to_order"
+      "stockStatus": "made_to_order",
+      "filterableSpecs": {
+        "hasWaterJets": true,
+        "hasAirJets": true,
+        "hasLED": true,
+        "hasFiltration": true,
+        "hasElectricHeater": false,
+        "isColdTherapy": false,
+        "weightKg": 400,
+        "externalSizeMm": 2200
+      }
     },
     {
       "id": "prod_macau_in",
@@ -904,25 +1107,41 @@
       "currency": "EUR",
       "specs": {
         "capacity": {
-          "min": 6,
-          "max": 8
+          "min": 5,
+          "max": 5
         },
-        "weight": "~340 kg",
+        "weight": "~440 kg",
         "dimensions": {
-          "external": 2050,
-          "internal": 1750,
-          "height": 1050,
+          "external": 2450,
+          "internal": 1700,
+          "height": 1000,
           "unit": "mm"
         },
         "heater": {
           "type": "Integruota malkinė",
           "power": "30 kW",
-          "material": "AISI 316"
+          "material": "AISI 304/316"
         },
-        "waterCapacity": "1350 L",
+        "waterCapacity": "1000 L",
         "filtration": {
-          "type": "Smėlio filtras",
-          "flow": "8 m³/h"
+          "type": "Filtravimo išvestys / Montuojama filtravimo dėžė"
+        },
+        "electricHeater": true,
+        "ledStars": {
+          "min": 6,
+          "max": 24
+        },
+        "ledLamps": {
+          "min": 1,
+          "max": 2
+        },
+        "airJets": {
+          "min": 12,
+          "max": 24
+        },
+        "waterJets": {
+          "min": 6,
+          "max": 24
         }
       },
       "images": [
@@ -948,7 +1167,17 @@
       ],
       "isActive": true,
       "isFeatured": false,
-      "stockStatus": "made_to_order"
+      "stockStatus": "made_to_order",
+      "filterableSpecs": {
+        "hasWaterJets": true,
+        "hasAirJets": true,
+        "hasLED": true,
+        "hasFiltration": true,
+        "hasElectricHeater": true,
+        "isColdTherapy": false,
+        "weightKg": 440,
+        "externalSizeMm": 2450
+      }
     },
     {
       "id": "prod_arctic",
@@ -980,17 +1209,20 @@
       "currency": "EUR",
       "specs": {
         "capacity": {
-          "min": 1,
-          "max": 2
+          "min": 4,
+          "max": 6
         },
-        "weight": "~50 kg",
+        "weight": "~110 kg",
         "dimensions": {
-          "external": 1000,
-          "internal": 800,
+          "external": 2310,
+          "internal": 1700,
           "height": 900,
           "unit": "mm"
         },
-        "waterCapacity": "400 L"
+        "waterCapacity": "1000 L",
+        "filtration": {
+          "type": "Skimeris / UVC"
+        }
       },
       "images": [
         {
@@ -1012,7 +1244,17 @@
       ],
       "isActive": true,
       "isFeatured": false,
-      "stockStatus": "in_stock"
+      "stockStatus": "in_stock",
+      "filterableSpecs": {
+        "hasWaterJets": false,
+        "hasAirJets": false,
+        "hasLED": true,
+        "hasFiltration": true,
+        "hasElectricHeater": false,
+        "isColdTherapy": false,
+        "weightKg": 110,
+        "externalSizeMm": 2310
+      }
     },
     {
       "id": "prod_arctic_chiller",
@@ -1044,13 +1286,13 @@
       "currency": "EUR",
       "specs": {
         "capacity": {
-          "min": 1,
-          "max": 2
+          "min": 4,
+          "max": 6
         },
-        "weight": "~80 kg",
+        "weight": "~110 kg",
         "dimensions": {
-          "external": 1000,
-          "internal": 800,
+          "external": 2310,
+          "internal": 1700,
           "height": 900,
           "unit": "mm"
         },
@@ -1059,8 +1301,9 @@
           "power": "1.5 kW",
           "material": "AISI 316"
         },
-        "waterCapacity": "400 L",
-        "temperature": "3-8°C"
+        "waterCapacity": "1000 L",
+        "temperature": "3-8°C",
+        "coldTherapy": true
       },
       "images": [
         {
@@ -1082,7 +1325,17 @@
       ],
       "isActive": true,
       "isFeatured": true,
-      "stockStatus": "made_to_order"
+      "stockStatus": "made_to_order",
+      "filterableSpecs": {
+        "hasWaterJets": false,
+        "hasAirJets": false,
+        "hasLED": false,
+        "hasFiltration": false,
+        "hasElectricHeater": false,
+        "isColdTherapy": true,
+        "weightKg": 110,
+        "externalSizeMm": 2310
+      }
     },
     {
       "id": "prod_ofuro",
@@ -1110,14 +1363,14 @@
       "currency": "EUR",
       "specs": {
         "capacity": {
-          "min": 1,
+          "min": 2,
           "max": 2
         },
-        "weight": "~60 kg",
+        "weight": "~120 kg",
         "dimensions": {
-          "external": 1200,
-          "internal": 1000,
-          "height": 800,
+          "external": 2240,
+          "internal": 1700,
+          "height": 1050,
           "unit": "mm"
         },
         "heater": {
@@ -1125,7 +1378,7 @@
           "power": "15 kW",
           "material": "AISI 304"
         },
-        "waterCapacity": "500 L"
+        "waterCapacity": "1000 L"
       },
       "images": [
         {
@@ -1148,7 +1401,19 @@
       ],
       "isActive": true,
       "isFeatured": false,
-      "stockStatus": "made_to_order"
+      "stockStatus": "made_to_order",
+      "filterableSpecs": {
+        "hasWaterJets": false,
+        "hasAirJets": false,
+        "hasLED": false,
+        "hasFiltration": false,
+        "hasElectricHeater": false,
+        "isColdTherapy": false,
+        "weightKg": 120,
+        "externalSizeMm": 2240
+      }
     }
-  ]
+  ],
+  "lastUpdated": "2026-03-23T22:51:00.519Z",
+  "version": "2.1.0"
 }
