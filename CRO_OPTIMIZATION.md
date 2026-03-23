@@ -833,17 +833,302 @@ Step 4: Patvirtinimas
 2. **Quiz Results Page** - Personalized catalog view
 3. **Trust Bar** - Reusable component
 4. **Product Page FAQ** - Addresses objections
+5. **Monthly Payment Display** - Show "nuo X €/mėn" everywhere
 
 ### Phase 2: Conversion Optimization
-5. **Configurator 3-Package System** - Reduces decision fatigue
-6. **Product Comparison Widget** - Helps decision making
-7. **Sticky Mobile CTA** - Captures mobile users
-8. **Financing Calculator** - Shows affordability
+6. **Configurator Step-by-Step Wizard** - Beautiful, one decision per step
+7. **Product Comparison Widget** - Side-by-side comparison
+8. **Sticky Mobile CTA** - Price + monthly + button
+9. **Exit Intent Email Capture** - Save configuration
+10. **Customer Reviews Section** - Social proof on product pages
 
-### Phase 3: Polish
-9. **Checkout Optimization** - Guest checkout, progress bar
-10. **Social Proof** - Reviews, installation gallery
-11. **A/B Testing Setup** - Track improvements
+### Phase 3: Retention & Growth
+11. **Abandoned Cart Email Sequence** - 4-email recovery flow
+12. **Post-Purchase Email Flow** - Confirmation → Installation → Review request
+13. **Installation Photo Gallery** - Real customer photos
+14. **Video on Product Pages** - Product in action
+
+---
+
+## Monthly Payment Calculation
+
+**Formula:** `Math.ceil(totalPrice / 36)` €/mėn
+
+**Display:** Always show "nuo X €/mėn" alongside or instead of full price.
+
+**Product Base Prices → Monthly:**
+| Product | Base Price | Monthly (36 mėn) |
+|---------|------------|------------------|
+| Arctic | 1,490 € | 42 €/mėn |
+| Ofuro | 1,890 € | 53 €/mėn |
+| Classic Round In | 1,990 € | 56 €/mėn |
+| Classic Round Out | 2,490 € | 70 €/mėn |
+| Paris In | 2,690 € | 75 €/mėn |
+| Andorra | 2,890 € | 81 €/mėn |
+| Grande Round In | 2,890 € | 81 €/mėn |
+| Macau In | 3,190 € | 89 €/mėn |
+| Grande Round Out | 3,190 € | 89 €/mėn |
+| Monaco In | 3,290 € | 92 €/mėn |
+| Classic Round Horizon | 3,490 € | 97 €/mėn |
+| Cuba Out | 3,590 € | 100 €/mėn |
+| Monaco Out | 3,890 € | 108 €/mėn |
+| Grande Round Horizon | 4,290 € | 120 €/mėn |
+| Monaco Horizon | 4,890 € | 136 €/mėn |
+| Arctic Chiller | 5,990 € | 167 €/mėn |
+
+**Where to Display:**
+```
+1. Product cards in catalog:
+   ┌─────────────────┐
+   │ Monaco Horizon  │
+   │ nuo 136 €/mėn   │ ← Lead with monthly
+   │ arba 4 890 €    │ ← Secondary
+   └─────────────────┘
+
+2. Product page hero:
+   "nuo 136 €/mėn · arba 4 890 € vienkartinis mokėjimas"
+
+3. Configurator (live update):
+   "Viso: 5 670 € · 158 €/mėn"
+
+4. Cart:
+   "Jūsų užsakymas: 5 670 € arba 158 €/mėn su lizingu"
+
+5. Quiz results:
+   Each product card shows monthly payment
+```
+
+**Configurator Live Calculation:**
+```typescript
+function calculateMonthlyPayment(totalPrice: number, months: number = 36): number {
+  return Math.ceil(totalPrice / months);
+}
+
+// In configurator state:
+const totalPrice = basePrice + packagePrice + addons;
+const monthlyPayment = calculateMonthlyPayment(totalPrice);
+
+// Display:
+// "5 670 € · 158 €/mėn"
+```
+
+---
+
+## Contact Approach (Premium, Not Cheap)
+
+**Philosophy:** Available but not aggressive. Elegant, not desperate.
+
+**Header (subtle):**
+```
+┌─────────────────────────────────────────────────────────────────┐
+│  [Logo]     Katalogas   Apie mus   Kontaktai      [Konsultacija]│
+│                                                    ↑ Subtle link │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+**Product Page (contextual help):**
+```
+┌─────────────────────────────────────────────────────────────────┐
+│  Turite klausimų apie šį modelį?                                │
+│  [Užsisakyti konsultaciją] ← Links to Calendly                  │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+**Configurator (if user pauses 30+ seconds):**
+```
+┌─────────────────────────────────────────────────────────────────┐
+│  Nežinote ką pasirinkti?                                        │
+│  Mūsų ekspertas padės per 15 min pokalbį.                      │
+│  [Rezervuoti laiką] ← Calendly                                  │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+**Footer:**
+```
+┌─────────────────────────────────────────────────────────────────┐
+│  Kontaktai                                                       │
+│  info@mojodasspa.lt                                             │
+│  +370 XXX XXXXX                                                 │
+│  [Užsisakyti konsultaciją]                                      │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+**What NOT to do:**
+- ❌ Floating chat bubble
+- ❌ Pop-ups on every page
+- ❌ "SKAMBINKITE DABAR!"
+- ❌ Flashing elements
+- ❌ Multiple contact CTAs competing
+
+---
+
+## Exit Intent & Email Capture
+
+**Trigger:** User moves mouse toward browser close/back (desktop) or attempts to navigate away.
+
+**Design (elegant, not desperate):**
+
+```
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃                                                                  ┃
+┃                     [Monaco Horizon preview]                     ┃
+┃                                                                  ┃
+┃        Išsaugokite savo konfigūraciją                           ┃
+┃                                                                  ┃
+┃        Atsiųsime nuorodą, kad galėtumėte                        ┃
+┃        tęsti bet kada.                                          ┃
+┃                                                                  ┃
+┃        ┌────────────────────────────────┐                       ┃
+┃        │  jusu@email.lt                 │                       ┃
+┃        └────────────────────────────────┘                       ┃
+┃                                                                  ┃
+┃              [ IŠSAUGOTI KONFIGŪRACIJĄ ]                        ┃
+┃                                                                  ┃
+┃                    Ne, ačiū                                     ┃
+┃                                                                  ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+```
+
+**Rules:**
+- Show only ONCE per session
+- Only on product page or configurator (not homepage)
+- Include product/config they were viewing
+- Clean, minimal design matching site aesthetic
+- Easy dismiss ("Ne, ačiū" or click outside)
+
+---
+
+## Abandoned Cart Email Sequence
+
+**Trigger:** User added to cart but didn't complete checkout within 1 hour.
+
+```
+EMAIL 1 (1 hour after abandon):
+─────────────────────────────────────────────────────────────────
+Subject: Jūsų Monaco Horizon laukia
+
+Sveiki [Vardas],
+
+Pastebėjome, kad nebaigėte užsakymo.
+
+[Product Image]
+Monaco Horizon - Populiarus paketas
+5 380 € · 150 €/mėn
+
+[TĘSTI UŽSAKYMĄ]
+
+Turite klausimų? Atsakysime per 24h.
+
+---
+
+EMAIL 2 (24 hours):
+─────────────────────────────────────────────────────────────────
+Subject: Ar galime padėti?
+
+Gal turite klausimų apie Monaco Horizon?
+
+Dažniausiai klausia:
+• Kaip vyksta pristatymas?
+• Ar reikia leidimo?
+• Kiek kainuoja eksploatacija?
+
+[PERŽIŪRĖTI DUK]
+
+Arba užsisakykite nemokamą konsultaciją:
+[REZERVUOTI LAIKĄ]
+
+---
+
+EMAIL 3 (72 hours):
+─────────────────────────────────────────────────────────────────
+Subject: Jūsų konfigūracija vis dar išsaugota
+
+Jūsų Monaco Horizon konfigūracija:
+• Populiarus paketas
+• Termo mediena
+• Baltas akrilas
+
+Viso: 5 670 € · 158 €/mėn
+
+[UŽBAIGTI UŽSAKYMĄ]
+
+---
+
+EMAIL 4 (7 days):
+─────────────────────────────────────────────────────────────────
+Subject: Paskutinis priminimas
+
+Jūsų išsaugota konfigūracija bus ištrinta po 7 dienų.
+
+[PERŽIŪRĖTI KONFIGŪRACIJĄ]
+```
+
+---
+
+## Social Proof Elements
+
+**Trust Bar (homepage + all pages):**
+```
+┌─────────────────────────────────────────────────────────────────┐
+│  ✓ 500+ kubilų Lietuvoje  ·  ★ 4.9/5 įvertinimas  ·  🛡 5m garantija  │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+**Product Page Reviews (future - when collected):**
+```
+┌─────────────────────────────────────────────────────────────────┐
+│  KLIENTŲ ATSILIEPIMAI                    ★★★★★ 4.9 (23)        │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│  ★★★★★  "Puiki kokybė, greitas pristatymas"                    │
+│         Tomas V. · Monaco Horizon · 2024-02                     │
+│                                                                 │
+│  ★★★★★  "Jau antras sezonas - veikia puikiai"                  │
+│         Andrius K. · Grande Round · 2023-05                     │
+│                                                                 │
+│  [Rodyti daugiau]                                              │
+│                                                                 │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+**Installation Gallery (real customer photos):**
+```
+┌─────────────────────────────────────────────────────────────────┐
+│  KAIP ATRODO PAS KLIENTUS                                       │
+│                                                                 │
+│  [photo]    [photo]    [photo]    [photo]                      │
+│   Vilnius    Kaunas    Klaipėda   Šiauliai                     │
+│                                                                 │
+│  "Atsiųskite savo nuotrauką ir gaukite €50 priedų kuponą"     │
+│                                                                 │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+---
+
+## Video Content (High Priority)
+
+**Product Page - Hero Video:**
+- 30-60 second product showcase
+- Water bubbling, steam, LED lights at night
+- No voiceover needed, just ambient sound + music
+- Autoplay muted with play button overlay
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                                                                 │
+│                    [▶ VIDEO THUMBNAIL]                         │
+│                                                                 │
+│                  Pažiūrėkite veikime                           │
+│                                                                 │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+**Types of Video Content (priority order):**
+1. Product demo (each model) - 30-60 sec
+2. Installation timelapse - 2-3 min
+3. Customer testimonial - 1-2 min
+4. "Kaip prižiūrėti kubilą" guide - 3-5 min
 
 ---
 
