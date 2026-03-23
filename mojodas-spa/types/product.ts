@@ -67,10 +67,28 @@ export interface ProductSpecs {
   dimensions: ProductDimensions;
   heater?: HeaterSpecs;
   waterCapacity: string;
+  filtration?: {
+    type: string;
+    flow?: string;
+  };
   airJets?: JetRange;
   waterJets?: JetRange;
   ledStars?: JetRange;
   ledLamps?: JetRange;
+  electricHeater?: boolean;
+  coldTherapy?: boolean;
+}
+
+// Filterable attributes for catalog filtering
+export interface FilterableSpecs {
+  hasWaterJets: boolean;
+  hasAirJets: boolean;
+  hasLED: boolean;
+  hasFiltration: boolean;
+  hasElectricHeater: boolean;
+  isColdTherapy: boolean;
+  weightKg: number | null;
+  externalSizeMm: number | null;
 }
 
 export interface ProductSEO {
@@ -145,6 +163,8 @@ export interface ProductListItem {
   thumbnail?: ProductImage;
   isFeatured: boolean;
   stockStatus: StockStatus;
+  // Filterable specs for advanced filtering
+  specs?: FilterableSpecs;
 }
 
 // Filter options for catalog
@@ -158,6 +178,13 @@ export interface ProductFilters {
   maxPrice?: number;
   isFeatured?: boolean;
   stockStatus?: StockStatus;
+  // Advanced filters based on specs
+  hasWaterJets?: boolean;
+  hasAirJets?: boolean;
+  hasLED?: boolean;
+  hasFiltration?: boolean;
+  hasElectricHeater?: boolean;
+  isColdTherapy?: boolean;
 }
 
 // Sort options
