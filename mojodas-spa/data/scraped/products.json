@@ -46,15 +46,15 @@
         "gallery": [
           {
             "url": "https://mojodasspa.com/wp-content/uploads/2024/01/RoundIn_reality.jpg",
-            "localPath": "images/products/classic-round-in-kubilas/gallery-1.jpg"
+            "localPath": "/images/products/classic-round-in/gallery-1.jpg"
           },
           {
             "url": "https://mojodasspa.com/wp-content/uploads/2024/01/4.jpg",
-            "localPath": "images/products/classic-round-in-kubilas/gallery-2.jpg"
+            "localPath": "/images/products/classic-round-in/gallery-2.jpg"
           },
           {
             "url": "https://mojodasspa.com/wp-content/uploads/2025/07/round-in.jpg",
-            "localPath": "images/products/classic-round-in-kubilas/gallery-3.jpg"
+            "localPath": "/images/products/classic-round-in/gallery-3.jpg"
           }
         ]
       },
@@ -106,16 +106,7 @@
             "localPath": "/images/products/classic-round-out/hero-1.jpg"
           }
         ],
-        "gallery": [
-          {
-            "url": "https://mojodasspa.com/wp-content/uploads/2024/01/Round_out1.jpg",
-            "localPath": "images/products/classic-round-out-kubilas/gallery-1.jpg"
-          },
-          {
-            "url": "https://mojodasspa.com/wp-content/uploads/2024/01/Round_out3.jpg",
-            "localPath": "images/products/classic-round-out-kubilas/gallery-2.jpg"
-          }
-        ]
+        "gallery": []
       },
       "relatedProducts": [],
       "configurableOptions": [
@@ -162,19 +153,10 @@
         "hero": [
           {
             "url": "https://mojodasspa.com/wp-content/uploads/2024/01/Horizon1.jpg",
-            "localPath": "images/products/classic-round-horizon/hero-1.jpg"
+            "localPath": "/images/products/classic-round-horizon/hero-1.jpg"
           }
         ],
-        "gallery": [
-          {
-            "url": "https://mojodasspa.com/wp-content/uploads/2024/01/Horizon2.jpg",
-            "localPath": "images/products/classic-round-horizon/gallery-1.jpg"
-          },
-          {
-            "url": "https://mojodasspa.com/wp-content/uploads/2024/01/Horizon3.jpg",
-            "localPath": "images/products/classic-round-horizon/gallery-2.jpg"
-          }
-        ]
+        "gallery": []
       },
       "relatedProducts": [],
       "configurableOptions": [
@@ -227,11 +209,11 @@
         "gallery": [
           {
             "url": "https://mojodasspa.com/wp-content/uploads/2024/01/Grande_in2.jpg",
-            "localPath": "images/products/grande-round-in-kubilas/gallery-1.jpg"
+            "localPath": "/images/products/grande-round-in/gallery-1.jpg"
           },
           {
             "url": "https://mojodasspa.com/wp-content/uploads/2024/01/Grande_in3.jpg",
-            "localPath": "images/products/grande-round-in-kubilas/gallery-2.jpg"
+            "localPath": "/images/products/grande-round-in/gallery-2.jpg"
           }
         ]
       },
@@ -314,29 +296,29 @@
           },
           {
             "url": "https://mojodasspa.com/wp-content/uploads/2024/01/3-1-scaled.jpg",
-            "localPath": "images/products/grande-round-in-kubilas/hero-2.jpg"
+            "localPath": "/images/products/grande-round-in/hero-2.jpg"
           },
           {
             "url": "https://mojodasspa.com/wp-content/uploads/2024/01/grande-in-w.png",
-            "localPath": "images/products/grande-round-in-kubilas/hero-3.png"
+            "localPath": "/images/products/grande-round-in/hero-3.png"
           }
         ],
         "gallery": [
           {
             "url": "https://mojodasspa.com/wp-content/uploads/2024/01/1-2-scaled.jpg",
-            "localPath": "images/products/grande-round-in-kubilas/gallery-1.jpg"
+            "localPath": "/images/products/grande-round-in/gallery-1.jpg"
           },
           {
             "url": "https://mojodasspa.com/wp-content/uploads/2024/01/5-1.jpg",
-            "localPath": "images/products/grande-round-in-kubilas/gallery-2.jpg"
+            "localPath": "/images/products/grande-round-in/gallery-2.jpg"
           },
           {
             "url": "https://mojodasspa.com/wp-content/uploads/2024/01/2-1.jpg",
-            "localPath": "images/products/grande-round-in-kubilas/gallery-3.jpg"
+            "localPath": "/images/products/grande-round-in/gallery-3.jpg"
           },
           {
             "url": "https://mojodasspa.com/wp-content/uploads/2024/01/6.jpg",
-            "localPath": "images/products/grande-round-in-kubilas/gallery-4.jpg"
+            "localPath": "/images/products/grande-round-in/gallery-4.jpg"
           }
         ]
       },
@@ -591,15 +573,15 @@
         "gallery": [
           {
             "url": "https://mojodasspa.com/wp-content/uploads/2025/04/1-1-scaled.jpg",
-            "localPath": "images/products/cuba-out/gallery-1.jpg"
+            "localPath": "/images/products/cuba-out/gallery-1.jpg"
           },
           {
             "url": "https://mojodasspa.com/wp-content/uploads/2025/04/5-2.jpg",
-            "localPath": "images/products/cuba-out/gallery-2.jpg"
+            "localPath": "/images/products/cuba-out/gallery-2.jpg"
           },
           {
             "url": "https://mojodasspa.com/wp-content/uploads/2025/04/cuba-water.jpg",
-            "localPath": "images/products/cuba-out/gallery-3.jpg"
+            "localPath": "/images/products/cuba-out/gallery-3.jpg"
           }
         ]
       },
@@ -691,7 +673,7 @@
         "hero": [
           {
             "url": "https://mojodasspa.com/wp-content/uploads/2025/04/Monaco_In.jpg",
-            "localPath": "images/products/monaco-in/hero-1.jpg"
+            "localPath": "/images/products/monaco-in/hero-1.jpg"
           }
         ],
         "gallery": []
@@ -784,7 +766,7 @@
         "hero": [
           {
             "url": "https://mojodasspa.com/wp-content/uploads/2025/04/Monaco_Out.jpg",
-            "localPath": "images/products/monaco-out/hero-1.jpg"
+            "localPath": "/images/products/monaco-out/hero-1.jpg"
           }
         ],
         "gallery": []
@@ -974,21 +956,21 @@
           },
           {
             "url": "https://mojodasspa.com/wp-content/uploads/2024/02/mojodas3.jpg",
-            "localPath": "images/products/macau-in/hero-2.jpg"
+            "localPath": "/images/products/macau-in/hero-2.jpg"
           },
           {
             "url": "https://mojodasspa.com/wp-content/uploads/2024/02/macau.jpg",
-            "localPath": "images/products/macau-in/hero-3.jpg"
+            "localPath": "/images/products/macau-in/hero-3.jpg"
           }
         ],
         "gallery": [
           {
             "url": "https://mojodasspa.com/wp-content/uploads/2025/07/hidro.jpg",
-            "localPath": "images/products/macau-in/gallery-1.jpg"
+            "localPath": "/images/products/macau-in/gallery-1.jpg"
           },
           {
             "url": "https://mojodasspa.com/wp-content/uploads/2025/07/air.jpg",
-            "localPath": "images/products/macau-in/gallery-2.jpg"
+            "localPath": "/images/products/macau-in/gallery-2.jpg"
           }
         ]
       },
@@ -1059,16 +1041,7 @@
             "localPath": "/images/products/arctic/hero-1.jpg"
           }
         ],
-        "gallery": [
-          {
-            "url": "https://mojodasspa.com/wp-content/uploads/2024/02/black-marble.png",
-            "localPath": "images/products/arctic/gallery-1.png"
-          },
-          {
-            "url": "https://mojodasspa.com/wp-content/uploads/2024/02/coffee-marble.png",
-            "localPath": "images/products/arctic/gallery-2.png"
-          }
-        ]
+        "gallery": []
       },
       "relatedProducts": [
         {
@@ -1118,7 +1091,7 @@
         "hero": [
           {
             "url": "https://mojodasspa.com/wp-content/uploads/2024/02/chiller-1.jpg",
-            "localPath": "images/products/arctic-chiller/hero-1.jpg"
+            "localPath": "/images/products/arctic-chiller/hero-1.jpg"
           }
         ],
         "gallery": []

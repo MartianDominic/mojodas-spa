@@ -1,416 +1,441 @@
 {
-  "scrapedAt": "2026-03-23T16:58:00Z",
+  "scrapedAt": "2026-03-23T18:30:00Z",
+  "sourceUrl": "https://mojodasspa.com",
   "acrylicColors": {
     "title": "Akrilo įdėklo spalvos pasirinkimas",
-    "description": "Išsirinkite akrilo įdėklą iš mūsų plataus spalvų pasirinkimo: vientisa spalva, ar marmuro rašto? Rinktis Jums! Spalvų pasirinkimas akrilo įdėklams yra svarbus žingsnis, nes tai lemia galutinio produkto išvaizdą.",
     "options": [
       {
         "id": "black-marble",
         "name": "Juodas marmuras",
         "type": "marble",
         "image": "/images/config/acrylic/black-marble.png",
-        "sourceUrl": "https://mojodasspa.com/wp-content/uploads/2024/01/round-in-black-marble.png"
+        "price": 0
       },
       {
         "id": "grey",
         "name": "Pilka",
         "type": "solid",
         "image": "/images/config/acrylic/grey.png",
-        "sourceUrl": "https://mojodasspa.com/wp-content/uploads/2024/01/round-in-grey.png"
+        "price": 0
       },
       {
         "id": "blue-marble",
         "name": "Mėlynas marmuras",
         "type": "marble",
         "image": "/images/config/acrylic/blue-marble.png",
-        "sourceUrl": "https://mojodasspa.com/wp-content/uploads/2024/01/round-in-blue-marble-1.png"
+        "price": 0
       },
       {
         "id": "green-marble",
         "name": "Žalias marmuras",
         "type": "marble",
         "image": "/images/config/acrylic/green-marble.png",
-        "sourceUrl": "https://mojodasspa.com/wp-content/uploads/2024/01/round-in-green-marble.png"
+        "price": 0
       },
       {
         "id": "coffee-marble",
         "name": "Kavos marmuras",
         "type": "marble",
         "image": "/images/config/acrylic/coffee-marble.png",
-        "sourceUrl": "https://mojodasspa.com/wp-content/uploads/2024/01/round-in-coffee-marble.png"
-      },
-      {
-        "id": "brown-marble",
-        "name": "Rudas marmuras",
-        "type": "marble",
-        "image": "/images/config/acrylic/brown-marble.png",
-        "sourceUrl": "https://mojodasspa.com/wp-content/uploads/2024/01/round-in-brown-marble.png"
-      },
-      {
-        "id": "white",
-        "name": "Balta",
-        "type": "solid",
-        "image": "/images/config/acrylic/white.png",
-        "sourceUrl": "https://mojodasspa.com/wp-content/uploads/2024/01/round-in-white.png"
-      },
-      {
-        "id": "white-marble",
-        "name": "Baltas marmuras",
-        "type": "marble",
-        "image": "/images/config/acrylic/white-marble.png",
-        "sourceUrl": "https://mojodasspa.com/wp-content/uploads/2024/01/round-in-white-marble.png"
+        "price": 0
       },
       {
         "id": "pearl-marble",
-        "name": "Perlamutro marmuras",
+        "name": "Perlų marmuras",
         "type": "marble",
         "image": "/images/config/acrylic/pearl-marble.png",
-        "sourceUrl": "https://mojodasspa.com/wp-content/uploads/2024/01/round-in-pearl-marble-real-1.png"
+        "price": 0
       },
       {
         "id": "grey-marble",
         "name": "Pilkas marmuras",
         "type": "marble",
         "image": "/images/config/acrylic/grey-marble.png",
-        "sourceUrl": "https://mojodasspa.com/wp-content/uploads/2024/01/round-in-grey-marble-1.png"
+        "price": 0
       },
       {
-        "id": "granite",
-        "name": "Granitas",
-        "type": "granite",
-        "image": "/images/config/acrylic/granite.png",
-        "sourceUrl": "https://mojodasspa.com/wp-content/uploads/2024/01/round-in-granite.png"
+        "id": "white-marble",
+        "name": "Baltas marmuras",
+        "type": "marble",
+        "image": "/images/config/acrylic/white-marble.png",
+        "price": 0
       },
       {
-        "id": "latte",
-        "name": "Latte",
+        "id": "brown-marble",
+        "name": "Rudas marmuras",
+        "type": "marble",
+        "image": "/images/config/acrylic/brown-marble.png",
+        "price": 0
+      },
+      {
+        "id": "white",
+        "name": "Balta",
         "type": "solid",
-        "image": "/images/config/acrylic/latte.png",
-        "sourceUrl": "https://mojodasspa.com/wp-content/uploads/2024/01/round-in-latte-1.png"
+        "image": "/images/config/acrylic/white.png",
+        "price": 0
       },
       {
         "id": "espresso",
         "name": "Espresso",
         "type": "solid",
         "image": "/images/config/acrylic/espresso.png",
-        "sourceUrl": "https://mojodasspa.com/wp-content/uploads/2024/08/round-in-espresso-w.png"
+        "price": 0
+      },
+      {
+        "id": "latte",
+        "name": "Latte",
+        "type": "solid",
+        "image": "/images/config/acrylic/latte.png",
+        "price": 0
+      },
+      {
+        "id": "granite",
+        "name": "Granitas",
+        "type": "solid",
+        "image": "/images/config/acrylic/granite.png",
+        "price": 0
       }
     ]
   },
   "woodFinishes": {
     "title": "Kubilo apdailos pasirinkimas",
-    "description": "Kubilo apdailą galite rinktis iš: eglės, degintos eglės, termo medienos, arba wpc lentų. Eksterjero materialas, spalva ir tekstūra suteiks unikalumą būtent Jūsų kubilui.",
-    "categories": [
+    "options": [
       {
-        "name": "EGLĖ IR DEGINTA EGLĖ",
-        "options": [
-          {
-            "id": "silbergrau",
-            "name": "Silbergrau",
-            "image": "/images/config/wood/silbergrau.jpg"
-          },
-          {
-            "id": "pinnie",
-            "name": "Pinnie",
-            "image": "/images/config/wood/pinnie.jpg"
-          },
-          {
-            "id": "teak",
-            "name": "Teak",
-            "image": "/images/config/wood/teak.jpg"
-          },
-          {
-            "id": "kastanie",
-            "name": "Kastanie",
-            "image": "/images/config/wood/kastanie.jpg"
-          },
-          {
-            "id": "nussbaum",
-            "name": "Nussbaum",
-            "image": "/images/config/wood/nussbaum.jpg"
-          },
-          {
-            "id": "palisander",
-            "name": "Palisander",
-            "image": "/images/config/wood/palisander.jpg"
-          },
-          {
-            "id": "grafitgrau",
-            "name": "Grafitgrau",
-            "image": "/images/config/wood/grafitgrau.jpg"
-          },
-          {
-            "id": "anthrazit-ral",
-            "name": "Anthrazit RAL",
-            "image": "/images/config/wood/anthrazit-ral.jpg"
-          },
-          {
-            "id": "anthrazitgrau",
-            "name": "Anthrazitgrau",
-            "image": "/images/config/wood/anthrazitgrau.jpg"
-          },
-          {
-            "id": "ebenholz",
-            "name": "Ebenholz",
-            "image": "/images/config/wood/ebenholz.jpg"
-          },
-          {
-            "id": "burned-silver",
-            "name": "Deginta Sidabrinė",
-            "image": "/images/config/wood/burned-silver.jpg"
-          },
-          {
-            "id": "burned-cherry",
-            "name": "Deginta Vyšninė",
-            "image": "/images/config/wood/burned-cherry.jpg"
-          },
-          {
-            "id": "burned-black-spruce",
-            "name": "Deginta Juoda Eglė",
-            "image": "/images/config/wood/burned-black-spruce.jpg"
-          }
-        ]
+        "id": "natural",
+        "name": "Natūrali eglė",
+        "type": "natural",
+        "image": "/images/config/wood/natural.jpg",
+        "price": 0
       },
       {
-        "name": "TERMO MEDIENA",
-        "options": [
-          {
-            "id": "natural",
-            "name": "Natūrali",
-            "image": "/images/config/wood/natural.jpg"
-          },
-          {
-            "id": "burned-oiled",
-            "name": "Deginta Alyvinė",
-            "image": "/images/config/wood/burned-oiled.jpg"
-          },
-          {
-            "id": "burned-black",
-            "name": "Deginta Juoda",
-            "image": "/images/config/wood/burned-black.jpg"
-          },
-          {
-            "id": "rhombus",
-            "name": "Rhombus",
-            "image": "/images/config/wood/rhombus.jpg"
-          }
-        ]
+        "id": "burned-oiled",
+        "name": "Deginta alyvuota",
+        "type": "burned",
+        "image": "/images/config/wood/burned-oiled.jpg",
+        "price": 0
       },
       {
-        "name": "WPC LENTOS",
-        "options": [
-          {
-            "id": "wpc-brown",
-            "name": "WPC Ruda",
-            "image": "/images/config/wood/wpc-brown.jpg"
-          },
-          {
-            "id": "wpc-black",
-            "name": "WPC Juoda",
-            "image": "/images/config/wood/wpc-black.jpg"
-          }
-        ]
+        "id": "burned-black",
+        "name": "Deginta juoda",
+        "type": "burned",
+        "image": "/images/config/wood/burned-black.jpg",
+        "price": 0
+      },
+      {
+        "id": "burned-silver",
+        "name": "Deginta sidabrinė",
+        "type": "burned",
+        "image": "/images/config/wood/burned-silver.jpg",
+        "price": 0
+      },
+      {
+        "id": "burned-cherry",
+        "name": "Deginta vyšninė",
+        "type": "burned",
+        "image": "/images/config/wood/burned-cherry.jpg",
+        "price": 0
+      },
+      {
+        "id": "burned-black-spruce",
+        "name": "Deginta juoda eglė",
+        "type": "burned",
+        "image": "/images/config/wood/burned-black-spruce.jpg",
+        "price": 0
+      },
+      {
+        "id": "anthrazitgrau",
+        "name": "Anthrazitgrau",
+        "type": "stain",
+        "image": "/images/config/wood/anthrazitgrau.jpg",
+        "price": 0
+      },
+      {
+        "id": "anthrazit-ral",
+        "name": "Anthrazit RAL",
+        "type": "stain",
+        "image": "/images/config/wood/anthrazit-ral.jpg",
+        "price": 0
+      },
+      {
+        "id": "ebenholz",
+        "name": "Ebenholz",
+        "type": "stain",
+        "image": "/images/config/wood/ebenholz.jpg",
+        "price": 0
+      },
+      {
+        "id": "grafitgrau",
+        "name": "Grafitgrau",
+        "type": "stain",
+        "image": "/images/config/wood/grafitgrau.jpg",
+        "price": 0
+      },
+      {
+        "id": "kastanie",
+        "name": "Kastanie",
+        "type": "stain",
+        "image": "/images/config/wood/kastanie.jpg",
+        "price": 0
+      },
+      {
+        "id": "nussbaum",
+        "name": "Nussbaum",
+        "type": "stain",
+        "image": "/images/config/wood/nussbaum.jpg",
+        "price": 0
+      },
+      {
+        "id": "palisander",
+        "name": "Palisander",
+        "type": "stain",
+        "image": "/images/config/wood/palisander.jpg",
+        "price": 0
+      },
+      {
+        "id": "pinnie",
+        "name": "Pinnie",
+        "type": "stain",
+        "image": "/images/config/wood/pinnie.jpg",
+        "price": 0
+      },
+      {
+        "id": "rhombus",
+        "name": "Rombas",
+        "type": "pattern",
+        "image": "/images/config/wood/rhombus.jpg",
+        "price": 0
+      },
+      {
+        "id": "silbergrau",
+        "name": "Silbergrau",
+        "type": "stain",
+        "image": "/images/config/wood/silbergrau.jpg",
+        "price": 0
+      },
+      {
+        "id": "teak",
+        "name": "Teak",
+        "type": "stain",
+        "image": "/images/config/wood/teak.jpg",
+        "price": 0
+      },
+      {
+        "id": "wpc-black",
+        "name": "WPC juoda",
+        "type": "wpc",
+        "image": "/images/config/wood/wpc-black.jpg",
+        "price": 0
+      },
+      {
+        "id": "wpc-brown",
+        "name": "WPC ruda",
+        "type": "wpc",
+        "image": "/images/config/wood/wpc-brown.jpg",
+        "price": 0
       }
     ]
   },
   "thermoCover": {
-    "title": "Termo dangčio pasirinkimas",
-    "description": "Termo dangtis kubilui yra itin reikalingas siekiant palaikyti optimalią vandens temperatūrą bei vandens švarą.",
+    "title": "Termo dangčio spalva",
     "options": [
       {
-        "id": "cover-black",
-        "name": "Juodas",
-        "image": "/images/config/cover/black.png"
+        "id": "black",
+        "name": "Juoda",
+        "image": "/images/config/cover/black.png",
+        "price": 250
       },
       {
-        "id": "cover-brown",
-        "name": "Rudas",
-        "image": "/images/config/cover/brown.png"
+        "id": "brown",
+        "name": "Ruda",
+        "image": "/images/config/cover/brown.png",
+        "price": 250
       },
       {
-        "id": "cover-grey",
-        "name": "Pilkas",
-        "image": "/images/config/cover/grey.png"
+        "id": "grey",
+        "name": "Pilka",
+        "image": "/images/config/cover/grey.png",
+        "price": 250
       }
     ]
   },
   "accessories": {
-    "title": "Papildomi priedai",
-    "description": "Kad padidinti kubilo funkcionalumą ir patogumą – rinkitės iš mūsų siūlomų priedų gausos.",
-    "categories": [
+    "title": "Papildomi aksesuarai",
+    "options": [
       {
-        "name": "HIDROMASAŽO PURKŠTUKAI",
-        "options": [
-          {
-            "id": "hydro-jets",
-            "name": "Hidromasažo purkštukai",
-            "image": "/images/config/accessories/hydro-jets.jpg"
-          }
-        ]
+        "id": "hydro-jets",
+        "name": "Hydro masažiniai purkštuvai",
+        "category": "jets",
+        "image": "/images/config/accessories/hydro-jets.jpg",
+        "price": 450
       },
       {
-        "name": "ORO PURKŠTUKAI",
-        "options": [
-          {
-            "id": "air-jets",
-            "name": "Oro purkštukai",
-            "image": "/images/config/accessories/air-jets.jpg"
-          }
-        ]
+        "id": "air-jets",
+        "name": "Oro masažiniai purkštuvai",
+        "category": "jets",
+        "image": "/images/config/accessories/air-jets.jpg",
+        "price": 350
       },
       {
-        "name": "GARSIAKALBIAI",
-        "subtitle": "Jūsų mėgstamai muzikai",
-        "options": [
-          {
-            "id": "speaker",
-            "name": "Bluetooth garsiakalbis",
-            "image": "/images/config/accessories/speaker.jpg"
-          }
-        ]
+        "id": "heater-integrated",
+        "name": "Integruotas elektrinis šildytuvas 3kW",
+        "category": "heater",
+        "image": "/images/config/accessories/heater-integrated.png",
+        "price": 850
       },
       {
-        "name": "JUTIMINĖ KONTROLĖ",
-        "options": [
-          {
-            "id": "control-3in1",
-            "name": "3 IN 1",
-            "description": "Oro, hidro, šildymo",
-            "image": "/images/config/accessories/control-3in1.jpg"
-          },
-          {
-            "id": "control-4in1",
-            "name": "4 IN 1",
-            "description": "Oro, hidro, šildymo, LED",
-            "image": "/images/config/accessories/control-4in1.jpg"
-          }
-        ]
+        "id": "heater-external",
+        "name": "Išorinis elektrinis šildytuvas 3kW",
+        "category": "heater",
+        "image": "/images/config/accessories/heater-external.jpg",
+        "price": 750
       },
       {
-        "name": "GĖRIMŲ LAIKIKLIAI",
-        "subtitle": "Atsigaivinimui",
-        "options": [
-          {
-            "id": "cupholder-1",
-            "name": "Gėrimų laikiklis 1",
-            "image": "/images/config/accessories/cupholder-1.jpg"
-          },
-          {
-            "id": "cupholder-2",
-            "name": "Gėrimų laikiklis 2",
-            "image": "/images/config/accessories/cupholder-2.jpg"
-          }
-        ]
+        "id": "led-rgb",
+        "name": "RGB LED apšvietimas",
+        "category": "lighting",
+        "image": "/images/config/accessories/led-rgb.jpg",
+        "price": 150
       },
       {
-        "name": "LED SPALVOS",
-        "options": [
-          {
-            "id": "led-rgb",
-            "name": "RGB LED",
-            "image": "/images/config/accessories/led-rgb.jpg"
-          },
-          {
-            "id": "led-green",
-            "name": "Žalia",
-            "image": "/images/config/accessories/led-green.png"
-          },
-          {
-            "id": "led-blue-light",
-            "name": "Mėlyna Šviesi",
-            "image": "/images/config/accessories/led-blue-light.png"
-          },
-          {
-            "id": "led-blue-dark",
-            "name": "Mėlyna Tamsi",
-            "image": "/images/config/accessories/led-blue-dark.png"
-          },
-          {
-            "id": "led-violet",
-            "name": "Violetinė",
-            "image": "/images/config/accessories/led-violet.png"
-          },
-          {
-            "id": "led-red",
-            "name": "Raudona",
-            "image": "/images/config/accessories/led-red.png"
-          }
-        ]
+        "id": "led-blue-light",
+        "name": "Mėlyna LED",
+        "category": "lighting",
+        "image": "/images/config/accessories/led-blue-light.png",
+        "price": 80
       },
       {
-        "name": "FILTRAVIMO DĖŽĖS",
-        "subtitle": "Estetiškumo išlaikymui",
-        "options": [
-          {
-            "id": "filtration-box-spruce",
-            "name": "Eglės",
-            "image": "/images/config/accessories/filtration-box-spruce.jpg"
-          },
-          {
-            "id": "filtration-box-thermo",
-            "name": "Termo",
-            "image": "/images/config/accessories/filtration-box-thermo.jpg"
-          },
-          {
-            "id": "filtration-box-cherry",
-            "name": "Vyšnios",
-            "image": "/images/config/accessories/filtration-box-cherry.jpg"
-          },
-          {
-            "id": "filtration-box-wpc",
-            "name": "WPC",
-            "image": "/images/config/accessories/filtration-box-wpc.jpg"
-          }
-        ]
+        "id": "led-blue-dark",
+        "name": "Tamsiai mėlyna LED",
+        "category": "lighting",
+        "image": "/images/config/accessories/led-blue-dark.png",
+        "price": 80
       },
       {
-        "name": "FILTRAVIMO SISTEMOS",
-        "subtitle": "Skaidriam vandeniui",
-        "options": [
-          {
-            "id": "filtration-system-box",
-            "name": "Sistemos Dėžė",
-            "image": "/images/config/accessories/filtration-system-box.jpg"
-          },
-          {
-            "id": "filtration-system",
-            "name": "Filtravimo Sistema",
-            "image": "/images/config/accessories/filtration-system.jpg"
-          }
-        ]
+        "id": "led-green",
+        "name": "Žalia LED",
+        "category": "lighting",
+        "image": "/images/config/accessories/led-green.png",
+        "price": 80
       },
       {
-        "name": "ŠILDYTUVO PARINKTYS",
-        "subtitle": "Karščio išlaikymui",
-        "options": [
-          {
-            "id": "heater-integrated",
-            "name": "Integruotas",
-            "image": "/images/config/accessories/heater-integrated.png"
-          },
-          {
-            "id": "heater-external",
-            "name": "Išorinis",
-            "image": "/images/config/accessories/heater-external.jpg"
-          }
-        ]
+        "id": "led-red",
+        "name": "Raudona LED",
+        "category": "lighting",
+        "image": "/images/config/accessories/led-red.png",
+        "price": 80
       },
       {
-        "name": "GECKO",
-        "options": [
-          {
-            "id": "gecko-1",
-            "name": "Gecko Sistema 1",
-            "image": "/images/config/accessories/gecko-1.jpg"
-          },
-          {
-            "id": "gecko-2",
-            "name": "Gecko Sistema 2",
-            "image": "/images/config/accessories/gecko-2.jpg"
-          }
-        ]
+        "id": "led-violet",
+        "name": "Violetinė LED",
+        "category": "lighting",
+        "image": "/images/config/accessories/led-violet.png",
+        "price": 80
+      },
+      {
+        "id": "led-color-1",
+        "name": "LED spalva 1",
+        "category": "lighting",
+        "image": "/images/config/accessories/led-color-1.png",
+        "price": 80
+      },
+      {
+        "id": "led-color-2",
+        "name": "LED spalva 2",
+        "category": "lighting",
+        "image": "/images/config/accessories/led-color-2.png",
+        "price": 80
+      },
+      {
+        "id": "gecko-1",
+        "name": "Gecko valdymo sistema",
+        "category": "control",
+        "image": "/images/config/accessories/gecko-1.jpg",
+        "price": 650
+      },
+      {
+        "id": "gecko-2",
+        "name": "Gecko valdymo sistema (premium)",
+        "category": "control",
+        "image": "/images/config/accessories/gecko-2.jpg",
+        "price": 850
+      },
+      {
+        "id": "control-3in1",
+        "name": "3-in-1 valdymo pultas",
+        "category": "control",
+        "image": "/images/config/accessories/control-3in1.jpg",
+        "price": 280
+      },
+      {
+        "id": "control-4in1",
+        "name": "4-in-1 valdymo pultas",
+        "category": "control",
+        "image": "/images/config/accessories/control-4in1.jpg",
+        "price": 350
+      },
+      {
+        "id": "filtration-system",
+        "name": "Filtravimo sistema",
+        "category": "filtration",
+        "image": "/images/config/accessories/filtration-system.jpg",
+        "price": 550
+      },
+      {
+        "id": "filtration-system-box",
+        "name": "Filtravimo sistema su dėžute",
+        "category": "filtration",
+        "image": "/images/config/accessories/filtration-system-box.jpg",
+        "price": 650
+      },
+      {
+        "id": "filtration-box-spruce",
+        "name": "Filtravimo dėžė (eglė)",
+        "category": "filtration",
+        "image": "/images/config/accessories/filtration-box-spruce.jpg",
+        "price": 180
+      },
+      {
+        "id": "filtration-box-cherry",
+        "name": "Filtravimo dėžė (vyšnia)",
+        "category": "filtration",
+        "image": "/images/config/accessories/filtration-box-cherry.jpg",
+        "price": 200
+      },
+      {
+        "id": "filtration-box-thermo",
+        "name": "Termo filtravimo dėžė",
+        "category": "filtration",
+        "image": "/images/config/accessories/filtration-box-thermo.jpg",
+        "price": 220
+      },
+      {
+        "id": "filtration-box-wpc",
+        "name": "WPC filtravimo dėžė",
+        "category": "filtration",
+        "image": "/images/config/accessories/filtration-box-wpc.jpg",
+        "price": 250
+      },
+      {
+        "id": "cupholder-1",
+        "name": "Stiklinių laikiklis",
+        "category": "accessories",
+        "image": "/images/config/accessories/cupholder-1.jpg",
+        "price": 45
+      },
+      {
+        "id": "cupholder-2",
+        "name": "Stiklinių laikiklis (didelis)",
+        "category": "accessories",
+        "image": "/images/config/accessories/cupholder-2.jpg",
+        "price": 55
+      },
+      {
+        "id": "speaker",
+        "name": "Bluetooth garsiakalbis",
+        "category": "accessories",
+        "image": "/images/config/accessories/speaker.jpg",
+        "price": 120
       }
-    ],
-    "note": "Priedai priklauso nuo pasirinktos komplektacijos."
+    ]
   }
 }
