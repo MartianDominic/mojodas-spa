@@ -58,8 +58,8 @@ export function Bestsellers() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           {/* Featured Card */}
           {featured && (
-            <div className="md:col-span-2 flex flex-col md:flex-row bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-200">
-              <div className="md:w-1/2 h-[400px] md:h-auto relative">
+            <div className="md:col-span-2 flex flex-col md:flex-row bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-200 max-w-6xl mx-auto">
+              <div className="md:w-1/2 h-[300px] md:h-[400px] lg:h-[500px] max-h-[600px] relative">
                 <Image
                   src={featured.image}
                   alt={featured.name}
@@ -112,7 +112,7 @@ export function Bestsellers() {
           {others.map((product) => (
             <div
               key={product.slug}
-              className="flex flex-col bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-200"
+              className="flex flex-col bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-200 max-w-xl mx-auto w-full"
             >
               <Image
                 src={product.image}
