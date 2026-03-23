@@ -12,11 +12,13 @@ interface SpecItemProps {
 
 function SpecItem({ label, value }: SpecItemProps) {
   return (
-    <div>
-      <p className="text-xs uppercase tracking-widest text-secondary mb-1">
+    <div className="flex flex-col sm:flex-row sm:items-baseline justify-between py-6 border-b border-on-surface/10 group hover:bg-surface-container-low transition-colors px-2">
+      <p className="text-sm uppercase tracking-[0.15em] font-medium text-secondary group-hover:text-on-surface transition-colors">
         {label}
       </p>
-      <p className="font-medium text-on-surface">{value}</p>
+      <p className="font-headline text-xl text-on-surface mt-2 sm:mt-0 tracking-tight text-right">
+        {value}
+      </p>
     </div>
   );
 }
@@ -100,9 +102,12 @@ export function TechSpecs({ specs, capacity }: TechSpecsProps) {
   }
 
   return (
-    <div className="bg-surface-container-low p-6 md:p-8 lg:p-12 mt-12">
-      <h3 className="font-headline text-2xl mb-8">Technine Specifikacija</h3>
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-y-10 gap-x-8">
+    <div className="mt-24 pt-16 border-t-2 border-on-surface">
+      <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
+        <h3 className="font-headline italic text-4xl font-light tracking-tight text-on-surface">The Ledger</h3>
+        <p className="text-xs uppercase tracking-widest text-secondary mt-4 md:mt-0 font-medium">Techninė Specifikacija & Matmenys</p>
+      </div>
+      <div className="flex flex-col border-t border-on-surface">
         {specItems.map((item) => (
           <SpecItem key={item.label} label={item.label} value={item.value} />
         ))}
