@@ -59,7 +59,7 @@ export function ProductImageGallery({ product }: ProductImageGalleryProps) {
       )}
 
       {/* Technical Specs */}
-      <div className="bg-surface-container-low p-12 mt-12">
+      <div className="bg-surface-container-low p-6 md:p-8 lg:p-12 mt-12">
         <h3 className="font-headline text-2xl mb-8">Techninė Specifikacija</h3>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-y-10 gap-x-8">
           <div>

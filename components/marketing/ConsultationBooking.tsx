@@ -20,7 +20,7 @@ const calendarDays = [
 
 export function ConsultationBooking() {
   return (
-    <section className="py-32 bg-surface overflow-hidden">
+    <section className="py-16 md:py-24 lg:py-32 bg-surface overflow-hidden">
       <div className="container mx-auto px-6">
         <div className="flex flex-col lg:flex-row items-center gap-20">
           {/* Left Content */}
@@ -51,7 +51,7 @@ export function ConsultationBooking() {
 
           {/* Right - Calendar */}
           <div className="flex-1 w-full lg:w-auto">
-            <div className="bg-surface-container-high p-8 md:p-12 shadow-sm relative">
+            <div className="bg-surface-container-high p-8 md:p-6 md:p-8 lg:p-12 shadow-sm relative">
               <div className="mb-8">
                 <h4 className="font-headline text-xl mb-2">
                   Pasirinkite dieną ir laiką

@@ -96,7 +96,7 @@ export function MultiplePopupButtonsExample() {
 // Example 7: Replacing B2BCalendly Placeholder
 export function B2BCalendlyReplacement() {
   return (
-    <div className="bg-surface-container-high p-12 flex flex-col justify-center items-center text-center space-y-8 relative overflow-hidden h-full">
+    <div className="bg-surface-container-high p-6 md:p-8 lg:p-12 flex flex-col justify-center items-center text-center space-y-8 relative overflow-hidden h-full">
       <div className="relative z-10 w-full max-w-4xl">
         <h3 className="font-display text-3xl mb-4">
           Techninė konsultacija su inžinieriumi
@@ -119,7 +119,7 @@ export function B2BCalendlyReplacement() {
 // Example 8: Replacing ConsultationBooking Section
 export function ConsultationBookingReplacement() {
   return (
-    <section className="py-32 bg-surface overflow-hidden">
+    <section className="py-16 md:py-24 lg:py-32 bg-surface overflow-hidden">
       <div className="container mx-auto px-6">
         <div className="flex flex-col lg:flex-row items-center gap-20">
           {/* Left Content */}

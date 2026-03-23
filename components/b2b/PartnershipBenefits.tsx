@@ -29,7 +29,7 @@ const benefits = [
 
 export function PartnershipBenefits() {
   return (
-    <section className="bg-surface-container-low py-32 px-8">
+    <section className="bg-surface-container-low py-16 md:py-24 lg:py-32 px-8">
       <div className="max-w-screen-2xl mx-auto">
         <div className="max-w-3xl mb-24">
           <h2 className="font-display text-4xl md:text-5xl mb-8">
@@ -43,7 +43,7 @@ export function PartnershipBenefits() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-outline-variant/30">
           {benefits.map((benefit) => (
-            <div key={benefit.title} className="bg-surface p-12 space-y-6">
+            <div key={benefit.title} className="bg-surface p-6 md:p-8 lg:p-12 space-y-6">
               <Icon name={benefit.icon} className="text-primary text-4xl" />
               <h4 className="font-headline text-xl">{benefit.title}</h4>
               <p className="text-on-surface-variant text-sm leading-relaxed">

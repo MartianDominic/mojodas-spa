@@ -44,18 +44,18 @@ export function Bestsellers() {
   const others = bestsellers.filter((p) => !p.featured);
 
   return (
-    <section className="bg-[#FAFAFA] text-[#050505] py-32 px-12">
-      <div className="container mx-auto">
-        <div className="mb-16">
-          <h2 className="font-headline text-4xl md:text-5xl mb-4">
+    <section className="bg-[#FAFAFA] text-[#050505] py-16 md:py-24 lg:py-32 px-4 md:px-8 lg:px-12">
+      <div className="container mx-auto max-w-screen-2xl">
+        <div className="mb-12 md:mb-16">
+          <h2 className="font-headline text-3xl md:text-4xl lg:text-5xl mb-4">
             Dažniausias klientų pasirinkimas.
           </h2>
-          <p className="font-body text-gray-500 max-w-2xl">
+          <p className="font-body text-sm md:text-base text-gray-500 max-w-2xl">
             Patikrinti modeliai, kuriuos dažniausiai užsako privačių namų savininkai.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           {/* Featured Card */}
           {featured && (
             <div className="md:col-span-2 flex flex-col md:flex-row bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-200">

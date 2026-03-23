@@ -3,7 +3,7 @@ import { Icon } from "@/components/ui";
 
 export function ContactCalendly() {
   return (
-    <div className="bg-surface-container-high p-12 flex flex-col justify-center items-center text-center space-y-8 relative overflow-hidden h-full">
+    <div className="bg-surface-container-high p-6 md:p-8 lg:p-12 flex flex-col justify-center items-center text-center space-y-8 relative overflow-hidden h-full">
       {/* Background Image */}
       <div className="absolute inset-0 opacity-5 grayscale">
         <Image

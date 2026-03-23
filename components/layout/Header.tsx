@@ -42,7 +42,7 @@ export function Header({ variant = "default" }: HeaderProps) {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-12">
+          <div className="hidden md:flex items-center gap-6 md:p-8 lg:p-12">
             <Link
               href={ROUTES.CATALOG}
               className={cn(

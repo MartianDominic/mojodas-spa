@@ -82,7 +82,7 @@ export function ContactForm() {
             Ačiū už jūsų žinutę!
           </h2>
         </div>
-        <div className="bg-surface-container-low p-12 text-center">
+        <div className="bg-surface-container-low p-6 md:p-8 lg:p-12 text-center">
           <div className="text-primary text-6xl mb-6">✓</div>
           <p className="text-on-surface-variant text-lg leading-relaxed">
             {formState.message}

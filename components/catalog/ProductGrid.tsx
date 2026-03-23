@@ -14,7 +14,7 @@ interface ProductGridProps {
 export function ProductGrid({ products, className }: ProductGridProps) {
   if (products.length === 0) {
     return (
-      <div className="text-center py-20">
+      <div className="text-center py-12 md:py-16 lg:py-20">
         <p className="text-on-surface-variant text-lg">
           Produktu nerasta pagal pasirinktus filtrus.
         </p>

@@ -31,7 +31,7 @@ const models = [
 
 export function B2BModels() {
   return (
-    <section className="py-32 px-8 max-w-screen-2xl mx-auto overflow-hidden">
+    <section className="py-16 md:py-24 lg:py-32 px-8 max-w-screen-2xl mx-auto overflow-hidden">
       <div className="flex flex-col md:flex-row justify-between items-end mb-24 gap-8">
         <h2 className="font-display text-4xl md:text-5xl max-w-2xl">
           Rekomenduojami modeliai verslui.
@@ -44,7 +44,7 @@ export function B2BModels() {
         </Link>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:p-8 lg:p-12">
         {models.map((model) => (
           <div key={model.slug} className="group">
             <div className="relative aspect-[3/4] overflow-hidden mb-8 bg-surface-container">
