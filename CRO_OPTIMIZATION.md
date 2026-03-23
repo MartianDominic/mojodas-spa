@@ -1,0 +1,627 @@
+# CRO Optimization Plan: User Journey Architecture
+
+## Target Customer Profile (ICP)
+
+### Demographics
+- **Gender:** Male
+- **Age:** 38-55 years
+- **Income:** 3,000-7,000 EUR/month net
+- **Location:** Lithuania (primarily urban/suburban homeowners)
+
+### Psychographics
+- Homeowner with garden, terrace, or suitable outdoor space
+- Family man (children may be teens/young adults or grown)
+- Successful professional who values quality over price
+- Time-poor: doesn't want to spend hours researching
+- Risk-averse on big purchases: needs confidence before committing
+- Practical: needs to justify 2-5k EUR purchase to spouse/self
+- Patriotic: "Made in Lithuania" resonates strongly
+
+### Key Concerns & Objections
+1. "Will this actually fit my space?"
+2. "Is this worth 2,000-5,000 EUR?"
+3. "What if I choose the wrong model?"
+4. "How hard is installation? Do I need permits?"
+5. "Will it last? What about warranty?"
+6. "Can I afford this right now?" (financing from ~42 EUR/month)
+7. "What do other customers think?"
+
+---
+
+## Actual Product Catalog Analysis
+
+### Price Distribution (16 products)
+| Range | Count | Products |
+|-------|-------|----------|
+| €1,490-2,000 | 4 | Arctic (€1,490), Ofuro (€1,890), Classic Round In (€1,990) |
+| €2,000-3,000 | 5 | Classic Round Out (€2,490), Paris In (€2,690), Andorra (€2,890), Grande Round In (€2,890) |
+| €3,000-4,000 | 4 | Classic Round Horizon (€3,490), Cuba Out (€3,590), Monaco In (€3,290), Grande Round Out (€3,190), Macau In (€3,190) |
+| €4,000-5,000 | 2 | Grande Round Horizon (€4,290), Monaco Horizon (€4,890) |
+| €5,000+ | 1 | Arctic Chiller (€5,990) |
+
+### Shape Distribution
+| Shape | Products | Price Range |
+|-------|----------|-------------|
+| Round (6) | Classic Round series, Grande Round series | €1,990-4,290 |
+| Square (7) | Paris, Andorra, Cuba, Monaco series, Macau | €2,690-4,890 |
+| Therapeutic (3) | Arctic, Arctic Chiller, Ofuro | €1,490-5,990 |
+
+### Capacity Distribution
+| Capacity | Products | Use Case |
+|----------|----------|----------|
+| 1-2 persons | Arctic, Arctic Chiller, Ofuro | Solo/couple, therapy |
+| 4-6 persons | Classic Round series, Paris, Andorra | Small family, couple |
+| 6-8 persons | Grande Round series, Cuba, Monaco In/Out, Macau | Large family, friends |
+| 8-10 persons | Monaco Horizon | Entertaining, groups |
+
+### Feature Availability
+| Feature | Products With | Products Without |
+|---------|---------------|------------------|
+| Water Jets | 6 (Monaco series, Grande Round In, Cuba, Macau) | 10 |
+| Air Jets | 6 (same as water jets) | 10 |
+| LED Lighting | 8 | 8 |
+| Filtration | 9 | 7 |
+| Cold Therapy | 1 (Arctic Chiller) | 15 |
+
+---
+
+## Current State Analysis
+
+### Existing User Journey
+```
+Homepage
+├── Hero section
+├── 3 Bestsellers ("Populiariausi")
+├── 3 Categories (Round, Square, Therapeutic)
+└── CTA to Catalog
+
+         ↓
+
+Catalog (/katalogas)
+├── 16 products displayed
+├── Basic filtering (shape, size, heater)
+└── Product cards with price
+
+         ↓
+
+Product Page (/produktas/[slug])
+├── Gallery
+├── Specs
+├── Price
+└── Configure CTA
+
+         ↓
+
+Configurator (/konfiguratorius)
+├── Many individual options
+├── Price updates
+└── Add to cart
+
+         ↓
+
+Cart → Checkout
+```
+
+### Problems Identified
+1. **Catalog Cognitive Overload:** 16 products with complex specs overwhelms users
+2. **No Guided Path:** User must become a "hot tub expert" to choose
+3. **Weak Trust Signals:** Not enough social proof throughout journey
+4. **Configurator Decision Fatigue:** Too many individual choices
+5. **Missing Objection Handling:** FAQs and concerns not addressed proactively
+6. **Financing Buried:** Monthly payment option not prominent enough
+
+---
+
+## Optimized User Journey Architecture
+
+### Overview Flow
+```
+HOMEPAGE (Emotional Hook + Clear Paths)
+├── Hero: Lifestyle imagery + primary CTA
+├── Product Finder Quiz CTA (PRIMARY PATH)
+├── 3 Bestsellers (social proof)
+├── 3 Categories (secondary path for experts)
+├── Trust Bar (warranty, made in LT, installation)
+└── Testimonials
+
+         ↓ Quiz OR Category Click
+
+PERSONALIZED RESULTS (2-4 Products, Not 16)
+├── "Jums rekomenduojame" header
+├── 2-4 matched products with "why this fits"
+├── Comparison tool
+├── "Peržiūrėti visus" secondary link
+└── Expert consultation CTA
+
+         ↓ Product Selected
+
+PRODUCT PAGE (Confidence Builder)
+├── Hero: Gallery + Price + Monthly + Key Benefit
+├── Quick Specs: 4-5 icons
+├── "Kodėl šis modelis" positioning
+├── Social Proof: Reviews + Installation Photos
+├── Comparison: "vs similar models"
+├── FAQ Section (addresses objections)
+├── Financing Calculator
+└── Sticky CTA Bar
+
+         ↓ Configure/Order
+
+SIMPLIFIED CONFIGURATOR
+├── 3 Packages: Bazinis / Populiarus / Premium
+├── "Populiarus" pre-selected
+├── Single upgrades shown as +EUR
+├── "Dauguma renkasi" badges
+├── Live price + monthly payment
+└── Clear "Į krepšelį" CTA
+
+         ↓ Add to Cart
+
+OPTIMIZED CHECKOUT
+├── Guest checkout (no forced account)
+├── Financing options prominent
+├── Trust signals throughout
+├── Delivery timeline
+├── "Turite klausimų?" phone CTA
+└── Progress indicator
+```
+
+---
+
+## Component Specifications
+
+### 1. Product Finder Quiz
+
+**Purpose:** Reduce 16 products to 2-4 personalized recommendations
+
+**Location:**
+- Homepage hero section (primary CTA)
+- Catalog page header (before product grid)
+- Floating widget on all pages
+
+**Quiz Flow (3 steps, ~20 seconds):**
+
+Each question progressively filters products. Questions are designed to NOT conflict.
+
+```
+STEP 1: PURPOSE (Eliminates product categories)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Question: "Kam naudosite kubilą?"
+
+┌─────────────────┬─────────────────┬─────────────────┐
+│ KARŠTAS         │ ŠALČIO TERAPIJA │ OFURO           │
+│ MAUDYMASIS      │                 │                 │
+│                 │                 │                 │
+│ Atsipalaidavimui│ Recovery,       │ Japoniška       │
+│ su šeima ar     │ kontrastinei    │ maudymosi       │
+│ draugais        │ terapijai       │ tradicija       │
+│                 │                 │                 │
+│ → 13 products   │ → 2 products    │ → 1 product     │
+│   (€1,990+)     │   (€1,490-5,990)│   (€1,890)      │
+└─────────────────┴─────────────────┴─────────────────┘
+
+If "Šalčio terapija" → Show Arctic (€1,490) vs Arctic Chiller (€5,990) comparison
+If "Ofuro" → Show Ofuro product page directly
+
+
+STEP 2: CAPACITY (Only if chose "Karštas maudymasis")
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Question: "Kiek žmonių dažniausiai maudysis kartu?"
+
+┌─────────────────┬─────────────────┬─────────────────┐
+│ 2-4 ASMENYS     │ 4-6 ASMENYS     │ 6+ ASMENYS      │
+│                 │                 │                 │
+│ Pora, maža      │ Šeima su        │ Draugų          │
+│ šeima           │ vaikais         │ kompanija       │
+│                 │                 │                 │
+│ nuo €1,990      │ nuo €2,690      │ nuo €2,890      │
+│ nuo 56 €/mėn    │ nuo 75 €/mėn    │ nuo 81 €/mėn    │
+└─────────────────┴─────────────────┴─────────────────┘
+
+Filters:
+- 2-4: Classic Round (In/Out/Horizon) → 3 products
+- 4-6: + Paris, Andorra, Grande Round → 6 products
+- 6+:  + Monaco series, Cuba, Macau → 7 products
+
+
+STEP 3: DESIGN PREFERENCE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Question: "Koks dizainas jums labiau patinka?"
+
+┌─────────────────┬─────────────────┬─────────────────┐
+│ APVALUS         │ KVADRATINIS     │ NESVARBU        │
+│ [image]         │ [image]         │                 │
+│                 │                 │ Parodyti        │
+│ Klasikinis,     │ Modernus,       │ visus           │
+│ tradicinis      │ elegantiškas    │ variantus       │
+│                 │                 │                 │
+│ nuo €1,990      │ nuo €2,690      │                 │
+└─────────────────┴─────────────────┴─────────────────┘
+
+Round: Classic Round, Grande Round
+Square: Paris, Andorra, Cuba, Monaco, Macau
+```
+
+**Product Mapping by Quiz Path:**
+
+| Purpose | Capacity | Shape | Recommended Products |
+|---------|----------|-------|---------------------|
+| Hot | 2-4 | Round | Classic Round In (€1,990), Classic Round Out (€2,490), Classic Round Horizon (€3,490) |
+| Hot | 2-4 | Square | Paris In (€2,690), Andorra (€2,890) |
+| Hot | 4-6 | Round | Grande Round In (€2,890), Grande Round Out (€3,190), Grande Round Horizon (€4,290) |
+| Hot | 4-6 | Square | Paris In (€2,690), Andorra (€2,890), Monaco In (€3,290) |
+| Hot | 6+ | Round | Grande Round series |
+| Hot | 6+ | Square | Monaco series (€3,290-4,890), Cuba Out (€3,590), Macau In (€3,190) |
+| Cold | - | - | Arctic (€1,490), Arctic Chiller (€5,990) |
+| Ofuro | - | - | Ofuro (€1,890) |
+
+**Results Page:**
+- Header: "Jums rekomenduojame" with quiz answer summary
+- 2-4 products max, sorted by popularity within selection
+- Each card shows: "Tinka jums, nes..." with personalized bullets
+- Below: "Peržiūrėti visus" link for browse-all access
+
+---
+
+### 2. Simplified Catalog View
+
+**Default State (after quiz or category click):**
+- Show only matched/category products (2-6 items)
+- Clear header: "Apvalūs kubilai" or "Jums parinkti modeliai"
+- Minimal filters visible
+
+**"Browse All" State:**
+- Available via link
+- Smart defaults: sort by popularity
+- Simplified filters:
+  - Capacity: 2-4 / 4-6 / 6+
+  - Shape: Round / Square / Therapeutic
+  - Price: Slider or ranges
+- Remove: Technical filters (jets, LED, etc.)
+
+**Filter Bar Redesign:**
+```typescript
+const SIMPLIFIED_FILTERS = [
+  { id: 'all', label: 'Visi' },
+  { id: 'small', label: '2-4 Asmenims' },
+  { id: 'large', label: '5+ Asmenims' },
+  { id: 'round', label: 'Apvalūs' },
+  { id: 'square', label: 'Kvadratiniai' },
+  { id: 'therapeutic', label: 'Šalčio terapija' },
+];
+// Remove: internal/external/horizon heater filters (too technical)
+```
+
+---
+
+### 3. Enhanced Product Page
+
+**Above the Fold:**
+```
+┌────────────────────────────────────────────┐
+│  [Gallery]              │ Monaco Horizon   │
+│  [Main Image]           │ Prabangus        │
+│  [Thumbnails]           │ 8-10 asmenims    │
+│                         │                  │
+│                         │ 4,890 EUR        │
+│                         │ arba nuo 136€/mėn│
+│                         │                  │
+│                         │ [KONFIGŪRUOTI]   │
+│                         │ [UŽSAKYTI]       │
+└────────────────────────────────────────────┘
+```
+
+**Quick Specs Bar:**
+```
+┌─────┬─────┬─────┬─────┬─────┐
+│ 4-6 │2.2m │ LED │Jets │ 5yr │
+│asm. │diam.│     │     │gar. │
+└─────┴─────┴─────┴─────┴─────┘
+```
+
+**"Kodėl šis modelis" Section:**
+- 2-3 sentence positioning statement
+- Key differentiator from similar models
+- "Tinka jums, jei..." bullet points
+
+**Social Proof Section:**
+- Customer reviews (if available)
+- Installation gallery (real customer photos)
+- "Parduota: 50+ vienetų" type badges
+
+**Comparison Widget:**
+```
+┌────────────────────────────────────────────┐
+│ Palyginkite su kitais modeliais            │
+├──────────────┬──────────────┬──────────────┤
+│ Monaco       │ Monaco       │ Paris        │
+│ Horizon      │ Out          │ In           │
+├──────────────┼──────────────┼──────────────┤
+│ 12,990 EUR   │ 9,990 EUR    │ 8,490 EUR    │
+│ 4-6 asm.     │ 4-6 asm.     │ 4-6 asm.     │
+│ Horizon krosn│ Išorinė krosn│ Integr. krosn│
+│ LED, Jets    │ LED          │ -            │
+└──────────────┴──────────────┴──────────────┘
+```
+
+**FAQ Section (addresses objections):**
+```typescript
+const PRODUCT_FAQS = [
+  {
+    question: 'Ar reikia leidimo statybai?',
+    answer: 'Daugeliu atvejų leidimo nereikia, nes kubilas nėra statinys...',
+  },
+  {
+    question: 'Kaip vyksta pristatymas ir montavimas?',
+    answer: 'Pristatome visoje Lietuvoje. Montavimas įskaičiuotas į kainą...',
+  },
+  {
+    question: 'Kokia garantija?',
+    answer: '5 metų garantija konstrukcijai, 2 metai elektronikai...',
+  },
+  {
+    question: 'Kiek kainuoja eksploatacija?',
+    answer: 'Malkinis kūrenimas: ~5 EUR/kūrenimą. Elektra ~15 EUR/mėn...',
+  },
+  {
+    question: 'Ar galima išsimokėtinai?',
+    answer: 'Taip, siūlome lizingą nuo 42 EUR/mėn (Arctic) iki 167 EUR/mėn (Arctic Chiller)...',
+  },
+];
+```
+
+**Financing Calculator:**
+- Prominent placement
+- Live calculation: "4,890 EUR = 136 EUR/mėn x 36 mėn"
+- "Sužinoti daugiau" link to financing page
+
+**Sticky CTA Bar (mobile):**
+- Fixed bottom bar on scroll
+- Shows: Price + Monthly + "Konfigūruoti" button
+
+---
+
+### 4. Simplified Configurator
+
+**Package-Based Approach:**
+
+Based on actual configurableOptions in products (acrylicColor, woodFinish, thermoCover, accessories, heatingSystem):
+
+```typescript
+interface ConfiguratorPackage {
+  id: string;
+  name: string;
+  description: string;
+  priceModifier: number;
+  included: string[];
+  badge?: string;
+}
+
+const PACKAGES: ConfiguratorPackage[] = [
+  {
+    id: 'basic',
+    name: 'Bazinis',
+    description: 'Viskas ko reikia pradėti',
+    priceModifier: 0,
+    included: [
+      'Standartinė krosnelė',
+      'Eglės medienos apdaila',
+      'Pagrindinis dangtelis',
+    ],
+  },
+  {
+    id: 'popular',
+    name: 'Populiarus',
+    description: 'Mūsų klientų pasirinkimas',
+    priceModifier: 490,
+    included: [
+      'Viskas iš Bazinio +',
+      'Termo dangtelis',
+      'Laiptai',
+      'Vandens priežiūros rinkinys',
+    ],
+    badge: 'Dauguma renkasi',
+  },
+  {
+    id: 'premium',
+    name: 'Premium',
+    description: 'Maksimalus komfortas',
+    priceModifier: 990,
+    included: [
+      'Viskas iš Populiaraus +',
+      'Termo mediena (Thermowood)',
+      'LED apšvietimas',
+      'Premium akrilas',
+    ],
+  },
+];
+```
+
+**UI Layout:**
+```
+┌────────────────────────────────────────────┐
+│ 1. Pasirinkite paketą                      │
+├──────────────┬──────────────┬──────────────┤
+│   BAZINIS    │  POPULIARUS  │   PREMIUM    │
+│   +0 EUR     │  +490 EUR    │  +990 EUR    │
+│              │  ★ Dauguma   │              │
+│              │    renkasi   │              │
+│  [Rinktis]   │  [PASIRINKTA]│  [Rinktis]   │
+└──────────────┴──────────────┴──────────────┘
+
+┌────────────────────────────────────────────┐
+│ 2. Papildomi pasirinkimai                  │
+│                                            │
+│ ☐ Filtracijos sistema (+390 EUR)          │
+│ ☐ Masažiniai purkštukai (+590 EUR)        │
+│ ☐ Elektrinis šildytuvas (+490 EUR)        │
+└────────────────────────────────────────────┘
+
+┌────────────────────────────────────────────┐
+│ Jūsų kubilas                               │
+│                                            │
+│ Monaco Horizon - Populiarus paketas        │
+│                                            │
+│ Bazinė kaina:         4,890 EUR            │
+│ Paketas:               +490 EUR            │
+│ ────────────────────────────               │
+│ Viso:                 5,380 EUR            │
+│ arba                  150 EUR/mėn          │
+│                                            │
+│ [       Į KREPŠELĮ       ]                 │
+└────────────────────────────────────────────┘
+```
+
+---
+
+### 5. Trust Elements (Site-Wide)
+
+**Trust Bar Component:**
+```typescript
+const TRUST_BADGES = [
+  { icon: 'flag-lt', text: 'Gaminama Lietuvoje' },
+  { icon: 'shield', text: '5 metų garantija' },
+  { icon: 'truck', text: 'Montavimas įskaičiuotas' },
+  { icon: 'phone', text: 'Nemokama konsultacija' },
+];
+```
+
+**Placement:**
+- Below homepage hero
+- Above footer on all pages
+- In checkout flow
+
+**Customer Proof Points:**
+- "Parduota 500+ kubilų"
+- "4.9/5 klientų įvertinimas"
+- Real installation photos in gallery
+
+---
+
+### 6. Checkout Optimization
+
+**Key Principles:**
+- Guest checkout default (no forced account)
+- Clear progress indicator
+- Financing prominent (not hidden)
+- Trust signals throughout
+- Phone support visible
+
+**Flow:**
+```
+Step 1: Kontaktai
+- Name, email, phone
+- "Užsakymas be registracijos"
+
+Step 2: Pristatymas
+- Address
+- Delivery timeline shown
+- Installation scheduling
+
+Step 3: Mokėjimas
+- Financing option first
+- Bank transfer
+- Invoice for B2B
+
+Step 4: Patvirtinimas
+- Order summary
+- Next steps clear
+- Support contact
+```
+
+---
+
+## Implementation Priority
+
+### Phase 1: High Impact, Quick Wins
+1. **Product Finder Quiz** - New component
+2. **Quiz Results Page** - Personalized catalog view
+3. **Trust Bar** - Reusable component
+4. **Product Page FAQ** - Addresses objections
+
+### Phase 2: Conversion Optimization
+5. **Configurator 3-Package System** - Reduces decision fatigue
+6. **Product Comparison Widget** - Helps decision making
+7. **Sticky Mobile CTA** - Captures mobile users
+8. **Financing Calculator** - Shows affordability
+
+### Phase 3: Polish
+9. **Checkout Optimization** - Guest checkout, progress bar
+10. **Social Proof** - Reviews, installation gallery
+11. **A/B Testing Setup** - Track improvements
+
+---
+
+## File Structure for Implementation
+
+```
+components/
+├── quiz/
+│   ├── ProductFinderQuiz.tsx      # Main quiz component
+│   ├── QuizStep.tsx               # Individual question
+│   ├── QuizOption.tsx             # Option card
+│   ├── QuizResults.tsx            # Results display
+│   └── quizLogic.ts               # Scoring algorithm
+├── catalog/
+│   ├── PersonalizedResults.tsx    # Quiz-driven view
+│   ├── CatalogContent.tsx         # Updated
+│   └── FilterBar.tsx              # Simplified
+├── product/
+│   ├── ProductComparison.tsx      # Comparison widget
+│   ├── ProductFAQ.tsx             # FAQ accordion
+│   ├── FinancingCalculator.tsx    # Monthly payment calc
+│   └── StickyMobileCTA.tsx        # Mobile conversion
+├── configurator/
+│   ├── PackageSelector.tsx        # 3-tier packages
+│   └── ConfiguratorSimplified.tsx # Streamlined flow
+└── shared/
+    └── TrustBar.tsx               # Trust badges
+```
+
+---
+
+## Success Metrics
+
+### Primary KPIs
+- **Conversion Rate:** Homepage → Checkout completion
+- **Add-to-Cart Rate:** Product page → Cart
+- **Quiz Completion Rate:** Quiz start → Results view
+- **Average Order Value:** Track package upgrades
+
+### Secondary KPIs
+- Time on site
+- Pages per session
+- Bounce rate reduction
+- Mobile conversion rate
+- Financing application rate
+
+---
+
+## Technical Notes
+
+### Data Requirements
+All products already have `filterableSpecs` in `products.json`:
+```json
+{
+  "filterableSpecs": {
+    "hasWaterJets": boolean,
+    "hasAirJets": boolean,
+    "hasLED": boolean,
+    "hasFiltration": boolean,
+    "hasElectricHeater": boolean,
+    "isColdTherapy": boolean,
+    "weightKg": number | null,
+    "externalSizeMm": number | null
+  }
+}
+```
+
+### State Management
+- Quiz state: Local state with URL params for sharing
+- Catalog filters: URL params for bookmarking
+- Configurator: Zustand store (existing)
+
+### SEO Considerations
+- Quiz results page should be indexable with canonical URL
+- Product pages remain primary landing pages
+- Implement proper schema.org Product markup
