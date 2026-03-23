@@ -1,43 +1,99 @@
 {
-  "scrapedAt": "2026-03-22T23:13:57.535169Z",
+  "scrapedAt": "2026-03-23T18:30:00Z",
+  "sourceUrl": "https://mojodasspa.com",
   "acrylicColors": {
     "title": "Akrilo įdėklo spalvos pasirinkimas",
     "options": [
       {
-        "id": "perlamutrinė-pilka",
-        "name": "Perlamutrinė pilka",
-        "image": "images/config/acrylic/acrylic-1.png",
-        "originalUrl": "https://mojodasspa.com/wp-content/uploads/2024/01/round-in-1.png"
+        "id": "black-marble",
+        "name": "Juodas marmuras",
+        "type": "marble",
+        "image": "/images/config/acrylic/black-marble.png",
+        "price": 0
       },
       {
-        "id": "perlamutrinė-balta",
-        "name": "Perlamutrinė balta",
-        "image": "images/config/acrylic/acrylic-2.png",
-        "originalUrl": "https://mojodasspa.com/wp-content/uploads/2024/01/round-in-sch.png"
+        "id": "grey",
+        "name": "Pilka",
+        "type": "solid",
+        "image": "/images/config/acrylic/grey.png",
+        "price": 0
       },
       {
-        "id": "mėlyna",
-        "name": "Mėlyna",
-        "image": "images/config/acrylic/acrylic-3.png",
-        "originalUrl": "https://mojodasspa.com/wp-content/uploads/2024/01/round-in3-1.png"
+        "id": "blue-marble",
+        "name": "Mėlynas marmuras",
+        "type": "marble",
+        "image": "/images/config/acrylic/blue-marble.png",
+        "price": 0
       },
       {
-        "id": "sidabrinė",
-        "name": "Sidabrinė",
-        "image": "images/config/acrylic/acrylic-4.png",
-        "originalUrl": "https://mojodasspa.com/wp-content/uploads/2024/01/round-in2-1.png"
+        "id": "green-marble",
+        "name": "Žalias marmuras",
+        "type": "marble",
+        "image": "/images/config/acrylic/green-marble.png",
+        "price": 0
       },
       {
-        "id": "pilka-šlifuota",
-        "name": "Pilka šlifuota",
-        "image": "images/config/acrylic/acrylic-5.png",
-        "originalUrl": "https://mojodasspa.com/wp-content/uploads/2024/01/round-in4-1.png"
+        "id": "coffee-marble",
+        "name": "Kavos marmuras",
+        "type": "marble",
+        "image": "/images/config/acrylic/coffee-marble.png",
+        "price": 0
       },
       {
-        "id": "juoda-šlifuota",
-        "name": "Juoda šlifuota",
-        "image": "images/config/acrylic/acrylic-6.png",
-        "originalUrl": "https://mojodasspa.com/wp-content/uploads/2024/01/round-in5-1.png"
+        "id": "pearl-marble",
+        "name": "Perlų marmuras",
+        "type": "marble",
+        "image": "/images/config/acrylic/pearl-marble.png",
+        "price": 0
+      },
+      {
+        "id": "grey-marble",
+        "name": "Pilkas marmuras",
+        "type": "marble",
+        "image": "/images/config/acrylic/grey-marble.png",
+        "price": 0
+      },
+      {
+        "id": "white-marble",
+        "name": "Baltas marmuras",
+        "type": "marble",
+        "image": "/images/config/acrylic/white-marble.png",
+        "price": 0
+      },
+      {
+        "id": "brown-marble",
+        "name": "Rudas marmuras",
+        "type": "marble",
+        "image": "/images/config/acrylic/brown-marble.png",
+        "price": 0
+      },
+      {
+        "id": "white",
+        "name": "Balta",
+        "type": "solid",
+        "image": "/images/config/acrylic/white.png",
+        "price": 0
+      },
+      {
+        "id": "espresso",
+        "name": "Espresso",
+        "type": "solid",
+        "image": "/images/config/acrylic/espresso.png",
+        "price": 0
+      },
+      {
+        "id": "latte",
+        "name": "Latte",
+        "type": "solid",
+        "image": "/images/config/acrylic/latte.png",
+        "price": 0
+      },
+      {
+        "id": "granite",
+        "name": "Granitas",
+        "type": "solid",
+        "image": "/images/config/acrylic/granite.png",
+        "price": 0
       }
     ]
   },
@@ -45,34 +101,340 @@
     "title": "Kubilo apdailos pasirinkimas",
     "options": [
       {
-        "id": "silbergrau",
-        "name": "Silbergrau",
-        "image": "images/config/wood/wood-1.jpg",
-        "originalUrl": "https://mojodasspa.com/wp-content/uploads/2024/01/silbergrau.jpg"
+        "id": "natural",
+        "name": "Natūrali eglė",
+        "type": "natural",
+        "image": "/images/config/wood/natural.jpg",
+        "price": 0
       },
       {
-        "id": "pine",
-        "name": "Pine",
-        "image": "images/config/wood/wood-2.jpg",
-        "originalUrl": "https://mojodasspa.com/wp-content/uploads/2024/01/pinie-1.jpg"
+        "id": "burned-oiled",
+        "name": "Deginta alyvuota",
+        "type": "burned",
+        "image": "/images/config/wood/burned-oiled.jpg",
+        "price": 0
+      },
+      {
+        "id": "burned-black",
+        "name": "Deginta juoda",
+        "type": "burned",
+        "image": "/images/config/wood/burned-black.jpg",
+        "price": 0
+      },
+      {
+        "id": "burned-silver",
+        "name": "Deginta sidabrinė",
+        "type": "burned",
+        "image": "/images/config/wood/burned-silver.jpg",
+        "price": 0
+      },
+      {
+        "id": "burned-cherry",
+        "name": "Deginta vyšninė",
+        "type": "burned",
+        "image": "/images/config/wood/burned-cherry.jpg",
+        "price": 0
+      },
+      {
+        "id": "burned-black-spruce",
+        "name": "Deginta juoda eglė",
+        "type": "burned",
+        "image": "/images/config/wood/burned-black-spruce.jpg",
+        "price": 0
+      },
+      {
+        "id": "anthrazitgrau",
+        "name": "Anthrazitgrau",
+        "type": "stain",
+        "image": "/images/config/wood/anthrazitgrau.jpg",
+        "price": 0
+      },
+      {
+        "id": "anthrazit-ral",
+        "name": "Anthrazit RAL",
+        "type": "stain",
+        "image": "/images/config/wood/anthrazit-ral.jpg",
+        "price": 0
+      },
+      {
+        "id": "ebenholz",
+        "name": "Ebenholz",
+        "type": "stain",
+        "image": "/images/config/wood/ebenholz.jpg",
+        "price": 0
+      },
+      {
+        "id": "grafitgrau",
+        "name": "Grafitgrau",
+        "type": "stain",
+        "image": "/images/config/wood/grafitgrau.jpg",
+        "price": 0
+      },
+      {
+        "id": "kastanie",
+        "name": "Kastanie",
+        "type": "stain",
+        "image": "/images/config/wood/kastanie.jpg",
+        "price": 0
+      },
+      {
+        "id": "nussbaum",
+        "name": "Nussbaum",
+        "type": "stain",
+        "image": "/images/config/wood/nussbaum.jpg",
+        "price": 0
+      },
+      {
+        "id": "palisander",
+        "name": "Palisander",
+        "type": "stain",
+        "image": "/images/config/wood/palisander.jpg",
+        "price": 0
+      },
+      {
+        "id": "pinnie",
+        "name": "Pinnie",
+        "type": "stain",
+        "image": "/images/config/wood/pinnie.jpg",
+        "price": 0
+      },
+      {
+        "id": "rhombus",
+        "name": "Rombas",
+        "type": "pattern",
+        "image": "/images/config/wood/rhombus.jpg",
+        "price": 0
+      },
+      {
+        "id": "silbergrau",
+        "name": "Silbergrau",
+        "type": "stain",
+        "image": "/images/config/wood/silbergrau.jpg",
+        "price": 0
       },
       {
         "id": "teak",
         "name": "Teak",
-        "image": "images/config/wood/wood-3.jpg",
-        "originalUrl": "https://mojodasspa.com/wp-content/uploads/2024/01/teak-1.jpg"
+        "type": "stain",
+        "image": "/images/config/wood/teak.jpg",
+        "price": 0
       },
       {
-        "id": "charcoal",
-        "name": "Charcoal",
-        "image": "images/config/wood/wood-4.jpg",
-        "originalUrl": "https://mojodasspa.com/wp-content/uploads/2024/01/charcoal.jpg"
+        "id": "wpc-black",
+        "name": "WPC juoda",
+        "type": "wpc",
+        "image": "/images/config/wood/wpc-black.jpg",
+        "price": 0
       },
       {
-        "id": "oak",
-        "name": "Oak",
-        "image": "images/config/wood/wood-5.jpg",
-        "originalUrl": "https://mojodasspa.com/wp-content/uploads/2024/01/oak.jpg"
+        "id": "wpc-brown",
+        "name": "WPC ruda",
+        "type": "wpc",
+        "image": "/images/config/wood/wpc-brown.jpg",
+        "price": 0
+      }
+    ]
+  },
+  "thermoCover": {
+    "title": "Termo dangčio spalva",
+    "options": [
+      {
+        "id": "black",
+        "name": "Juoda",
+        "image": "/images/config/cover/black.png",
+        "price": 250
+      },
+      {
+        "id": "brown",
+        "name": "Ruda",
+        "image": "/images/config/cover/brown.png",
+        "price": 250
+      },
+      {
+        "id": "grey",
+        "name": "Pilka",
+        "image": "/images/config/cover/grey.png",
+        "price": 250
+      }
+    ]
+  },
+  "accessories": {
+    "title": "Papildomi aksesuarai",
+    "options": [
+      {
+        "id": "hydro-jets",
+        "name": "Hydro masažiniai purkštuvai",
+        "category": "jets",
+        "image": "/images/config/accessories/hydro-jets.jpg",
+        "price": 450
+      },
+      {
+        "id": "air-jets",
+        "name": "Oro masažiniai purkštuvai",
+        "category": "jets",
+        "image": "/images/config/accessories/air-jets.jpg",
+        "price": 350
+      },
+      {
+        "id": "heater-integrated",
+        "name": "Integruotas elektrinis šildytuvas 3kW",
+        "category": "heater",
+        "image": "/images/config/accessories/heater-integrated.png",
+        "price": 850
+      },
+      {
+        "id": "heater-external",
+        "name": "Išorinis elektrinis šildytuvas 3kW",
+        "category": "heater",
+        "image": "/images/config/accessories/heater-external.jpg",
+        "price": 750
+      },
+      {
+        "id": "led-rgb",
+        "name": "RGB LED apšvietimas",
+        "category": "lighting",
+        "image": "/images/config/accessories/led-rgb.jpg",
+        "price": 150
+      },
+      {
+        "id": "led-blue-light",
+        "name": "Mėlyna LED",
+        "category": "lighting",
+        "image": "/images/config/accessories/led-blue-light.png",
+        "price": 80
+      },
+      {
+        "id": "led-blue-dark",
+        "name": "Tamsiai mėlyna LED",
+        "category": "lighting",
+        "image": "/images/config/accessories/led-blue-dark.png",
+        "price": 80
+      },
+      {
+        "id": "led-green",
+        "name": "Žalia LED",
+        "category": "lighting",
+        "image": "/images/config/accessories/led-green.png",
+        "price": 80
+      },
+      {
+        "id": "led-red",
+        "name": "Raudona LED",
+        "category": "lighting",
+        "image": "/images/config/accessories/led-red.png",
+        "price": 80
+      },
+      {
+        "id": "led-violet",
+        "name": "Violetinė LED",
+        "category": "lighting",
+        "image": "/images/config/accessories/led-violet.png",
+        "price": 80
+      },
+      {
+        "id": "led-color-1",
+        "name": "LED spalva 1",
+        "category": "lighting",
+        "image": "/images/config/accessories/led-color-1.png",
+        "price": 80
+      },
+      {
+        "id": "led-color-2",
+        "name": "LED spalva 2",
+        "category": "lighting",
+        "image": "/images/config/accessories/led-color-2.png",
+        "price": 80
+      },
+      {
+        "id": "gecko-1",
+        "name": "Gecko valdymo sistema",
+        "category": "control",
+        "image": "/images/config/accessories/gecko-1.jpg",
+        "price": 650
+      },
+      {
+        "id": "gecko-2",
+        "name": "Gecko valdymo sistema (premium)",
+        "category": "control",
+        "image": "/images/config/accessories/gecko-2.jpg",
+        "price": 850
+      },
+      {
+        "id": "control-3in1",
+        "name": "3-in-1 valdymo pultas",
+        "category": "control",
+        "image": "/images/config/accessories/control-3in1.jpg",
+        "price": 280
+      },
+      {
+        "id": "control-4in1",
+        "name": "4-in-1 valdymo pultas",
+        "category": "control",
+        "image": "/images/config/accessories/control-4in1.jpg",
+        "price": 350
+      },
+      {
+        "id": "filtration-system",
+        "name": "Filtravimo sistema",
+        "category": "filtration",
+        "image": "/images/config/accessories/filtration-system.jpg",
+        "price": 550
+      },
+      {
+        "id": "filtration-system-box",
+        "name": "Filtravimo sistema su dėžute",
+        "category": "filtration",
+        "image": "/images/config/accessories/filtration-system-box.jpg",
+        "price": 650
+      },
+      {
+        "id": "filtration-box-spruce",
+        "name": "Filtravimo dėžė (eglė)",
+        "category": "filtration",
+        "image": "/images/config/accessories/filtration-box-spruce.jpg",
+        "price": 180
+      },
+      {
+        "id": "filtration-box-cherry",
+        "name": "Filtravimo dėžė (vyšnia)",
+        "category": "filtration",
+        "image": "/images/config/accessories/filtration-box-cherry.jpg",
+        "price": 200
+      },
+      {
+        "id": "filtration-box-thermo",
+        "name": "Termo filtravimo dėžė",
+        "category": "filtration",
+        "image": "/images/config/accessories/filtration-box-thermo.jpg",
+        "price": 220
+      },
+      {
+        "id": "filtration-box-wpc",
+        "name": "WPC filtravimo dėžė",
+        "category": "filtration",
+        "image": "/images/config/accessories/filtration-box-wpc.jpg",
+        "price": 250
+      },
+      {
+        "id": "cupholder-1",
+        "name": "Stiklinių laikiklis",
+        "category": "accessories",
+        "image": "/images/config/accessories/cupholder-1.jpg",
+        "price": 45
+      },
+      {
+        "id": "cupholder-2",
+        "name": "Stiklinių laikiklis (didelis)",
+        "category": "accessories",
+        "image": "/images/config/accessories/cupholder-2.jpg",
+        "price": 55
+      },
+      {
+        "id": "speaker",
+        "name": "Bluetooth garsiakalbis",
+        "category": "accessories",
+        "image": "/images/config/accessories/speaker.jpg",
+        "price": 120
       }
     ]
   }

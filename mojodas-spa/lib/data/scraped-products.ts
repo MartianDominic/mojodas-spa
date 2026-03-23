@@ -353,45 +353,33 @@ function generateBadges(
   return badges;
 }
 
-// Placeholder images using working lh3 URLs
-const PLACEHOLDER_IMAGES = [
-  "https://lh3.googleusercontent.com/aida-public/AB6AXuDLCc95wXpJ75aZGgdFs7-vwoxe7RUHJj_1qxTUcRhI8zvh50gXSTicNSCeEakXuZr6M-L0CAEuOF56Ni331j6V5e_abs6QbLivsIgdM11i2bzey0UUIqL085Q5ys_zzmevwPiIUfAcqzlrmW5U3uoHugJqkPYwYBzM8GPWS8h3CAidDwYufn0XDN7cuU27BW0FcyrjSSQ7VvSZoau2zMURoggFxV5i3wkxZ2Qz93B8slLgXIgBPjqMWnvPoj4IFsswbEEJyHRwhik",
-  "https://lh3.googleusercontent.com/aida-public/AB6AXuCQF0iRK4nuaXgoWoUcoeqbc0VhwTG4AXksk1m0L7Thh6otUpVrgsu4MINOL7PufWmw3qR7lo_0e1Q8D7fcLN6jOH3HHqdFr4LDtd6KAG8NZ11nxfi1yo8i08OBtdk86dqf3yuwNJCjrUj0VKgp82BVhCxKVvY58gL0eSpb3NMQ9-u8c-iErj0wu8Y5ilIuUu23pewjzF3MU6fzd8aLApTZtqP7yciLq2qFd5p3tCOr_4pxSBEx8UvYdgUJGCINnyzoIugf4deHPAA",
-  "https://lh3.googleusercontent.com/aida-public/AB6AXuA6jvWC4VZKtz1BGxZ5gQ1yVxY1DdSl1F4GXvNwBK6o3CpcQYDO7AhE8iSeXYJ9SrUNmnNRTamaYMchE15wbQwzAZsGzQ0hf7dkGYu9TKVKq0forlJnmWsZwiL1pWZ_7Qf6JD_OQ0mdfJgjwFRXpM1m0dVkPmt_JGGvSYldwHsJ3hXY8uOAPRVLd4lR2ytTkiNC9h9U7bEFFl3yraid1VDtjeqCgsuxYJouhOefOwBeBwDv_6Yf8ldPeDnitcPkJkSEz75hUrkvfR4",
-  "https://lh3.googleusercontent.com/aida-public/AB6AXuBcc-_pz3yDuVJhYgqDULzjZGKFWTGKC_prEXti2syqkOtJ9m_y3zizzY3pN421_dFpEUR0OMrrtSqRBiWRf4rctpEwQAnuPqjmqJUcbgnkxnK_GkQV-LTMg0_swDvQt4Lvv0v93XlLgqDLAw_1mGrBSWzF33F__HThVpym4GIPhXtr2RTS4gARL6wKh9oYeyHroKa60XofZMMREeS74HTbkNnINYBsyt7HNu6uX7ryKTFL8w24lq29aKgqb7uJHtToywmn922rQYY",
-];
-
 // Convert scraped images to ProductImage array
 function convertImages(images: ScrapedProductImages, productName: string): ProductImage[] {
   const result: ProductImage[] = [];
 
-  // Use placeholder images since mojodasspa.com blocks external access
-  // Rotate through available placeholders based on product name hash
-  const hashCode = productName.split("").reduce((acc, char) => acc + char.charCodeAt(0), 0);
-  const primaryIdx = hashCode % PLACEHOLDER_IMAGES.length;
+  // Add hero images from scraped data
+  if (images.hero && images.hero.length > 0) {
+    images.hero.forEach((img, idx) => {
+      result.push({
+        url: img.localPath,
+        alt: `${productName} - ${idx + 1}`,
+        width: 800,
+        height: 1000,
+      });
+    });
+  }
 
-  // Add primary image
-  result.push({
-    url: PLACEHOLDER_IMAGES[primaryIdx],
-    alt: `${productName} - 1`,
-    width: 800,
-    height: 1000,
-  });
-
-  // Add 2 more gallery images with different placeholders
-  result.push({
-    url: PLACEHOLDER_IMAGES[(primaryIdx + 1) % PLACEHOLDER_IMAGES.length],
-    alt: `${productName} galerija - 1`,
-    width: 800,
-    height: 1000,
-  });
-
-  result.push({
-    url: PLACEHOLDER_IMAGES[(primaryIdx + 2) % PLACEHOLDER_IMAGES.length],
-    alt: `${productName} galerija - 2`,
-    width: 800,
-    height: 1000,
-  });
+  // Add gallery images from scraped data
+  if (images.gallery && images.gallery.length > 0) {
+    images.gallery.forEach((img, idx) => {
+      result.push({
+        url: img.localPath,
+        alt: `${productName} galerija - ${idx + 1}`,
+        width: 800,
+        height: 1000,
+      });
+    });
+  }
 
   return result;
 }
