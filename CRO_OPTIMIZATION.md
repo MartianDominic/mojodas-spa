@@ -255,11 +255,150 @@ Square: Paris, Andorra, Cuba, Monaco, Macau
 | Cold | - | - | Arctic (€1,490), Arctic Chiller (€5,990) |
 | Ofuro | - | - | Ofuro (€1,890) |
 
-**Results Page:**
-- Header: "Jums rekomenduojame" with quiz answer summary
-- 2-4 products max, sorted by popularity within selection
-- Each card shows: "Tinka jums, nes..." with personalized bullets
-- Below: "Peržiūrėti visus" link for browse-all access
+**Rezultatų puslapis:**
+- Antraštė: „Jums rekomenduojame" su pasirinkimų santrauka
+- 2-4 produktai, surūšiuoti pagal populiarumą
+- Kiekviena kortelė rodo: „Tinka jums, nes..." su personalizuotais punktais
+- Apačioje: „Peržiūrėti visus →" nuoroda
+
+---
+
+### 1b. Complete Quiz UI Specification (Lithuanian)
+
+```
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃                     RASKITE SAVO KUBILĄ                         ┃
+┃                        1 / 3 žingsnis                           ┃
+┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫
+┃                                                                 ┃
+┃   Kokio tipo kubilą ieškote?                                   ┃
+┃                                                                 ┃
+┃   ┌─────────────────┐  ┌─────────────────┐  ┌─────────────────┐┃
+┃   │   [hot tub      │  │   [ice bath     │  │   [ofuro        │┃
+┃   │    image]       │  │    image]       │  │    image]       │┃
+┃   │                 │  │                 │  │                 │┃
+┃   │ KARŠTO VANDENS  │  │ ŠALČIO TERAPIJA │  │     OFURO       │┃
+┃   │    KUBILAS      │  │                 │  │                 │┃
+┃   │                 │  │                 │  │                 │┃
+┃   │ Atsipalaidavimui│  │ Recovery ir     │  │ Japoniška       │┃
+┃   │ su šeima ar     │  │ kontrastinei    │  │ maudymosi       │┃
+┃   │ draugais        │  │ terapijai       │  │ tradicija       │┃
+┃   │                 │  │                 │  │                 │┃
+┃   │ nuo 1 990 €     │  │ nuo 1 490 €     │  │ 1 890 €         │┃
+┃   │ 13 modelių      │  │ 2 modeliai      │  │                 │┃
+┃   └─────────────────┘  └─────────────────┘  └─────────────────┘┃
+┃                                                                 ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃                     RASKITE SAVO KUBILĄ                         ┃
+┃                        2 / 3 žingsnis                           ┃
+┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫
+┃                                                                 ┃
+┃   Kiek žmonių dažniausiai maudysis vienu metu?                 ┃
+┃                                                                 ┃
+┃   ┌─────────────────┐  ┌─────────────────┐  ┌─────────────────┐┃
+┃   │   [2 people     │  │   [family       │  │   [group        │┃
+┃   │    icon]        │  │    icon]        │  │    icon]        │┃
+┃   │                 │  │                 │  │                 │┃
+┃   │   2-4 ASMENYS   │  │   4-6 ASMENYS   │  │   6+ ASMENYS    │┃
+┃   │                 │  │                 │  │                 │┃
+┃   │ Pora arba       │  │ Šeima su        │  │ Draugų          │┃
+┃   │ maža šeima      │  │ vaikais         │  │ kompanija       │┃
+┃   │                 │  │                 │  │                 │┃
+┃   │ nuo 1 990 €     │  │ nuo 2 690 €     │  │ nuo 2 890 €     │┃
+┃   │ nuo 56 €/mėn    │  │ nuo 75 €/mėn    │  │ nuo 81 €/mėn    │┃
+┃   └─────────────────┘  └─────────────────┘  └─────────────────┘┃
+┃                                                                 ┃
+┃   ← Grįžti                                                      ┃
+┃                                                                 ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃                     RASKITE SAVO KUBILĄ                         ┃
+┃                        3 / 3 žingsnis                           ┃
+┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫
+┃                                                                 ┃
+┃   Koks dizainas jums labiau patinka?                           ┃
+┃                                                                 ┃
+┃   ┌─────────────────┐  ┌─────────────────┐  ┌─────────────────┐┃
+┃   │   [round tub    │  │   [square tub   │  │                 │┃
+┃   │    photo]       │  │    photo]       │  │       ?         │┃
+┃   │                 │  │                 │  │                 │┃
+┃   │    APVALUS      │  │  KVADRATINIS    │  │    NESVARBU     │┃
+┃   │                 │  │                 │  │                 │┃
+┃   │ Klasikinis,     │  │ Modernus,       │  │ Rodyti visus    │┃
+┃   │ tradicinis      │  │ elegantiškas    │  │ variantus       │┃
+┃   │                 │  │                 │  │                 │┃
+┃   │ nuo 1 990 €     │  │ nuo 2 690 €     │  │                 │┃
+┃   └─────────────────┘  └─────────────────┘  └─────────────────┘┃
+┃                                                                 ┃
+┃   ← Grįžti                                                      ┃
+┃                                                                 ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃                      JUMS REKOMENDUOJAME                        ┃
+┃            4-6 asmenims • Apvalus dizainas                      ┃
+┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫
+┃                                                                 ┃
+┃  ┌──────────────────────────┐  ┌──────────────────────────┐    ┃
+┃  │ [Grande Round In photo]  │  │ [Grande Round Out photo] │    ┃
+┃  │                          │  │                          │    ┃
+┃  │ Grande Round In          │  │ Grande Round Out         │    ┃
+┃  │ 2 890 € · 81 €/mėn       │  │ 3 190 € · 89 €/mėn       │    ┃
+┃  │                          │  │                          │    ┃
+┃  │ Tinka jums, nes:         │  │ Tinka jums, nes:         │    ┃
+┃  │ ✓ Telpa 6-8 asmenys      │  │ ✓ Telpa 6-8 asmenys      │    ┃
+┃  │ ✓ Apvalus dizainas       │  │ ✓ Apvalus dizainas       │    ┃
+┃  │ ✓ Integruota krosnelė    │  │ ✓ Daugiau vietos viduje  │    ┃
+┃  │                          │  │                          │    ┃
+┃  │ [    PLAČIAU    ]        │  │ [    PLAČIAU    ]        │    ┃
+┃  └──────────────────────────┘  └──────────────────────────┘    ┃
+┃                                                                 ┃
+┃  ┌──────────────────────────┐                                  ┃
+┃  │ [Grande Round Horizon]   │  ★ Premium variantas             ┃
+┃  │                          │                                  ┃
+┃  │ Grande Round Horizon     │                                  ┃
+┃  │ 4 290 € · 120 €/mėn      │                                  ┃
+┃  │                          │                                  ┃
+┃  │ Tinka jums, nes:         │                                  ┃
+┃  │ ✓ Telpa 6-8 asmenys      │                                  ┃
+┃  │ ✓ Panoraminis dizainas   │                                  ┃
+┃  │ ✓ Horizon krosnelė       │                                  ┃
+┃  │                          │                                  ┃
+┃  │ [    PLAČIAU    ]        │                                  ┃
+┃  └──────────────────────────┘                                  ┃
+┃                                                                 ┃
+┃            Peržiūrėti visus produktus →                        ┃
+┃                                                                 ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+```
+
+**Šalčio terapijos rezultatai (jei pasirinko Step 1 → Šalčio terapija):**
+
+```
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃                      ŠALČIO TERAPIJA                            ┃
+┃              Pasirinkite jums tinkamą variantą                  ┃
+┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫
+┃                                                                 ┃
+┃  ┌──────────────────────────┐  ┌──────────────────────────┐    ┃
+┃  │ [Arctic photo]           │  │ [Arctic Chiller photo]   │    ┃
+┃  │                          │  │                          │    ┃
+┃  │ Arctic                   │  │ Arctic Chiller           │    ┃
+┃  │ 1 490 €                  │  │ 5 990 €                  │    ┃
+┃  │ 42 €/mėn                 │  │ 167 €/mėn                │    ┃
+┃  │                          │  │ ★ Su aušinimo sistema    │    ┃
+┃  │ Be aušinimo sistemos     │  │                          │    ┃
+┃  │ Vanduo šąla natūraliai   │  │ Palaiko 3-8°C temperatūrą│    ┃
+┃  │                          │  │ Profesionalams           │    ┃
+┃  │                          │  │                          │    ┃
+┃  │ [    PLAČIAU    ]        │  │ [    PLAČIAU    ]        │    ┃
+┃  └──────────────────────────┘  └──────────────────────────┘    ┃
+┃                                                                 ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+```
 
 ---
 
@@ -294,183 +433,201 @@ const SIMPLIFIED_FILTERS = [
 
 ---
 
-### 3. Enhanced Product Page
+### 3. Product Page with Integrated Package Selection
 
-**Above the Fold:**
+**Key Insight:** Eliminate the separate configurator page. Put package selection DIRECTLY on the product page. User picks package → clicks "UŽSAKYTI" → goes straight to cart.
+
+**Full Product Page Layout (Lithuanian):**
+
 ```
-┌────────────────────────────────────────────┐
-│  [Gallery]              │ Monaco Horizon   │
-│  [Main Image]           │ Prabangus        │
-│  [Thumbnails]           │ 8-10 asmenims    │
-│                         │                  │
-│                         │ 4,890 EUR        │
-│                         │ arba nuo 136€/mėn│
-│                         │                  │
-│                         │ [KONFIGŪRUOTI]   │
-│                         │ [UŽSAKYTI]       │
-└────────────────────────────────────────────┘
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ ← Grįžti į katalogą                                             ┃
+┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫
+┃                                                                 ┃
+┃  ┌─────────────────────────┐   MONACO HORIZON                   ┃
+┃  │                         │   ━━━━━━━━━━━━━━━                  ┃
+┃  │    [Main Product        │   8-10 asmenų · Kvadratinis        ┃
+┃  │     Photo]              │   Panoraminis Horizon dizainas     ┃
+┃  │                         │                                    ┃
+┃  │                         │   ┌─────┬─────┬─────┬─────┐        ┃
+┃  │                         │   │8-10 │2.2m │ LED │ 5m  │        ┃
+┃  │                         │   │asm. │     │Jets │gar. │        ┃
+┃  └─────────────────────────┘   └─────┴─────┴─────┴─────┘        ┃
+┃  [thumb] [thumb] [thumb]                                        ┃
+┃                                                                 ┃
+┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫
+┃                                                                 ┃
+┃   PASIRINKITE KOMPLEKTACIJĄ                                     ┃
+┃                                                                 ┃
+┃   ┌─────────────────┬─────────────────┬─────────────────┐       ┃
+┃   │    BAZINIS      │   POPULIARUS    │    PREMIUM      │       ┃
+┃   │                 │   ★ Rekomenduoj.│                 │       ┃
+┃   ├─────────────────┼─────────────────┼─────────────────┤       ┃
+┃   │    4 890 €      │    5 380 €      │    5 880 €      │       ┃
+┃   │    136 €/mėn    │    150 €/mėn    │    164 €/mėn    │       ┃
+┃   ├─────────────────┼─────────────────┼─────────────────┤       ┃
+┃   │ ✓ Kubilas       │ ✓ Viskas iš     │ ✓ Viskas iš     │       ┃
+┃   │ ✓ Horizon krosn.│   Bazinio, plius│   Populiaraus + │       ┃
+┃   │ ✓ Eglės mediena │ ✓ Termo dangtelis│ ✓ Termo mediena│       ┃
+┃   │ ✓ Std. dangtelis│ ✓ Mediniai      │ ✓ LED apšvietim.│       ┃
+┃   │                 │   laiptai       │ ✓ Premium akrilas│      ┃
+┃   │                 │ ✓ Priežiūros    │                 │       ┃
+┃   │                 │   rinkinys      │                 │       ┃
+┃   ├─────────────────┼─────────────────┼─────────────────┤       ┃
+┃   │  [ RINKTIS ]    │  [ UŽSAKYTI ]   │  [ RINKTIS ]    │       ┃
+┃   │                 │  ← Populiariaus │                 │       ┃
+┃   └─────────────────┴─────────────────┴─────────────────┘       ┃
+┃                                                                 ┃
+┃   Norite pritaikyti detaliau? →                                 ┃
+┃                                                                 ┃
+┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫
+┃                                                                 ┃
+┃   KODĖL MONACO HORIZON?                                         ┃
+┃                                                                 ┃
+┃   Flagmaninis modelis tiems, kurie siekia aukščiausios          ┃
+┃   prabangos. Panoraminis dizainas leidžia mėgautis aplinkos     ┃
+┃   vaizdais be jokių trukdžių.                                   ┃
+┃                                                                 ┃
+┃   Tinka jums, jei:                                              ┃
+┃   • Dažnai priimate svečius ir draugus                          ┃
+┃   • Vertinate modernų, elegantišką dizainą                      ┃
+┃   • Norite pilnos SPA patirties su LED ir masažu                ┃
+┃                                                                 ┃
+┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫
+┃                                                                 ┃
+┃   DAŽNIAUSIAI UŽDUODAMI KLAUSIMAI                               ┃
+┃                                                                 ┃
+┃   ▸ Ar reikia leidimo statybai?                                 ┃
+┃   ▸ Kaip vyksta pristatymas ir montavimas?                      ┃
+┃   ▸ Kokia garantija?                                            ┃
+┃   ▸ Kiek kainuoja eksploatacija?                                ┃
+┃   ▸ Ar galima išsimokėtinai?                                    ┃
+┃                                                                 ┃
+┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫
+┃                                                                 ┃
+┃   TECHNINĖS SPECIFIKACIJOS                                      ┃
+┃   [Collapsible detailed specs]                                  ┃
+┃                                                                 ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 ```
 
-**Quick Specs Bar:**
+**Sticky Mobile CTA (Bottom Bar):**
 ```
-┌─────┬─────┬─────┬─────┬─────┐
-│ 4-6 │2.2m │ LED │Jets │ 5yr │
-│asm. │diam.│     │     │gar. │
-└─────┴─────┴─────┴─────┴─────┘
-```
-
-**"Kodėl šis modelis" Section:**
-- 2-3 sentence positioning statement
-- Key differentiator from similar models
-- "Tinka jums, jei..." bullet points
-
-**Social Proof Section:**
-- Customer reviews (if available)
-- Installation gallery (real customer photos)
-- "Parduota: 50+ vienetų" type badges
-
-**Comparison Widget:**
-```
-┌────────────────────────────────────────────┐
-│ Palyginkite su kitais modeliais            │
-├──────────────┬──────────────┬──────────────┤
-│ Monaco       │ Monaco       │ Paris        │
-│ Horizon      │ Out          │ In           │
-├──────────────┼──────────────┼──────────────┤
-│ 12,990 EUR   │ 9,990 EUR    │ 8,490 EUR    │
-│ 4-6 asm.     │ 4-6 asm.     │ 4-6 asm.     │
-│ Horizon krosn│ Išorinė krosn│ Integr. krosn│
-│ LED, Jets    │ LED          │ -            │
-└──────────────┴──────────────┴──────────────┘
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃  5 380 € · 150 €/mėn    [ UŽSAKYTI ]       ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 ```
 
-**FAQ Section (addresses objections):**
+**User Flow (5-6 clicks total):**
+```
+Homepage → Quiz (3 clicks) → Results → Product Page → Pick Package → UŽSAKYTI → Cart → Checkout
+```
+
+**For users who want customization:**
+- "Norite pritaikyti detaliau?" link opens full configurator
+- Estimated 10-15% of users will use this
+- 85-90% will just pick a package and go
+
+**FAQ Section Answers (Lithuanian):**
 ```typescript
 const PRODUCT_FAQS = [
   {
     question: 'Ar reikia leidimo statybai?',
-    answer: 'Daugeliu atvejų leidimo nereikia, nes kubilas nėra statinys...',
+    answer: 'Daugeliu atvejų leidimo nereikia, nes kubilas laikomas kilnojamuoju daiktu, o ne statiniu. Jei abejojate – pasitarkite su savo savivaldybe.',
   },
   {
     question: 'Kaip vyksta pristatymas ir montavimas?',
-    answer: 'Pristatome visoje Lietuvoje. Montavimas įskaičiuotas į kainą...',
+    answer: 'Pristatome visoje Lietuvoje per 2-4 savaites. Montavimas įskaičiuotas į kainą – mūsų specialistai viską sumontuos ir parodys, kaip naudotis.',
   },
   {
     question: 'Kokia garantija?',
-    answer: '5 metų garantija konstrukcijai, 2 metai elektronikai...',
+    answer: '5 metų garantija kubilo konstrukcijai, 2 metai elektronikai ir krosnelei. Garantinis aptarnavimas visoje Lietuvoje.',
   },
   {
-    question: 'Kiek kainuoja eksploatacija?',
-    answer: 'Malkinis kūrenimas: ~5 EUR/kūrenimą. Elektra ~15 EUR/mėn...',
+    question: 'Kiek kainuoja eksploatacija per mėnesį?',
+    answer: 'Malkinis kūrenimas: ~5€ už vieną kūrenimą. Elektros sąnaudos (siurblys, LED): ~10-15€/mėn. Vandens priežiūra: ~10€/mėn.',
   },
   {
     question: 'Ar galima išsimokėtinai?',
-    answer: 'Taip, siūlome lizingą nuo 42 EUR/mėn (Arctic) iki 167 EUR/mėn (Arctic Chiller)...',
+    answer: 'Taip! Siūlome lizingą be pradinio įnašo. Mėnesinės įmokos nuo 42€ (Arctic) iki 167€ (Arctic Chiller). Sprendimas per 15 min.',
   },
 ];
 ```
-
-**Financing Calculator:**
-- Prominent placement
-- Live calculation: "4,890 EUR = 136 EUR/mėn x 36 mėn"
-- "Sužinoti daugiau" link to financing page
-
-**Sticky CTA Bar (mobile):**
-- Fixed bottom bar on scroll
-- Shows: Price + Monthly + "Konfigūruoti" button
 
 ---
 
-### 4. Simplified Configurator
+### 4. Full Configurator (For 10-15% Power Users)
 
-**Package-Based Approach:**
+**Access:** Only via "Norite pritaikyti detaliau?" link on product page.
 
-Based on actual configurableOptions in products (acrylicColor, woodFinish, thermoCover, accessories, heatingSystem):
+**Purpose:** For users who want to change specific options beyond the 3 packages.
 
-```typescript
-interface ConfiguratorPackage {
-  id: string;
-  name: string;
-  description: string;
-  priceModifier: number;
-  included: string[];
-  badge?: string;
-}
+**Konfigūratoriaus puslapis (Lithuanian):**
 
-const PACKAGES: ConfiguratorPackage[] = [
-  {
-    id: 'basic',
-    name: 'Bazinis',
-    description: 'Viskas ko reikia pradėti',
-    priceModifier: 0,
-    included: [
-      'Standartinė krosnelė',
-      'Eglės medienos apdaila',
-      'Pagrindinis dangtelis',
-    ],
-  },
-  {
-    id: 'popular',
-    name: 'Populiarus',
-    description: 'Mūsų klientų pasirinkimas',
-    priceModifier: 490,
-    included: [
-      'Viskas iš Bazinio +',
-      'Termo dangtelis',
-      'Laiptai',
-      'Vandens priežiūros rinkinys',
-    ],
-    badge: 'Dauguma renkasi',
-  },
-  {
-    id: 'premium',
-    name: 'Premium',
-    description: 'Maksimalus komfortas',
-    priceModifier: 990,
-    included: [
-      'Viskas iš Populiaraus +',
-      'Termo mediena (Thermowood)',
-      'LED apšvietimas',
-      'Premium akrilas',
-    ],
-  },
-];
+```
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃  MONACO HORIZON · KONFIGŪRATORIUS                               ┃
+┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫
+┃                                                                 ┃
+┃  ┌─────────────────────────────────────────────────────────┐   ┃
+┃  │ 1. BAZINIS PAKETAS (pasirinkta)                         │   ┃
+┃  │    ○ Bazinis  ● Populiarus (+490€)  ○ Premium (+990€)   │   ┃
+┃  └─────────────────────────────────────────────────────────┘   ┃
+┃                                                                 ┃
+┃  ┌─────────────────────────────────────────────────────────┐   ┃
+┃  │ 2. MEDIENOS APDAILA                                     │   ┃
+┃  │                                                         │   ┃
+┃  │   [Eglė]    [Termo]    [Kedras]   [Ąžuolas]            │   ┃
+┃  │    +0€      +290€      +390€      +590€                │   ┃
+┃  │     ●         ○          ○          ○                   │   ┃
+┃  └─────────────────────────────────────────────────────────┘   ┃
+┃                                                                 ┃
+┃  ┌─────────────────────────────────────────────────────────┐   ┃
+┃  │ 3. AKRILO SPALVA                                        │   ┃
+┃  │                                                         │   ┃
+┃  │   [Balta]   [Pilka]   [Smėlio]   [Juoda]               │   ┃
+┃  │    +0€      +0€       +0€        +190€                 │   ┃
+┃  │     ●         ○          ○          ○                   │   ┃
+┃  └─────────────────────────────────────────────────────────┘   ┃
+┃                                                                 ┃
+┃  ┌─────────────────────────────────────────────────────────┐   ┃
+┃  │ 4. DANGTELIS                                            │   ┃
+┃  │                                                         │   ┃
+┃  │   ○ Standartinis (+0€)                                  │   ┃
+┃  │   ● Termo dangtelis (+290€) ★ Rekomenduojama           │   ┃
+┃  └─────────────────────────────────────────────────────────┘   ┃
+┃                                                                 ┃
+┃  ┌─────────────────────────────────────────────────────────┐   ┃
+┃  │ 5. PAPILDOMA ĮRANGA                                     │   ┃
+┃  │                                                         │   ┃
+┃  │   ☑ Mediniai laiptai (+180€)                           │   ┃
+┃  │   ☐ LED apšvietimas (+290€)                            │   ┃
+┃  │   ☐ Filtracijos sistema (+390€)                        │   ┃
+┃  │   ☐ Vandens priežiūros rinkinys (+120€)                │   ┃
+┃  └─────────────────────────────────────────────────────────┘   ┃
+┃                                                                 ┃
+┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫
+┃                                                                 ┃
+┃  JŪSŲ KONFIGŪRACIJA                                            ┃
+┃  ─────────────────                                             ┃
+┃  Monaco Horizon                          4 890 €               ┃
+┃  Populiarus paketas                       +490 €               ┃
+┃  Mediniai laiptai                         +180 €               ┃
+┃  ─────────────────────────────────────────────────             ┃
+┃  Viso:                                   5 560 €               ┃
+┃  arba                                    155 €/mėn             ┃
+┃                                                                 ┃
+┃  [          Į KREPŠELĮ          ]                              ┃
+┃                                                                 ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 ```
 
-**UI Layout:**
-```
-┌────────────────────────────────────────────┐
-│ 1. Pasirinkite paketą                      │
-├──────────────┬──────────────┬──────────────┤
-│   BAZINIS    │  POPULIARUS  │   PREMIUM    │
-│   +0 EUR     │  +490 EUR    │  +990 EUR    │
-│              │  ★ Dauguma   │              │
-│              │    renkasi   │              │
-│  [Rinktis]   │  [PASIRINKTA]│  [Rinktis]   │
-└──────────────┴──────────────┴──────────────┘
-
-┌────────────────────────────────────────────┐
-│ 2. Papildomi pasirinkimai                  │
-│                                            │
-│ ☐ Filtracijos sistema (+390 EUR)          │
-│ ☐ Masažiniai purkštukai (+590 EUR)        │
-│ ☐ Elektrinis šildytuvas (+490 EUR)        │
-└────────────────────────────────────────────┘
-
-┌────────────────────────────────────────────┐
-│ Jūsų kubilas                               │
-│                                            │
-│ Monaco Horizon - Populiarus paketas        │
-│                                            │
-│ Bazinė kaina:         4,890 EUR            │
-│ Paketas:               +490 EUR            │
-│ ────────────────────────────               │
-│ Viso:                 5,380 EUR            │
-│ arba                  150 EUR/mėn          │
-│                                            │
-│ [       Į KREPŠELĮ       ]                 │
-└────────────────────────────────────────────┘
-```
+**Key UX Principles:**
+- Package is pre-selected based on what user clicked on product page
+- Each option shows price difference, not total
+- "★ Rekomenduojama" badges guide decisions
+- Live price updates as options change
+- Single "Į krepšelį" button at bottom
 
 ---
 
