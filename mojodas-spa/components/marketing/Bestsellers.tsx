@@ -112,7 +112,7 @@ export function Bestsellers() {
           {others.map((product) => (
             <div
               key={product.slug}
-              className="flex flex-col bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-200 max-w-xl mx-auto w-full"
+              className="flex flex-col bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-200 w-full"
             >
               <Image
                 src={product.image}

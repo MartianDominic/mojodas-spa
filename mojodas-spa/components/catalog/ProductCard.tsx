@@ -37,7 +37,7 @@ export function ProductCard({ product, className }: ProductCardProps) {
         "group relative aspect-[4/5] rounded-[2rem] overflow-hidden",
         "bg-surface-container-low editorial-shadow",
         "transition-transform duration-700 hover:-translate-y-2",
-        "max-w-md mx-auto w-full", // Prevent gigantic cards on large screens
+        "w-full", // Fill grid cell width
         className
       )}
     >
