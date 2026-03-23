@@ -840,13 +840,16 @@ Step 4: Patvirtinimas
 7. **Product Comparison Widget** - Side-by-side comparison
 8. **Sticky Mobile CTA** - Price + monthly + button
 9. **Exit Intent Email Capture** - Save configuration
-10. **Customer Reviews Section** - Social proof on product pages
 
 ### Phase 3: Retention & Growth
-11. **Abandoned Cart Email Sequence** - 4-email recovery flow
-12. **Post-Purchase Email Flow** - Confirmation → Installation → Review request
-13. **Installation Photo Gallery** - Real customer photos
-14. **Video on Product Pages** - Product in action
+10. **Abandoned Cart Email Sequence** - 4-email recovery flow
+11. **Post-Purchase Email Flow** - Confirmation → Installation → Review request
+12. **Video on Product Pages** - Product in action (can use stock/rendered)
+
+### Phase 4: Social Proof (After First Sales)
+13. **Review Collection System** - Email customers post-installation
+14. **Customer Photo Gallery** - Real installation photos
+15. **Trust Numbers** - "X+ kubilų" when we have data
 
 ---
 
@@ -1065,44 +1068,43 @@ Jūsų išsaugota konfigūracija bus ištrinta po 7 dienų.
 
 ---
 
-## Social Proof Elements
+## Trust Elements (What We Have Now)
 
 **Trust Bar (homepage + all pages):**
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│  ✓ 500+ kubilų Lietuvoje  ·  ★ 4.9/5 įvertinimas  ·  🛡 5m garantija  │
+│  🇱🇹 Gaminama Lietuvoje  ·  🛡 5 metų garantija  ·  🚚 Montavimas įskaičiuotas  │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
-**Product Page Reviews (future - when collected):**
+**Product Page Trust Signals:**
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│  KLIENTŲ ATSILIEPIMAI                    ★★★★★ 4.9 (23)        │
-├─────────────────────────────────────────────────────────────────┤
-│                                                                 │
-│  ★★★★★  "Puiki kokybė, greitas pristatymas"                    │
-│         Tomas V. · Monaco Horizon · 2024-02                     │
-│                                                                 │
-│  ★★★★★  "Jau antras sezonas - veikia puikiai"                  │
-│         Andrius K. · Grande Round · 2023-05                     │
-│                                                                 │
-│  [Rodyti daugiau]                                              │
-│                                                                 │
+│  ✓ 5 metų garantija konstrukcijai                              │
+│  ✓ 2 metų garantija elektronikai                               │
+│  ✓ Pristatymas ir montavimas įskaičiuotas                      │
+│  ✓ Gaminama Lietuvoje iš vietinių medžiagų                     │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
-**Installation Gallery (real customer photos):**
-```
-┌─────────────────────────────────────────────────────────────────┐
-│  KAIP ATRODO PAS KLIENTUS                                       │
-│                                                                 │
-│  [photo]    [photo]    [photo]    [photo]                      │
-│   Vilnius    Kaunas    Klaipėda   Šiauliai                     │
-│                                                                 │
-│  "Atsiųskite savo nuotrauką ir gaukite €50 priedų kuponą"     │
-│                                                                 │
-└─────────────────────────────────────────────────────────────────┘
-```
+---
+
+## Social Proof (FUTURE - When Available)
+
+**Phase 1: Collect reviews after first sales**
+- Email customers 2 weeks after installation
+- Offer €50 priedų kuponas for photo + review
+- Build gallery organically
+
+**Phase 2: When we have 10+ reviews**
+- Add reviews section to product pages
+- Add "X klientų įvertinimas" to trust bar
+
+**Phase 3: When we have 50+ sales**
+- Add "50+ kubilų Lietuvoje" to trust bar
+- Customer photo gallery
+
+**For now: Don't fake it. Trust comes from guarantees and quality.**
 
 ---
 
