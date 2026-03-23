@@ -433,9 +433,9 @@ const SIMPLIFIED_FILTERS = [
 
 ---
 
-### 3. Product Page with Integrated Package Selection
+### 3. Product Page — Gateway to Beautiful Configurator
 
-**Key Insight:** Eliminate the separate configurator page. Put package selection DIRECTLY on the product page. User picks package → clicks "UŽSAKYTI" → goes straight to cart.
+**Key Insight:** Product page builds desire. Primary CTA is `[KONFIGŪRUOTI]` which leads to the beautiful step-by-step wizard. Quick-buy with preset packages available for users who don't want to configure.
 
 **Full Product Page Layout (Lithuanian):**
 
@@ -455,9 +455,20 @@ const SIMPLIFIED_FILTERS = [
 ┃  └─────────────────────────┘   └─────┴─────┴─────┴─────┘        ┃
 ┃  [thumb] [thumb] [thumb]                                        ┃
 ┃                                                                 ┃
+┃                            nuo 4 890 €  ·  nuo 136 €/mėn        ┃
+┃                                                                 ┃
+┃               ┌─────────────────────────────────────┐           ┃
+┃               │                                     │           ┃
+┃               │    [ KONFIGŪRUOTI IR UŽSAKYTI ]     │ ← PRIMARY ┃
+┃               │                                     │           ┃
+┃               │    Pasirinkite medieną, spalvą      │           ┃
+┃               │    ir priedus per 2 minutes         │           ┃
+┃               │                                     │           ┃
+┃               └─────────────────────────────────────┘           ┃
+┃                                                                 ┃
 ┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫
 ┃                                                                 ┃
-┃   PASIRINKITE KOMPLEKTACIJĄ                                     ┃
+┃   ARBA UŽSAKYKITE GREITAI (su standartine konfigūracija)        ┃
 ┃                                                                 ┃
 ┃   ┌─────────────────┬─────────────────┬─────────────────┐       ┃
 ┃   │    BAZINIS      │   POPULIARUS    │    PREMIUM      │       ┃
@@ -467,18 +478,16 @@ const SIMPLIFIED_FILTERS = [
 ┃   │    136 €/mėn    │    150 €/mėn    │    164 €/mėn    │       ┃
 ┃   ├─────────────────┼─────────────────┼─────────────────┤       ┃
 ┃   │ ✓ Kubilas       │ ✓ Viskas iš     │ ✓ Viskas iš     │       ┃
-┃   │ ✓ Horizon krosn.│   Bazinio, plius│   Populiaraus + │       ┃
+┃   │ ✓ Horizon krosn.│   Bazinio +     │   Populiaraus + │       ┃
 ┃   │ ✓ Eglės mediena │ ✓ Termo dangtelis│ ✓ Termo mediena│       ┃
-┃   │ ✓ Std. dangtelis│ ✓ Mediniai      │ ✓ LED apšvietim.│       ┃
-┃   │                 │   laiptai       │ ✓ Premium akrilas│      ┃
-┃   │                 │ ✓ Priežiūros    │                 │       ┃
+┃   │ ✓ Std. dangtelis│ ✓ Laiptai       │ ✓ LED apšvietim.│       ┃
+┃   │                 │ ✓ Priežiūros    │ ✓ Premium akrilas│      ┃
 ┃   │                 │   rinkinys      │                 │       ┃
 ┃   ├─────────────────┼─────────────────┼─────────────────┤       ┃
-┃   │  [ RINKTIS ]    │  [ UŽSAKYTI ]   │  [ RINKTIS ]    │       ┃
-┃   │                 │  ← Populiariaus │                 │       ┃
+┃   │ [Į KREPŠELĮ]    │ [Į KREPŠELĮ]    │ [Į KREPŠELĮ]    │       ┃
 ┃   └─────────────────┴─────────────────┴─────────────────┘       ┃
 ┃                                                                 ┃
-┃   Norite pritaikyti detaliau? →                                 ┃
+┃   ↑ Greitam užsakymui — iškart į krepšelį be konfigūravimo     ┃
 ┃                                                                 ┃
 ┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫
 ┃                                                                 ┃
@@ -556,78 +565,207 @@ const PRODUCT_FAQS = [
 
 ---
 
-### 4. Full Configurator (For 10-15% Power Users)
+### 4. Konfigūratorius — Beautiful Step-by-Step Wizard
 
-**Access:** Only via "Norite pritaikyti detaliau?" link on product page.
+**Philosophy:** Konfigūratorius yra PAGRINDINIS kelias, ne paslėpta funkcija. Bet jis suprojektuotas taip, kad jaustųsi lengvas ir greitas — vienas sprendimas per žingsnį.
 
-**Purpose:** For users who want to change specific options beyond the 3 packages.
+**Access:** Primary CTA on product page: `[ KONFIGŪRUOTI IR UŽSAKYTI ]`
 
-**Konfigūratoriaus puslapis (Lithuanian):**
+**Konfigūratoriaus Step-by-Step Wizard:**
 
 ```
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-┃  MONACO HORIZON · KONFIGŪRATORIUS                               ┃
-┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫
 ┃                                                                 ┃
-┃  ┌─────────────────────────────────────────────────────────┐   ┃
-┃  │ 1. BAZINIS PAKETAS (pasirinkta)                         │   ┃
-┃  │    ○ Bazinis  ● Populiarus (+490€)  ○ Premium (+990€)   │   ┃
-┃  └─────────────────────────────────────────────────────────┘   ┃
+┃  MONACO HORIZON                                                 ┃
+┃  Konfigūruokite savo kubilą                                    ┃
 ┃                                                                 ┃
-┃  ┌─────────────────────────────────────────────────────────┐   ┃
-┃  │ 2. MEDIENOS APDAILA                                     │   ┃
-┃  │                                                         │   ┃
-┃  │   [Eglė]    [Termo]    [Kedras]   [Ąžuolas]            │   ┃
-┃  │    +0€      +290€      +390€      +590€                │   ┃
-┃  │     ●         ○          ○          ○                   │   ┃
-┃  └─────────────────────────────────────────────────────────┘   ┃
-┃                                                                 ┃
-┃  ┌─────────────────────────────────────────────────────────┐   ┃
-┃  │ 3. AKRILO SPALVA                                        │   ┃
-┃  │                                                         │   ┃
-┃  │   [Balta]   [Pilka]   [Smėlio]   [Juoda]               │   ┃
-┃  │    +0€      +0€       +0€        +190€                 │   ┃
-┃  │     ●         ○          ○          ○                   │   ┃
-┃  └─────────────────────────────────────────────────────────┘   ┃
-┃                                                                 ┃
-┃  ┌─────────────────────────────────────────────────────────┐   ┃
-┃  │ 4. DANGTELIS                                            │   ┃
-┃  │                                                         │   ┃
-┃  │   ○ Standartinis (+0€)                                  │   ┃
-┃  │   ● Termo dangtelis (+290€) ★ Rekomenduojama           │   ┃
-┃  └─────────────────────────────────────────────────────────┘   ┃
-┃                                                                 ┃
-┃  ┌─────────────────────────────────────────────────────────┐   ┃
-┃  │ 5. PAPILDOMA ĮRANGA                                     │   ┃
-┃  │                                                         │   ┃
-┃  │   ☑ Mediniai laiptai (+180€)                           │   ┃
-┃  │   ☐ LED apšvietimas (+290€)                            │   ┃
-┃  │   ☐ Filtracijos sistema (+390€)                        │   ┃
-┃  │   ☐ Vandens priežiūros rinkinys (+120€)                │   ┃
-┃  └─────────────────────────────────────────────────────────┘   ┃
+┃  ●━━━━━━━○━━━━━━━○━━━━━━━○━━━━━━━○                              ┃
+┃  Paketas   Mediena  Spalva  Priedai  Peržiūra                  ┃
 ┃                                                                 ┃
 ┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫
 ┃                                                                 ┃
-┃  JŪSŲ KONFIGŪRACIJA                                            ┃
-┃  ─────────────────                                             ┃
-┃  Monaco Horizon                          4 890 €               ┃
-┃  Populiarus paketas                       +490 €               ┃
-┃  Mediniai laiptai                         +180 €               ┃
-┃  ─────────────────────────────────────────────────             ┃
-┃  Viso:                                   5 560 €               ┃
-┃  arba                                    155 €/mėn             ┃
+┃  1. PASIRINKITE KOMPLEKTACIJĄ                                   ┃
 ┃                                                                 ┃
-┃  [          Į KREPŠELĮ          ]                              ┃
+┃  ┌───────────────────────────────────────────────────────────┐ ┃
+┃  │                                                           │ ┃
+┃  │  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐       │ ┃
+┃  │  │             │  │ ★ DAUGUMA   │  │             │       │ ┃
+┃  │  │   BAZINIS   │  │   RENKASI   │  │   PREMIUM   │       │ ┃
+┃  │  │             │  │             │  │             │       │ ┃
+┃  │  │   4 890 €   │  │   5 380 €   │  │   5 880 €   │       │ ┃
+┃  │  │   136 €/mėn │  │   150 €/mėn │  │   164 €/mėn │       │ ┃
+┃  │  │             │  │             │  │             │       │ ┃
+┃  │  │ ✓ Kubilas   │  │ ✓ Bazinis + │  │ ✓ Populiar +│       │ ┃
+┃  │  │ ✓ Krosnelė  │  │ ✓ Termo     │  │ ✓ Termo     │       │ ┃
+┃  │  │ ✓ Eglės med.│  │   dangtelis │  │   mediena   │       │ ┃
+┃  │  │ ✓ Standart. │  │ ✓ Laiptai   │  │ ✓ LED       │       │ ┃
+┃  │  │   dangtelis │  │ ✓ Priežiūros│  │ ✓ Premium   │       │ ┃
+┃  │  │             │  │   rinkinys  │  │   akrilas   │       │ ┃
+┃  │  │             │  │             │  │             │       │ ┃
+┃  │  │  [RINKTIS]  │  │[✓ PASIRINKTA]│ │  [RINKTIS]  │       │ ┃
+┃  │  └─────────────┘  └─────────────┘  └─────────────┘       │ ┃
+┃  │                                                           │ ┃
+┃  └───────────────────────────────────────────────────────────┘ ┃
+┃                                                                 ┃
+┃                                       [ TOLIAU → ]              ┃
+┃                                                                 ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃                                                                 ┃
+┃  MONACO HORIZON · Populiarus                     5 380 €        ┃
+┃                                                                 ┃
+┃  ○━━━━━━━●━━━━━━━○━━━━━━━○━━━━━━━○                              ┃
+┃  Paketas   Mediena  Spalva  Priedai  Peržiūra                  ┃
+┃                                                                 ┃
+┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫
+┃                                                                 ┃
+┃  2. PASIRINKITE MEDIENĄ                                         ┃
+┃                                                                 ┃
+┃     Išorinė kubilo apdaila                                      ┃
+┃                                                                 ┃
+┃  ┌───────────┐ ┌───────────┐ ┌───────────┐ ┌───────────┐       ┃
+┃  │ [photo]   │ │ [photo]   │ │ [photo]   │ │ [photo]   │       ┃
+┃  │           │ │     ★     │ │           │ │           │       ┃
+┃  │   EGLĖ    │ │   TERMO   │ │  KEDRAS   │ │  ĄŽUOLAS  │       ┃
+┃  │           │ │           │ │           │ │           │       ┃
+┃  │   +0 €    │ │  +290 €   │ │  +390 €   │ │  +590 €   │       ┃
+┃  │           │ │Rekomenduoj│ │           │ │           │       ┃
+┃  │  [    ]   │ │  [ ✓ ]    │ │  [    ]   │ │  [    ]   │       ┃
+┃  └───────────┘ └───────────┘ └───────────┘ └───────────┘       ┃
+┃                                                                 ┃
+┃  ℹ️ Termo mediena atspari drėgmei ir tarnaus ilgiau             ┃
+┃                                                                 ┃
+┃                                                                 ┃
+┃  [ ← ATGAL ]                              [ TOLIAU → ]          ┃
+┃                                                                 ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃                                                                 ┃
+┃  MONACO HORIZON · Populiarus + Termo             5 670 €        ┃
+┃                                                                 ┃
+┃  ○━━━━━━━○━━━━━━━●━━━━━━━○━━━━━━━○                              ┃
+┃  Paketas   Mediena  Spalva  Priedai  Peržiūra                  ┃
+┃                                                                 ┃
+┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫
+┃                                                                 ┃
+┃  3. PASIRINKITE SPALVĄ                                          ┃
+┃                                                                 ┃
+┃     Vidinis akrilo paviršius                                    ┃
+┃                                                                 ┃
+┃  ┌─────────┐ ┌─────────┐ ┌─────────┐ ┌─────────┐ ┌─────────┐   ┃
+┃  │ [○    ] │ │ [○    ] │ │ [○    ] │ │ [○    ] │ │ [○    ] │   ┃
+┃  │  BALTA  │ │  PILKA  │ │ SMĖLIO  │ │ MĖLYNA  │ │  JUODA  │   ┃
+┃  │   +0 €  │ │   +0 €  │ │   +0 €  │ │  +90 €  │ │ +190 €  │   ┃
+┃  │  [ ✓ ]  │ │  [   ]  │ │  [   ]  │ │  [   ]  │ │  [   ]  │   ┃
+┃  └─────────┘ └─────────┘ └─────────┘ └─────────┘ └─────────┘   ┃
+┃                                                                 ┃
+┃                                                                 ┃
+┃  [ ← ATGAL ]                              [ TOLIAU → ]          ┃
+┃                                                                 ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃                                                                 ┃
+┃  MONACO HORIZON · Populiarus + Termo + Balta     5 670 €        ┃
+┃                                                                 ┃
+┃  ○━━━━━━━○━━━━━━━○━━━━━━━●━━━━━━━○                              ┃
+┃  Paketas   Mediena  Spalva  Priedai  Peržiūra                  ┃
+┃                                                                 ┃
+┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫
+┃                                                                 ┃
+┃  4. PAPILDOMI PRIEDAI                                           ┃
+┃                                                                 ┃
+┃     Pasirinkite, ko dar norite (nebūtina)                      ┃
+┃                                                                 ┃
+┃  ┌─────────────────────────────────────────────────────────┐   ┃
+┃  │  ☑  LED apšvietimas                           +290 €    │   ┃
+┃  │      7-24 žvaigždutės + 1-2 lempos                      │   ┃
+┃  ├─────────────────────────────────────────────────────────┤   ┃
+┃  │  ☐  Masažiniai purkštukai                     +590 €    │   ┃
+┃  │      6-24 vandens + 12-24 oro purkštukų                 │   ┃
+┃  ├─────────────────────────────────────────────────────────┤   ┃
+┃  │  ☐  Filtracijos sistema                       +390 €    │   ┃
+┃  │      Smėlio filtras arba UVC                            │   ┃
+┃  ├─────────────────────────────────────────────────────────┤   ┃
+┃  │  ☐  Elektrinis šildytuvas                     +490 €    │   ┃
+┃  │      Papildomas šildymas be malkų                       │   ┃
+┃  └─────────────────────────────────────────────────────────┘   ┃
+┃                                                                 ┃
+┃                                                                 ┃
+┃  [ ← ATGAL ]                              [ TOLIAU → ]          ┃
+┃                                                                 ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃                                                                 ┃
+┃  MONACO HORIZON                                                 ┃
+┃  Jūsų konfigūracija                                            ┃
+┃                                                                 ┃
+┃  ○━━━━━━━○━━━━━━━○━━━━━━━○━━━━━━━●                              ┃
+┃  Paketas   Mediena  Spalva  Priedai  Peržiūra                  ┃
+┃                                                                 ┃
+┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫
+┃                                                                 ┃
+┃  ┌─────────────────┐                                           ┃
+┃  │                 │   Monaco Horizon                          ┃
+┃  │  [Product       │   ─────────────────────────────────────   ┃
+┃  │   Preview       │                                           ┃
+┃  │   Image]        │   ✓ Populiarus paketas                    ┃
+┃  │                 │   ✓ Termo medienos apdaila                ┃
+┃  │                 │   ✓ Baltas akrilas                        ┃
+┃  │                 │   ✓ Termo dangtelis                       ┃
+┃  └─────────────────┘   ✓ Mediniai laiptai                      ┃
+┃                        ✓ Priežiūros rinkinys                   ┃
+┃                        ✓ LED apšvietimas                       ┃
+┃                                                                 ┃
+┃  ┌─────────────────────────────────────────────────────────┐   ┃
+┃  │                                                         │   ┃
+┃  │   Bazinė kaina                              4 890 €     │   ┃
+┃  │   Populiarus paketas                         +490 €     │   ┃
+┃  │   Termo mediena                              +290 €     │   ┃
+┃  │   LED apšvietimas                            +290 €     │   ┃
+┃  │   ─────────────────────────────────────────────────     │   ┃
+┃  │   VISO                                      5 960 €     │   ┃
+┃  │                                                         │   ┃
+┃  │   arba lizingu    166 €/mėn × 36 mėn                   │   ┃
+┃  │                                                         │   ┃
+┃  └─────────────────────────────────────────────────────────┘   ┃
+┃                                                                 ┃
+┃  ┌─────────────────────────────────────────────────────────┐   ┃
+┃  │                                                         │   ┃
+┃  │   Pristatymas per 2-4 savaites · Montavimas įskaičiuotas│   ┃
+┃  │   5 metų garantija · Gaminama Lietuvoje                 │   ┃
+┃  │                                                         │   ┃
+┃  └─────────────────────────────────────────────────────────┘   ┃
+┃                                                                 ┃
+┃                                                                 ┃
+┃  [ ← ATGAL ]           [      Į KREPŠELĮ      ]                ┃
 ┃                                                                 ┃
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 ```
 
-**Key UX Principles:**
-- Package is pre-selected based on what user clicked on product page
-- Each option shows price difference, not total
-- "★ Rekomenduojama" badges guide decisions
-- Live price updates as options change
-- Single "Į krepšelį" button at bottom
+**Wizard UX Principles:**
+
+1. **Progress bar** - User always sees where they are (●━━○━━○━━○)
+2. **One decision per step** - No cognitive overload
+3. **Live price in header** - Always visible, updates instantly
+4. **Smart defaults** - "Populiarus" and "★ Rekomenduojama" pre-selected
+5. **Back/Forward navigation** - Easy to change previous choices
+6. **Visual options** - Photos for wood, color swatches for acrylic
+7. **Helpful hints** - "ℹ️ Termo mediena atspari drėgmei..."
+8. **Final review** - See everything before adding to cart
+9. **Trust signals** - Warranty, delivery, made in LT on final step
+
+**Mobile Experience:**
+- Same steps, vertically stacked
+- Sticky bottom bar with price + "TOLIAU" button
+- Swipe gestures between steps (optional enhancement)
 
 ---
 
