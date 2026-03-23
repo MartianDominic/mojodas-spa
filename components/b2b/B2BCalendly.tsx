@@ -15,7 +15,7 @@ export function B2BCalendly() {
       </div>
 
       <div className="relative z-10 w-full max-w-md">
-        <Icon name="calendar_month" className="text-primary text-6xl mb-6" />
+        <Icon name="calendar_month" className="text-primary text-4xl md:text-5xl lg:text-6xl mb-6" />
         <h3 className="font-display text-3xl mb-4">
           Techninė konsultacija su inžinieriumi
         </h3>
