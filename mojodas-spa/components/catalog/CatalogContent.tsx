@@ -24,7 +24,8 @@ export function CatalogContent({ products }: CatalogContentProps) {
     <>
       <FilterBar activeFilter={activeFilter} onFilterChange={onFilterChange} />
 
-      <section className="px-8 md:px-16 max-w-screen-2xl mx-auto">
+      <section className="px-8 md:px-16 w-full">
+        <div className="max-w-screen-2xl mx-auto">
         <ProductGrid products={filteredProducts} />
 
         {/* Empty state */}
@@ -41,6 +42,7 @@ export function CatalogContent({ products }: CatalogContentProps) {
             </button>
           </div>
         )}
+        </div>
       </section>
     </>
   );

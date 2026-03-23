@@ -49,15 +49,14 @@ export function FilterBar({
   return (
     <section
       className={cn(
-        "sticky top-[96px] z-40",
-        "px-8 md:px-16 py-6 mb-20",
+        "sticky top-[96px] z-40 w-full",
+        "py-6 mb-20",
         "overflow-x-auto scrollbar-hide",
-        "max-w-screen-2xl mx-auto",
         "bg-surface/80 backdrop-blur-md",
         className
       )}
     >
-      <div className="flex items-center gap-3 whitespace-nowrap">
+      <div className="flex items-center gap-3 whitespace-nowrap px-8 md:px-16 max-w-screen-2xl mx-auto">
         {FILTERS.map((filter) => (
           <button
             key={filter.id}
