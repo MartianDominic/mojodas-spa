@@ -30,7 +30,7 @@ export function EngineeringDurability() {
               </p>
             </div>
             <Image
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUAj_LXuFdy8VwpE1zvyJebQ6E4tbulaQ1k3MH7jGwvXkHsuaOJtdaYCZGrV9LKy_8BoO0I8HmaT3gefysrk8xiUkwAlaDWa6oGWqgqtGsBZbpwmUYfoGS61tn2ZOMbsfNsPYvDmeMKfUYkZuofLUbTqcAfqZZmA0_ZCYiarVKh-dVXHJygQmSz8zZCreMknbpDTPIpENyym9GmmQn-TeMFdkLMpCrxO0w8trv3kbyTpeSSY1z7Fyzxt-9Rp7Be1zMD9mYqnaEqws"
+              src="/images/b2b/filtration-system.jpg"
               alt="Advanced filtration system"
               fill
               className="object-cover opacity-5 pointer-events-none"

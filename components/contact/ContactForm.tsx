@@ -75,7 +75,7 @@ export function ContactForm() {
     return (
       <div className="space-y-12">
         <div>
-          <span className="text-primary font-bold tracking-[0.2em] text-[10px] uppercase block mb-4">
+          <span className="text-primary font-bold tracking-[0.2em] text-xs uppercase block mb-4">
             ŽINUTĖ IŠSIŲSTA
           </span>
           <h2 className="font-display text-4xl mb-4">
@@ -101,7 +101,7 @@ export function ContactForm() {
   return (
     <div className="space-y-12">
       <div>
-        <span className="text-primary font-bold tracking-[0.2em] text-[10px] uppercase block mb-4">
+        <span className="text-primary font-bold tracking-[0.2em] text-xs uppercase block mb-4">
           RAŠYKITE MUMS
         </span>
         <h2 className="font-display text-4xl mb-4">
@@ -118,7 +118,7 @@ export function ContactForm() {
           <div className="space-y-2">
             <label
               htmlFor="name"
-              className="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant"
+              className="text-xs font-bold uppercase tracking-widest text-on-surface-variant"
             >
               Vardas Pavardė *
             </label>
@@ -136,7 +136,7 @@ export function ContactForm() {
           <div className="space-y-2">
             <label
               htmlFor="phone"
-              className="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant"
+              className="text-xs font-bold uppercase tracking-widest text-on-surface-variant"
             >
               Telefono numeris *
             </label>
@@ -156,7 +156,7 @@ export function ContactForm() {
         <div className="space-y-2">
           <label
             htmlFor="email"
-            className="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant"
+            className="text-xs font-bold uppercase tracking-widest text-on-surface-variant"
           >
             El. paštas *
           </label>
@@ -175,7 +175,7 @@ export function ContactForm() {
         <div className="space-y-2">
           <label
             htmlFor="message"
-            className="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant"
+            className="text-xs font-bold uppercase tracking-widest text-on-surface-variant"
           >
             Jūsų žinutė *
           </label>

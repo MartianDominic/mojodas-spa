@@ -74,7 +74,7 @@ export function OrderSummary({ className }: OrderSummaryProps) {
           <div className="flex gap-6 items-center">
             <div className="w-32 aspect-[3/4] bg-neutral-200 overflow-hidden relative">
               <img
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwI_H8qSzLCL22GaFc03VZ3hpvLFC6tBxyXgBRItaU5pc8PeSN82WOc7Mh7cAF4AXG2HOrbSzJoXNmROhYSYhWhk81vopdnwN4zTTXFelnVfoTqrhP7jQxy9f0jRMc1mOHfFOuIr-BfBOGiD0DOAP6Gx_tGVHXOCj_wYQF6g-TPZCmgQnD6BMKbV0VPGKx_-7Qny6iV-_ysrbJNES7PzEtlApobL1Pa-7lh5NiRzLSRllO2Qb-TNLrYefPk6gG4nsqFTUivAgKhPtZ"
+                src="/images/products/order-placeholder.jpg"
                 alt="High-end minimalist spa tub"
                 className="w-full h-full object-cover"
               />

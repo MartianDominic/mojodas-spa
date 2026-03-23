@@ -25,7 +25,7 @@ export function CartHeader({ itemCount, onClose }: CartHeaderProps) {
           <Icon name="close" size="md" />
         </button>
       </div>
-      <p className="text-[10px] text-gray-500 font-medium tracking-wide">
+      <p className="text-xs text-gray-500 font-medium tracking-wide">
         Pristatymas visoje Lietuvoje per 2–4 savaites.
       </p>
     </header>

@@ -66,7 +66,7 @@ export function ConsultationBooking() {
                 {weekDays.map((day) => (
                   <div
                     key={day}
-                    className="text-[10px] text-center font-bold text-on-surface-variant/50 uppercase"
+                    className="text-xs text-center font-bold text-on-surface-variant/50 uppercase"
                   >
                     {day}
                   </div>

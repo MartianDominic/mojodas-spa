@@ -19,7 +19,7 @@ export function CartSummary({ subtotal }: CartSummaryProps) {
       </div>
       <div className="flex items-center gap-2 py-2 px-3 bg-[#F8F8F8] rounded-lg">
         <span className="text-base">&#128179;</span>
-        <p className="text-[11px] text-gray-500 font-medium">
+        <p className="text-sm text-gray-500 font-medium">
           Išmanus mokėjimas dalimis:{" "}
           <span className="text-[#050505] font-bold italic">
             nuo {formatMonthlyPayment(subtotal)}

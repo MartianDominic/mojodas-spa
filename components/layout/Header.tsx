@@ -86,7 +86,7 @@ export function Header({ variant = "default" }: HeaderProps) {
             >
               <Icon name="shopping_bag" size="md" />
               {itemCount > 0 && (
-                <span className="absolute -top-1 -right-1 w-4 h-4 bg-primary text-on-primary text-[10px] font-bold rounded-full flex items-center justify-center">
+                <span className="absolute -top-1 -right-1 w-4 h-4 bg-primary text-on-primary text-xs font-bold rounded-full flex items-center justify-center">
                   {itemCount}
                 </span>
               )}

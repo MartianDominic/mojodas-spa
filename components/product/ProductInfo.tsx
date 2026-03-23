@@ -28,7 +28,7 @@ export function ProductInfo({ product }: ProductInfoProps) {
       {/* Header */}
       <header>
         {/* Breadcrumb */}
-        <nav className="flex items-center space-x-2 text-[10px] uppercase tracking-widest text-secondary mb-4">
+        <nav className="flex items-center space-x-2 text-xs uppercase tracking-widest text-secondary mb-4">
           <Link
             href={ROUTES.CATALOG}
             className="hover:text-primary transition-colors"
@@ -64,7 +64,7 @@ export function ProductInfo({ product }: ProductInfoProps) {
       {/* Price Section */}
       <section className="space-y-4">
         <div>
-          <span className="text-[10px] uppercase tracking-widest text-secondary font-semibold block mb-1">
+          <span className="text-xs uppercase tracking-widest text-secondary font-semibold block mb-1">
             Bazine kaina nuo
           </span>
           <span className="text-4xl font-light font-headline tracking-tight text-on-surface">
@@ -88,25 +88,25 @@ export function ProductInfo({ product }: ProductInfoProps) {
       {/* Quick Specs */}
       <section className="grid grid-cols-2 gap-4">
         <div className="p-4 bg-surface-container-low">
-          <span className="text-[10px] uppercase tracking-widest text-secondary block mb-1">
+          <span className="text-xs uppercase tracking-widest text-secondary block mb-1">
             Talpa
           </span>
           <span className="font-medium">{capacityDisplay}</span>
         </div>
         <div className="p-4 bg-surface-container-low">
-          <span className="text-[10px] uppercase tracking-widest text-secondary block mb-1">
+          <span className="text-xs uppercase tracking-widest text-secondary block mb-1">
             Forma
           </span>
           <span className="font-medium">{getShapeLabel(product.shape)}</span>
         </div>
         <div className="p-4 bg-surface-container-low">
-          <span className="text-[10px] uppercase tracking-widest text-secondary block mb-1">
+          <span className="text-xs uppercase tracking-widest text-secondary block mb-1">
             Kolekcija
           </span>
           <span className="font-medium">{collectionLabel}</span>
         </div>
         <div className="p-4 bg-surface-container-low">
-          <span className="text-[10px] uppercase tracking-widest text-secondary block mb-1">
+          <span className="text-xs uppercase tracking-widest text-secondary block mb-1">
             Krosnele
           </span>
           <span className="font-medium">{heaterDisplay}</span>

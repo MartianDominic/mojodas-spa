@@ -47,7 +47,7 @@ export function TrustStrip() {
               <span className="material-symbols-outlined text-2xl text-white/80">
                 {badge.icon}
               </span>
-              <span className="text-[10px] font-bold uppercase tracking-[0.15em] text-white/90 leading-tight">
+              <span className="text-xs font-bold uppercase tracking-[0.15em] text-white/90 leading-tight">
                 {badge.label}
               </span>
             </div>

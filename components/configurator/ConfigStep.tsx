@@ -138,10 +138,10 @@ export function ConfigStep({ stepNumber, group, selectedValue }: ConfigStepProps
                   <div className="flex flex-col items-start">
                     <span className="font-medium">{option.name}</span>
                     {option.description && (
-                      <span className="text-[10px] text-secondary mt-0.5">{option.description}</span>
+                      <span className="text-xs text-secondary mt-0.5">{option.description}</span>
                     )}
                     {option.badge && (
-                      <span className="text-[9px] bg-primary text-white px-1.5 py-0.5 mt-1 tracking-tighter uppercase">
+                      <span className="text-xs bg-primary text-white px-1.5 py-0.5 mt-1 tracking-tighter uppercase">
                         {option.badge}
                       </span>
                     )}
@@ -195,7 +195,7 @@ export function ConfigStep({ stepNumber, group, selectedValue }: ConfigStepProps
                   <div>
                     <h5 className="font-bold">{option.name}</h5>
                     {option.badge && (
-                      <span className="inline-block text-[9px] bg-secondary-container text-on-secondary-container px-2 py-0.5 mt-1 tracking-tighter uppercase font-bold">
+                      <span className="inline-block text-xs bg-secondary-container text-on-secondary-container px-2 py-0.5 mt-1 tracking-tighter uppercase font-bold">
                         {option.badge}
                       </span>
                     )}
@@ -250,7 +250,7 @@ export function ConfigStep({ stepNumber, group, selectedValue }: ConfigStepProps
                 <div className="flex flex-col">
                   <span className="text-sm font-semibold">{option.name}</span>
                   {option.description && (
-                    <span className="text-[10px] text-secondary">{option.description}</span>
+                    <span className="text-xs text-secondary">{option.description}</span>
                   )}
                 </div>
                 <span className="ml-auto text-xs font-bold">+ {option.priceModifier}€</span>
@@ -284,7 +284,7 @@ export function ConfigStep({ stepNumber, group, selectedValue }: ConfigStepProps
                 )}
               >
                 <span className="text-xs font-bold leading-tight">{option.name}</span>
-                <span className="text-[10px] text-primary font-bold mt-4">+ {option.priceModifier}€</span>
+                <span className="text-xs text-primary font-bold mt-4">+ {option.priceModifier}€</span>
                 {selected && (
                   <span
                     className="material-symbols-outlined absolute top-2 right-2 text-primary-container text-sm"

@@ -30,13 +30,13 @@ export function CartFooter({ subtotal, onClose }: CartFooterProps) {
       <div className="flex justify-center items-center gap-6 pt-2">
         <div className="flex items-center gap-2 opacity-40">
           <Icon name="lock" size="sm" />
-          <span className="text-[9px] uppercase font-bold tracking-widest">
+          <span className="text-xs uppercase font-bold tracking-widest">
             Saugus mokėjimas
           </span>
         </div>
         <div className="w-1 h-1 rounded-full bg-gray-300"></div>
         <div className="flex items-center gap-2 opacity-40">
-          <span className="text-[9px] uppercase font-bold tracking-widest">
+          <span className="text-xs uppercase font-bold tracking-widest">
             5 Metų Garantija
           </span>
         </div>

@@ -13,7 +13,7 @@ interface SpecItemProps {
 function SpecItem({ label, value }: SpecItemProps) {
   return (
     <div>
-      <p className="text-[10px] uppercase tracking-widest text-secondary mb-1">
+      <p className="text-xs uppercase tracking-widest text-secondary mb-1">
         {label}
       </p>
       <p className="font-medium text-on-surface">{value}</p>
