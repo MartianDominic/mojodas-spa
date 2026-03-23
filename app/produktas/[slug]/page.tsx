@@ -82,37 +82,41 @@ export default async function ProductPage({ params }: ProductPageProps) {
   return (
     <>
       <Header />
-      <main className="pt-24 pb-32">
-        <div className="max-w-screen-2xl mx-auto px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
-            {/* Left Column: Product Imagery */}
-            <div className="lg:col-span-7 xl:col-span-8">
-              <div className="lg:sticky lg:top-32 space-y-8">
-                <ProductGallery
-                  images={product.images}
-                  productName={product.name}
-                  badge={product.tagline}
-                />
-                <TechSpecs
-                  specs={product.specs}
-                  capacity={product.capacity}
-                />
+      <main className="pb-32 -mt-24">
+        {/* Full Viewport Cinematic Hero */}
+        <div className="w-full overflow-hidden">
+          <ProductGallery
+            images={product.images}
+            productName={product.name}
+            badge={product.tagline}
+          />
+        </div>
+
+        {/* Narrative & Specifications Grid */}
+        <div className="max-w-screen-2xl mx-auto px-8 pt-24">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24">
+            {/* Left Column: Narrative & Specs */}
+            <div className="lg:col-span-7 space-y-24">
+              <section className="max-w-3xl">
+                <h2 className="font-headline italic text-4xl mb-8 font-light text-on-surface">The Narrative</h2>
+                <p className="text-secondary/90 leading-relaxed font-body text-lg">
+                  {product.longDescription || product.shortDescription}
+                </p>
+              </section>
+
+              <TechSpecs
+                specs={product.specs}
+                capacity={product.capacity}
+              />
+            </div>
+
+            {/* Right Column: Investment & Configuration Info */}
+            <div className="lg:col-span-5">
+              <div className="lg:sticky lg:top-32 pt-8">
+                <ProductInfo product={product} />
               </div>
             </div>
-
-            {/* Right Column: Product Info */}
-            <div className="lg:col-span-5 xl:col-span-4">
-              <ProductInfo product={product} />
-            </div>
           </div>
-
-          {/* Product Description */}
-          <section className="mt-24 max-w-3xl">
-            <h2 className="font-headline text-2xl mb-6">Apie produkta</h2>
-            <p className="text-secondary leading-relaxed">
-              {product.longDescription || product.shortDescription}
-            </p>
-          </section>
 
           {/* Related Products */}
           <RelatedProducts products={relatedProducts} />

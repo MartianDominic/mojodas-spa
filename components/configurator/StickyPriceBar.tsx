@@ -22,31 +22,45 @@ export function StickyPriceBar({ product }: StickyPriceBarProps) {
   };
 
   return (
-    <div className="fixed bottom-0 left-0 w-full flex justify-between items-center px-4 md:px-8 lg:px-12 py-6 bg-white/70 dark:bg-neutral-900/70 backdrop-blur-2xl z-50 shadow-[0_-10px_40px_rgba(0,0,0,0.06)] border-t border-neutral-200/20">
-      <div className="flex flex-col">
-        <span className="text-xs text-secondary font-semibold uppercase tracking-widest mb-1">
-          Dabartinė kaina
-        </span>
-        <span className="text-2xl font-light font-headline tracking-tight text-neutral-900 dark:text-neutral-100">
-          {formatPrice(totalPrice)}
-        </span>
+    <div className="fixed bottom-0 left-0 w-full px-4 py-4 md:px-8 md:py-4 bg-surface/90 backdrop-blur-xl z-50 border-t border-on-surface/10 flex flex-col md:flex-row justify-between items-center gap-3 transition-transform translate-y-0 shadow-2xl">
+      <div className="w-full md:w-auto flex justify-between md:justify-start items-center md:gap-12">
+        <div className="flex flex-col">
+          <span className="text-[10px] text-secondary font-semibold uppercase tracking-widest mb-0.5">
+            Total Investment
+          </span>
+          <span className="text-2xl md:text-3xl font-medium font-headline tracking-tight text-on-surface leading-none">
+            {formatPrice(totalPrice)}
+          </span>
+        </div>
+        <div className="hidden sm:flex flex-col items-start border-l border-on-surface/10 pl-6">
+          <span className="text-[10px] text-secondary font-medium uppercase tracking-widest mb-0.5">
+            Build Status
+          </span>
+          <span className="text-xs font-semibold text-on-surface flex items-center gap-2">
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+            Allocation Open
+          </span>
+        </div>
       </div>
-      <div className="flex items-center space-x-8">
-        <button className="hidden md:flex flex-col items-center group">
-          <span className="material-symbols-outlined text-on-surface group-hover:text-primary transition-colors">
-            payments
+      
+      <div className="w-full md:w-auto flex items-center gap-4">
+        <div className="hidden lg:flex flex-col items-end">
+          <span className="text-[10px] uppercase tracking-widest text-secondary mb-0.5">
+            Financing Available
           </span>
-          <span className="font-body font-semibold tracking-widest uppercase text-xs text-neutral-900 dark:text-neutral-100 mt-1">
-            Lizingas nuo {monthlyPayment}€/mėn
+          <span className="text-xs font-medium text-on-surface tracking-wide">
+            {monthlyPayment} € / month
           </span>
-        </button>
+        </div>
         <button
           onClick={handleAddToCart}
-          className="bg-[#AF8F55] text-white px-10 py-5 font-body font-bold tracking-[0.2em] uppercase text-xs hover:brightness-110 active:translate-y-0.5 transition-all flex items-center group"
+          className="w-full md:w-auto bg-primary text-white px-8 py-3.5 md:px-10 md:py-4 font-body font-bold tracking-[0.15em] uppercase text-[11px] hover:bg-primary/90 hover:scale-[1.02] active:scale-95 transition-all flex justify-center items-center group relative overflow-hidden rounded-sm shadow-md"
         >
-          Pridėti į krepšelį
-          <span className="material-symbols-outlined ml-4 group-hover:translate-x-1 transition-transform">
-            double_arrow
+          <span className="relative z-10 flex items-center">
+            Reserve Allocation
+            <span className="material-symbols-outlined ml-3 text-[14px] group-hover:translate-x-1 group-hover:opacity-100 opacity-80 transition-all">
+              arrow_forward
+            </span>
           </span>
         </button>
       </div>
