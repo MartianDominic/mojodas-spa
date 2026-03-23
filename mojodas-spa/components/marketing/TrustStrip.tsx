@@ -20,7 +20,7 @@ const badges = [
 export function TrustStrip() {
   return (
     <div className="w-full bg-black py-8 md:py-10 border-t border-white/10">
-      <div className="container mx-auto px-6 md:px-12">
+      <div className="container mx-auto px-6 md:px-4 md:px-8 lg:px-12">
         {/* Desktop: Horizontal Layout */}
         <div className="hidden md:flex justify-between items-center gap-8">
           {badges.map((badge, index) => (

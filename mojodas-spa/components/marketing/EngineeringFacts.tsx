@@ -21,7 +21,7 @@ const facts = [
 
 export function EngineeringFacts() {
   return (
-    <section className="py-32 bg-surface-container-low">
+    <section className="py-16 md:py-24 lg:py-32 bg-surface-container-low">
       <div className="container mx-auto px-6">
         <h2 className="font-headline text-4xl md:text-5xl mb-24 text-center">
           Kodėl šis sprendimas tarnaus ilgai?

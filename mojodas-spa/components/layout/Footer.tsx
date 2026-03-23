@@ -6,7 +6,7 @@ export function Footer() {
   return (
     <footer className="bg-surface-container-low border-t border-outline-variant/10">
       {/* Main Footer */}
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 py-20 w-full max-w-[1920px] mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:p-8 lg:p-12 px-4 md:px-8 lg:px-12 py-12 md:py-16 lg:py-20 w-full max-w-[1920px] mx-auto">
         {/* Brand Column */}
         <div className="md:col-span-1">
           <Link
@@ -80,7 +80,7 @@ export function Footer() {
       </div>
 
       {/* Copyright */}
-      <div className="px-12 py-8 border-t border-outline-variant/10">
+      <div className="px-4 md:px-8 lg:px-12 py-8 border-t border-outline-variant/10">
         <div className="container mx-auto text-center md:text-left">
           <p className="font-body text-sm tracking-wide leading-relaxed text-on-surface-variant">
             © 2024 MojoDas Spa. Ramybės inžinerija.

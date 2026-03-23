@@ -28,7 +28,7 @@ const propositions = [
 
 export function ValuePropositions() {
   return (
-    <section className="py-32 px-8 max-w-screen-2xl mx-auto">
+    <section className="py-16 md:py-24 lg:py-32 px-8 max-w-screen-2xl mx-auto">
       <div className="max-w-3xl mb-20">
         <h2 className="font-display text-4xl md:text-5xl leading-tight mb-6">
           Jūs parduodate ne nakvynę, o{" "}
@@ -40,11 +40,11 @@ export function ValuePropositions() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:p-8 lg:p-12">
         {propositions.map((prop) => (
           <div
             key={prop.title}
-            className="p-12 bg-surface-container-low border-b-2 border-transparent hover:border-primary transition-all duration-500 group"
+            className="p-6 md:p-8 lg:p-12 bg-surface-container-low border-b-2 border-transparent hover:border-primary transition-all duration-500 group"
           >
             <div className="mb-8 text-primary opacity-60 group-hover:opacity-100 transition-opacity">
               <Icon name={prop.icon} className="text-5xl" />

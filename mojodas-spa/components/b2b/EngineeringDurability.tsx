@@ -3,7 +3,7 @@ import { Icon } from "@/components/ui";
 
 export function EngineeringDurability() {
   return (
-    <section className="bg-surface-container-low py-32 px-8">
+    <section className="bg-surface-container-low py-16 md:py-24 lg:py-32 px-8">
       <div className="max-w-screen-2xl mx-auto">
         <div className="text-center mb-24 max-w-3xl mx-auto">
           <h2 className="font-display text-4xl md:text-5xl mb-6">
@@ -17,8 +17,8 @@ export function EngineeringDurability() {
 
         <div className="grid grid-cols-1 md:grid-cols-12 grid-rows-2 gap-4 h-auto md:min-h-[700px]">
           {/* Item 1: 5-min maintenance */}
-          <div className="md:col-span-8 md:row-span-1 bg-surface p-12 flex flex-col justify-end relative overflow-hidden">
-            <div className="absolute top-12 right-12 text-6xl font-display text-primary/10">
+          <div className="md:col-span-8 md:row-span-1 bg-surface p-6 md:p-8 lg:p-12 flex flex-col justify-end relative overflow-hidden">
+            <div className="absolute top-6 md:p-8 lg:p-12 right-12 text-6xl font-display text-primary/10">
               01
             </div>
             <div className="max-w-md relative z-10">
@@ -38,7 +38,7 @@ export function EngineeringDurability() {
           </div>
 
           {/* Item 2: Vandal-proof */}
-          <div className="md:col-span-4 md:row-span-1 bg-surface-container-highest p-12 flex flex-col justify-between border border-outline-variant/20">
+          <div className="md:col-span-4 md:row-span-1 bg-surface-container-highest p-6 md:p-8 lg:p-12 flex flex-col justify-between border border-outline-variant/20">
             <Icon name="security" className="text-primary text-4xl" />
             <div>
               <h4 className="font-headline text-2xl mb-4">
@@ -52,7 +52,7 @@ export function EngineeringDurability() {
           </div>
 
           {/* Item 3: Zero rot */}
-          <div className="md:col-span-12 md:row-span-1 bg-primary text-white p-12 flex flex-col justify-center relative overflow-hidden">
+          <div className="md:col-span-12 md:row-span-1 bg-primary text-white p-6 md:p-8 lg:p-12 flex flex-col justify-center relative overflow-hidden">
             <div className="max-w-2xl relative z-10">
               <Icon
                 name="forest"

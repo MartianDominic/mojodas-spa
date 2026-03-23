@@ -29,7 +29,7 @@ export function CatalogContent({ products }: CatalogContentProps) {
 
         {/* Empty state */}
         {filteredProducts.length === 0 && (
-          <div className="text-center py-20">
+          <div className="text-center py-12 md:py-16 lg:py-20">
             <p className="text-on-surface-variant text-lg">
               Pagal pasirinktus filtrus produktų nerasta.
             </p>
