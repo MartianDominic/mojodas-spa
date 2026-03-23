@@ -1,0 +1,19 @@
+{
+  "status": "completed",
+  "scrapedAt": "2026-03-23T17:00:00Z",
+  "completedAt": "2026-03-23T17:01:00Z",
+  "executionTime": "~3 minutes",
+  "productsCount": 16,
+  "totalImagesDownloaded": 112,
+  "imageCategories": {
+    "products": 41,
+    "acrylicColors": 13,
+    "woodFinishes": 19,
+    "covers": 3,
+    "accessories": 25,
+    "icons": 11
+  },
+  "downloadMethod": "5 parallel agents with curl + proper headers",
+  "allImagesLocal": true,
+  "noHotlinkIssues": true
+}
