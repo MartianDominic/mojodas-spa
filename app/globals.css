@@ -6,6 +6,45 @@
 
 /* MojoDas Spa Design Tokens */
 :root {
+  /* Base Font Size - DO NOT CHANGE */
+  font-size: 16px;
+
+  /* Fluid Typography Scale (13" → 27" responsive) */
+  /* Scales from mobile (375px) to ultra-wide (2560px) */
+  --font-size-xs: clamp(0.625rem, 0.5rem + 0.5vw, 0.75rem);      /* 10-12px */
+  --font-size-sm: clamp(0.75rem, 0.65rem + 0.4vw, 0.875rem);     /* 12-14px */
+  --font-size-base: clamp(0.875rem, 0.8rem + 0.3vw, 1rem);       /* 14-16px */
+  --font-size-md: clamp(1rem, 0.9rem + 0.4vw, 1.125rem);         /* 16-18px */
+  --font-size-lg: clamp(1.125rem, 1rem + 0.5vw, 1.25rem);        /* 18-20px */
+  --font-size-xl: clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem);        /* 20-24px */
+  --font-size-2xl: clamp(1.5rem, 1.3rem + 0.8vw, 1.875rem);      /* 24-30px */
+  --font-size-3xl: clamp(1.875rem, 1.6rem + 1vw, 2.25rem);       /* 30-36px */
+  --font-size-4xl: clamp(2.25rem, 2rem + 1.2vw, 3rem);           /* 36-48px */
+  --font-size-5xl: clamp(3rem, 2.5rem + 1.5vw, 3.75rem);         /* 48-60px */
+  --font-size-6xl: clamp(3.75rem, 3rem + 2vw, 4.5rem);           /* 60-72px */
+  --font-size-7xl: clamp(4.5rem, 3.5rem + 2.5vw, 6rem);          /* 72-96px */
+  --font-size-8xl: clamp(6rem, 4.5rem + 3vw, 8rem);              /* 96-128px */
+
+  /* Fluid Spacing Scale (13" → 27" responsive) */
+  --space-2xs: clamp(0.25rem, 0.2rem + 0.2vw, 0.375rem);         /* 4-6px */
+  --space-xs: clamp(0.5rem, 0.4rem + 0.3vw, 0.75rem);            /* 8-12px */
+  --space-sm: clamp(0.75rem, 0.6rem + 0.4vw, 1rem);              /* 12-16px */
+  --space-md: clamp(1rem, 0.8rem + 0.6vw, 1.5rem);               /* 16-24px */
+  --space-lg: clamp(1.5rem, 1.2rem + 0.8vw, 2rem);               /* 24-32px */
+  --space-xl: clamp(2rem, 1.5rem + 1.2vw, 3rem);                 /* 32-48px */
+  --space-2xl: clamp(3rem, 2.5rem + 1.5vw, 4rem);                /* 48-64px */
+  --space-3xl: clamp(4rem, 3rem + 2vw, 6rem);                    /* 64-96px */
+  --space-4xl: clamp(6rem, 4rem + 3vw, 8rem);                    /* 96-128px */
+  --space-5xl: clamp(8rem, 6rem + 4vw, 10rem);                   /* 128-160px */
+
+  /* Container Max Widths */
+  --container-sm: 640px;
+  --container-md: 768px;
+  --container-lg: 1024px;
+  --container-xl: 1280px;
+  --container-2xl: 1536px;
+  --container-max: 1920px; /* Cap for ultra-wide screens */
+
   /* Surface Hierarchy */
   --surface: #fbf9f4;
   --surface-dim: #dbdad5;
@@ -92,6 +131,33 @@
 
 /* Tailwind Theme */
 @theme inline {
+  /* Fluid Typography */
+  --font-size-xs: var(--font-size-xs);
+  --font-size-sm: var(--font-size-sm);
+  --font-size-base: var(--font-size-base);
+  --font-size-md: var(--font-size-md);
+  --font-size-lg: var(--font-size-lg);
+  --font-size-xl: var(--font-size-xl);
+  --font-size-2xl: var(--font-size-2xl);
+  --font-size-3xl: var(--font-size-3xl);
+  --font-size-4xl: var(--font-size-4xl);
+  --font-size-5xl: var(--font-size-5xl);
+  --font-size-6xl: var(--font-size-6xl);
+  --font-size-7xl: var(--font-size-7xl);
+  --font-size-8xl: var(--font-size-8xl);
+
+  /* Fluid Spacing */
+  --spacing-2xs: var(--space-2xs);
+  --spacing-xs: var(--space-xs);
+  --spacing-sm: var(--space-sm);
+  --spacing-md: var(--space-md);
+  --spacing-lg: var(--space-lg);
+  --spacing-xl: var(--space-xl);
+  --spacing-2xl: var(--space-2xl);
+  --spacing-3xl: var(--space-3xl);
+  --spacing-4xl: var(--space-4xl);
+  --spacing-5xl: var(--space-5xl);
+
   /* Colors */
   --color-surface: var(--surface);
   --color-surface-dim: var(--surface-dim);
