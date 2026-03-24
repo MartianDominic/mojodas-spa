@@ -29,7 +29,7 @@ export function Header({ variant = "default" }: HeaderProps) {
             : "bg-surface/95 backdrop-blur-xl text-on-surface border-b border-outline-variant/20"
         )}
       >
-        <div className="flex justify-between items-center px-8 py-8 w-full max-w-[1920px] mx-auto">
+        <div className="flex justify-between items-center px-6 py-4 w-full max-w-[1920px] mx-auto">
           {/* Logo */}
           <Link
             href={ROUTES.HOME}
@@ -42,7 +42,7 @@ export function Header({ variant = "default" }: HeaderProps) {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-6 md:p-8 lg:p-12">
+          <div className="hidden md:flex items-center gap-6">
             <Link
               href={ROUTES.CATALOG}
               className={cn(

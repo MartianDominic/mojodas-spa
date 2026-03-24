@@ -45,20 +45,20 @@ export function Bestsellers() {
 
   return (
     <section className="bg-[#FAFAFA] text-[#050505] py-12 md:py-16 lg:py-20 px-4 md:px-8 lg:px-12">
-      <div className="container mx-auto max-w-screen-2xl">
-        <div className="mb-8 md:mb-10">
+      <div className="w-full max-w-screen-2xl mx-auto">
+        <header className="mb-8 md:mb-10">
           <h2 className="font-headline text-2xl md:text-3xl mb-4">
             Dažniausias klientų pasirinkimas.
           </h2>
           <p className="font-body text-sm md:text-base text-gray-500 max-w-2xl">
             Patikrinti modeliai, kuriuos dažniausiai užsako privačių namų savininkai.
           </p>
-        </div>
+        </header>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+        <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           {/* Featured Card */}
           {featured && (
-            <div className="md:col-span-2 flex flex-col md:flex-row bg-white rounded-xl overflow-hidden shadow-sm border border-gray-200 max-w-6xl mx-auto">
+            <div className="md:col-span-2 w-full max-w-6xl mx-auto flex flex-col md:flex-row bg-white rounded-xl overflow-hidden shadow-sm border border-gray-200">
               <div className="md:w-1/2 h-[300px] md:h-[400px] lg:h-[500px] max-h-[600px] relative">
                 <Image
                   src={featured.image}
