@@ -44,10 +44,10 @@ export function Bestsellers() {
   const others = bestsellers.filter((p) => !p.featured);
 
   return (
-    <section className="bg-[#FAFAFA] text-[#050505] py-16 md:py-24 lg:py-32 px-4 md:px-8 lg:px-12">
+    <section className="bg-[#FAFAFA] text-[#050505] py-12 md:py-16 lg:py-20 px-4 md:px-8 lg:px-12">
       <div className="container mx-auto max-w-screen-2xl">
-        <div className="mb-12 md:mb-16">
-          <h2 className="font-headline text-3xl md:text-4xl lg:text-5xl mb-4">
+        <div className="mb-8 md:mb-10">
+          <h2 className="font-headline text-2xl md:text-3xl mb-4">
             Dažniausias klientų pasirinkimas.
           </h2>
           <p className="font-body text-sm md:text-base text-gray-500 max-w-2xl">
@@ -58,7 +58,7 @@ export function Bestsellers() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           {/* Featured Card */}
           {featured && (
-            <div className="md:col-span-2 flex flex-col md:flex-row bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-200 max-w-6xl mx-auto">
+            <div className="md:col-span-2 flex flex-col md:flex-row bg-white rounded-xl overflow-hidden shadow-sm border border-gray-200 max-w-6xl mx-auto">
               <div className="md:w-1/2 h-[300px] md:h-[400px] lg:h-[500px] max-h-[600px] relative">
                 <Image
                   src={featured.image}
@@ -72,7 +72,7 @@ export function Bestsellers() {
                   <span className="text-xs bg-black text-white px-3 py-1 uppercase tracking-widest inline-block mb-4">
                     {featured.badge}
                   </span>
-                  <h3 className="font-headline text-4xl md:text-5xl mb-4">
+                  <h3 className="font-headline text-2xl md:text-3xl mb-4">
                     {featured.name}
                   </h3>
                   <p className="text-sm text-gray-500 mb-6">{featured.tagline}</p>
@@ -112,7 +112,7 @@ export function Bestsellers() {
           {others.map((product) => (
             <div
               key={product.slug}
-              className="flex flex-col bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-200 w-full"
+              className="flex flex-col bg-white rounded-xl overflow-hidden shadow-sm border border-gray-200 w-full"
             >
               <Image
                 src={product.image}
