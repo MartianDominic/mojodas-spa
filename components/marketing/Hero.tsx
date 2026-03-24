@@ -6,7 +6,7 @@ import { ROUTES } from "@/lib/constants/routes";
 
 export function Hero() {
   return (
-    <header className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black text-white">
+    <header className="w-full relative min-h-screen flex items-center justify-center overflow-hidden bg-black text-white">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image

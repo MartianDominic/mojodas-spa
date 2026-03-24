@@ -29,7 +29,7 @@ const categories = [
 
 export function CategoryGrid() {
   return (
-    <section className="py-10 md:py-12 lg:py-16 bg-surface-container-low">
+    <section className="w-full py-10 md:py-12 lg:py-16 bg-surface-container-low">
       <div className="container mx-auto px-4 md:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 items-stretch max-w-screen-2xl">
         {/* Large Card */}
         <div className="md:col-span-8 relative aspect-[16/9] md:aspect-auto md:min-h-[400px] lg:min-h-[500px] bg-surface overflow-hidden group">

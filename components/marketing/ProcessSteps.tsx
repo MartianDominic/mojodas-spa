@@ -21,7 +21,7 @@ const steps = [
 
 export function ProcessSteps() {
   return (
-    <section className="py-12 md:py-16 lg:py-20 bg-surface">
+    <section className="w-full py-12 md:py-16 lg:py-20 bg-surface">
       <div className="container mx-auto px-6">
         <h2 className="font-headline text-2xl md:text-3xl lg:text-4xl text-center mb-10 md:mb-12 leading-snug tracking-tight">
           Nuo užsakymo iki pirmo maudymosi – be jokio streso.

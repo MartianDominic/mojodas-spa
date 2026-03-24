@@ -44,7 +44,7 @@ export function Bestsellers() {
   const others = bestsellers.filter((p) => !p.featured);
 
   return (
-    <section className="bg-[#FAFAFA] text-[#050505] py-12 md:py-16 lg:py-20 px-4 md:px-8 lg:px-12">
+    <section className="w-full bg-[#FAFAFA] text-[#050505] py-12 md:py-16 lg:py-20 px-4 md:px-8 lg:px-12">
       <div className="w-full max-w-screen-2xl mx-auto">
         <header className="w-full mb-8 md:mb-10">
           <h2 className="font-headline text-2xl md:text-3xl mb-4">
