@@ -10,12 +10,12 @@ interface CatalogHeaderProps {
  */
 export function CatalogHeader({ className }: CatalogHeaderProps) {
   return (
-    <header className={cn("px-8 md:px-16 mb-12 md:mb-16 w-full", className)}>
+    <header className={cn("px-6 md:px-8 mb-8 md:mb-12 w-full", className)}>
       <div className="max-w-screen-2xl mx-auto">
-        <h1 className="font-headline text-6xl md:text-8xl lg:text-9xl font-black tracking-tighter text-on-surface mb-6 md:mb-8">
+        <h1 className="font-headline text-4xl md:text-5xl lg:text-6xl font-black tracking-tighter text-on-surface mb-4 md:mb-6">
           Kolekcija.
         </h1>
-        <p className="font-body text-lg md:text-xl lg:text-2xl text-on-surface-variant leading-relaxed" style={{ maxWidth: '42rem' }}>
+        <p className="font-body text-base md:text-lg text-on-surface-variant leading-relaxed max-w-xl">
           Lietuvoje gaminami premium klases modeliai. Atraskite savo erdvei tobulai tinkanti dizaina ir talpa.
         </p>
       </div>

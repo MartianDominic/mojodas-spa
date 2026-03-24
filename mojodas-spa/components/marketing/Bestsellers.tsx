@@ -46,11 +46,11 @@ export function Bestsellers() {
   return (
     <section className="bg-[#FAFAFA] text-[#050505] py-12 md:py-16 lg:py-20 px-4 md:px-8 lg:px-12">
       <div className="w-full max-w-screen-2xl mx-auto">
-        <header className="mb-8 md:mb-10">
+        <header className="w-full mb-8 md:mb-10">
           <h2 className="font-headline text-2xl md:text-3xl mb-4">
             Dažniausias klientų pasirinkimas.
           </h2>
-          <p className="font-body text-sm md:text-base text-gray-500 max-w-2xl">
+          <p className="font-body text-sm md:text-base text-gray-500 max-w-2xl w-full">
             Patikrinti modeliai, kuriuos dažniausiai užsako privačių namų savininkai.
           </p>
         </header>

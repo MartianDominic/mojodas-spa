@@ -79,7 +79,7 @@ export function FilterBar({
   );
 
   return (
-    <div className={cn("w-full relative z-40 mb-12 md:mb-20", className)}>
+    <div className={cn("w-full relative z-40 mb-8 md:mb-12", className)}>
       <div className="max-w-screen-2xl mx-auto px-6 md:px-8">
         {/* Top Control Bar */}
         <div className="flex items-center justify-between border-b border-on-surface py-6">
