@@ -32,9 +32,8 @@ export function ConsultationBooking() {
             <h2 className="font-headline text-2xl md:text-3xl lg:text-4xl mb-8 leading-tight">
               Rezervuokite nemokamą 15 minučių pokalbį.
             </h2>
-            <p className="font-body text-base text-on-surface-variant mb-8 max-w-lg">
-              Parinksime tinkamiausią modelį jūsų sklypui, aptarsime techninius
-              reikalavimus ir pateiksime preliminarų kainos pasiūlymą.
+            <p className="text-base text-on-surface-variant mb-8" style={{ maxWidth: '32rem', wordBreak: 'normal', whiteSpace: 'normal' }}>
+              Parinksime tinkamiausią modelį jūsų sklypui, aptarsime techninius reikalavimus ir pateiksime preliminarų kainos pasiūlymą.
             </p>
             <div className="flex flex-col gap-6">
               {benefits.map((benefit) => (
@@ -63,9 +62,9 @@ export function ConsultationBooking() {
 
               {/* Calendar Grid */}
               <div className="grid grid-cols-7 gap-2 mb-8">
-                {weekDays.map((day) => (
+                {weekDays.map((day, index) => (
                   <div
-                    key={day}
+                    key={index}
                     className="text-xs text-center font-bold text-on-surface-variant/50 uppercase"
                   >
                     {day}

@@ -311,10 +311,11 @@ main, header, section, article, div, footer, nav {
 }
 
 /* Ensure text doesn't break incorrectly */
-p, h1, h2, h3, h4, h5, h6, span {
-  word-break: normal;
-  overflow-wrap: normal;
-  hyphens: none;
+p, h1, h2, h3, h4, h5, h6, span, .font-body, .font-headline {
+  word-break: normal !important;
+  overflow-wrap: normal !important;
+  hyphens: none !important;
+  white-space: normal !important;
 }
 
 /* Selection */
