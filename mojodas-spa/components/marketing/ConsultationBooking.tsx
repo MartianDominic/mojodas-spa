@@ -20,7 +20,7 @@ const calendarDays = [
 
 export function ConsultationBooking() {
   return (
-    <section className="py-12 md:py-16 lg:py-20 bg-surface overflow-hidden">
+    <section className="w-full py-12 md:py-16 lg:py-20 bg-surface overflow-hidden">
       <div className="container mx-auto px-6">
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
           {/* Left Content */}

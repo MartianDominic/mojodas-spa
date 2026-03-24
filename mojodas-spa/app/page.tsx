@@ -12,7 +12,7 @@ export default function HomePage() {
   return (
     <>
       <Header variant="transparent" />
-      <main>
+      <main className="w-full">
         <Hero />
         <ProcessSteps />
         <CategoryGrid />
