@@ -286,6 +286,7 @@
 /* Base Styles */
 html {
   scroll-behavior: smooth;
+  width: 100%;
 }
 
 body {
@@ -294,6 +295,26 @@ body {
   font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+}
+
+/* Force all block elements to respect parent width */
+main, header, section, article, div, footer, nav {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+
+/* Force width inheritance in nested containers */
+.container {
+  width: 100% !important;
+}
+
+/* Ensure text doesn't break incorrectly */
+p, h1, h2, h3, h4, h5, h6, span {
+  word-break: normal;
+  overflow-wrap: normal;
+  hyphens: none;
 }
 
 /* Selection */

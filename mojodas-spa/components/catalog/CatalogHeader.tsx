@@ -15,7 +15,7 @@ export function CatalogHeader({ className }: CatalogHeaderProps) {
         <h1 className="font-headline text-4xl md:text-5xl lg:text-6xl font-black tracking-tighter text-on-surface mb-4 md:mb-6">
           Kolekcija.
         </h1>
-        <p className="font-body text-base md:text-lg text-on-surface-variant leading-relaxed max-w-xl">
+        <p className="text-base md:text-lg text-on-surface-variant leading-relaxed max-w-xl">
           Lietuvoje gaminami premium klases modeliai. Atraskite savo erdvei tobulai tinkanti dizaina ir talpa.
         </p>
       </div>
