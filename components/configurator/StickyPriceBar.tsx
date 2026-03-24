@@ -2,7 +2,7 @@
 
 import { useConfiguratorStore } from "@/stores/configurator";
 import { useCartStore } from "@/stores/cart";
-import { formatPrice, formatMonthlyPayment } from "@/lib/utils/format";
+import { formatPrice } from "@/lib/utils/format";
 import type { Product } from "@/types";
 
 interface StickyPriceBarProps {
@@ -26,7 +26,7 @@ export function StickyPriceBar({ product }: StickyPriceBarProps) {
       <div className="w-full md:w-auto flex justify-between md:justify-start items-center md:gap-12">
         <div className="flex flex-col">
           <span className="text-[10px] text-secondary font-semibold uppercase tracking-widest mb-0.5">
-            Total Investment
+            Investicija
           </span>
           <span className="text-2xl md:text-3xl font-medium font-headline tracking-tight text-on-surface leading-none">
             {formatPrice(totalPrice)}
@@ -34,11 +34,11 @@ export function StickyPriceBar({ product }: StickyPriceBarProps) {
         </div>
         <div className="hidden sm:flex flex-col items-start border-l border-on-surface/10 pl-6">
           <span className="text-[10px] text-secondary font-medium uppercase tracking-widest mb-0.5">
-            Build Status
+            Gamybos Statusas
           </span>
           <span className="text-xs font-semibold text-on-surface flex items-center gap-2">
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-            Allocation Open
+            Priimame Užsakymus
           </span>
         </div>
       </div>
@@ -46,7 +46,7 @@ export function StickyPriceBar({ product }: StickyPriceBarProps) {
       <div className="w-full md:w-auto flex items-center gap-4">
         <div className="hidden lg:flex flex-col items-end">
           <span className="text-[10px] uppercase tracking-widest text-secondary mb-0.5">
-            Financing Available
+            Galimas Finansavimas
           </span>
           <span className="text-xs font-medium text-on-surface tracking-wide">
             {monthlyPayment} € / month
@@ -57,7 +57,7 @@ export function StickyPriceBar({ product }: StickyPriceBarProps) {
           className="w-full md:w-auto bg-primary text-white px-8 py-3.5 md:px-10 md:py-4 font-body font-bold tracking-[0.15em] uppercase text-[11px] hover:bg-primary/90 hover:scale-[1.02] active:scale-95 transition-all flex justify-center items-center group relative overflow-hidden rounded-sm shadow-md"
         >
           <span className="relative z-10 flex items-center">
-            Reserve Allocation
+            Rezervuoti Vietą
             <span className="material-symbols-outlined ml-3 text-[14px] group-hover:translate-x-1 group-hover:opacity-100 opacity-80 transition-all">
               arrow_forward
             </span>

@@ -221,12 +221,12 @@
       },
       "images": [
         {
-          "url": "/images/products/classic-round-horizon/hero-1.jpg",
+          "url": "/images/products/placeholder.svg",
           "alt": "Classic Round Horizon kublas"
         }
       ],
       "thumbnail": {
-        "url": "/images/products/classic-round-horizon/thumb.jpg",
+        "url": "/images/products/placeholder.svg",
         "alt": "Classic Round Horizon"
       },
       "configurableOptions": [
@@ -849,12 +849,12 @@
       },
       "images": [
         {
-          "url": "/images/products/monaco-in/hero-1.jpg",
+          "url": "/images/products/placeholder.svg",
           "alt": "Monaco In kublas"
         }
       ],
       "thumbnail": {
-        "url": "/images/products/monaco-in/thumb.jpg",
+        "url": "/images/products/placeholder.svg",
         "alt": "Monaco In"
       },
       "configurableOptions": [
@@ -946,12 +946,12 @@
       },
       "images": [
         {
-          "url": "/images/products/monaco-out/hero-1.jpg",
+          "url": "/images/products/placeholder.svg",
           "alt": "Monaco Out kublas"
         }
       ],
       "thumbnail": {
-        "url": "/images/products/monaco-out/thumb.jpg",
+        "url": "/images/products/placeholder.svg",
         "alt": "Monaco Out"
       },
       "configurableOptions": [
@@ -1307,12 +1307,12 @@
       },
       "images": [
         {
-          "url": "/images/products/arctic-chiller/hero-1.jpg",
+          "url": "/images/products/placeholder.svg",
           "alt": "Arctic Chiller kublas"
         }
       ],
       "thumbnail": {
-        "url": "/images/products/arctic-chiller/thumb.jpg",
+        "url": "/images/products/placeholder.svg",
         "alt": "Arctic Chiller"
       },
       "configurableOptions": [
