@@ -36,7 +36,7 @@ export function ProductCard({ product, className }: ProductCardProps) {
         "group relative aspect-[4/5] overflow-hidden rounded-sm",
         "bg-surface",
         "transition-transform duration-700 hover:-translate-y-1 hover:shadow-2xl",
-        "w-full", // Fill grid cell width
+        "w-full min-w-0", // Fill grid cell width
         className
       )}
     >
@@ -57,28 +57,28 @@ export function ProductCard({ product, className }: ProductCardProps) {
       <div className="absolute inset-0 bg-noise mix-blend-overlay opacity-50 pointer-events-none" />
 
       {/* Top Left Badge - Feature (variant or heater type) */}
-      <div className="absolute top-6 left-6 z-10">
-        <span className="text-white text-[10px] sm:text-xs font-semibold tracking-[0.2em] uppercase px-3 py-1.5 backdrop-blur-md bg-black/40 border border-white/10 rounded-sm">
+      <div className="absolute top-6 left-6 z-10 max-w-[calc(50%-1rem)]">
+        <span className="text-white text-[10px] sm:text-xs font-semibold tracking-[0.2em] uppercase px-3 py-1.5 backdrop-blur-md bg-black/40 border border-white/10 rounded-sm break-words">
           {featureLabel}
         </span>
       </div>
 
       {/* Top Right Badge - Shape */}
-      <div className="absolute top-6 right-6 z-10">
-        <span className="bg-on-surface text-surface text-[10px] sm:text-xs font-medium tracking-widest uppercase px-3 py-1.5 rounded-sm">
+      <div className="absolute top-6 right-6 z-10 max-w-[calc(50%-1rem)]">
+        <span className="bg-on-surface text-surface text-[10px] sm:text-xs font-medium tracking-widest uppercase px-3 py-1.5 rounded-sm break-words">
           {shapeLabel}
         </span>
       </div>
 
       {/* Bottom Content */}
-      <div className="absolute inset-x-6 bottom-6 z-10 flex flex-col justify-end">
+      <div className="absolute inset-x-6 bottom-6 z-10 flex flex-col justify-end min-w-0">
         {/* Product Name */}
-        <h3 className="font-headline text-2xl sm:text-3xl text-white font-medium mb-1 tracking-tight drop-shadow-md">
+        <h3 className="font-headline text-2xl sm:text-3xl text-white font-medium mb-1 tracking-tight drop-shadow-md break-words">
           {product.name}
         </h3>
 
         {/* Capacity Info */}
-        <p className="text-white/70 text-[10px] sm:text-xs uppercase tracking-widest font-medium mb-5">{capacityDisplay}</p>
+        <p className="text-white/70 text-[10px] sm:text-xs uppercase tracking-widest font-medium mb-5 break-words">{capacityDisplay}</p>
 
         {/* Price and CTA Container */}
         <div className="flex items-center justify-between border-t border-white/20 pt-4">
@@ -92,7 +92,7 @@ export function ProductCard({ product, className }: ProductCardProps) {
 
           {/* Configure Button */}
           <Link href={ROUTES.CONFIGURATOR(product.slug)}>
-            <button className="bg-white/10 hover:bg-white text-white hover:text-black backdrop-blur-md border border-white/20 px-5 sm:px-6 py-2.5 sm:py-3 text-[10px] sm:text-xs font-semibold tracking-[0.15em] uppercase transition-all rounded-sm flex items-center group/btn">
+            <button className="bg-white/10 hover:bg-white text-white hover:text-black backdrop-blur-md border border-white/20 px-5 sm:px-6 py-2.5 sm:py-3 text-[10px] sm:text-xs font-semibold tracking-[0.15em] uppercase transition-all rounded-sm flex items-center group/btn whitespace-nowrap">
               Konfigūruoti
               <span className="material-symbols-outlined ml-2 text-sm group-hover/btn:translate-x-1 transition-transform">
                 arrow_forward
