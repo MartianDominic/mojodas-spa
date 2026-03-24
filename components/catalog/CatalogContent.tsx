@@ -25,8 +25,8 @@ export function CatalogContent({ products }: CatalogContentProps) {
         productCount={filteredProducts.length}
       />
 
-      <section className="px-6 md:px-8 w-full min-w-0">
-        <div className="max-w-screen-2xl min-w-0 mx-auto">
+      <section className="px-6 md:px-8">
+        <div className="max-w-screen-2xl mx-auto">
           <ProductGrid products={filteredProducts} />
 
           {/* Empty state */}

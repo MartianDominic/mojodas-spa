@@ -79,8 +79,8 @@ export function FilterBar({
   );
 
   return (
-    <div className={cn("w-full min-w-0 relative z-40 mb-8 md:mb-12", className)}>
-      <div className="max-w-screen-2xl min-w-0 mx-auto px-6 md:px-8">
+    <div className={cn("relative z-40 mb-8 md:mb-12", className)}>
+      <div className="max-w-screen-2xl mx-auto px-6 md:px-8">
         {/* Top Control Bar */}
         <div className="flex items-center justify-between border-b border-on-surface py-6">
           <div className="flex items-center gap-4">
@@ -93,7 +93,7 @@ export function FilterBar({
                   {isOpen ? "close" : "tune"}
                 </span>
               </div>
-              <span className="font-headline text-lg uppercase tracking-widest mt-0.5 break-words">
+              <span className="font-headline text-lg uppercase tracking-widest mt-0.5">
                 Filtravimo Parametrai
               </span>
               {activeCount > 0 && (

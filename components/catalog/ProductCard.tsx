@@ -36,7 +36,7 @@ export function ProductCard({ product, className }: ProductCardProps) {
         "group relative aspect-[4/5] overflow-hidden rounded-sm",
         "bg-surface",
         "transition-transform duration-700 hover:-translate-y-1 hover:shadow-2xl",
-        "w-full min-w-0", // Fill grid cell width
+        "w-full", // Fill grid cell width
         className
       )}
     >
@@ -57,28 +57,28 @@ export function ProductCard({ product, className }: ProductCardProps) {
       <div className="absolute inset-0 bg-noise mix-blend-overlay opacity-50 pointer-events-none" />
 
       {/* Top Left Badge - Feature (variant or heater type) */}
-      <div className="absolute top-6 left-6 z-10 max-w-[calc(50%-1rem)]">
-        <span className="text-white text-[10px] sm:text-xs font-semibold tracking-[0.2em] uppercase px-3 py-1.5 backdrop-blur-md bg-black/40 border border-white/10 rounded-sm break-words">
+      <div className="absolute top-6 left-6 z-10">
+        <span className="text-white text-[10px] sm:text-xs font-semibold tracking-[0.2em] uppercase px-3 py-1.5 backdrop-blur-md bg-black/40 border border-white/10 rounded-sm">
           {featureLabel}
         </span>
       </div>
 
       {/* Top Right Badge - Shape */}
-      <div className="absolute top-6 right-6 z-10 max-w-[calc(50%-1rem)]">
-        <span className="bg-on-surface text-surface text-[10px] sm:text-xs font-medium tracking-widest uppercase px-3 py-1.5 rounded-sm break-words">
+      <div className="absolute top-6 right-6 z-10">
+        <span className="bg-on-surface text-surface text-[10px] sm:text-xs font-medium tracking-widest uppercase px-3 py-1.5 rounded-sm">
           {shapeLabel}
         </span>
       </div>
 
       {/* Bottom Content */}
-      <div className="absolute inset-x-6 bottom-6 z-10 flex flex-col justify-end min-w-0">
+      <div className="absolute inset-x-6 bottom-6 z-10 flex flex-col justify-end">
         {/* Product Name */}
-        <h3 className="font-headline text-2xl sm:text-3xl text-white font-medium mb-1 tracking-tight drop-shadow-md break-words">
+        <h3 className="font-headline text-2xl sm:text-3xl text-white font-medium mb-1 tracking-tight drop-shadow-md">
           {product.name}
         </h3>
 
         {/* Capacity Info */}
-        <p className="text-white/70 text-[10px] sm:text-xs uppercase tracking-widest font-medium mb-5 break-words">{capacityDisplay}</p>
+        <p className="text-white/70 text-[10px] sm:text-xs uppercase tracking-widest font-medium mb-5">{capacityDisplay}</p>
 
         {/* Price and CTA Container */}
         <div className="flex items-center justify-between border-t border-white/20 pt-4">

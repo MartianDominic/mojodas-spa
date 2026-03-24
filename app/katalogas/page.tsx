@@ -41,7 +41,7 @@ export default function KatalogasPage() {
     <>
       <Header />
 
-      <main className="w-full min-w-0 pt-24 md:pt-28 pb-16 bg-[#FAFAFA]">
+      <main className="pt-24 md:pt-28 pb-16 bg-[#FAFAFA]">
         {/* Header Section */}
         <CatalogHeader />
 
