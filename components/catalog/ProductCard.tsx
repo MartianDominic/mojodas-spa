@@ -73,7 +73,7 @@ export function ProductCard({ product, className }: ProductCardProps) {
       {/* Bottom Content */}
       <div className="absolute inset-x-6 bottom-6 z-10 flex flex-col justify-end">
         {/* Product Name */}
-        <h3 className="font-headline text-3xl sm:text-4xl text-white font-medium mb-1 tracking-tight drop-shadow-md">
+        <h3 className="font-headline text-2xl sm:text-3xl text-white font-medium mb-1 tracking-tight drop-shadow-md">
           {product.name}
         </h3>
 
