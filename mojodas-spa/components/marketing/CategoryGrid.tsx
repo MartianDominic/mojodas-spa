@@ -29,7 +29,7 @@ const categories = [
 
 export function CategoryGrid() {
   return (
-    <section className="py-12 md:py-16 lg:py-20 bg-surface-container-low">
+    <section className="py-10 md:py-12 lg:py-16 bg-surface-container-low">
       <div className="container mx-auto px-4 md:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 items-stretch max-w-screen-2xl">
         {/* Large Card */}
         <div className="md:col-span-8 relative aspect-[16/9] md:aspect-auto md:min-h-[400px] lg:min-h-[500px] bg-surface overflow-hidden group">
@@ -40,7 +40,7 @@ export function CategoryGrid() {
             className="object-cover transition-transform duration-700 group-hover:scale-105"
           />
           <div className="absolute inset-0 bg-black/30 flex flex-col justify-end p-6 md:p-8 lg:p-12">
-            <h3 className="text-white font-headline text-2xl md:text-3xl mb-2">
+            <h3 className="text-white font-headline text-xl md:text-2xl mb-2">
               {categories[0].title}
             </h3>
             <p className="text-white/80 text-sm md:text-base mb-4 md:mb-6">{categories[0].subtitle}</p>
@@ -67,7 +67,7 @@ export function CategoryGrid() {
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-black/30 flex flex-col justify-end p-6 md:p-8">
-                <h3 className="text-white font-headline text-2xl mb-1">
+                <h3 className="text-white font-headline text-xl mb-1">
                   {category.title}
                 </h3>
                 <p className="text-white/80 text-sm mb-4">{category.subtitle}</p>

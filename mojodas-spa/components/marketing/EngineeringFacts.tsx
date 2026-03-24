@@ -21,12 +21,12 @@ const facts = [
 
 export function EngineeringFacts() {
   return (
-    <section className="py-16 md:py-24 lg:py-32 bg-surface-container-low">
+    <section className="py-12 md:py-16 lg:py-20 bg-surface-container-low">
       <div className="container mx-auto px-6">
-        <h2 className="font-headline text-4xl md:text-5xl mb-24 text-center">
+        <h2 className="font-headline text-2xl md:text-3xl lg:text-4xl mb-12 md:mb-16 text-center">
           Kodėl šis sprendimas tarnaus ilgai?
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
           {facts.map((fact) => (
             <div key={fact.title} className="text-center px-4">
               <div className="inline-flex items-center justify-center w-16 h-16 bg-white rounded-full mb-8 text-primary shadow-sm">

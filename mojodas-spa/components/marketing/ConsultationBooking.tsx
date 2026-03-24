@@ -20,19 +20,19 @@ const calendarDays = [
 
 export function ConsultationBooking() {
   return (
-    <section className="py-16 md:py-24 lg:py-32 bg-surface overflow-hidden">
+    <section className="py-12 md:py-16 lg:py-20 bg-surface overflow-hidden">
       <div className="container mx-auto px-6">
-        <div className="flex flex-col lg:flex-row items-center gap-20">
+        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
           {/* Left Content */}
           <div className="flex-1 max-w-2xl">
             <p className="text-primary font-bold text-xs tracking-[0.2em] uppercase mb-6 flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-error animate-pulse" />
               Pavasario gamybos grafikas sparčiai pildosi.
             </p>
-            <h2 className="font-headline text-4xl md:text-6xl mb-8 leading-tight">
+            <h2 className="font-headline text-2xl md:text-3xl lg:text-4xl mb-8 leading-tight">
               Rezervuokite nemokamą 15 minučių pokalbį.
             </h2>
-            <p className="font-body text-lg text-on-surface-variant mb-12 max-w-lg">
+            <p className="font-body text-base text-on-surface-variant mb-8 max-w-lg">
               Parinksime tinkamiausią modelį jūsų sklypui, aptarsime techninius
               reikalavimus ir pateiksime preliminarų kainos pasiūlymą.
             </p>
