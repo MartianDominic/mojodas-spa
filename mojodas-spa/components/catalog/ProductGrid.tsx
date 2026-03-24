@@ -29,7 +29,7 @@ export function ProductGrid({ products, className }: ProductGridProps) {
     <motion.section
       layout
       className={cn(
-        "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 lg:gap-16",
+        "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 lg:gap-16 min-w-0",
         className
       )}
     >
@@ -42,6 +42,7 @@ export function ProductGrid({ products, className }: ProductGridProps) {
             exit={{ opacity: 0, scale: 0.95 }}
             transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
             key={product.id}
+            className="min-w-0"
           >
             <ProductCard product={product} />
           </motion.div>
