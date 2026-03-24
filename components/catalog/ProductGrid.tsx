@@ -1,4 +1,7 @@
+"use client";
+
 import { cn } from "@/lib/utils/cn";
+import { motion, AnimatePresence } from "framer-motion";
 import { ProductCard } from "./ProductCard";
 import type { ProductListItem } from "@/types";
 
@@ -23,15 +26,27 @@ export function ProductGrid({ products, className }: ProductGridProps) {
   }
 
   return (
-    <section
+    <motion.section
+      layout
       className={cn(
-        "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10",
+        "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 lg:gap-16",
         className
       )}
     >
-      {products.map((product) => (
-        <ProductCard key={product.id} product={product} />
-      ))}
-    </section>
+      <AnimatePresence mode="popLayout">
+        {products.map((product) => (
+          <motion.div
+            layout
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.95 }}
+            transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+            key={product.id}
+          >
+            <ProductCard product={product} />
+          </motion.div>
+        ))}
+      </AnimatePresence>
+    </motion.section>
   );
 }

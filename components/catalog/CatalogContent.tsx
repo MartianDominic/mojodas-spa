@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo } from "react";
-import { FilterBar, useProductFilters, type FilterType } from "./FilterBar";
+import { FilterBar, useProductFilters, type FilterState } from "./FilterBar";
 import { ProductGrid } from "./ProductGrid";
 import type { ProductListItem } from "@/types";
 
@@ -9,86 +9,88 @@ interface CatalogContentProps {
   products: ProductListItem[];
 }
 
-/**
- * Client component that handles filtering and displays products
- * Receives products from server component, handles client-side filtering
- */
 export function CatalogContent({ products }: CatalogContentProps) {
-  const { activeFilter, onFilterChange } = useProductFilters("all");
+  const { activeFilters, onFilterChange, onClearFilters } = useProductFilters();
 
   const filteredProducts = useMemo(() => {
-    return filterProducts(products, activeFilter);
-  }, [products, activeFilter]);
+    return filterProducts(products, activeFilters);
+  }, [products, activeFilters]);
 
   return (
     <>
-      <FilterBar activeFilter={activeFilter} onFilterChange={onFilterChange} />
+      <FilterBar 
+        activeFilters={activeFilters} 
+        onFilterChange={onFilterChange} 
+        onClearFilters={onClearFilters}
+        productCount={filteredProducts.length}
+      />
 
-      <section className="px-8 md:px-16 w-full">
+      <section className="px-6 md:px-8 w-full">
         <div className="max-w-screen-2xl mx-auto">
-        <ProductGrid products={filteredProducts} />
+          <ProductGrid products={filteredProducts} />
 
-        {/* Empty state */}
-        {filteredProducts.length === 0 && (
-          <div className="text-center py-12 md:py-16 lg:py-20">
-            <p className="text-on-surface-variant text-lg">
-              Pagal pasirinktus filtrus produktų nerasta.
-            </p>
-            <button
-              onClick={() => onFilterChange("all")}
-              className="mt-4 text-primary underline hover:no-underline"
-            >
-              Rodyti visus produktus
-            </button>
-          </div>
-        )}
+          {/* Empty state */}
+          {filteredProducts.length === 0 && (
+            <div className="text-center py-24 flex flex-col items-center">
+              <span className="material-symbols-outlined text-4xl text-outline-variant mb-6">
+                filter_list_off
+              </span>
+              <p className="font-headline text-2xl text-on-surface mb-2">
+                Nerasta atitikmenų
+              </p>
+              <p className="text-secondary mb-8 max-w-md">
+                Pagal Jūsų pasirinktus techninius parametrus modelių neradome. Pabandytumėte sušvelninti filtrus.
+              </p>
+              <button
+                onClick={onClearFilters}
+                className="bg-on-surface text-surface px-8 py-3 text-xs uppercase tracking-[0.2em] font-medium hover:bg-on-surface/90 transition-colors rounded-sm"
+              >
+                Išvalyti visus filtrus
+              </button>
+            </div>
+          )}
         </div>
       </section>
     </>
   );
 }
 
-/**
- * Filter products based on selected filter type
- */
 function filterProducts(
   products: ProductListItem[],
-  filter: FilterType
+  state: FilterState
 ): ProductListItem[] {
-  switch (filter) {
-    case "all":
-      return products;
+  return products.filter((p) => {
+    // 1. Shape Filter
+    if (state.shape.length > 0) {
+      if (!state.shape.includes(p.shape)) return false;
+    }
 
-    case "small":
-      // 2-4 person capacity
-      return products.filter((p) => p.capacity.max <= 4);
+    // 2. Capacity Filter
+    if (state.capacity.length > 0) {
+      const isSmall = p.capacity.max <= 4;
+      const isLarge = p.capacity.min >= 5 || p.capacity.max >= 5;
+      
+      const smallMatch = state.capacity.includes("small") && isSmall;
+      const largeMatch = state.capacity.includes("large") && isLarge;
+      
+      if (!smallMatch && !largeMatch) return false;
+    }
 
-    case "large":
-      // 5+ person capacity
-      return products.filter((p) => p.capacity.min >= 5 || p.capacity.max >= 5);
+    // 3. Heater Type Filter
+    if (state.heaterType.length > 0) {
+      if (!state.heaterType.includes(p.heaterType)) return false;
+    }
 
-    case "round":
-      return products.filter((p) => p.shape === "round");
+    // 4. Features Filter (logical AND for features - if they select 2 features, product must have both)
+    if (state.features.length > 0) {
+      for (const feature of state.features) {
+        // We safely cast feature string to the boolean key in filterableSpecs
+        if (p.filterableSpecs && (p.filterableSpecs as any)[feature] !== true) {
+          return false;
+        }
+      }
+    }
 
-    case "square":
-      return products.filter((p) => p.shape === "square");
-
-    case "therapeutic":
-      return products.filter((p) => p.shape === "therapeutic");
-
-    case "internal":
-      // Internal heater
-      return products.filter((p) => p.heaterType === "internal");
-
-    case "external":
-      // External heater (including regular external)
-      return products.filter((p) => p.heaterType === "external");
-
-    case "horizon":
-      // Horizon variant
-      return products.filter((p) => p.variant === "horizon");
-
-    default:
-      return products;
-  }
+    return true; // Passed all filters
+  });
 }
