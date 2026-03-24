@@ -160,15 +160,16 @@ export interface ProductListItem {
   heaterType: HeaterType;
   basePrice: number;
   monthlyPayment: number;
+  currency: "EUR";
   badges: ProductBadge[];
   images: ProductImage[];
   thumbnail?: ProductImage;
   isFeatured: boolean;
   stockStatus: StockStatus;
-  
+
   // Dynamic filter specs
   filterableSpecs?: FilterableSpecs;
-  
+
   // Filterable specs for advanced filtering
   specs?: FilterableSpecs;
 }

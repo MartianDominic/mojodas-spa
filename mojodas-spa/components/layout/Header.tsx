@@ -23,10 +23,10 @@ export function Header({ variant = "default" }: HeaderProps) {
     <>
       <nav
         className={cn(
-          "absolute top-0 w-full z-50 transition-all duration-300",
+          "fixed top-0 w-full z-50 transition-all duration-300",
           isTransparent
             ? "bg-transparent text-white border-b border-white/10"
-            : "bg-surface/80 backdrop-blur-xl text-on-surface"
+            : "bg-surface/95 backdrop-blur-xl text-on-surface border-b border-outline-variant/20"
         )}
       >
         <div className="flex justify-between items-center px-8 py-8 w-full max-w-[1920px] mx-auto">

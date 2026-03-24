@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { Header, Footer } from "@/components/layout";
 import { Button, Icon } from "@/components/ui";
 import { CartItem } from "@/components/cart/CartItem";
 import { EmptyCart } from "@/components/cart/EmptyCart";
@@ -28,16 +29,22 @@ export default function CartPage() {
   // Empty cart state
   if (items.length === 0) {
     return (
-      <div className="min-h-screen bg-[#FAFAFA] flex items-center justify-center">
-        <div className="max-w-md w-full px-6">
-          <EmptyCart onClose={() => {}} />
+      <>
+        <Header />
+        <div className="min-h-screen bg-[#FAFAFA] flex items-center justify-center pt-32">
+          <div className="max-w-md w-full px-6">
+            <EmptyCart onClose={() => {}} />
+          </div>
         </div>
-      </div>
+        <Footer />
+      </>
     );
   }
 
   return (
-    <div className="min-h-screen bg-[#FAFAFA] py-12 px-4 sm:px-6 lg:px-8">
+    <>
+      <Header />
+      <div className="min-h-screen bg-[#FAFAFA] py-12 px-4 sm:px-6 lg:px-8 pt-32">
       <div className="max-w-7xl mx-auto">
         {/* Page Header */}
         <div className="mb-12">
@@ -187,6 +194,8 @@ export default function CartPage() {
           </Link>
         </div>
       </div>
-    </div>
+      </div>
+      <Footer />
+    </>
   );
 }

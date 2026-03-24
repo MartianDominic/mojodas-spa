@@ -3,7 +3,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { cn } from "@/lib/utils/cn";
-import { Button } from "@/components/ui";
 import { ROUTES } from "@/lib/constants/routes";
 import type { ProductListItem } from "@/types";
 
@@ -85,7 +84,7 @@ export function ProductCard({ product, className }: ProductCardProps) {
         <div className="flex items-center justify-between border-t border-white/20 pt-4">
           {/* Price */}
           <div className="text-left flex flex-col">
-            <span className="text-[10px] text-white/60 uppercase tracking-widest font-semibold mb-0.5">Total Investment</span>
+            <span className="text-[10px] text-white/60 uppercase tracking-widest font-semibold mb-0.5">Investicija</span>
             <span className="text-white font-medium text-lg lg:text-xl leading-none tracking-wide">
               {formattedPrice}
             </span>

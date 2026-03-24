@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Header, Footer } from "@/components/layout";
 import {
   ProductGallery,
@@ -82,7 +83,31 @@ export default async function ProductPage({ params }: ProductPageProps) {
   return (
     <>
       <Header />
-      <main className="pb-32 -mt-24">
+      <main className="pb-32 pt-24">
+        {/* Back Button */}
+        <div className="max-w-screen-2xl mx-auto px-8 pt-8 pb-4">
+          <Link
+            href="/katalogas"
+            className="inline-flex items-center gap-2 text-sm font-body text-secondary/70 hover:text-secondary transition-colors duration-200 group"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="w-4 h-4 group-hover:-translate-x-1 transition-transform duration-200"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"
+              />
+            </svg>
+            <span>ATGAL</span>
+          </Link>
+        </div>
+
         {/* Full Viewport Cinematic Hero */}
         <div className="w-full overflow-hidden">
           <ProductGallery

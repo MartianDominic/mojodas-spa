@@ -2,6 +2,7 @@
 
 import { use } from "react";
 import { notFound } from "next/navigation";
+import { Header, Footer } from "@/components/layout";
 import {
   ConfiguratorForm,
   ProductImageGallery,
@@ -23,7 +24,8 @@ export default function ConfiguratorPage({ params }: ConfiguratorPageProps) {
 
   return (
     <>
-      <main className="pt-24 pb-32">
+      <Header />
+      <main className="pt-32 pb-32">
         <div className="max-w-screen-2xl mx-auto px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
             {/* Left Column: Sticky Product Imagery */}
@@ -41,6 +43,7 @@ export default function ConfiguratorPage({ params }: ConfiguratorPageProps) {
 
       {/* Bottom Action Bar */}
       <StickyPriceBar product={product} />
+      <Footer />
     </>
   );
 }
