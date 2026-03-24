@@ -20,7 +20,7 @@ const badges = [
 export function TrustStrip() {
   return (
     <div className="w-full bg-black py-8 md:py-10 border-t border-white/10">
-      <div className="container mx-auto px-6 md:px-4 md:px-8 lg:px-12">
+      <div className="container mx-auto px-4 md:px-8 lg:px-12">
         {/* Desktop: Horizontal Layout */}
         <div className="hidden md:flex justify-between items-center gap-8">
           {badges.map((badge, index) => (
@@ -41,13 +41,13 @@ export function TrustStrip() {
         </div>
 
         {/* Mobile: 2x2 Grid */}
-        <div className="grid grid-cols-2 gap-6 md:hidden">
+        <div className="grid grid-cols-2 gap-x-4 gap-y-6 md:hidden">
           {badges.map((badge) => (
-            <div key={badge.label} className="flex flex-col items-center gap-2 text-center">
-              <span className="material-symbols-outlined text-2xl text-white/80">
+            <div key={badge.label} className="flex items-center gap-3">
+              <span className="material-symbols-outlined text-xl text-white/80 shrink-0">
                 {badge.icon}
               </span>
-              <span className="text-xs font-bold uppercase tracking-[0.15em] text-white/90 leading-tight">
+              <span className="text-[10px] font-bold uppercase tracking-[0.1em] text-white/90 leading-tight">
                 {badge.label}
               </span>
             </div>
