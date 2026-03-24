@@ -75,7 +75,9 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-full flex flex-col bg-surface text-on-surface font-body antialiased">
-        {children}
+        <div className="w-full flex-1">
+          {children}
+        </div>
         <CartDrawer />
       </body>
     </html>

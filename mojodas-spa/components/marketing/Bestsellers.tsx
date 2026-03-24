@@ -50,7 +50,7 @@ export function Bestsellers() {
           <h2 className="font-headline text-2xl md:text-3xl mb-4">
             Dažniausias klientų pasirinkimas.
           </h2>
-          <p className="font-body text-sm md:text-base text-gray-500 max-w-2xl w-full">
+          <p className="font-body text-sm md:text-base text-gray-500 max-w-2xl">
             Patikrinti modeliai, kuriuos dažniausiai užsako privačių namų savininkai.
           </p>
         </header>
