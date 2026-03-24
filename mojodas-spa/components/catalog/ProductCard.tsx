@@ -34,9 +34,9 @@ export function ProductCard({ product, className }: ProductCardProps) {
   return (
     <article
       className={cn(
-        "group relative aspect-[4/5] rounded-[2rem] overflow-hidden",
-        "bg-surface-container-low editorial-shadow",
-        "transition-transform duration-700 hover:-translate-y-2",
+        "group relative aspect-[4/5] overflow-hidden rounded-sm",
+        "bg-surface",
+        "transition-transform duration-700 hover:-translate-y-1 hover:shadow-2xl",
         "w-full", // Fill grid cell width
         className
       )}
@@ -54,53 +54,51 @@ export function ProductCard({ product, className }: ProductCardProps) {
       )}
 
       {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none" />
+      <div className="absolute inset-0 bg-noise mix-blend-overlay opacity-50 pointer-events-none" />
 
       {/* Top Left Badge - Feature (variant or heater type) */}
-      <div className="absolute top-8 left-8">
-        <span className="text-white text-xs font-bold tracking-[0.2em] uppercase px-4 py-2 backdrop-blur-md bg-white/10 rounded-lg">
+      <div className="absolute top-6 left-6 z-10">
+        <span className="text-white text-[10px] sm:text-xs font-semibold tracking-[0.2em] uppercase px-3 py-1.5 backdrop-blur-md bg-black/40 border border-white/10 rounded-sm">
           {featureLabel}
         </span>
       </div>
 
       {/* Top Right Badge - Shape */}
-      <div className="absolute top-8 right-8">
-        <span className="bg-[#1A1A1A] text-white text-xs font-black tracking-widest uppercase px-5 py-2 rounded-full">
+      <div className="absolute top-6 right-6 z-10">
+        <span className="bg-on-surface text-surface text-[10px] sm:text-xs font-medium tracking-widest uppercase px-3 py-1.5 rounded-sm">
           {shapeLabel}
         </span>
       </div>
 
       {/* Bottom Content */}
-      <div className="absolute inset-x-8 bottom-8">
+      <div className="absolute inset-x-6 bottom-6 z-10 flex flex-col justify-end">
         {/* Product Name */}
-        <h3 className="font-headline text-4xl text-white font-bold mb-2 tracking-tight">
+        <h3 className="font-headline text-3xl sm:text-4xl text-white font-medium mb-1 tracking-tight drop-shadow-md">
           {product.name}
         </h3>
 
         {/* Capacity Info */}
-        <p className="text-white/80 text-sm mb-6">{capacityDisplay}</p>
+        <p className="text-white/70 text-[10px] sm:text-xs uppercase tracking-widest font-medium mb-5">{capacityDisplay}</p>
 
         {/* Price and CTA Container */}
-        <div className="flex flex-col xl:flex-row items-center justify-between gap-4 p-5 rounded-[1.5rem] bg-white/10 backdrop-blur-xl border border-white/10">
+        <div className="flex items-center justify-between border-t border-white/20 pt-4">
           {/* Price */}
-          <div className="text-left">
-            <p className="text-white font-black text-lg leading-none">
-              Nuo {formattedPrice}
-            </p>
+          <div className="text-left flex flex-col">
+            <span className="text-[10px] text-white/60 uppercase tracking-widest font-semibold mb-0.5">Total Investment</span>
+            <span className="text-white font-medium text-lg lg:text-xl leading-none tracking-wide">
+              {formattedPrice}
+            </span>
           </div>
 
           {/* Configure Button */}
-          <Link
-            href={ROUTES.CONFIGURATOR(product.slug)}
-            className="w-full xl:w-auto"
-          >
-            <Button
-              variant="dark"
-              size="sm"
-              className="w-full xl:w-auto px-6 py-3 text-xs font-black tracking-[0.2em] rounded-xl"
-            >
-              KONFIGURUOTI
-            </Button>
+          <Link href={ROUTES.CONFIGURATOR(product.slug)}>
+            <button className="bg-white/10 hover:bg-white text-white hover:text-black backdrop-blur-md border border-white/20 px-5 sm:px-6 py-2.5 sm:py-3 text-[10px] sm:text-xs font-semibold tracking-[0.15em] uppercase transition-all rounded-sm flex items-center group/btn">
+              Konfigūruoti
+              <span className="material-symbols-outlined ml-2 text-sm group-hover/btn:translate-x-1 transition-transform">
+                arrow_forward
+              </span>
+            </button>
           </Link>
         </div>
       </div>

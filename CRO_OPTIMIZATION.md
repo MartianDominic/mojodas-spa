@@ -1108,29 +1108,230 @@ Jūsų išsaugota konfigūracija bus ištrinta po 7 dienų.
 
 ---
 
-## Video Content (High Priority)
+## Price Psychology
 
-**Product Page - Hero Video:**
-- 30-60 second product showcase
-- Water bubbling, steam, LED lights at night
-- No voiceover needed, just ambient sound + music
-- Autoplay muted with play button overlay
+**Current:** "4,890 €" — scary number upfront.
+
+**Better approach:**
 
 ```
-┌─────────────────────────────────────────────────────────────────┐
-│                                                                 │
-│                    [▶ VIDEO THUMBNAIL]                         │
-│                                                                 │
-│                  Pažiūrėkite veikime                           │
-│                                                                 │
-└─────────────────────────────────────────────────────────────────┘
+CURRENT:                          BETTER:
+─────────────────────────────────────────────────────────
+4,890 €                           nuo 136 €/mėn
+                                  arba 4,890 € vienkartinis
+
+─────────────────────────────────────────────────────────
+"Monaco Horizon"                  "Monaco Horizon"
+                                  ✓ Pristatymas (€300 vertės)
+                                  ✓ Montavimas (€500 vertės)
+                                  ✓ Priežiūros rinkinys (€120)
+                                  ✓ 5 metų garantija
+                                  ─────────────────────────
+                                  Viso vertė: €5,810
+                                  Jūsų kaina: 4,890 €
+
+─────────────────────────────────────────────────────────
+                                  "Per 10 metų - tik €1.34/dieną
+                                   už SPA namuose"
 ```
 
-**Types of Video Content (priority order):**
-1. Product demo (each model) - 30-60 sec
-2. Installation timelapse - 2-3 min
-3. Customer testimonial - 1-2 min
-4. "Kaip prižiūrėti kubilą" guide - 3-5 min
+**Implementation:**
+- Lead with monthly payment everywhere
+- Show value stacking on product page
+- Daily cost calculator (optional)
+
+---
+
+## Video Content
+
+**This is MASSIVE for hot tubs.** People want to see:
+- Water bubbling
+- Steam rising
+- Happy family enjoying
+- Night with LED lights
+- Installation process
+
+**Product Page:**
+```
+┌────────────────────────────────────────┐
+│  [▶ WATCH VIDEO]                       │  ← Hero area
+│                                        │
+│  "Pažiūrėkite Monaco Horizon veikime"  │
+└────────────────────────────────────────┘
+```
+
+**Types needed:**
+- Product demo (30-60 sec)
+- Customer testimonial (when available)
+- Installation timelapse
+- "Day in the life" lifestyle
+
+---
+
+## Configurator Visual Preview
+
+**Currently missing:** User doesn't SEE their choices.
+
+```
+CURRENT:                          BETTER:
+─────────────────────────────────────────────────────────
+Select wood: [Termo]              [LIVE PREVIEW IMAGE]
+Select color: [Pilka]             that updates as user
+                                  selects options
+
+                                  ┌─────────────────┐
+                                  │                 │
+                                  │  [3D Preview    │
+                                  │   with Termo    │
+                                  │   wood + Gray   │
+                                  │   acrylic]      │
+                                  │                 │
+                                  └─────────────────┘
+```
+
+**Implementation options:**
+1. Pre-rendered images for each combination (simplest)
+2. CSS overlay system (medium complexity)
+3. WebGL 3D viewer (most complex, best UX)
+
+**Minimum viable:** Show product image that swaps based on wood selection.
+
+---
+
+## Urgency / Scarcity
+
+**Currently:** Zero urgency.
+
+**Tasteful urgency options:**
+
+```
+Delivery-based:
+"Užsakykite iki kovo 28d. — pristatysime iki Velykų"
+
+Seasonal:
+"Pasiruoškite vasarai — užsakymai priimami iki balandžio 15d."
+
+Stock-based:
+"Šis modelis: 3 vnt. sandėlyje, kiti - gamyba 3-4 sav."
+
+Bonus-based:
+"Kovo mėnesį — nemokamas priežiūros rinkinys (€120 vertės)"
+```
+
+**Rules:**
+- Only use TRUE statements
+- Tasteful, not aggressive
+- One urgency element per page max
+- Seasonal campaigns work well for hot tubs
+
+---
+
+## Comparison Tool
+
+**User thinking:** "Monaco vs Grande Round?" — no easy way to compare.
+
+```
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃  PALYGINKITE MODELIUS                                 ┃
+┣━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━┫
+┃                ┃ Monaco Horizon ┃ Grande Round Horiz.┃
+┣━━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━━━━━━┫
+┃ Kaina          ┃ 4,890 €        ┃ 4,290 €            ┃
+┃ Mėnesinis      ┃ 136 €/mėn      ┃ 120 €/mėn          ┃
+┃ Talpa          ┃ 8-10 asm.      ┃ 6-8 asm.           ┃
+┃ Forma          ┃ Kvadratinis    ┃ Apvalus            ┃
+┃ Matmenys       ┃ 2.2 x 2.2m     ┃ ⌀ 2.25m            ┃
+┃ LED            ┃ ✓              ┃ ✓                  ┃
+┃ Jets           ┃ ✓ 6-24         ┃ ○                  ┃
+┣━━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━━━━━━┫
+┃                ┃ [KONFIGŪRUOTI] ┃ [KONFIGŪRUOTI]     ┃
+┗━━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━━━━━━┛
+```
+
+**Implementation:**
+- "Palyginti" button on product cards
+- Compare up to 3 products
+- Sticky comparison bar at bottom
+- Clear differences highlighted
+
+---
+
+## Post-Purchase Flow
+
+**Currently:** Not implemented.
+
+**Order Confirmation Page:**
+```
+┌─────────────────────────────────────────────────────┐
+│  ✓ Užsakymas priimtas! (#MJ-2024-0342)             │
+│                                                     │
+│  KAS TOLIAU?                                        │
+│  1. Gausite patvirtinimą el. paštu                 │
+│  2. Susisieksime dėl montavimo datos (per 24h)     │
+│  3. Pristatysime per 2-4 savaites                  │
+│                                                     │
+│  [Atsisiųsti paruošimo instrukciją PDF]            │
+│                                                     │
+│  Turite klausimų? +370 XXX XXXXX                   │
+└─────────────────────────────────────────────────────┘
+```
+
+**Post-Purchase Email Sequence:**
+```
+Day 0:  Order confirmation + What to expect
+Day 1:  "Paruoškite vietą" checklist PDF
+Day 3:  Montavimo datos patvirtinimas
+Day -1: "Rytoj atvežame!" reminder
+Day +1: "Kaip sekasi? Ar viskas gerai?"
+Day +14: "Prašome palikti atsiliepimą" (+ €50 kuponas už nuotrauką)
+Day +30: "Rekomenduokite draugui, gaukite €200"
+```
+
+---
+
+## Mobile Experience
+
+**60%+ traffic is mobile — must be flawless.**
+
+**Mobile-specific needs:**
+```
+• Sticky bottom CTA bar (price + monthly + button)
+• Touch-friendly configurator options (large tap targets)
+• Swipeable product gallery
+• Click-to-call phone number
+• WhatsApp one-tap button
+• Simplified checkout (fewer fields)
+• Fast loading (< 3 seconds)
+• Quiz works perfectly on mobile
+```
+
+**Sticky Mobile CTA Bar:**
+```
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃  136 €/mėn · 4 890 €   [KONFIGŪRUOTI]   ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+```
+
+---
+
+## Priority Matrix
+
+| Priority | Element | Impact | Effort |
+|----------|---------|--------|--------|
+| 🔴 P0 | Lead with monthly payment | Very High | Low |
+| 🔴 P0 | Trust badges (guarantees) | High | Low |
+| 🔴 P0 | Sticky mobile CTA | High | Low |
+| 🟠 P1 | Exit intent + email capture | Very High | Medium |
+| 🟠 P1 | Video on product pages | Very High | Medium |
+| 🟠 P1 | Abandoned cart emails | High | Medium |
+| 🟠 P1 | Value stacking on product page | High | Low |
+| 🟡 P2 | Visual configurator preview | High | High |
+| 🟡 P2 | Comparison tool | Medium | Medium |
+| 🟡 P2 | Post-purchase email flow | Medium | Medium |
+| 🟡 P2 | Urgency/scarcity messaging | Medium | Low |
+| 🟢 P3 | Referral program | Medium | High |
+| 🟢 P3 | Customer reviews (after sales) | High | Medium |
+| 🟢 P3 | Installation gallery (after sales) | Medium | Low |
 
 ---
 

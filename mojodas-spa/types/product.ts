@@ -142,6 +142,9 @@ export interface Product {
   // Timestamps (optional in data)
   createdAt?: string;
   updatedAt?: string;
+
+  // Dynamic filter specs
+  filterableSpecs?: FilterableSpecs;
 }
 
 // List view subset for performance
@@ -157,12 +160,15 @@ export interface ProductListItem {
   heaterType: HeaterType;
   basePrice: number;
   monthlyPayment: number;
-  currency: "EUR";
   badges: ProductBadge[];
   images: ProductImage[];
   thumbnail?: ProductImage;
   isFeatured: boolean;
   stockStatus: StockStatus;
+  
+  // Dynamic filter specs
+  filterableSpecs?: FilterableSpecs;
+  
   // Filterable specs for advanced filtering
   specs?: FilterableSpecs;
 }
