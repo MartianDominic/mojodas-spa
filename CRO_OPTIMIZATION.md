@@ -1408,3 +1408,28 @@ All products already have `filterableSpecs` in `products.json`:
 - Quiz results page should be indexable with canonical URL
 - Product pages remain primary landing pages
 - Implement proper schema.org Product markup
+
+---
+
+## Quiz Design Specifications
+
+### Aesthetic & UI Principles
+The quiz must perfectly transition the user from the homepage into the premium "inner product page" design language.
+- **Background & Containers:** Use `bg-surface-container` or `bg-surface-container-low` for option cards, similar to the TechSpecs and ProductInfo cards.
+- **Typography:** Headlines should use `font-headline text-3xl md:text-5xl font-light tracking-tight`. Descriptive text should use `font-body text-secondary`.
+- **Borders & Shapes:** Sharp corners (`rounded-none` or `rounded-sm`), subtle borders (`border border-outline-variant/30`) on regular options, highlighted with `border-primary` when selected.
+- **Buttons / Actions:** Adhere to the `Button` component styling. Navigation should use the existing `Button` variants (e.g., outline for back, primary/gradient for next).
+- **Animations:** Subtle Framer Motion transitions (`opacity`, `y-axis` slide) between questions to preserve the elegant, cinematic "Billion-Dollar Maison" aesthetic.
+- **Imagery:** Product images and swatches should match the tone—slightly desaturated, high contrast, fitting the "Obsidian & Bone" or related premium aesthetic. Option cards should feature clear typography and iconic representations.
+
+### Layout Details
+1. **Container:** The quiz will be built as an interactive step-by-step wizard (similar to the Configurator) but can be embedded directly in a page or opened via a cinematic full-screen modal.
+2. **Progress Indicator:** Subtle top bar showing progress (e.g., `1 / 3 žingsnis`).
+3. **Card Grid for Options:** On desktop, a flex or grid layout (`grid-cols-1 md:grid-cols-3`); on mobile, a vertical stack.
+4. **Interactive States:** Options should have hover states (e.g., slight border color change, background shift) and clear active states (e.g., strong border, checkmark icon).
+
+### Placement Strategy (Where else to add it)
+1. **Homepage Hero (Primary CTA):** Update the main CTA from a generic catalog link to "Rasti Savo Kubilą" which opens the Quiz.
+2. **Catalog Page Header:** A prominent banner at the top of `/katalogas` for users feeling overwhelmed by viewing all 16 products at once.
+3. **Floating Mobile Action / Menu:** A sticky or menu-based link "Kuris kubilas man tinka?" ensuring users always have an easy way back to the guided flow.
+
