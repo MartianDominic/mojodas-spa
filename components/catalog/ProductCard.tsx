@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+// Using native img tag to avoid Next.js image caching issues
 import Link from "next/link";
 import { cn } from "@/lib/utils/cn";
 import { ROUTES } from "@/lib/constants/routes";
@@ -40,15 +40,12 @@ export function ProductCard({ product, className }: ProductCardProps) {
         className
       )}
     >
-      {/* Product Image */}
+      {/* Product Image - using img tag to bypass Next.js image cache */}
       {primaryImage && (
-        <Image
+        <img
           src={primaryImage.url}
           alt={primaryImage.alt || product.name}
-          fill
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          className="absolute inset-0 object-cover transition-transform duration-1000 group-hover:scale-105"
-          priority={false}
+          className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
         />
       )}
 

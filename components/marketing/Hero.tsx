@@ -1,10 +1,15 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { motion, AnimatePresence } from "framer-motion";
 import { ROUTES } from "@/lib/constants/routes";
+import { ProductFinderQuiz } from "./ProductFinderQuiz";
 
 export function Hero() {
+  const [isQuizOpen, setIsQuizOpen] = useState(false);
+
   return (
     <header className="w-full relative min-h-screen flex items-center justify-center overflow-hidden bg-black text-white">
       {/* Background Image */}
@@ -25,11 +30,12 @@ export function Hero() {
           Jūsų poilsio zona kieme.
         </h1>
         <div className="flex flex-col md:flex-row items-start justify-start gap-4 md:gap-6">
-          <Link href={ROUTES.CATALOG}>
-            <button className="w-full md:w-auto px-5 py-2.5 md:px-6 md:py-3 lg:px-8 lg:py-3.5 bg-white text-black text-xs md:text-sm font-bold tracking-[0.2em] uppercase transition-transform hover:scale-105 active:opacity-70">
-              RINKTIS MODELĮ
-            </button>
-          </Link>
+          <button 
+            onClick={() => setIsQuizOpen(true)}
+            className="w-full md:w-auto px-5 py-2.5 md:px-6 md:py-3 lg:px-8 lg:py-3.5 bg-white text-black text-xs md:text-sm font-bold tracking-[0.2em] uppercase transition-transform hover:scale-105 active:opacity-70"
+          >
+            RASTI SAVO KUBILĄ
+          </button>
           <Link href={ROUTES.CONTACT}>
             <button className="w-full md:w-auto px-5 py-2.5 md:px-6 md:py-3 lg:px-8 lg:py-3.5 border border-white text-white text-xs md:text-sm font-bold tracking-[0.2em] uppercase transition-colors hover:bg-white/10 active:opacity-70">
               15 MIN. KONSULTACIJA
@@ -40,6 +46,22 @@ export function Hero() {
 
       {/* Trust Strip */}
       <TrustStrip />
+
+      {/* Quiz Modal Overlay */}
+      <AnimatePresence>
+        {isQuizOpen && (
+          <div className="fixed inset-0 z-50 flex py-12 px-4 items-start md:items-center justify-center bg-black/80 backdrop-blur-sm overflow-y-auto">
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.95, y: 20 }} 
+              animate={{ opacity: 1, scale: 1, y: 0 }} 
+              exit={{ opacity: 0, scale: 0.95, y: 20 }} 
+              className="w-full max-w-5xl relative z-50 m-auto shadow-2xl shadow-black/50"
+            >
+              <ProductFinderQuiz onClose={() => setIsQuizOpen(false)} />
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
     </header>
   );
 }

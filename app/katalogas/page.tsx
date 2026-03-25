@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
-import { CatalogHeader, CatalogContent } from "@/components/catalog";
+import { CatalogHeader, CatalogContent, QuizBanner } from "@/components/catalog";
 import { getCatalogProducts } from "@/lib/data/catalog-products";
 
 export const metadata: Metadata = {
@@ -44,6 +44,9 @@ export default function KatalogasPage() {
       <main className="pt-24 md:pt-28 pb-16 bg-[#FAFAFA]">
         {/* Header Section */}
         <CatalogHeader />
+
+        {/* Quiz Banner */}
+        <QuizBanner />
 
         {/* Filter Bar + Product Grid */}
         <CatalogContent products={products} />
