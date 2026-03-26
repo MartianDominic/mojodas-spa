@@ -4186,10 +4186,321 @@ const swipeHandlers = useSwipeable({
 
 ---
 
+# APPENDIX D: CODEBASE GAP ANALYSIS
+
+## D.1 Executive Summary
+
+The current codebase has significant gaps compared to this specification. **The most critical issue is that the primary conversion path (packages) doesn't exist** - users can ONLY configure, which is the 15% power-user path. The 85% "just sell me something" path is completely missing.
+
+**Status:** 16 issues identified
+
+## D.2 P0: CRITICAL (Launch Blockers)
+
+### Issue #1: "Lizingas" Terminology Still in Code
+
+**Problem:** "Lizingas" sounds expensive and like a GOTCHA. Must use "išsimokėtinai" instead.
+
+**Files affected:**
+- `components/product/ProductInfo.tsx` line 79: `Lizingas nuo`
+- `components/checkout/PaymentMethods.tsx` line 39: `Lizingas (Mokėjimas dalimis)`
+
+**Fix:**
+```typescript
+// ProductInfo.tsx line 79
+- Lizingas nuo
++ Išsimokėtinai nuo
+
+// PaymentMethods.tsx line 39
+- title: "Lizingas (Mokėjimas dalimis)",
++ title: "Išsimokėtinai",
+```
+
+### Issue #2: Payment Methods Order Wrong
+
+**Problem:** Checkout shows payment options in wrong order. Išsimokėtinai should be FIRST.
+
+**File:** `components/checkout/PaymentMethods.tsx` lines 24-44
+
+**Current order:**
+1. Banklink (first)
+2. Card (second)
+3. Leasing (third, but highlighted)
+
+**Required order:**
+1. Išsimokėtinai (★ REKOMENDUOJAMA badge)
+2. Banklink
+3. Card
+
+**Fix:** Reorder `paymentOptions` array:
+```typescript
+const paymentOptions: PaymentOption[] = [
+  {
+    id: "leasing",
+    title: "Išsimokėtinai",
+    description: "Nuo X €/mėn – Be pradinio įnašo",
+    icon: "payments",
+    highlighted: true,
+    badge: "★ REKOMENDUOJAMA",
+  },
+  { id: "banklink", title: "Bankinis pavedimas", ... },
+  { id: "card", title: "Mokėjimo kortelė", ... },
+];
+```
+
+### Issue #3: Monthly Payment NOT Leading
+
+**Problem:** Full price shown first everywhere. Monthly payment should be PRIMARY.
+
+**Files affected:**
+- `components/product/ProductInfo.tsx` lines 65-86
+- `components/catalog/ProductCard.tsx` lines 83-88 (NO monthly at all!)
+- `components/marketing/Bestsellers.tsx` lines 94-99
+
+**Current (ProductInfo):**
+```
+Bazine kaina nuo         <- First, big
+2 890 €                  <- Primary display
+Lizingas nuo 80 €/mėn    <- Secondary, small
+```
+
+**Required:**
+```
+nuo 80 €/mėn             <- First, PRIMARY, big
+arba 2 890 € viso        <- Secondary, small
+```
+
+**ProductCard has NO monthly payment at all** - critical fix needed.
+
+### Issue #4: Quiz is Modal, Not Full-Screen Pages
+
+**Problem:** Quiz opens as modal popup from Hero.tsx. Should be full-screen pages.
+
+**Current:**
+- `components/marketing/Hero.tsx` line 33-35: `onClick={() => setIsQuizOpen(true)}`
+- `components/marketing/ProductFinderQuiz.tsx`: Modal component
+
+**Required:**
+- `app/raskite-savo-kubila/page.tsx` - Step 1
+- `app/raskite-savo-kubila/rezultatai/page.tsx` - Results
+- Change Hero.tsx CTA from `onClick` to `<Link href="/raskite-savo-kubila">`
+
+### Issue #5: Product Page Missing Package Selector (CRITICAL!)
+
+**Problem:** Product page only has "Konfiguruoti" CTA. NO package selector.
+
+**This is the BIGGEST conversion killer:**
+- 85% of users who want a quick decision → no path exists
+- Everyone forced through 15% power-user configurator path
+
+**Current flow:**
+```
+Product Page → [KONFIGURUOTI] → Configurator → Cart
+             ↑
+             Only option!
+```
+
+**Required flow:**
+```
+Product Page → [BAZINIS]    → Cart (direct!)
+             → [POPULIARUS] → Cart (direct!)  ← 73% choose this
+             → [PREMIUM]    → Cart (direct!)
+             → [Konfigūruoti detaliau] → Configurator → Cart
+```
+
+**Missing components:**
+- `components/product/PackageSelector.tsx`
+- `components/product/PackageCard.tsx`
+
+### Issue #6: Bestsellers Component Price Order
+
+**Problem:** Full price first, monthly as afterthought.
+
+**File:** `components/marketing/Bestsellers.tsx` lines 94-99
+
+**Fix:** Swap to show monthly first, full price secondary.
+
+## D.3 P1: HIGH IMPACT
+
+### Issue #7: Product Page Missing FAQ
+
+**File:** `app/produktas/[slug]/page.tsx`
+**Missing:** `components/product/ProductFAQ.tsx`
+
+### Issue #8: Product Page Missing Positioning Section
+
+**Missing:** `components/product/ProductPositioning.tsx`
+- "Kodėl šis modelis?" headline
+- "Tinka jums, jei:" bullet list
+
+### Issue #9: Product Page Missing Sticky Mobile CTA
+
+**Missing:** `components/product/StickyMobileCTA.tsx` (lg:hidden)
+
+### Issue #10: Cart Missing Monthly Payment Display
+
+**File:** `app/krepselis/page.tsx` lines 117-125
+**Fix:** Add monthly equivalent below total.
+
+### Issue #11: Cart Missing Delivery Timeline
+
+**File:** `app/krepselis/page.tsx`
+**Fix:** Add "Pristatymas per 2-4 savaites" to trust badges.
+
+### Issue #12: Configurator Missing Package as Step 1
+
+**File:** `stores/configurator.ts`
+**Current:** wood → color → extras → review
+**Required:** package → wood → color → extras → review
+
+## D.4 P2: MEDIUM IMPACT
+
+### Issue #13: No Exit Intent Modal
+
+`ExitIntentModal.tsx` doesn't exist.
+
+### Issue #14: Cart Upsells Missing Social Proof
+
+`UpsellEngine.tsx` needs "★ 87% renkasi" badges.
+
+### Issue #15: Guest Checkout Messaging Missing
+
+Add "Užsakymas be registracijos" banner to checkout.
+
+### Issue #16: Products Missing Package Data
+
+Product JSON needs `packages` array:
+```json
+{
+  "packages": [
+    { "id": "bazinis", "priceModifier": 0, "included": [...] },
+    { "id": "populiarus", "priceModifier": 490, "badge": "★ 73% RENKASI", "isRecommended": true, ... },
+    { "id": "premium", "priceModifier": 1090, ... }
+  ]
+}
+```
+
+## D.5 Implementation Priority
+
+| Priority | Issues | Est. Hours |
+|----------|--------|------------|
+| P0 (Week 1) | #1, #2, #3, #4, #5, #6 | 20h |
+| P1 (Week 2) | #7, #8, #9, #10, #11, #12 | 14h |
+| P2 (Week 3) | #13, #14, #15, #16 | 10h |
+
+**Total: ~44 hours of development work**
+
+## D.6 Quick Wins (< 30 min each)
+
+1. Issue #1: Find/replace "Lizingas" → "Išsimokėtinai" in 2 files
+2. Issue #2: Reorder array in PaymentMethods.tsx
+3. Issue #6: Swap price order in Bestsellers.tsx
+4. Issue #10: Add monthly payment line in cart summary
+5. Issue #11: Add delivery timeline badge in cart
+
+---
+
+# APPENDIX E: FILE-BY-FILE CHANGES
+
+## E.1 Files to Modify
+
+| File | Changes | Priority |
+|------|---------|----------|
+| `components/marketing/Hero.tsx` | Remove modal onClick, add Link to quiz route | P0 |
+| `components/product/ProductInfo.tsx` | "Lizingas"→"Išsimokėtinai", monthly first | P0 |
+| `components/catalog/ProductCard.tsx` | Add monthly payment display | P0 |
+| `components/marketing/Bestsellers.tsx` | Swap price order (monthly first) | P0 |
+| `components/checkout/PaymentMethods.tsx` | Reorder options, fix terminology | P0 |
+| `app/produktas/[slug]/page.tsx` | Add PackageSelector, FAQ, Positioning | P0 |
+| `stores/configurator.ts` | Add selectedPackage, package as step 1 | P1 |
+| `app/krepselis/page.tsx` | Add monthly display, delivery timeline | P1 |
+| `components/cart/UpsellEngine.tsx` | Add social proof badges | P2 |
+| `app/(checkout)/atsiskaitymas/page.tsx` | Add guest checkout banner | P2 |
+
+## E.2 Files to Create
+
+| File | Purpose | Priority |
+|------|---------|----------|
+| `app/raskite-savo-kubila/page.tsx` | Quiz Step 1 | P0 |
+| `app/raskite-savo-kubila/rezultatai/page.tsx` | Quiz Results | P0 |
+| `components/quiz/QuizLayout.tsx` | Shared quiz layout | P0 |
+| `components/quiz/QuizOption.tsx` | Option card component | P0 |
+| `components/quiz/QuizProgress.tsx` | Progress indicator | P0 |
+| `components/product/PackageSelector.tsx` | Package selection UI | P0 |
+| `components/product/PackageCard.tsx` | Individual package card | P0 |
+| `components/product/ProductFAQ.tsx` | FAQ accordion | P1 |
+| `components/product/ProductPositioning.tsx` | "Why this model" section | P1 |
+| `components/product/StickyMobileCTA.tsx` | Mobile bottom bar | P1 |
+| `components/marketing/ExitIntentModal.tsx` | Exit intent popup | P2 |
+
+## E.3 Data Changes
+
+### Product Data Schema Extension
+
+Each product needs:
+```typescript
+interface Product {
+  // ... existing fields ...
+
+  // NEW REQUIRED FIELDS
+  monthlyPayment: number;  // basePrice / 36
+  packages: ProductPackage[];
+  positioning: {
+    headline: string;
+    narrative: string;
+    suitableFor: string[];
+  };
+}
+```
+
+### Package Definition per Product
+
+```typescript
+const STANDARD_PACKAGES: ProductPackage[] = [
+  {
+    id: 'bazinis',
+    name: 'Bazinis',
+    priceModifier: 0,
+    included: [
+      { name: 'Kubilas', included: true },
+      { name: 'Krosnelė', included: true },
+      { name: 'Standartinis dangtis', included: true },
+      { name: 'Pristatymas', included: true },
+      { name: 'Montavimas', included: true },
+    ]
+  },
+  {
+    id: 'populiarus',
+    name: 'Populiarus',
+    priceModifier: 490,
+    badge: '★ 73% RENKASI',
+    isRecommended: true,
+    included: [
+      // ...all from Bazinis, plus:
+      { name: 'Termo dangtelis', included: true, value: '290 €' },
+      { name: 'Mediniai laiptai', included: true, value: '190 €' },
+      { name: 'Priežiūros rinkinys', included: true, value: '89 €' },
+    ]
+  },
+  {
+    id: 'premium',
+    name: 'Premium',
+    priceModifier: 1090,
+    included: [
+      // ...all from Populiarus, plus:
+      { name: 'Termo medienos apdaila', included: true, value: '180 €' },
+      { name: 'LED apšvietimas', included: true, value: '290 €' },
+      { name: 'Hidro masažas (6 vnt.)', included: true, value: '320 €' },
+    ]
+  }
+];
+```
+
+---
+
 *End of Complete CRO Specification*
 
-**Version:** 2.0 (Complete)
-**Parts:** 1-20 + Appendices A-C
-**Total Sections:** 84
+**Version:** 3.0 (Consolidated with Gap Analysis)
+**Parts:** 1-20 + Appendices A-E
+**Total Sections:** 95
 **Last Updated:** 2026-03-26
 
