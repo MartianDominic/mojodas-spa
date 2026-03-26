@@ -1,5 +1,5 @@
 /**
- * Cart Types for MojoDas Spa
+ * Cart Types for Lux Spa Nature
  * Matches PRD Section 3.2
  */
 

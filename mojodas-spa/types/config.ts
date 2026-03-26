@@ -1,5 +1,5 @@
 /**
- * Configuration Types for MojoDas Spa Product Configurator
+ * Configuration Types for Lux Spa Nature Product Configurator
  * Matches PRD Section 4.2
  */
 

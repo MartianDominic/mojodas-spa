@@ -10,7 +10,7 @@ import {
 } from "@/components/b2b";
 
 export const metadata = {
-  title: "MojoDas Spa | Komerciniai SPA Sprendimai Verslui",
+  title: "Lux Spa Nature | Komerciniai SPA Sprendimai Verslui",
   description:
     "Padidinkite užimtumą ne sezono metu ir pakelkite bazinę nakvynės kainą. Ilgaamžiai, intensyviam naudojimui ir minimaliai priežiūrai pritaikyti kubilai tiesiai iš gamintojo.",
 };

@@ -52,7 +52,7 @@ export function Header({ variant = "default" }: HeaderProps) {
               showSolidBackground ? "text-on-surface" : "text-white"
             )}
           >
-            MojoDas Spa
+            Lux Spa Nature
           </Link>
 
           {/* Desktop Navigation */}

@@ -950,7 +950,7 @@ const monthlyPayment = calculateMonthlyPayment(totalPrice);
 ```
 ┌─────────────────────────────────────────────────────────────────┐
 │  Kontaktai                                                       │
-│  info@mojodasspa.lt                                             │
+│  info@luxspanaturespa.lt                                             │
 │  +370 XXX XXXXX                                                 │
 │  [Užsisakyti konsultaciją]                                      │
 └─────────────────────────────────────────────────────────────────┘

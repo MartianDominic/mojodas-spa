@@ -1,5 +1,5 @@
 /**
- * API Response Types for MojoDas Spa
+ * API Response Types for Lux Spa Nature
  * Consistent envelope format for all API responses
  */
 

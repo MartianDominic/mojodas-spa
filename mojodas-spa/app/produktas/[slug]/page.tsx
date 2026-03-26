@@ -44,7 +44,7 @@ export async function generateMetadata({
   const seo = product.seo;
 
   return {
-    title: seo?.title || `${product.name} | MojoDas SPA`,
+    title: seo?.title || `${product.name} | Lux Spa Nature SPA`,
     description: seo?.description || product.shortDescription || product.longDescription,
     keywords: seo?.keywords ? [...seo.keywords] : [],
     openGraph: {

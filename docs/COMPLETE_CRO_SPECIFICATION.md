@@ -1,14 +1,16 @@
-# MojoDas Spa: Complete CRO Specification
+# Lux Spa Nature: Complete CRO Specification
 
 ## The Definitive Implementation Guide
 
-**Version:** 2.0 (Complete)
+**Version:** 4.0 (Complete with Page-Specific Analysis)
 **Date:** 2026-03-26
 **Goal:** Make purchasing feel like an impulse buy. Only friction = financing approval.
 
 ---
 
 # TABLE OF CONTENTS
+
+## Parts 1-20: Core Specification
 
 1. [Philosophy & Psychology](#part-1-philosophy--psychology)
 2. [User Personas & Objections](#part-2-user-personas--objections)
@@ -30,6 +32,30 @@
 18. [Copy & Microcopy](#part-18-copy--microcopy)
 19. [Animations & Transitions](#part-19-animations--transitions)
 20. [Mobile-Specific Behaviors](#part-20-mobile-specific-behaviors)
+
+## Appendices: Implementation Details
+
+- [Appendix A: Quiz Data & Filtering Logic](#appendix-a-quiz-data--filtering-logic)
+- [Appendix B: Package System Data](#appendix-b-package-system-data)
+- [Appendix C: Analytics Event Schema](#appendix-c-analytics-event-schema)
+- [Appendix D: Gap Analysis vs Current Codebase](#appendix-d-gap-analysis-vs-current-codebase)
+- [Appendix E: File-by-File Changes](#appendix-e-file-by-file-changes)
+- [Appendix F: Page-Specific CRO Analysis](#appendix-f-page-specific-cro-analysis)
+  - F.1 Homepage Components (Hero, ProcessSteps, CategoryGrid, Bestsellers, etc.)
+  - F.2 Catalog Page (Layout, Sidebar, ProductCard)
+  - F.3 B2B Page (Form Bug, Social Proof)
+  - F.4 Cart & Checkout (Payment Order, Monthly Visibility)
+  - F.5 Contact Page (Phone Prominence, Form Fix)
+  - F.6 Conversion Impact Estimates
+  - F.7 Implementation Priority
+- [Appendix G: Realistic Sections (No Fake Social Proof)](#appendix-g-realistic-section-structure-be-fake-social-proof)
+  - G.1 What We Have (Real)
+  - G.2 What We Don't Have (Yet)
+  - G.3 Homepage: Real Sections (9 sections)
+  - G.4 B2B Page: Real Sections (8 sections)
+  - G.5 Compensation Strategy
+  - G.6 Future Plan: When We Have Social Proof
+  - G.7 Contact Placeholders
 
 ---
 
@@ -108,7 +134,7 @@ STAGE 2: PROBLEM-AWARE
 ↓ (Homepage hero: emotional hook)
 
 STAGE 3: SOLUTION-AWARE
-"MojoDas makes hot tubs in Lithuania"
+"Lux Spa Nature makes hot tubs in Lithuania"
 ↓ (Quiz: segment and qualify)
 
 STAGE 4: PRODUCT-AWARE
@@ -578,7 +604,7 @@ Description: "Pristatome ir sumontuojame per 2-4 savaites."
 │ [Logo]     Katalogas   Apie mus   Kontaktai   [Phone]   [Cart]   [CTA]│
 └─────────────────────────────────────────────────────────────────────────┘
 
-Logo: MojoDas Spa wordmark, links to homepage
+Logo: Lux Spa Nature wordmark, links to homepage
 Nav Items:
 - Katalogas → /katalogas
 - Apie mus → /apie-mus (if exists) or anchor to trust section
@@ -2716,7 +2742,7 @@ const validationRules = {
 ┃  ━━━━ TURITE KLAUSIMŲ? ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  ┃
 ┃                                                                        ┃
 ┃  📞 +370 600 00000                                                    ┃
-┃  📧 info@mojodasspa.lt                                                ┃
+┃  📧 info@luxspanaturespa.lt                                                ┃
 ┃                                                                        ┃
 ┃                      [  GRĮŽTI Į PRADŽIĄ  ]                           ┃
 ┃                                                                        ┃
@@ -2726,11 +2752,11 @@ const validationRules = {
 ## 11.2 Order Confirmation Email
 
 ```
-Subject: ✓ Užsakymas priimtas – MojoDas Spa #MJS-2024-00123
+Subject: ✓ Užsakymas priimtas – Lux Spa Nature #MJS-2024-00123
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-                    [MojoDas Spa Logo]
+                    [Lux Spa Nature Logo]
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
@@ -2771,11 +2797,11 @@ Vilnius, LT-01103
 
 Turite klausimų?
 📞 +370 600 00000
-📧 info@mojodasspa.lt
+📧 info@luxspanaturespa.lt
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-                    © 2024 MojoDas Spa
+                    © 2024 Lux Spa Nature
                     Gaminama Lietuvoje
 ```
 
@@ -2813,7 +2839,7 @@ Turite klausimų prieš perkant?
 Skambinkite: +370 600 00000
 
 ---
-MojoDas Spa
+Lux Spa Nature
 ```
 
 ### Email 2: Value Reminder (24 hours)
@@ -2835,7 +2861,7 @@ Visa tai – nuo [X] €/mėn.
 [CTA: Grįžti į krepšelį]
 
 ---
-MojoDas Spa
+Lux Spa Nature
 ```
 
 ### Email 3: Urgency + Help Offer (48 hours)
@@ -2855,12 +2881,12 @@ Gal turite klausimų, kurie trukdo apsispręsti?
 
 Pasikalbėkime:
 📞 +370 600 00000
-📧 info@mojodasspa.lt
+📧 info@luxspanaturespa.lt
 
 Arba [tiesiog užbaikite užsakymą].
 
 ---
-MojoDas Spa
+Lux Spa Nature
 ```
 
 ## 12.3 Post-Purchase Sequence
@@ -2887,7 +2913,7 @@ Reikia priežiūros priemonių?
 [Apsilankyti parduotuvėje]
 
 ---
-MojoDas Spa
+Lux Spa Nature
 ```
 
 ### Day 30: Review Request
@@ -2908,7 +2934,7 @@ Norėtume sužinoti jūsų nuomonę:
 Jūsų atsiliepimas padeda kitiems priimti sprendimą.
 
 ---
-MojoDas Spa
+Lux Spa Nature
 ```
 
 ### Day 90: Referral Program
@@ -2918,7 +2944,7 @@ Subject: Pasidalinkite poilsiu su draugais
 
 Sveiki, [Vardas]!
 
-Džiaugiamės, kad esate MojoDas Spa šeimos narys.
+Džiaugiamės, kad esate Lux Spa Nature šeimos narys.
 
 Pasiūlymas jums ir jūsų draugams:
 
@@ -2928,7 +2954,7 @@ Pasiūlymas jums ir jūsų draugams:
 [CTA: Gauti rekomendacijos nuorodą]
 
 ---
-MojoDas Spa
+Lux Spa Nature
 ```
 
 ---
@@ -3011,7 +3037,7 @@ Mūsų bestseleriai:
 [Rasti savo kubilą] (quiz link)
 
 ---
-MojoDas Spa
+Lux Spa Nature
 ```
 
 ### Day 3: Educational Content
@@ -3898,7 +3924,7 @@ const backdropVariants = {
 
 ```
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━┓
-┃  [≡]  MojoDas Spa  [🛒] ┃
+┃  [≡]  Lux Spa Nature  [🛒] ┃
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
 Mobile menu (hamburger):
@@ -4497,10 +4523,1082 @@ const STANDARD_PACKAGES: ProductPackage[] = [
 
 ---
 
+---
+
+# APPENDIX F: PAGE-SPECIFIC CRO ANALYSIS
+
+Detailed component-level analysis for each page in the user journey.
+
+## F.1 HOMEPAGE COMPONENTS
+
+### F.1.1 Hero Component
+
+**File:** `components/marketing/Hero.tsx`
+
+**Current Issues:**
+1. Quiz CTA opens modal instead of navigating to dedicated `/raskite-savo-kubila` page
+2. No monthly payment messaging in hero headline
+3. Generic headline doesn't communicate affordability
+4. Trust strip has "IŠMANUS MOKĖJIMAS DALIMIS" but not emphasized
+5. Two equal-weight CTAs create choice paralysis
+
+**Required Changes:**
+
+```tsx
+// BEFORE (line 34):
+onClick={() => setIsQuizOpen(true)}
+
+// AFTER:
+<Link href="/raskite-savo-kubila">
+```
+
+Add monthly payment subheadline:
+```tsx
+<h1>Jūsų poilsio zona kieme.</h1>
+<p className="text-xl md:text-2xl mb-6 text-white/90">
+  Nuo 75 €/mėn. su 0% finansavimu.
+</p>
+```
+
+Add urgency messaging:
+```tsx
+<p className="text-sm uppercase tracking-wide mb-4 text-white/80">
+  🔥 Pavasario gamybos grafikas sparčiai pildosi
+</p>
+```
+
+### F.1.2 ProcessSteps Component
+
+**File:** `components/marketing/ProcessSteps.tsx`
+
+**Current Issues:**
+1. No CTA at bottom - dead end
+2. No monthly payment mention
+3. Generic delivery messaging
+
+**Required Changes:**
+
+Add CTA at bottom:
+```tsx
+<div className="text-center mt-12">
+  <Link href="/raskite-savo-kubila">
+    <button className="bg-primary text-white px-8 py-4 text-sm uppercase tracking-wide">
+      PRADĖTI KONFIGŪRACIJĄ
+    </button>
+  </Link>
+  <p className="text-sm text-gray-500 mt-3">
+    Nuo 75 €/mėn. • 0% palūkanų • Pristatymas per 4-6 savaites
+  </p>
+</div>
+```
+
+Update delivery timeline to specific: "per 4-6 savaites visoje Lietuvoje"
+
+Add guarantee to step 3: "5 metų garantija visoms gamybos detalėms"
+
+### F.1.3 CategoryGrid Component
+
+**File:** `components/marketing/CategoryGrid.tsx`
+
+**Current Issues:**
+1. No pricing information on category cards
+2. Weak CTA copy "PERŽIŪRĖTI" is passive
+3. No monthly payment per category
+4. No guidance on most popular choice
+
+**Required Changes:**
+
+Add price ranges to each category:
+```tsx
+<p className="text-white/90 text-lg font-bold mb-1">
+  Nuo 2,490 € (75 €/mėn.)
+</p>
+```
+
+Change CTA: "PERŽIŪRĖTI" → "RASKITE SAVO MODELĮ"
+
+Add popularity badge to round category:
+```tsx
+<span className="absolute top-6 right-6 bg-primary text-white text-xs px-3 py-1 uppercase tracking-wide">
+  POPULIARIAUSIAS
+</span>
+```
+
+Add product count: "6 modeliai"
+
+### F.1.4 Bestsellers Component
+
+**File:** `components/marketing/Bestsellers.tsx`
+
+**Current Issues:**
+1. Monthly payment is secondary (small gray text below full price)
+2. CTA goes directly to configurator (may overwhelm users)
+3. No urgency messaging or stock levels
+4. Price format inconsistent with monthly-first strategy
+
+**Required Changes:**
+
+Flip price hierarchy (monthly first):
+```tsx
+<div className="mb-6">
+  <span className="text-3xl font-headline">
+    {product.monthlyPayment} €/mėn.
+  </span>
+  <p className="text-xs text-gray-400 mt-1">
+    Visa kaina: {product.price} € arba 0% finansavimas
+  </p>
+</div>
+```
+
+Add urgency for popular products:
+```tsx
+{product.badge === "POPULIARIAUSIAS" && (
+  <p className="text-xs text-error mb-3">
+    ⚠️ Liko tik 3 gamybos vietos gegužės-birželio periodui
+  </p>
+)}
+```
+
+Add comparison link at bottom:
+```tsx
+<div className="text-center mt-12">
+  <Link href="/katalogas" className="text-sm underline">
+    Palyginkite visus 16 modelių →
+  </Link>
+</div>
+```
+
+### F.1.5 EngineeringFacts Component
+
+**File:** `components/marketing/EngineeringFacts.tsx`
+
+**Current Issues:**
+1. No CTA at end of section
+2. Technical jargon: "AISI 316" may not resonate
+3. No monthly payment mention connecting quality to affordability
+
+**Required Changes:**
+
+Add CTA:
+```tsx
+<div className="text-center mt-12">
+  <Link href="/raskite-savo-kubila">
+    <button className="bg-primary text-white px-8 py-4 text-sm uppercase tracking-wide">
+      PAMATYTI, KĄ GALITE GAUTI UŽ 75 €/MĖN.
+    </button>
+  </Link>
+</div>
+```
+
+Simplify: "Medicininis AISI 316 plienas" → "Aukščiausios kokybės nerūdijantis plienas"
+
+Add 4th fact: "5 metų garantija + amžinas palaikymas"
+
+### F.1.6 ConsultationBooking Component
+
+**File:** `components/marketing/ConsultationBooking.tsx`
+
+**Current Issues:**
+1. Calendar widget is non-functional placeholder
+2. Competes with quiz CTA (3 paths: catalog, quiz, consultation)
+3. No monthly payment mention
+4. Generic urgency messaging
+
+**Required Changes:**
+
+Either integrate real Calendly or simplify to CTA button.
+
+Update benefits:
+```tsx
+const benefits = [
+  "Pamatysime, kaip telpa jūsų kieme (AR vizualizacija)",
+  "Sužinosite tikslią mėnesinę įmoką už pasirinktą modelį",
+  "Gausime preliminarų patvirtinimą už 24 val.",
+];
+```
+
+Specific urgency:
+```tsx
+<p className="text-primary font-bold text-xs tracking-[0.2em] uppercase mb-6">
+  🔥 Liko tik 12 gamybos vietų 2026 Q2 periodui
+</p>
+```
+
+Add alternative quiz CTA:
+```tsx
+<p className="text-center mt-6 text-sm text-gray-500">
+  Dar nepasiruošę kalbėtis?{" "}
+  <Link href="/raskite-savo-kubila" className="text-primary underline">
+    Pirmiausia raskite savo modelį
+  </Link>
+</p>
+```
+
+---
+
+## F.2 CATALOG PAGE
+
+### F.2.1 Layout Restructure
+
+**Current State:**
+- `grid-cols-1 md:grid-cols-2 lg:grid-cols-3` → only 3-6 products visible
+- No left sidebar for filters (Amazon-style)
+- Cards are too tall: `aspect-[4/5]`
+
+**Required Layout:**
+
+```
+┌─────────────────────────────────────────────────────────────────────────┐
+│ [Breadcrumb: Pradžia > Katalogas]                                       │
+├─────────────────────────────────────────────────────────────────────────┤
+│                                                                         │
+│ [H1: Kubilų Katalogas]                                                  │
+│ [Subtitle: 16 modelių • Nuo 1,990 € (58 €/mėn.)]                       │
+│                                                                         │
+├────────────┬────────────────────────────────────────────────────────────┤
+│            │                                                            │
+│  FILTRAI   │  ┌──────┐ ┌──────┐ ┌──────┐ ┌──────┐ ┌──────┐ ┌──────┐  │
+│  ────────  │  │ Prod │ │ Prod │ │ Prod │ │ Prod │ │ Prod │ │ Prod │  │
+│            │  │  1   │ │  2   │ │  3   │ │  4   │ │  5   │ │  6   │  │
+│  □ Apvalūs │  │75€/mė│ │81€/mė│ │89€/mė│ │79€/mė│ │75€/mė│ │94€/mė│  │
+│  □ Kvad... │  └──────┘ └──────┘ └──────┘ └──────┘ └──────┘ └──────┘  │
+│  □ Šalčio  │  ┌──────┐ ┌──────┐ ┌──────┐ ┌──────┐ ┌──────┐ ┌──────┐  │
+│  □ Ofuro   │  │ Prod │ │ Prod │ │ Prod │ │ Prod │ │ Prod │ │ Prod │  │
+│            │  │  7   │ │  8   │ │  9   │ │ 10   │ │ 11   │ │ 12   │  │
+│  TALPA     │  │...   │ │...   │ │...   │ │...   │ │...   │ │...   │  │
+│  ────────  │  └──────┘ └──────┘ └──────┘ └──────┘ └──────┘ └──────┘  │
+│  □ 2-4 asm │                                                            │
+│  □ 4-6 asm │  [Load More / Pagination]                                  │
+│  □ 6+ asm  │                                                            │
+│            │                                                            │
+│  KAINA     │                                                            │
+│  ────────  │                                                            │
+│  [slider]  │                                                            │
+│            │                                                            │
+│  [VALYTI]  │                                                            │
+│            │                                                            │
+└────────────┴────────────────────────────────────────────────────────────┘
+```
+
+### F.2.2 Grid Changes
+
+**Current:** `grid-cols-1 md:grid-cols-2 lg:grid-cols-3`
+**Proposed:** `grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6`
+
+**Card aspect ratio:**
+- Current: `aspect-[4/5]` (portrait)
+- Proposed: `aspect-[5/4]` (landscape)
+
+This increases products above fold from 3-6 to 12-18.
+
+### F.2.3 Sidebar Filters
+
+**New Component:** `components/catalog/FilterSidebar.tsx`
+
+```tsx
+export function FilterSidebar({
+  filters,
+  onChange,
+  onClear,
+}: FilterSidebarProps) {
+  return (
+    <aside className="w-64 flex-shrink-0 sticky top-24 h-fit hidden lg:block">
+      {/* Shape Filter */}
+      <FilterGroup title="FORMA" options={shapeOptions} />
+
+      {/* Capacity Filter */}
+      <FilterGroup title="TALPA" options={capacityOptions} />
+
+      {/* Price Range */}
+      <PriceRangeSlider min={1990} max={5890} />
+
+      {/* Clear Button */}
+      <button onClick={onClear}>VALYTI FILTRUS</button>
+    </aside>
+  );
+}
+```
+
+### F.2.4 ProductCard Changes
+
+**File:** `components/catalog/ProductCard.tsx`
+
+**Critical Issue:** NO monthly payment shown at all!
+
+**Current (lines 83-88):**
+```tsx
+<p className="text-base-small text-on-surface-variant/80 font-light uppercase tracking-widest mb-1">
+  Investicija
+</p>
+<p className="text-base font-semibold text-on-surface tracking-wide">
+  nuo {formatPrice(price)} €
+</p>
+```
+
+**Required:**
+```tsx
+<div className="mb-4">
+  <p className="text-2xl font-headline text-primary">
+    nuo {Math.round(price / 36)} €/mėn.
+  </p>
+  <p className="text-xs text-on-surface-variant">
+    arba {formatPrice(price)} € | 0% palūkanos
+  </p>
+</div>
+```
+
+---
+
+## F.3 B2B (VERSLAS) PAGE
+
+### F.3.1 Critical Bug: Form-API Field Mismatch
+
+**CRITICAL: Form will fail validation!**
+
+**Form sends (LeadForm.tsx):**
+```typescript
+{ name: "...", company: "...", email: "...", phone: "...", type: "..." }
+```
+
+**API expects (api/leads/route.ts):**
+```typescript
+{ contactName: "...", companyName: "...", message: "...", ... }
+```
+
+**Fix Required:**
+```tsx
+// LeadForm.tsx - Update field names:
+name="contactName"    // was: name="name"
+name="companyName"    // was: name="company"
+// Add message field (API requires it)
+```
+
+### F.3.2 Missing B2B Conversion Elements
+
+**Social Proof:**
+- No client logos
+- No case studies
+- No testimonials from businesses
+
+**Trust Signals:**
+- No certifications (ISO, CE)
+- No business registration number
+- No physical address
+
+**Pricing Transparency:**
+- No volume discount information
+- No B2B financing terms
+- No ROI calculator
+
+### F.3.3 B2B-Specific Additions Needed
+
+1. **Client Logo Bar:** 6-8 business clients
+2. **Case Study Section:** "Kaip [Hotel X] padidino užimtumą 23%"
+3. **ROI Calculator:** Simple tool showing payback period
+4. **Volume Pricing Table:** 2-4 unit, 5-9 unit, 10+ unit tiers
+5. **B2B FAQ:** "Ar teikiate nuomos galimybę?", "Kokie mokėjimo terminai?"
+6. **Partnership CTA:** "Tapkite partneriu" button
+
+**Estimated work:** 85-109 hours
+
+---
+
+## F.4 CART & CHECKOUT
+
+### F.4.1 Payment Method Order (CRITICAL)
+
+**File:** `components/checkout/PaymentMethods.tsx` (lines 24-44)
+
+**Current order:**
+1. "Lietuvos Bankai" (banklink)
+2. "Kreditinė Kortelė" (card)
+3. "Lizingas (Mokėjimas dalimis)" ← LAST but highlighted
+
+**Required order:**
+1. "Išsimokėtinai (Mokėjimas dalimis)" ← FIRST, highlighted
+2. "Kreditinė Kortelė"
+3. "Lietuvos Bankai"
+
+**Terminology fix:** "Lizingas" → "Išsimokėtinai"
+
+### F.4.2 Monthly Payment Visibility in Cart (HIGH IMPACT)
+
+**File:** `app/krepselis/page.tsx` (lines 127-138)
+
+**Current:** Small info box with generic text "iki 36 mėnesių"
+**Problem:** No actual monthly price shown!
+
+**Required UI:**
+```
+┌─────────────────────────────────────────┐
+│ Užsakymo suvestinė                      │
+├─────────────────────────────────────────┤
+│ Tarpinė suma          10 247,93 €       │
+│ PVM (21%)              2 152,07 €       │
+│ Pristatymas            NEMOKAMAI        │
+├═════════════════════════════════════════┤
+│ ╔═══════════════════════════════════╗   │
+│ ║ 💳 Išsimokėtinai                  ║   │
+│ ║         nuo 258 €                 ║   │ ← BIG NUMBER
+│ ║         per mėnesį (48 mėn.)      ║   │
+│ ║ 0% palūkanų, be pradinio įnašo    ║   │
+│ ╚═══════════════════════════════════╝   │
+├─────────────────────────────────────────┤
+│ Viso mokėti                             │
+│ arba visa suma       12 400,00 €        │ ← Secondary
+├─────────────────────────────────────────┤
+│ [PIRKTI DABAR]                          │
+└─────────────────────────────────────────┘
+```
+
+**Impact:** Studies show 40-60% conversion lift when monthly payment is prominent.
+
+### F.4.3 Guest Checkout Messaging
+
+**File:** `components/checkout/DeliveryForm.tsx` (lines 16-99)
+
+**Missing:** No messaging about whether account is required.
+
+**Add above form:**
+```tsx
+<div className="bg-surface-container-low p-6 border-l-4 border-primary/40">
+  <div className="flex items-start gap-3">
+    <Icon name="check_circle" className="text-primary mt-0.5" />
+    <div>
+      <p className="text-sm font-medium text-on-surface mb-1">
+        Pirkite kaip svečias – paskyros kurti nereikia
+      </p>
+      <p className="text-xs text-on-surface-variant font-light">
+        Jūsų duomenys bus naudojami tik šiam užsakymui (GDPR).
+      </p>
+    </div>
+  </div>
+</div>
+```
+
+### F.4.4 Delivery Timeline Missing
+
+**Files:** `app/krepselis/page.tsx`, `components/checkout/OrderSummary.tsx`
+
+**Current:** Shows "Pristatymas: NEMOKAMAI" but NO timeline.
+
+**Add:**
+```tsx
+<span className="text-xs text-primary">
+  2-4 savaites | Tikėtina data: Bal 9 - Bal 23
+</span>
+```
+
+### F.4.5 Trust Badges Inconsistency
+
+Different badges in Cart vs Checkout. Create shared component:
+
+**New file:** `components/shared/TrustBadges.tsx`
+
+```tsx
+const TRUST_BADGES = [
+  { icon: "verified", title: "5 metų garantija", description: "Korpusui ir 2 metų elektronikai" },
+  { icon: "security", title: "Saugus mokėjimas", description: "SSL šifravimas ir PCI-DSS" },
+  { icon: "local_shipping", title: "Nemokamas pristatymas", description: "Visoje Lietuvoje" },
+];
+
+export function TrustBadges({ variant = "compact" }) { /* ... */ }
+```
+
+---
+
+## F.5 CONTACT PAGE
+
+### F.5.1 Critical: Non-Functional Form
+
+**Issue:** Form submits to `/api/contacts` which DOES NOT EXIST!
+
+**Fix:** Create `/app/api/contacts/route.ts` or update form to use `/api/leads`.
+
+### F.5.2 Phone Not Prominent or Clickable
+
+**Current:**
+- Phone in grid (1/4 cards) - not prominent
+- Placeholder: "+370 XXX XXXXX" - non-functional
+- Not clickable (no `tel:` link)
+- No mobile tap-to-call
+
+**Required:**
+
+Add phone CTA to hero:
+```tsx
+<div className="flex flex-col sm:flex-row gap-6 mt-8">
+  <a
+    href="tel:+37060012345"
+    className="bg-primary text-white px-8 py-5 font-bold tracking-widest uppercase"
+  >
+    <Icon name="phone" />
+    Skambinkite dabar
+  </a>
+  <a href="#contact-form" className="border-2 border-primary text-primary px-8 py-5">
+    Rašykite mums
+  </a>
+</div>
+
+<div className="mt-6 flex items-center gap-4 text-sm">
+  <a href="tel:+37060012345" className="font-bold hover:underline">
+    +370 600 12345
+  </a>
+  <span>| Pr-Pn 9:00-18:00</span>
+  <span className="text-primary">● Dabar dirbame</span>
+</div>
+```
+
+Make phone card primary (larger, different styling):
+```tsx
+<div className="bg-primary text-white p-8">
+  <h3>Greičiausias būdas</h3>
+  <a href="tel:+37060012345" className="text-2xl font-bold">
+    +370 600 12345
+  </a>
+  <p>⚡ Atsakysime iš karto</p>
+</div>
+```
+
+### F.5.3 Email Addresses Not Clickable
+
+**Current:** Static text "info@luxspanature.com"
+**Fix:** `<a href="mailto:info@luxspanature.com">`
+
+### F.5.4 Inconsistent Response Time Messaging
+
+| Location | Current Message |
+|----------|-----------------|
+| Email card | "Atsakysime per 24 val." |
+| Form description | "Atsakysime per 24 valandas darbo dienomis" |
+| Success message | "Susisieksime su jumis artimiausiu metu" (vague) |
+
+**Standardize:**
+- Phone: "Atsakome iš karto"
+- Email/Form: "Atsakome per 24 val. darbo dienomis"
+- Success: "Atsakysime į {email} per 24 val. darbo dienomis"
+
+### F.5.5 Missing Trust Elements
+
+- No testimonials
+- No certifications
+- Vague address: "Lux Spa Nature, Lietuva"
+- Map is placeholder (no real location)
+
+**Add:**
+```tsx
+<div className="mb-12 grid md:grid-cols-3 gap-8">
+  <TrustBadge icon="verified" text="15+ metų patirtis" />
+  <TrustBadge icon="star" text="4.9/5 klientų įvertinimas" />
+  <TrustBadge icon="support_agent" text="Lietuviškas palaikymas" />
+</div>
+```
+
+### F.5.6 Form Validation Missing
+
+**Current:** No Lithuanian phone format validation, no field-level errors.
+
+**Add:**
+```tsx
+const validatePhone = (value: string) => {
+  const cleanPhone = value.replace(/[\s\-()]/g, "");
+  return /^(\+?370|8)\d{8}$/.test(cleanPhone);
+};
+```
+
+---
+
+## F.6 ESTIMATED CONVERSION IMPACT
+
+### F.6.1 By Page
+
+| Page | Current Issues | Est. Lift After Fix |
+|------|----------------|---------------------|
+| Homepage | Modal quiz, weak CTAs, no monthly in hero | +15-25% |
+| Catalog | Too few products visible, no filters, no monthly | +20-30% |
+| B2B | Form broken, no social proof | +40-60% |
+| Cart | Monthly hidden, no delivery timeline | +15-25% |
+| Checkout | Payment order wrong, no guest messaging | +10-15% |
+| Contact | Form broken, phone buried | +200-300% (calls) |
+
+### F.6.2 By Issue Type
+
+| Issue Type | Count | Total Est. Impact |
+|------------|-------|-------------------|
+| Monthly payment visibility | 6 instances | +25-40% overall |
+| Non-functional elements | 3 (B2B form, contact form, calendar) | Blocking conversion |
+| Terminology ("Lizingas") | 5+ instances | Trust perception |
+| Missing CTAs | 4 sections | Lost opportunities |
+| Layout/UX | 2 (catalog grid, sidebar) | +15-20% browsing engagement |
+
+---
+
+## F.7 IMPLEMENTATION PRIORITY
+
+### Week 1: Critical Blockers
+1. ✅ Create `/api/contacts/route.ts` endpoint
+2. ✅ Fix B2B form field names (contactName, companyName, message)
+3. ✅ "Lizingas" → "Išsimokėtinai" across all files
+4. ✅ Payment method order (leasing first)
+5. ✅ Monthly payment in cart summary
+6. ✅ Hero quiz CTA → page link (not modal)
+
+### Week 2: High Impact
+7. ✅ Catalog sidebar filters
+8. ✅ Catalog grid (4-6 columns, smaller cards)
+9. ✅ ProductCard monthly payment display
+10. ✅ Contact page phone prominence + clickable
+11. ✅ Bestsellers price flip (monthly first)
+
+### Week 3: Enhancement
+12. ✅ EngineeringFacts + ProcessSteps CTAs
+13. ✅ CategoryGrid pricing + badges
+14. ✅ Guest checkout messaging
+15. ✅ Delivery timeline in cart/checkout
+16. ✅ Trust badges consistency
+
+### Week 4: Polish
+17. ✅ B2B social proof (logos, case studies)
+18. ✅ Contact page trust elements
+19. ✅ Mobile tap-to-call optimization
+20. ✅ ConsultationBooking real Calendly or simplify
+
+**Total estimated work:** 80-100 hours
+
+---
+
+# APPENDIX G: REALISTIC SECTION STRUCTURE (BE FAKE SOCIAL PROOF)
+
+**SVARBU:** Šis appendixas apibrėžia realias sekcijas BE:
+- Fake testimonialų
+- Fake case studies
+- Fake statistikų ("500+ klientų", "4.9/5 reitingas")
+- Fake klientų logotipų
+- Fake urgency ("Liko tik 3!")
+
+---
+
+## G.1 KĄ TURIME (Tikra)
+
+| Kategorija | Turimas turinys |
+|------------|-----------------|
+| Produktai | 16 modelių su kainomis, specifikacijomis |
+| Finansavimas | 0% išsimokėtinai, mėnesinės įmokos |
+| Gamyba | Lietuvoje (jei tikra) |
+| Garantijos | 5m korpusui, 2m elektronikai (jei siūlote) |
+| Medžiagos | AISI 316 plienas, termo mediena |
+| Procesas | Gamyba → Pristatymas → Montavimas |
+| Kontaktai | Telefonas, el. paštas (kai turėsite) |
+
+## G.2 KO NETURIME (Dar)
+
+| Kategorija | Trūksta |
+|------------|---------|
+| Social Proof | Testimonialai, reviews, reitingai |
+| Case Studies | Verslo klientų istorijos su skaičiais |
+| Statistika | "X klientų", "Y metų patirtis" |
+| Media | "Kaip matyta..." logotipai |
+| Klientų logotipai | Viešbučiai, glampingai |
+
+---
+
+## G.3 HOMEPAGE: REALIOS SEKCIJOS
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│ 1. HERO                                                         │
+│    ├── H1: "Jūsų poilsio zona kieme"                            │
+│    ├── Subhead: "Nuo 75 €/mėn. su 0% finansavimu"               │
+│    ├── CTA Primary: "Rasti savo kubilą" → /raskite-savo-kubila  │
+│    ├── CTA Secondary: "Skambinti" (kai turėsime numerį)         │
+│    └── Trust Strip (TIK FAKTAI):                                │
+│        [Gaminama Lietuvoje] [5m Garantija] [0% Išsimokėtinai]   │
+│        [Nemokamas Pristatymas]                                  │
+│                                                                 │
+│    ❌ NE: "500+ šeimų", "4.9★", klientų skaičius                │
+├─────────────────────────────────────────────────────────────────┤
+│ 2. LIFESTYLE TRANSFORMATION                                     │
+│    ├── H2: "Įsivaizduokite..."                                  │
+│    ├── Aprašymas (NE citatos):                                  │
+│    │   • "Vakarus su šeima po žvaigždėmis"                      │
+│    │   • "Raumenų atpalaidavimą po treniruotės"                 │
+│    │   • "Šilumą net -25°C žiemą"                               │
+│    ├── Lifestyle nuotrauka (stock OK, bet ne fake testimonial)  │
+│    └── CTA: "Pamatyti modelius"                                 │
+│                                                                 │
+│    Psichologija: Aprašome PATIRTĮ, ne cituojame klientus        │
+├─────────────────────────────────────────────────────────────────┤
+│ 3. BESTSELLERS (3 produktai)                                    │
+│    ├── H2: "Populiariausi modeliai"                             │
+│    ├── 3 produktai:                                             │
+│    │   ┌─────────────────────────────────────────┐              │
+│    │   │ [Nuotrauka]                             │              │
+│    │   │ Grande Round In                         │              │
+│    │   │ 4-6 asmenims                            │              │
+│    │   │                                         │              │
+│    │   │ 81 €/mėn.              ← PIRMA          │              │
+│    │   │ arba 2,890 €           ← antra          │              │
+│    │   │                                         │              │
+│    │   │ [SUŽINOTI DAUGIAU]                      │              │
+│    │   └─────────────────────────────────────────┘              │
+│    │                                                            │
+│    │   ❌ NE: "★ 73% renkasi" (neturime duomenų)                │
+│    │   ❌ NE: "Populiariausias" badge (neįrodyta)               │
+│    │   ✅ GALIMA: "Tinka šeimoms" (aprašymas)                   │
+│    │                                                            │
+│    └── Link: "Visi 16 modelių →"                                │
+├─────────────────────────────────────────────────────────────────┤
+│ 4. KODĖL LUX SPA NATURE (Authority)                             │
+│    ├── H2: "Kodėl mes?"                                         │
+│    ├── 4 faktai (TIK TIKRI):                                    │
+│    │   • "Gaminama Lietuvoje" (+ gamyklos nuotrauka)            │
+│    │   • "AISI 316 medicininis plienas"                         │
+│    │   • "Termo medienos apdaila"                               │
+│    │   • "5 metų garantija" (jei tikrai siūlote)                │
+│    │                                                            │
+│    │   ❌ NE: "15 metų patirtis" (jei netiesa)                  │
+│    │   ❌ NE: "1000+ pagamintų" (jei nežinote tiksliai)         │
+│    │                                                            │
+│    ├── Galima: Gamyklos/dirbtuvių nuotraukos                    │
+│    └── CTA: "Sužinoti daugiau apie gamybą"                      │
+├─────────────────────────────────────────────────────────────────┤
+│ 5. PROCESAS (3 žingsniai)                                       │
+│    ├── H2: "Kaip tai veikia"                                    │
+│    ├── 3 žingsniai:                                             │
+│    │   1. "Pasirinkite" - Quiz arba konsultacija                │
+│    │   2. "Gaminame" - 2-4 savaitės individualiai               │
+│    │   3. "Pristatome" - Nemokamas montavimas                   │
+│    └── CTA: "Pradėti" + "Nuo 75 €/mėn."                         │
+│                                                                 │
+│    Faktai - nereikia social proof                               │
+├─────────────────────────────────────────────────────────────────┤
+│ 6. PRIEINAMUMAS (Finansavimas)                                  │
+│    ├── H2: "Prieinamiau nei manote"                             │
+│    ├── Pavyzdys:                                                │
+│    │   "Classic Round Out"                                      │
+│    │   69 €/mėn. = 2.30 €/dieną                                 │
+│    │   "Mažiau nei kava kasdien"                                │
+│    ├── Finansavimo detalės:                                     │
+│    │   • 0% palūkanos                                           │
+│    │   • Be pradinio įnašo                                      │
+│    │   • Iki 48 mėnesių                                         │
+│    └── CTA: "Skaičiuoti savo įmoką"                             │
+│                                                                 │
+│    Faktai apie finansavimą - social proof nereikalingas         │
+├─────────────────────────────────────────────────────────────────┤
+│ 7. GARANTIJOS (Risk Reversal - KRITIŠKAI SVARBU!)               │
+│    ├── H2: "Jūsų ramybei"                                       │
+│    ├── Garantijos (TURIME):                                     │
+│    │   ✓ 5 metų garantija korpusui                              │
+│    │   ✓ 2 metų garantija elektronikai                          │
+│    │   ✓ Nemokamas pristatymas ir montavimas                    │
+│    │                                                            │
+│    │   ⚠️ NETURIME (bet rekomenduojama ateityje):               │
+│    │   ✗ Pinigų grąžinimo garantija                             │
+│    │                                                            │
+│    │   💡 ALTERNATYVA: Stiprus "satisfaction" įsipareigojimas:  │
+│    │   "Jei po montavimo kas nors neveikia - taisysime nemokamai"│
+│    │                                                            │
+│    └── Mažas tekstas: Tikslios garantijos sąlygos               │
+│                                                                 │
+│    ⚠️ BE SOCIAL PROOF IR BE MONEY-BACK = DIDESNIS PASITIKĖJIMO │
+│       BARJERAS. Kompensuokite: detaliais kontaktais, greitu     │
+│       atsakymu, profesionalumu.                                 │
+├─────────────────────────────────────────────────────────────────┤
+│ 8. FAQ (5 klausimai)                                            │
+│    ├── H2: "Dažniausi klausimai"                                │
+│    ├── Accordion:                                               │
+│    │   Q: "Kiek kainuoja eksploatacija?"                        │
+│    │   A: "~35 €/mėn. (elektra, chemija, vanduo)"               │
+│    │                                                            │
+│    │   Q: "Ar reikia statybos leidimo?"                         │
+│    │   A: "Ne, kubilai iki 10m² leidimo nereikalauja"           │
+│    │                                                            │
+│    │   Q: "Ar galima naudoti žiemą?"                            │
+│    │   A: "Taip, veikia iki -25°C"                              │
+│    │                                                            │
+│    │   Q: "Kiek trunka pristatymas?"                            │
+│    │   A: "2-4 savaitės nuo užsakymo"                           │
+│    │                                                            │
+│    │   Q: "Kaip prižiūrėti vandenį?"                            │
+│    │   A: "Paprasta - duosime instrukciją ir priežiūros rinkinį"│
+│    │                                                            │
+│    └── Link: "Visi klausimai →"                                 │
+├─────────────────────────────────────────────────────────────────┤
+│ 9. FINAL CTA                                                    │
+│    ├── H2: "Pasiruošę pradėti?"                                 │
+│    ├── CTA Primary: "Rasti savo kubilą"                         │
+│    ├── CTA Secondary: "Skambinti: +370 XXX XXXXX"               │
+│    ├── Darbo laikas: "Pr-Pn 9:00-18:00"                         │
+│    └── Info: "Pristatymas per 2-4 savaites"                     │
+│                                                                 │
+│    ❌ NE: "Liko tik 8 vietos!" (jei netiesa)                    │
+│    ✅ GALIMA: "Užsakymai priimami birželio gamybai" (jei tikra) │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+### Homepage Santrauka
+
+**9 sekcijos:**
+1. Hero (su trust strip)
+2. Lifestyle Transformation
+3. Bestsellers (3 produktai)
+4. Kodėl Lux Spa Nature (authority)
+5. Procesas (3 žingsniai)
+6. Prieinamumas (finansavimas)
+7. Garantijos (STIPRINTI!)
+8. FAQ (5 klausimai)
+9. Final CTA
+
+**Pašalinta (neturime duomenų):**
+- Social proof bar su statistika
+- Testimonialų sekcija
+- "X klientų pasirinko"
+- Fake urgency messaging
+
+---
+
+## G.4 B2B PAGE: REALIOS SEKCIJOS
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│ 1. B2B HERO                                                     │
+│    ├── H1: "Kubilai jūsų verslui"                               │
+│    ├── Subhead: "Viešbučiams, glampingams, poilsio centrams"    │
+│    ├── Value props (BE STATISTIKŲ):                             │
+│    │   ✅ "Komercinės nuolaidos nuo 2 vnt."                     │
+│    │   ✅ "Profesionalus montavimas"                            │
+│    │   ✅ "Priežiūros sutartys"                                 │
+│    │                                                            │
+│    │   ❌ NE: "+23% užimtumas" (neturime duomenų)               │
+│    │   ❌ NE: "50+ verslo klientų" (jei netiesa)                │
+│    │                                                            │
+│    ├── CTA Primary: "Gauti komercinį pasiūlymą"                 │
+│    └── CTA Secondary: "Skambinti verslo skyriui"                │
+│                                                                 │
+│    ❌ JOKIŲ KLIENTŲ LOGOTIPŲ (kol neturėsime tikrų)             │
+├─────────────────────────────────────────────────────────────────┤
+│ 2. VERSLO NAUDA (Logika, ne statistika)                         │
+│    ├── H2: "Kodėl kubilai jūsų verslui?"                        │
+│    ├── 4 naudos (be skaičių):                                   │
+│    │                                                            │
+│    │   🎯 IŠSKIRTINUMAS                                         │
+│    │   "Nedaug konkurentų siūlo kubilus - išsiskirsite"         │
+│    │                                                            │
+│    │   ❄️ ŽIEMOS SEZONO PATRAUKLUMAS                            │
+│    │   "Veikia iki -25°C - pritraukia klientus visus metus"     │
+│    │                                                            │
+│    │   💰 PAPILDOMA PASLAUGA                                    │
+│    │   "Galimybė imti papildomą mokestį už SPA patirtį"         │
+│    │                                                            │
+│    │   🔧 MAŽA PRIEŽIŪRA                                        │
+│    │   "5m garantija, priežiūros sutartys - minimalios rūpesčiai"│
+│    │                                                            │
+│    │   ❌ NE: "ROI per 8 mėnesius" (neįrodyta)                  │
+│    │   ❌ NE: "+34% bookings" (neturime case study)             │
+│    │                                                            │
+│    └── Psichologija: Logiškai pagrįskite, nemeluokite           │
+├─────────────────────────────────────────────────────────────────┤
+│ 3. PRODUKTAI VERSLUI                                            │
+│    ├── H2: "Rekomenduojami modeliai"                            │
+│    ├── 3-4 kategorijos (aprašymas, NE case study):              │
+│    │                                                            │
+│    │   ┌─────────────────────────────────────────┐              │
+│    │   │ VIEŠBUČIAMS                             │              │
+│    │   │ Grande Round In, Monaco Horizon         │              │
+│    │   │ "Premium išvaizda svečių zonoms"        │              │
+│    │   │ Nuo 2,890 € (81 €/mėn.)                │              │
+│    │   │ [SUŽINOTI DAUGIAU]                      │              │
+│    │   └─────────────────────────────────────────┘              │
+│    │                                                            │
+│    │   ┌─────────────────────────────────────────┐              │
+│    │   │ GLAMPINGAMS                             │              │
+│    │   │ Classic Round Out, Cuba                 │              │
+│    │   │ "Atsparus lauko sąlygoms"               │              │
+│    │   │ Nuo 2,490 € (69 €/mėn.)                │              │
+│    │   │ [SUŽINOTI DAUGIAU]                      │              │
+│    │   └─────────────────────────────────────────┘              │
+│    │                                                            │
+│    │   ❌ NE: "Hotel X pasirinko šį modelį"                     │
+│    │   ✅ GALIMA: "Tinka viešbučio svečių zonai"                │
+│    │                                                            │
+│    └── CTA: "Peržiūrėti visus modelius"                         │
+├─────────────────────────────────────────────────────────────────┤
+│ 4. KOMERCINĖS KAINOS (Transparency)                             │
+│    ├── H2: "Verslo klientų nuolaidos"                           │
+│    ├── Lentelė:                                                 │
+│    │   ┌─────────────────────────────────────────┐              │
+│    │   │ Kiekis    │ Nuolaida │ Pavyzdys        │              │
+│    │   ├───────────┼──────────┼─────────────────┤              │
+│    │   │ 1 vnt.    │ -        │ 2,890 €         │              │
+│    │   │ 2-4 vnt.  │ -10%     │ 2,601 € / vnt.  │              │
+│    │   │ 5-9 vnt.  │ -15%     │ 2,457 € / vnt.  │              │
+│    │   │ 10+ vnt.  │ Derybos  │ Kreipkitės      │              │
+│    │   └─────────────────────────────────────────┘              │
+│    │                                                            │
+│    ├── "Verslo išsimokėtinai: iki 60 mėn."                      │
+│    └── "Kainos be PVM. Pristatymas įskaičiuotas."               │
+│                                                                 │
+│    FAKTAS - social proof nereikalingas                          │
+├─────────────────────────────────────────────────────────────────┤
+│ 5. VERSLO PASLAUGOS                                             │
+│    ├── H2: "Ką gausite kaip verslo klientas"                    │
+│    ├── Paslaugų sąrašas:                                        │
+│    │   ✓ Profesionalus montavimas (mūsų komanda)                │
+│    │   ✓ Priežiūros sutartys (nuo 50 €/mėn.)                    │
+│    │   ✓ Prioritetinis palaikymas                               │
+│    │   ✓ PVM sąskaita                                           │
+│    │   ✓ Mokėjimo terminai (30/60 dienų)                        │
+│    │   ✓ Customizacija (logotipas, spalvos)                     │
+│    │                                                            │
+│    └── Tai JŪSŲ PASIŪLYMAS - nereikia įrodyti statistika        │
+├─────────────────────────────────────────────────────────────────┤
+│ 6. B2B FAQ                                                      │
+│    ├── H2: "Klausimai apie verslo užsakymus"                    │
+│    ├── 5 klausimai:                                             │
+│    │   Q: "Kokie mokėjimo terminai?"                            │
+│    │   A: "30 arba 60 dienų nuo sąskaitos išrašymo"             │
+│    │                                                            │
+│    │   Q: "Ar išrašote PVM sąskaitą?"                           │
+│    │   A: "Taip, visos kainos nurodytos be PVM"                 │
+│    │                                                            │
+│    │   Q: "Kiek trunka didelis užsakymas?"                      │
+│    │   A: "4-8 savaitės priklausomai nuo kiekio"                │
+│    │                                                            │
+│    │   Q: "Ar yra priežiūros sutartys?"                         │
+│    │   A: "Taip, nuo 50 €/mėn. už reguliarią priežiūrą"         │
+│    │                                                            │
+│    │   Q: "Ar galima su mūsų logotipu?"                         │
+│    │   A: "Taip, siūlome customizaciją verslo klientams"        │
+│    │                                                            │
+│    └── Faktai - case studies nereikalingi                       │
+├─────────────────────────────────────────────────────────────────┤
+│ 7. LEAD FORMA (PATAISYTA!)                                      │
+│    ├── H2: "Gaukite individualų pasiūlymą"                      │
+│    ├── Subhead: "Atsakysime per 24 val. darbo dienomis"         │
+│    │                                                            │
+│    │   ⚠️ KRITINIS FIX - Laukų pavadinimai:                     │
+│    │                                                            │
+│    ├── Laukai:                                                  │
+│    │   • Vardas, Pavardė     → name="contactName"               │
+│    │   • Įmonės pavadinimas  → name="companyName"               │
+│    │   • El. paštas          → name="email"                     │
+│    │   • Telefonas           → name="phone"                     │
+│    │   • Verslo tipas        → [dropdown]                       │
+│    │   • Planuojamas kiekis  → [1/2-4/5-9/10+]                  │
+│    │   • Žinutė              → name="message" ← API REIKALAUJA! │
+│    │                                                            │
+│    └── CTA: "Siųsti užklausą"                                   │
+├─────────────────────────────────────────────────────────────────┤
+│ 8. KONTAKTAI                                                    │
+│    ├── H2: "Arba susisiekite tiesiogiai"                        │
+│    ├── Tel: +370 XXX XXXXX (click-to-call) ← KAI TURĖSITE       │
+│    ├── El. paštas: verslas@luxspanature.com                     │
+│    └── "Atsakome per 24 val. darbo dienomis"                    │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+### B2B Santrauka
+
+**8 sekcijos:**
+1. Hero (be statistikų)
+2. Verslo nauda (logika, ne skaičiai)
+3. Produktai pagal verslo tipą
+4. Komercinės kainos (lentelė)
+5. Verslo paslaugos
+6. B2B FAQ
+7. Lead forma (PATAISYTA!)
+8. Kontaktai
+
+**Pašalinta (neturime duomenų):**
+- Client logo bar
+- ROI calculator (nėra duomenų pagrįsti)
+- Case studies
+- "50+ verslo klientų"
+- Testimonialai
+
+---
+
+## G.5 KOMPENSACIJOS STRATEGIJA
+
+### Be Social Proof IR be Money-Back, ką daryti?
+
+| Trūksta | Kompensacija |
+|---------|--------------|
+| Testimonialų | **Detalūs kontaktai + greitas atsakymas** |
+| Case studies | **Logiškas naudos paaiškinimas** |
+| "X klientų" | **Gamybos kokybė, "Lietuvoje"** |
+| Reitingų | **Sertifikatai** (CE, ISO jei turite) |
+| Money-back | **Stipri gamybos garantija + "satisfaction" pažadas** |
+| Urgency | **Tikri gamybos terminai** |
+
+### Prioritetai be social proof IR be money-back:
+
+1. **KONTAKTAI TURI BŪTI SUPER MATOMI**
+   - Telefonas hero sekcijoje (kai turėsite)
+   - "Skambinkite bet kada darbo metu"
+   - Greitas atsakymas (per 24h) = trust signalas
+
+2. **KONTAKTAI MATOMI**
+   - Telefonas hero sekcijoje
+   - Žmonės nori kalbėti prieš brangų pirkinį
+
+3. **PRODUKTŲ INFO DETALI**
+   - Daugiau specs = kompensuoja testimonialų trūkumą
+   - Nuotraukų galerija, matmenys, medžiagos
+
+4. **KAINA AIŠKI**
+   - Mėnesinė įmoka PIRMA visur
+   - 0% finansavimas - jūsų stiprybė
+
+---
+
+## G.6 ATEITIES PLANAS: KAI TURĖSIME SOCIAL PROOF
+
+### Kai gausite pirmus klientus:
+
+**Etapas 1: Pirmi 5 klientai**
+- Paprašykite trumpo atsiliepimo (2-3 sakiniai)
+- Paprašykite nuotraukos su kubilu
+- Pridėkite į homepage: "Ką sako mūsų klientai" sekcija
+
+**Etapas 2: Pirmas verslo klientas**
+- Paprašykite case study (su skaičiais jei įmanoma)
+- Pridėkite logotipą į B2B puslapį
+- Sukurkite "Sėkmės istorija" puslapį
+
+**Etapas 3: 20+ klientų**
+- Galite rašyti: "20+ šeimų jau mėgaujasi"
+- Galite pridėti reitingą (jei renkate Google reviews)
+
+**Etapas 4: 50+ klientų**
+- Full testimonial carousel
+- Video testimonials
+- Case study library
+
+---
+
+## G.7 KONTAKTŲ PLACEHOLDERIAI
+
+Kol neturite tikrų kontaktų, naudokite:
+
+```
+Telefonas: +370 600 00000 (PAKEISTI kai turėsite)
+El. paštas: info@luxspanature.com
+Verslo: verslas@luxspanature.com
+Adresas: Lietuva (PRIDĖTI tikslų kai turėsite)
+```
+
+**Svarbu:** Nepalikite placeholder'ių gamyboje - geriau visai nerodyti nei rodyti netikrą numerį.
+
+---
+
 *End of Complete CRO Specification*
 
-**Version:** 3.0 (Consolidated with Gap Analysis)
-**Parts:** 1-20 + Appendices A-E
-**Total Sections:** 95
+**Version:** 5.0 (Realistic Sections without Fake Social Proof)
+**Parts:** 1-20 + Appendices A-G
+**Total Sections:** 125
+**Brand:** Lux Spa Nature
+**Domain:** luxspanature.com
 **Last Updated:** 2026-03-26
 

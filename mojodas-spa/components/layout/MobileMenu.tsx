@@ -53,7 +53,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                 onClick={onClose}
                 className="text-xl font-bold uppercase tracking-widest font-headline"
               >
-                MojoDas Spa
+                Lux Spa Nature
               </Link>
               <button
                 onClick={onClose}

@@ -10,13 +10,13 @@ const contactCards = [
   {
     icon: "email",
     title: "El. paštas",
-    details: ["info@mojodas.lt", "support@mojodas.lt"],
+    details: ["info@luxspanature.com", "support@luxspanature.com"],
     description: "Atsakysime per 24 val.",
   },
   {
     icon: "location_on",
     title: "Adresas",
-    details: ["MojoDas Spa", "Lietuva"],
+    details: ["Lux Spa Nature", "Lietuva"],
     description: "Apsilankymas tik susitarus",
   },
   {

@@ -2,9 +2,9 @@ import { Header, Footer } from "@/components/layout";
 import { ContactInfo, ContactForm, ContactCalendly } from "@/components/contact";
 
 export const metadata = {
-  title: "Kontaktai | MojoDas Spa",
+  title: "Kontaktai | Lux Spa Nature",
   description:
-    "Susisiekite su MojoDas Spa komanda. Konsultacija, užsakymai, techninė informacija. Esame pasirengę atsakyti į visus jūsų klausimus.",
+    "Susisiekite su Lux Spa Nature komanda. Konsultacija, užsakymai, techninė informacija. Esame pasirengę atsakyti į visus jūsų klausimus.",
 };
 
 export default function ContactPage() {

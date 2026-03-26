@@ -1,6 +1,6 @@
-# MojoDas Spa: Brandbook & Design System
+# Lux Spa Nature: Brandbook & Design System
 
-This document outlines the visual identity, UI/UX principles, and "Billion-Dollar Maison" aesthetic guidelines for the MojoDas Spa digital flagship. It acts as the source of truth for all components (including the Configurator, Catalog, and Product Finder Quiz) to ensure the experience feels incredibly premium, tactile, and cohesive.
+This document outlines the visual identity, UI/UX principles, and "Billion-Dollar Maison" aesthetic guidelines for the Lux Spa Nature digital flagship. It acts as the source of truth for all components (including the Configurator, Catalog, and Product Finder Quiz) to ensure the experience feels incredibly premium, tactile, and cohesive.
 
 ---
 

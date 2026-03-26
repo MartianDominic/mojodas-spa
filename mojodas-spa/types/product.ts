@@ -1,5 +1,5 @@
 /**
- * Product Types for MojoDas Spa
+ * Product Types for Lux Spa Nature
  * TypeScript definitions matching PRD Section 3.1 and JSON data structure
  */
 

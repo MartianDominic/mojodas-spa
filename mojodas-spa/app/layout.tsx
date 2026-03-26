@@ -23,8 +23,8 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "MojoDas Spa | Ramybės Inžinerija",
-    template: "%s | MojoDas Spa",
+    default: "Lux Spa Nature | Ramybės Inžinerija",
+    template: "%s | Lux Spa Nature",
   },
   description:
     "Premium klasės masažiniai kubilai ir SPA sprendimai. Pagaminta Lietuvoje su 5 metų garantija. AISI 316 plienas, išmanus mokėjimas dalimis.",
@@ -34,24 +34,24 @@ export const metadata: Metadata = {
     "masažiniai baseinai",
     "hot tub",
     "Lietuva",
-    "MojoDas",
+    "Lux Spa Nature",
     "lauko kubilai",
     "malkiniai kubilai",
   ],
-  authors: [{ name: "MojoDas Spa" }],
-  creator: "MojoDas Spa",
+  authors: [{ name: "Lux Spa Nature" }],
+  creator: "Lux Spa Nature",
   metadataBase: new URL("https://mojodasspa.com"),
   openGraph: {
     type: "website",
     locale: "lt_LT",
-    siteName: "MojoDas Spa",
-    title: "MojoDas Spa | Ramybės Inžinerija",
+    siteName: "Lux Spa Nature",
+    title: "Lux Spa Nature | Ramybės Inžinerija",
     description:
       "Premium klasės masažiniai kubilai ir SPA sprendimai. Pagaminta Lietuvoje.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "MojoDas Spa | Ramybės Inžinerija",
+    title: "Lux Spa Nature | Ramybės Inžinerija",
     description:
       "Premium klasės masažiniai kubilai ir SPA sprendimai. Pagaminta Lietuvoje.",
   },

@@ -1,4 +1,4 @@
-# MojoDas Spa Workspace
+# Lux Spa Nature Workspace
 
 ## Structure
 ```
@@ -51,7 +51,7 @@ vercel --prod
 ```
 
 ## Brand
-- **Name:** MojoDas Spa
+- **Name:** Lux Spa Nature
 - **Tagline:** "Engineering of Serenity"
 - **Market:** Lithuanian luxury hot tub manufacturer
 - **Language:** Lithuanian (lt-LT)

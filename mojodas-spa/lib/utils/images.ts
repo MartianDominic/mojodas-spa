@@ -1,5 +1,5 @@
 /**
- * Image URL utilities for MojoDas Spa
+ * Image URL utilities for Lux Spa Nature
  *
  * Currently uses mojodasspa.com CDN URLs.
  * Can be switched to local images later by changing USE_LOCAL_IMAGES to true

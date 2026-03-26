@@ -1,5 +1,5 @@
 # Product Requirements Document (PRD)
-## MojoDas Spa - Next.js E-commerce Platform
+## Lux Spa Nature - Next.js E-commerce Platform
 
 **Version:** 1.1
 **Date:** 2026-03-23
@@ -10,7 +10,7 @@
 ## 1. Executive Summary
 
 ### 1.1 Project Overview
-Recreate the MojoDas Spa luxury hot tub e-commerce website as a modern Next.js 14+ application with a headless architecture. The site targets premium customers in Lithuania seeking high-quality, custom-manufactured spa/hot tub solutions.
+Recreate the Lux Spa Nature luxury hot tub e-commerce website as a modern Next.js 14+ application with a headless architecture. The site targets premium customers in Lithuania seeking high-quality, custom-manufactured spa/hot tub solutions.
 
 ### 1.2 Business Context
 - **Brand Position:** Premium Lithuanian spa manufacturer ("Engineering of Serenity")

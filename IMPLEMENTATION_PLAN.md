@@ -1,4 +1,4 @@
-# MojoDas Spa - Implementation Plan
+# Lux Spa Nature - Implementation Plan
 
 ## Phase 0: Project Initialization (Day 1)
 
@@ -30,7 +30,7 @@ pnpm add -D @types/node prettier prettier-plugin-tailwindcss
 ```
 
 ### 0.3 Configure Tailwind with Design Tokens
-- [ ] Update `tailwind.config.ts` with MojoDas color palette
+- [ ] Update `tailwind.config.ts` with Lux Spa Nature color palette
 - [ ] Add custom fonts (Noto Serif, Playfair Display, Inter)
 - [ ] Configure border-radius, spacing, animations
 - [ ] Set up dark mode support
@@ -159,7 +159,7 @@ antigravity run SCRAPING_TASK.md
 
 #### 1.3.1 Header
 - [ ] `Header.tsx` - Sticky glassmorphic navigation
-- [ ] Logo (MojoDas Spa text)
+- [ ] Logo (Lux Spa Nature text)
 - [ ] Navigation links (Katalogas, Verslui, Kontaktai)
 - [ ] Cart icon with badge
 - [ ] Language switcher (LT/EN)

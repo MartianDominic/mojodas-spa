@@ -13,7 +13,7 @@ export function Footer() {
             href={ROUTES.HOME}
             className="text-lg font-bold text-on-surface font-headline mb-6 block"
           >
-            MojoDas Spa
+            Lux Spa Nature
           </Link>
           <p className="font-body text-sm tracking-wide leading-relaxed text-on-surface-variant mb-8 max-w-xs">
             Ramybės inžinerija jūsų namams. Kuriame tai, kas suteikia džiaugsmą kūnui ir ramybe sielai.
@@ -74,7 +74,7 @@ export function Footer() {
           <p className="font-body text-sm tracking-wide leading-relaxed text-on-surface-variant">
             Telšiai, Lietuva<br />
             +370 (600) 00000<br />
-            info@mojodas.lt
+            info@luxspanature.com
           </p>
         </div>
       </div>
@@ -83,7 +83,7 @@ export function Footer() {
       <div className="px-4 md:px-8 lg:px-12 py-8 border-t border-outline-variant/10">
         <div className="container mx-auto text-center md:text-left">
           <p className="font-body text-sm tracking-wide leading-relaxed text-on-surface-variant">
-            © 2024 MojoDas Spa. Ramybės inžinerija.
+            © 2024 Lux Spa Nature. Ramybės inžinerija.
           </p>
         </div>
       </div>

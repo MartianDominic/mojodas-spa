@@ -6,8 +6,8 @@ export * from "./routes";
 // ============================================================================
 
 export const COMPANY_INFO = {
-  name: "MojoDas Spa",
-  legalName: "UAB MojoDas",
+  name: "Lux Spa Nature",
+  legalName: "UAB Lux Spa Nature",
   tagline: "Engineering of Serenity",
   taglineLt: "Ramybės inžinerija",
 
@@ -23,7 +23,7 @@ export const COMPANY_INFO = {
   // Contact
   phone: "+370 600 12345",
   phoneFormatted: "+370 600 12 345",
-  email: "info@mojodasspa.com",
+  email: "info@luxspanaturespa.com",
   supportEmail: "pagalba@mojodasspa.com",
   salesEmail: "pardavimai@mojodasspa.com",
 
@@ -174,8 +174,8 @@ export const TRUST_BADGES = [
 // ============================================================================
 
 export const DEFAULT_SEO = {
-  siteName: "MojoDas Spa",
-  title: "MojoDas Spa | Prabangūs kubilai Lietuvoje",
+  siteName: "Lux Spa Nature",
+  title: "Lux Spa Nature | Prabangūs kubilai Lietuvoje",
   description:
     "Aukščiausios kokybės kubilai ir SPA sprendimai. Pagaminta Lietuvoje, AISI 316 plienas, 5 metų garantija. Užsisakykite nemokamą konsultaciją.",
   keywords: [

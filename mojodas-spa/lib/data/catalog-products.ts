@@ -174,7 +174,7 @@ const transformedProducts: ProductListItem[] = deduplicateProducts(
 );
 
 /**
- * Catalog product data from scraped MojoDas website
+ * Catalog product data from scraped Lux Spa Nature website
  * 17 unique products from the catalog
  */
 export const CATALOG_PRODUCTS: ProductListItem[] = transformedProducts;

@@ -125,7 +125,7 @@ export function OrderSummary({ className }: OrderSummaryProps) {
                 Garantuota Kokybė
               </span>
               <p className="text-xs text-on-surface-variant font-light leading-relaxed">
-                5 metų garantija korpusui ir 2 metų elektronikai. MojoDas
+                5 metų garantija korpusui ir 2 metų elektronikai. Lux Spa Nature
                 premium servisas 24/7.
               </p>
             </div>

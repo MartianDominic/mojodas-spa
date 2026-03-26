@@ -1,4 +1,4 @@
-# MojoDas Spa
+# Lux Spa Nature
 
 Lithuanian luxury hot tub e-commerce platform.
 
@@ -66,4 +66,4 @@ vercel --prod
 ## 🔗 Links
 
 - **GitHub:** https://github.com/MartianDominic/mojodas-spa
-- **Brand:** MojoDas Spa - "Engineering of Serenity"
+- **Brand:** Lux Spa Nature - "Engineering of Serenity"

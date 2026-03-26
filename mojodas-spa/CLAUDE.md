@@ -1,4 +1,4 @@
-# MojoDas Spa - Project Instructions
+# Lux Spa Nature - Project Instructions
 
 ## Project Overview
 Lithuanian luxury hot tub e-commerce platform. Premium brand positioning ("Engineering of Serenity").

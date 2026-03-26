@@ -89,7 +89,7 @@ export function DeliveryForm({ className }: DeliveryFormProps) {
               <span className="text-primary font-bold">+0 €</span>
             </div>
             <p className="text-sm text-on-surface-variant font-light leading-relaxed">
-              Privatus MojoDas logistikos servisas. Mūsų inžinieriai pristatys
+              Privatus Lux Spa Nature logistikos servisas. Mūsų inžinieriai pristatys
               ir paruoš jūsų SPA naudojimui nemokamai šiuose regionuose.
             </p>
           </div>

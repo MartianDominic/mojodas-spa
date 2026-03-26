@@ -14,14 +14,14 @@ export const metadata: Metadata = {
     "masaziniai baseinai",
     "hot tub",
     "Lietuva",
-    "MojoDas",
+    "Lux Spa Nature",
     "lauko kubilai",
     "malkiniai kubilai",
     "apvalus kubilas",
     "kvadratinis kubilas",
   ],
   openGraph: {
-    title: "MojoDas Spa | Katalogas",
+    title: "Lux Spa Nature | Katalogas",
     description:
       "Lietuvoje gaminami premium klases masaziniai kubilai ir SPA sprendimai.",
     type: "website",

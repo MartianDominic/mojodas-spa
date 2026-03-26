@@ -20,7 +20,7 @@ const CATEGORIES = {
       "round hot tub",
       "apvalūs kubilai",
       "klasikinis kubilas",
-      "MojoDas apvalus",
+      "Lux Spa Nature apvalus",
     ],
   },
   kvadratinis: {
@@ -33,7 +33,7 @@ const CATEGORIES = {
       "square hot tub",
       "kvadratiniai kubilai",
       "modernus kubilas",
-      "MojoDas kvadratinis",
+      "Lux Spa Nature kvadratinis",
     ],
   },
   terapinis: {
@@ -78,18 +78,18 @@ export async function generateMetadata({
 
   if (!(category in CATEGORIES)) {
     return {
-      title: "Kategorija Nerasta | MojoDas Spa",
+      title: "Kategorija Nerasta | Lux Spa Nature",
     };
   }
 
   const categoryConfig = CATEGORIES[category as CategorySlug];
 
   return {
-    title: `${categoryConfig.title} | MojoDas Spa Katalogas`,
+    title: `${categoryConfig.title} | Lux Spa Nature Katalogas`,
     description: categoryConfig.description,
-    keywords: [...categoryConfig.keywords, "MojoDas", "Lietuva", "kubilai"],
+    keywords: [...categoryConfig.keywords, "Lux Spa Nature", "Lietuva", "kubilai"],
     openGraph: {
-      title: `${categoryConfig.title} | MojoDas Spa`,
+      title: `${categoryConfig.title} | Lux Spa Nature`,
       description: categoryConfig.description,
       type: "website",
       locale: "lt_LT",

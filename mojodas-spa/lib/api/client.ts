@@ -1,5 +1,5 @@
 /**
- * Type-safe API client for MojoDas Spa
+ * Type-safe API client for Lux Spa Nature
  *
  * Provides convenient functions for interacting with the API endpoints
  * with full TypeScript support and consistent error handling.

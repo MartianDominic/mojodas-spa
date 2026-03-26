@@ -437,7 +437,7 @@ function generateProductKeywords(product: Product | ProductListItem): string[] {
     "kubilas",
     "spa",
     "hot tub",
-    "MojoDas",
+    "Lux Spa Nature",
     "Lietuva",
   ]);
 
@@ -458,7 +458,7 @@ export function generateCategoryMetadata(
   const categoryNames = {
     round: {
       title: "Apvalūs Kubilai",
-      description: "Klasikinės apvalios formos kubilai nuo MojoDas Spa. Talpumas 4-8 asmenims, pagaminta Lietuvoje.",
+      description: "Klasikinės apvalios formos kubilai nuo Lux Spa Nature. Talpumas 4-8 asmenims, pagaminta Lietuvoje.",
     },
     square: {
       title: "Kvadratiniai Kubilai",
