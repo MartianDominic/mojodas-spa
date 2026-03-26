@@ -53,9 +53,11 @@
   - G.2 What We Don't Have (Yet)
   - G.3 Homepage: Real Sections (9 sections)
   - G.4 B2B Page: Real Sections (8 sections)
-  - G.5 Compensation Strategy
+  - G.5 Guarantee Placement Strategy
   - G.6 Future Plan: When We Have Social Proof
   - G.7 Contact Placeholders
+  - G.8 Product Page CRO: Package Selector (CRITICAL!)
+  - G.9 Implementation Phase Plan
 
 ---
 
@@ -5670,11 +5672,260 @@ Adresas: Lietuva (PRIDĖTI tikslų kai turėsite)
 
 ---
 
+## G.8 PRODUCT PAGE CRO: PACKAGE SELECTOR (CRITICAL!)
+
+### Problema
+
+Dabartinis flow:
+```
+Product Page → [KONFIGŪRUOTI] → Configurator (daug pasirinkimų) → Cart
+```
+
+**Friction:** Visi vartotojai priversti eiti per konfigūratorių, net jei nori tiesiog "duok man populiariausią variantą".
+
+### Sprendimas: 3 Paketai + Konfigūratoriaus Opcija
+
+```
+Product Page → [BAZINIS/POPULIARUS/PREMIUM] → Cart (tiesiogiai!)
+            → [Konfigūruoti detaliau] → Configurator → Cart
+```
+
+**85% users** tiesiog pasirenka paketą ir perka.
+**15% users** nori detalios konfigūracijos.
+
+### Package Selector UI
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│ Pasirinkite komplektaciją:                                      │
+│                                                                 │
+│ ┌───────────────┐ ┌───────────────────┐ ┌───────────────┐      │
+│ │    BAZINIS    │ │    POPULIARUS     │ │    PREMIUM    │      │
+│ │               │ │  ★ Rekomenduojama │ │               │      │
+│ │   2,490 €     │ │     2,980 €       │ │    3,580 €    │      │
+│ │   69 €/mėn.   │ │    83 €/mėn.      │ │   99 €/mėn.   │      │
+│ │               │ │                   │ │               │      │
+│ │ ✓ Kubilas     │ │ Viskas iš Bazinis │ │Viskas iš Popul│      │
+│ │ ✓ Krosnelė    │ │        +          │ │       +       │      │
+│ │ ✓ Dangtis     │ │ ✓ Termo dangtis   │ │ ✓ LED apšviet.│      │
+│ │ ✓ Pristatymas │ │ ✓ Mediniai laiptai│ │ ✓ Hidromasažas│      │
+│ │ ✓ Montavimas  │ │ ✓ Priežiūros rink.│ │ ✓ Termo medien│      │
+│ │               │ │                   │ │               │      │
+│ │  [PASIRINKTI] │ │   [PASIRINKTI]    │ │  [PASIRINKTI] │      │
+│ └───────────────┘ └───────────────────┘ └───────────────┘      │
+│                                                                 │
+│ ✓ 14 dienų grąžinimo garantija                                  │
+│ ✓ 5 metų garantija korpusui                                     │
+│                                                                 │
+│      Norite kitokią konfigūraciją? Konfigūruoti detaliau →     │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+### Psichologijos Principai
+
+| Principas | Taikymas |
+|-----------|----------|
+| **Paradox of Choice** | 3 paketai vs 50+ kombinacijų |
+| **Default Effect** | POPULIARUS paryškintas, "Rekomenduojama" |
+| **Anchoring** | PREMIUM kaina daro POPULIARUS "reasonable" |
+| **Social Proof** | "★ Rekomenduojama" (ne "73% renkasi" - neturime duomenų) |
+| **Loss Aversion** | Kiekvienas paketas rodo ką GAUNI, ne ką prarasite |
+
+### Paketo Duomenų Struktūra
+
+```typescript
+interface ProductPackage {
+  id: 'bazinis' | 'populiarus' | 'premium';
+  name: string;
+  priceModifier: number; // +0, +490, +1090
+  isRecommended?: boolean;
+  features: {
+    name: string;
+    included: boolean;
+    value?: string; // "290 €" jei norime rodyti vertę
+  }[];
+}
+
+const STANDARD_PACKAGES: ProductPackage[] = [
+  {
+    id: 'bazinis',
+    name: 'Bazinis',
+    priceModifier: 0,
+    features: [
+      { name: 'Kubilas', included: true },
+      { name: 'Krosnelė', included: true },
+      { name: 'Standartinis dangtis', included: true },
+      { name: 'Pristatymas', included: true },
+      { name: 'Montavimas', included: true },
+    ]
+  },
+  {
+    id: 'populiarus',
+    name: 'Populiarus',
+    priceModifier: 490,
+    isRecommended: true,
+    features: [
+      { name: 'Viskas iš Bazinis', included: true },
+      { name: 'Termo dangtis', included: true, value: '290 €' },
+      { name: 'Mediniai laiptai', included: true, value: '190 €' },
+      { name: 'Priežiūros rinkinys', included: true, value: '89 €' },
+    ]
+  },
+  {
+    id: 'premium',
+    name: 'Premium',
+    priceModifier: 1090,
+    features: [
+      { name: 'Viskas iš Populiarus', included: true },
+      { name: 'Termo medienos apdaila', included: true, value: '180 €' },
+      { name: 'LED apšvietimas', included: true, value: '290 €' },
+      { name: 'Hidromasažas (6 antgaliai)', included: true, value: '320 €' },
+    ]
+  }
+];
+```
+
+### User Flow
+
+```
+┌──────────────────┐
+│   Product Page   │
+│                  │
+│  [Package Select]│───────────────────────────┐
+│   ↓              │                           │
+│  Bazinis         │                           │
+│  Populiarus ←────│── Default selected        │
+│  Premium         │                           │
+│                  │                           │
+│  [PASIRINKTI]────│──→ Add to Cart ──→ Cart   │
+│                  │                           │
+│  "Konfigūruoti   │                           │
+│   detaliau →"────│──→ Configurator           │
+└──────────────────┘          │                │
+                              ↓                │
+                    ┌──────────────────┐       │
+                    │   Configurator   │       │
+                    │ (Quiz-like flow) │       │
+                    │                  │       │
+                    │ Step 1: Package  │       │
+                    │ Step 2: Mediena  │       │
+                    │ Step 3: Spalva   │       │
+                    │ Step 4: Priedai  │       │
+                    │ Step 5: Peržiūra │       │
+                    │                  │       │
+                    │ [PRIDĖTI]────────│───────┘
+                    └──────────────────┘
+```
+
+### Configurator as Quiz-Like Flow
+
+Jei vartotojas pasirenka "Konfigūruoti detaliau", configurator turėtų būti:
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│ Konfigūratorius                            [1/5] ████░░░░░░░░░░ │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│ Pasirinkite medienos tipą:                                      │
+│                                                                 │
+│ ┌─────────────┐ ┌─────────────┐ ┌─────────────┐                │
+│ │   [foto]    │ │   [foto]    │ │   [foto]    │                │
+│ │             │ │             │ │             │                │
+│ │   Eglė      │ │   Termo     │ │   Kedras    │                │
+│ │  +0 €       │ │  +180 €     │ │  +350 €     │                │
+│ │             │ │ Rekomenduoj.│ │             │                │
+│ └─────────────┘ └─────────────┘ └─────────────┘                │
+│                                                                 │
+│ Jūsų konfigūracija:              Kaina: 2,670 € (74 €/mėn.)    │
+│                                                                 │
+│ [← ATGAL]                                          [TOLIAU →]   │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+**Key UX principles:**
+- Vienas klausimas per žingsnį
+- Progress bar viršuje
+- Kaina atnaujinama realiu laiku
+- Galima grįžti atgal
+- Galima bet kada išeiti ir pasirinkti paketą
+
+### Failai Implementacijai
+
+| Failas | Veiksmas | Prioritetas |
+|--------|----------|-------------|
+| `components/product/PackageSelector.tsx` | Create | P0 |
+| `components/product/PackageCard.tsx` | Create | P0 |
+| `app/produktas/[slug]/page.tsx` | Modify - add PackageSelector | P0 |
+| `stores/configurator.ts` | Modify - add package step | P1 |
+| `data/products.json` | Modify - add packages array | P0 |
+| `components/configurator/ConfiguratorWizard.tsx` | Modify - quiz-like flow | P1 |
+
+### Definition of Done
+
+- [ ] PackageSelector komponentas sukurtas
+- [ ] 3 paketai rodomi produkto puslapyje
+- [ ] "Pasirinkti" → tiesiogiai į krepšelį
+- [ ] "Konfigūruoti detaliau" → configurator
+- [ ] Kaina su mėnesine įmoka
+- [ ] Garantijos po paketais
+- [ ] Mobile responsive
+- [ ] Populiarus paketas default selected
+
+---
+
+## G.9 IMPLEMENTACIJOS FAZIŲ PLANAS
+
+```
+docs/cro/
+├── 00-README.md              # Overview, dependencies, kaip naudoti
+├── 01-critical-fixes.md      # API bugs, terminology (2-3h)
+├── 02-guarantee-placement.md # 14d garantija visur (2-3h)
+├── 03-monthly-first.md       # Mėnesinė kaina pirma (3-4h)
+├── 04-homepage.md            # 9 sekcijos (6-8h)
+├── 05-catalog.md             # Sidebar, grid (4-6h)
+├── 06-product-page.md        # Package Selector! (4-6h)
+├── 07-cart-checkout.md       # Payment, trust (3-4h)
+├── 08-b2b.md                 # 8 sekcijos (6-8h)
+├── 09-contact.md             # Phone, form (2-3h)
+└── 10-quiz-flow.md           # Quiz pages (8-10h)
+```
+
+### Dependency Graph
+
+```
+01-CRITICAL ──→ 02-GUARANTEE ──→ 03-MONTHLY ──→ 04-HOMEPAGE
+                                      │              │
+                                      ├──→ 08-B2B    │
+                                      └──→ 09-CONTACT│
+                                                     │
+                          ┌──────────────────────────┘
+                          │
+                          ├──→ 05-CATALOG
+                          ├──→ 06-PRODUCT-PAGE (Package Selector!)
+                          ├──→ 07-CART-CHECKOUT
+                          │
+                          └──→ 10-QUIZ-FLOW
+```
+
+### Estimated Timeline
+
+| Fazė | Valandos | Gali būti parallel |
+|------|----------|-------------------|
+| 01-03 | 8-10h | Sequential |
+| 04 Homepage | 6-8h | - |
+| 05-07 | 11-16h | Yes, parallel |
+| 08-09 | 8-11h | Yes, parallel |
+| 10 Quiz | 8-10h | After 04 |
+
+**Total: ~40-55h** (su paralelizacija: ~30-40h)
+
+---
+
 *End of Complete CRO Specification*
 
-**Version:** 5.0 (Realistic Sections without Fake Social Proof)
-**Parts:** 1-20 + Appendices A-G
-**Total Sections:** 125
+**Version:** 6.0 (Added Package Selector & Phase Plan)
+**Parts:** 1-20 + Appendices A-G (9 sections)
+**Total Sections:** 135
 **Brand:** Lux Spa Nature
 **Domain:** luxspanature.com
 **Last Updated:** 2026-03-26
