@@ -1,0 +1,169 @@
+Model(s),Category,Item,Price (€)
+2 M Classic Round In,Standard,Standard Option,1750
+2 M Classic Round Out,Standard,Standard Option,1650
+2 M Classic Round Horizon,Standard,Standard Option,1900
+2.25 M Grande Round In,Standard,Standard Option,1850
+2.25 M Grande Round Out,Standard,Standard Option,1750
+2.25 M Grande Round Horizon,Standard,Standard Option,2000
+2.25 M Paris In,Standard,Standard Option,1950
+2.1 x 2.1 M Andorra In,Standard,Standard Option,2050
+2 x 2 M Cuba,Standard,Standard Option,1950
+2.2 x 2.2 M Monaco In,Standard,Standard Option,2050
+2.2 x 2.2 M Monaco Out,Standard,Standard Option,2000
+2.2 x 2.2 M Monaco Horizon,Standard,Standard Option,2400
+2.45 x 2.45 M Macau In,Standard,Standard Option,2450
+Arctic with Electrical Heater,Standard,Standard Option,1280
+Arctic with Heat Pump,Standard,Standard Option,2780
+Ofuro IN,Standard,Standard Option,1750
+Ofuro OUT,Standard,Standard Option,1600
+Coziness Grande Sauna,Standard,Standard Option,8000
+Coziness Sauna,Standard,Standard Option,8000
+Glow Sauna,Standard,Standard Option,7600
+Woodland Sauna,Standard,Standard Option,7000
+Mini Coziness Sauna,Standard,Standard Option,3000
+Mini Coziness Sauna,Standard,Order Unassembled Option,400
+Igloo Sauna,Standard,Standard Option,3930
+S Size Sauna,Standard,Standard Option,3850
+L Size Sauna,Standard,Standard Option,4680
+"2 M Classic Round (All) | 2 x 2 M Cuba",Additional Shell Colors,All Additional Colors,150
+"2.25 M Grande Round (All) | 2.25 M Paris In | 2.1 x 2.1 M Andorra In | 2.2 x 2.2 M Monaco (All)",Additional Shell Colors,All Additional Colors,170
+2 M Classic Round (All),Additional Paneling Colors,Thermo,150
+2 M Classic Round (All),Additional Paneling Colors,WPC,150
+2 M Classic Round (All),Additional Paneling Colors,Burned Spruce,180
+2.25 M Grande Round (All) | 2.25 M Paris In,Additional Paneling Colors,Thermo,180
+2.25 M Grande Round (All) | 2.25 M Paris In,Additional Paneling Colors,WPC,200
+2.25 M Grande Round (All) | 2.25 M Paris In,Additional Paneling Colors,Burned Spruce,200
+2.1 x 2.1 M Andorra In | 2.2 x 2.2 M Monaco (All),Additional Paneling Colors,Thermo,200
+2.1 x 2.1 M Andorra In | 2.2 x 2.2 M Monaco (All),Additional Paneling Colors,WPC,250
+2.1 x 2.1 M Andorra In | 2.2 x 2.2 M Monaco (All),Additional Paneling Colors,Burned Spruce,250
+2 x 2 M Cuba,Additional Paneling Colors,Thermo,180
+2 x 2 M Cuba,Additional Paneling Colors,WPC,200
+2 x 2 M Cuba,Additional Paneling Colors,Burned Spruce,220
+2.45 x 2.45 M Macau In,Additional Paneling Colors,Thermo,250
+2.45 x 2.45 M Macau In,Additional Paneling Colors,WPC,250
+2.45 x 2.45 M Macau In,Additional Paneling Colors,Burned Spruce,250
+Arctic with Electrical Heater,Additional Paneling Colors,Thermo,100
+Arctic with Electrical Heater,Additional Paneling Colors,Burned Spruce,80
+Arctic with Heat Pump,Additional Paneling Colors,Thermo,90
+Arctic with Heat Pump,Additional Paneling Colors,Burned Spruce,30
+Ofuro (All),Additional Paneling Colors,Thermo,130
+Ofuro (All),Additional Paneling Colors,WPC,130
+2 M Classic Round (All),Thermo Covers and Tent,Black / Grey / Brown Cover,180
+2 M Classic Round (All),Thermo Covers and Tent,Black Tent,220
+"2.25 M Grande Round (All) | 2.25 M Paris In | 2 x 2 M Cuba",Thermo Covers and Tent,Black / Grey / Brown Cover,200
+2.25 M Grande Round (All) | 2.25 M Paris In,Thermo Covers and Tent,Black Tent,250
+2 x 2 M Cuba,Thermo Covers and Tent,Black Tent,220
+2.1 x 2.1 M Andorra In,Thermo Covers and Tent,Black / Grey / Brown Cover,220
+2.1 x 2.1 M Andorra In,Thermo Covers and Tent,Black Tent,250
+2.2 x 2.2 M Monaco (All),Thermo Covers and Tent,Black / Grey / Brown Cover,250
+2.2 x 2.2 M Monaco (All),Thermo Covers and Tent,Black Tent,250
+2.45 x 2.45 M Macau In,Thermo Covers and Tent,Black / Grey / Brown Cover,300
+2.45 x 2.45 M Macau In,Thermo Covers and Tent,Black Tent,260
+Arctic (All),Thermo Covers and Tent,Black / Grey / Brown Cover,150
+Ofuro (All),Thermo Covers and Tent,Black / Grey / Brown Cover,170
+"All IN Models (Classic / Grande / Paris / Andorra / Monaco / Macau)",Heater Options,Integrated 30kW S316 Stove,150
+"All OUT Models (Classic / Grande / Cuba / Monaco)",Heater Options,External 25kW S316 Stove,150
+"All HORIZON Models (Classic / Grande / Monaco)",Heater Options,Integrated Horizon 25kW S316 Stove,150
+Ofuro IN,Heater Options,Integrated Horizon Ofuro S316 Stove,150
+Ofuro OUT,Heater Options,External S316 Stove,150
+All Hot Tubs | Ofuro (All),Heater Options,Electrical Heater 3 kW / 6 kW,0
+All Hot Tubs | Ofuro (All),Heater Options,Electrical Heater 9 kW,100
+Arctic with Electrical Heater,Heater Options,Electrical Heater 3 kW,450
+Arctic with Electrical Heater,Heater Options,Electrical Heater 6 kW,500
+Arctic with Electrical Heater,Heater Options,Electrical Heater 9 kW,520
+All Hot Tubs | Ofuro (All),Heater Options,Combined Version (El. Heater + Stove) 3 kW,450
+All Hot Tubs | Ofuro (All),Heater Options,Combined Version (El. Heater + Stove) 6 kW,500
+All Hot Tubs | Ofuro (All),Heater Options,Combined Version (El. Heater + Stove) 9 kW,520
+All Hot Tubs,Heater Options,1m Chimney with touch protection,75
+All Hot Tubs,Heater Options,1m Chimney extension,25
+All Hot Tubs,Heater Options,Ash Tray SS304 Not Painted,29
+All Hot Tubs,Heater Options,Ash Tray Painted Black,45
+All Hot Tubs | Arctic (All) | Ofuro (All),Extras,4 in 1 Controller,100
+All Hot Tubs | Arctic (All) | Ofuro (All),Extras,White / Black 3 in 1 Controller,85
+"2 M Classic Round (All) | 2.25 M Grande Round (All) | 2.25 M Paris In | 2.1 x 2.1 M Andorra In | 2 x 2 M Cuba",Extras,Sound System incl. 2 Speaker,160
+2.2 x 2.2 M Monaco (All) | 2.45 x 2.45 M Macau In | Arctic (All),Extras,Sound System incl. 1 Speaker,150
+2.2 x 2.2 M Monaco (All) | 2.45 x 2.45 M Macau In,Extras,Extra Speaker for Sound System,65
+All Hot Tubs | Arctic (All),Extras,Pillow,11
+Ofuro (All),Extras,Pillow and Towel Holder,11
+2 x 2 M Cuba,Extras,Waterfall,70
+2.2 x 2.2 M Monaco (All) | 2.45 x 2.45 M Macau In,Extras,Waterfall (3vnt),90
+All Hot Tubs,Gecko Systems,Gecko 5 kW Heat Pump,1600
+All Hot Tubs,Gecko Systems,Gecko In.Clear,580
+All Hot Tubs,Gecko Systems,Gecko 3 kW + Wifi + Touchscreen (12/14 Hero),1220
+All Hot Tubs,Gecko Systems,Gecko 3 kW + Wifi + Touchscreen (16/18 Hero),1340
+All Hot Tubs,Gecko Systems,Gecko 3 kW + Wifi + Touchscreen (24 Hero),1450
+"2 M Classic Round (All) | 2.25 M Grande Round (All) | 2.25 M Paris In | Ofuro (All)",Stairs,Round / Standard Spruce,90
+"2 M Classic Round (All) | 2.25 M Grande Round (All) | 2.25 M Paris In | Arctic (All) | Ofuro (All)",Stairs,Round / Standard Thermo / Rhombus / WPC,120
+"2 M Classic Round (All) | 2.25 M Grande Round (All) | 2.25 M Paris In | Arctic (All)",Stairs,Round / Standard Burned Spruce,130
+"2 M Classic Round (All) | 2.25 M Grande Round (All) | 2.25 M Paris In | Arctic (All)",Stairs,Round / Standard Burned Thermo,150
+"2 M Classic Round (All) | 2.25 M Grande Round (All) | 2.25 M Paris In | 2 x 2 M Cuba | 2.2 x 2.2 M Monaco (All) | 2.45 x 2.45 M Macau In",Stairs,3 Step with Filtration Box Spruce,250
+"2 M Classic Round (All) | 2.25 M Grande Round (All) | 2.25 M Paris In | 2 x 2 M Cuba | 2.2 x 2.2 M Monaco (All) | 2.45 x 2.45 M Macau In",Stairs,3 Step with Filtration Box Thermo / Rhombus / WPC,295
+"2 M Classic Round (All) | 2.25 M Grande Round (All) | 2.25 M Paris In | 2 x 2 M Cuba | 2.2 x 2.2 M Monaco (All) | 2.45 x 2.45 M Macau In",Stairs,3 Step with Filtration Box Burned Thermo,325
+"2 M Classic Round (All) | 2.25 M Grande Round (All) | 2.25 M Paris In",Stairs,Round XL Spruce / WPC,250
+"2 M Classic Round (All) | 2.25 M Grande Round (All) | 2.25 M Paris In",Stairs,Round XL Thermo / Rhombus,300
+"2.1 x 2.1 M Andorra In | 2 x 2 M Cuba | 2.2 x 2.2 M Monaco (All) | 2.45 x 2.45 M Macau In",Stairs,Andorra Spruce,120
+"2.1 x 2.1 M Andorra In | 2 x 2 M Cuba | 2.2 x 2.2 M Monaco (All) | 2.45 x 2.45 M Macau In",Stairs,Andorra Thermo / Rhombus / WPC,160
+2.1 x 2.1 M Andorra In | 2 x 2 M Cuba,Stairs,Andorra Burned Thermo,170
+"2 x 2 M Cuba | 2.2 x 2.2 M Monaco (All) | 2.45 x 2.45 M Macau In",Stairs,Straight Spruce,110
+"2 x 2 M Cuba | 2.2 x 2.2 M Monaco (All) | 2.45 x 2.45 M Macau In",Stairs,Straight Thermo / WPC / Rhombus,140
+"2 x 2 M Cuba | 2.2 x 2.2 M Monaco (All) | 2.45 x 2.45 M Macau In",Stairs,Straight Burned Spruce,145
+"2 x 2 M Cuba | 2.2 x 2.2 M Monaco (All) | 2.45 x 2.45 M Macau In",Stairs,Straight Burned Thermo,165
+All Hot Tubs,Accessories,Burned Thermo Cup Holder,70
+All Hot Tubs,Accessories,Spruce Cup Holder,40
+All Hot Tubs,Accessories,Thermo Cup Holder,60
+All Hot Tubs,Accessories,Metal Cup Holder (Type A),42
+All Hot Tubs,Accessories,Metal Cup Holder (Type B),32
+All Hot Tubs,Accessories,Turntable Table,80
+All Hot Tubs,Accessories,Wooden Shelf Spruce / WPC,70
+All Hot Tubs,Accessories,Wooden Shelf Thermo,90
+2.2 x 2.2 M Monaco (All) | 2.45 x 2.45 M Macau In,Accessories,Lighted Glass Holder,25
+All Hot Tubs,Massage and Lighting,Hydro Jets 1 Pump 6 nozzles,320
+All Hot Tubs | Ofuro (All),Massage and Lighting,Hydro Jets 1 Pump 8 nozzles,360
+All Hot Tubs,Massage and Lighting,Hydro Jets 1 Pump 12 nozzles,410
+All Hot Tubs,Massage and Lighting,Hydro Jets 1 Pump 14 nozzles,460
+All Hot Tubs,Massage and Lighting,Hydro Jets 2 Pumps 16 nozzles,600
+All Hot Tubs,Massage and Lighting,Hydro Jets 2 Pumps 18 nozzles,630
+All Hot Tubs,Massage and Lighting,Hydro Jets 2 Pumps 24 nozzles,720
+Arctic with Heat Pump,Massage and Lighting,Hydro Jets 6 nozzles,320
+All Hot Tubs | Ofuro (All),Massage and Lighting,Air Jets 1 Pump 12 nozzles,250
+All Hot Tubs,Massage and Lighting,Air Jets 1 Pump 18 nozzles,290
+"2 x 2 M Cuba | 2.2 x 2.2 M Monaco (All) | 2.45 x 2.45 M Macau In",Massage and Lighting,Air Jets 2 Pumps 24 nozzles,460
+All Hot Tubs | Ofuro (All) | Arctic with Electrical Heater,Massage and Lighting,LED Light 1 Light,60
+All Hot Tubs,Massage and Lighting,LED Light 2 Lights,110
+All Hot Tubs,Massage and Lighting,LED Stars 8 stars,95
+All Hot Tubs,Massage and Lighting,LED Stars 12 stars,115
+All Hot Tubs,Massage and Lighting,LED Stars 15 stars,130
+Arctic with Heat Pump,Massage and Lighting,Balboa LED Stars 8 stars,100
+Arctic with Electrical Heater,Massage and Lighting,LED Stars 6 stars,85
+Ofuro (All),Massage and Lighting,7 LED Stars,90
+All Hot Tubs,Massage and Lighting,LED Stars with Gecko 6 stars,90
+All Hot Tubs,Massage and Lighting,LED Stars with Gecko 12 stars,120
+All Hot Tubs,Massage and Lighting,LED Stars with Gecko 18 stars,140
+All Hot Tubs,Massage and Lighting,LED Stars with Gecko 24 stars,160
+"2 M Classic Round (All) | 2.25 M Grande Round (All) | 2.25 M Paris In",Massage and Lighting,LED Strip,140
+2.1 x 2.1 M Andorra In | 2 x 2 M Cuba,Massage and Lighting,LED Strip,180
+2.2 x 2.2 M Monaco (All),Massage and Lighting,LED Strip,200
+2.45 x 2.45 M Macau In,Massage and Lighting,LED Strip,240
+"2 M Classic Round (All) | 2.25 M Grande Round (All) | 2.25 M Paris In | 2.1 x 2.1 M Andorra In",Metal Parts,Black Stove Protection,40
+"2 M Classic Round (All) | 2.25 M Grande Round (All) | 2.25 M Paris In | 2.1 x 2.1 M Andorra In | 2 x 2 M Cuba | 2.2 x 2.2 M Monaco (All) | 2.45 x 2.45 M Macau In",Metal Parts,Logo Cut-out,70
+"2 M Classic Round (All) | 2.25 M Grande Round (All) | 2.25 M Paris In | 2.1 x 2.1 M Andorra In | 2 x 2 M Cuba | 2.2 x 2.2 M Monaco (All) | 2.45 x 2.45 M Macau In",Metal Parts,Logo Lighting,30
+"2 M Classic Round (All) | 2.25 M Grande Round (All) | 2.25 M Paris In | 2.1 x 2.1 M Andorra In",Metal Parts,S316 Stainless Steel Reinforcement Strips,50
+"2 M Classic Round (All) | 2.25 M Grande Round (All) | 2.25 M Paris In | 2.1 x 2.1 M Andorra In",Metal Parts,Painted Black Reinforcement Strips,40
+Ofuro (All),Metal Parts,S316 Stainless Steel Reinforcement Strips,40
+Ofuro (All),Metal Parts,Black Reinforcement Strips,50
+"2 x 2 M Cuba | 2.2 x 2.2 M Monaco (All) | 2.45 x 2.45 M Macau In",Metal Parts,Painted Corners with Strip LED,100
+"2 x 2 M Cuba | 2.2 x 2.2 M Monaco (All) | 2.45 x 2.45 M Macau In",Metal Parts,Painted Corners with LED Logo,100
+"2 M Classic Round (All) | 2.25 M Grande Round (All) | 2.25 M Paris In | 2 x 2 M Cuba | 2.2 x 2.2 M Monaco (All) | 2.45 x 2.45 M Macau In | Ofuro (All)",Filtration Systems,Filtration Box Thermo / Rhombus,120
+"2 M Classic Round (All) | 2.25 M Grande Round (All) | 2.25 M Paris In | 2 x 2 M Cuba | 2.2 x 2.2 M Monaco (All) | 2.45 x 2.45 M Macau In | Ofuro (All)",Filtration Systems,Filtration Box Spruce,90
+"2 M Classic Round (All) | 2.25 M Grande Round (All) | 2.25 M Paris In | 2 x 2 M Cuba | 2.2 x 2.2 M Monaco (All) | 2.45 x 2.45 M Macau In",Filtration Systems,Filtration Box Burned Spruce,125
+"2 M Classic Round (All) | 2.25 M Grande Round (All) | 2.25 M Paris In | 2 x 2 M Cuba | 2.2 x 2.2 M Monaco (All) | 2.45 x 2.45 M Macau In",Filtration Systems,Filtration Box Burned Thermo,145
+"2 M Classic Round (All) | 2.25 M Grande Round (All) | 2.25 M Paris In | 2 x 2 M Cuba | 2.2 x 2.2 M Monaco (All) | 2.45 x 2.45 M Macau In | Ofuro (All)",Filtration Systems,Filtration Box WPC,120
+All Hot Tubs | Ofuro (All),Filtration Systems,Sand Filtration System + Filler + UVC,430
+All Hot Tubs | Ofuro (All),Filtration Systems,Sand Filtration System + Filler + Fuse Box,370
+All Hot Tubs | Ofuro (All),Filtration Systems,Sand Filtration System + Filler + Fuse Box + UVC,550
+All Hot Tubs | Ofuro (All),Filtration Systems,Sand Filtration Unassembled,200
+All Hot Tubs | Ofuro (All),Filtration Systems,UVC Lamp,160
+All Hot Tubs | Ofuro (All),Filtration Systems,Connections,60
+All Hot Tubs | Ofuro (All),Filtration Systems,Filler,25
+"2.25 M Paris In | 2 x 2 M Cuba | 2.2 x 2.2 M Monaco (All) | 2.45 x 2.45 M Macau In | Arctic (All) | Ofuro (All)",Filtration Systems,Skimmer (Pneumatic button),200
+"2.25 M Paris In | 2 x 2 M Cuba | 2.2 x 2.2 M Monaco (All) | 2.45 x 2.45 M Macau In | Arctic (All) | Ofuro (All)",Filtration Systems,Skimmer + UVC Lamp (Pneumatic button),400
