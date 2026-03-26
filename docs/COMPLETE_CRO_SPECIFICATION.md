@@ -5185,8 +5185,7 @@ const validatePhone = (value: string) => {
 | Produktai | 16 modelių su kainomis, specifikacijomis |
 | Finansavimas | 0% išsimokėtinai, mėnesinės įmokos |
 | Gamyba | Lietuvoje (jei tikra) |
-| Garantijos | 5m korpusui, 2m elektronikai |
-| **Money-back** | **14d pinigų grąžinimas (iki pristatymo)** ✅ |
+| Garantijos | 14d grąžinimas, 5m korpusui, 2m elektronikai |
 | Medžiagos | AISI 316 plienas, termo mediena |
 | Procesas | Gamyba → Pristatymas → Montavimas |
 | Kontaktai | Telefonas, el. paštas (kai turėsite) |
@@ -5287,21 +5286,15 @@ const validatePhone = (value: string) => {
 │                                                                 │
 │    Faktai apie finansavimą - social proof nereikalingas         │
 ├─────────────────────────────────────────────────────────────────┤
-│ 7. GARANTIJOS (Risk Reversal - STIPRUS!)                        │
+│ 7. GARANTIJOS (Risk Reversal)                                   │
 │    ├── H2: "Jūsų ramybei"                                       │
 │    ├── Garantijos:                                              │
-│    │   ✓ 14 dienų pinigų grąžinimo garantija*                   │
+│    │   ✓ 14 dienų grąžinimo garantija                           │
 │    │   ✓ 5 metų garantija korpusui                              │
 │    │   ✓ 2 metų garantija elektronikai                          │
 │    │   ✓ Nemokamas pristatymas ir montavimas                    │
 │    │                                                            │
-│    │   *Sąlyga: Galioja iki pristatymo. Jei persigalvojote -    │
-│    │   grąžiname 100% sumą be jokių klausimų.                   │
-│    │                                                            │
-│    └── Mažas tekstas: "Pinigų grąžinimo garantija galioja       │
-│        užsakymams, kurie dar nebuvo pristatyti."                │
-│                                                                 │
-│    💪 STIPRUS TRUST SIGNALAS - kompensuoja social proof trūkumą │
+│    └── Sąlygos → T&C dokumentas (ne marketinge)                 │
 ├─────────────────────────────────────────────────────────────────┤
 │ 8. FAQ (5 klausimai)                                            │
 │    ├── H2: "Dažniausi klausimai"                                │
@@ -5519,34 +5512,21 @@ const validatePhone = (value: string) => {
 
 ## G.5 KOMPENSACIJOS STRATEGIJA
 
-### Be Social Proof, bet SU Money-Back garantija
+### Be Social Proof, bet su garantijomis
 
 | Trūksta | Kompensacija |
 |---------|--------------|
-| Testimonialų | **14d pinigų grąžinimas + detalūs kontaktai** |
+| Testimonialų | **14d grąžinimo garantija + kontaktai** |
 | Case studies | **Logiškas naudos paaiškinimas** |
 | "X klientų" | **Gamybos kokybė, "Lietuvoje"** |
 | Reitingų | **Sertifikatai** (CE, ISO jei turite) |
 | Urgency | **Tikri gamybos terminai** |
 
-### 14 dienų garantijos sąlygos:
+### Trust badges visur:
 
-```
-✓ Galioja 14 dienų nuo užsakymo
-✓ Taikoma TIK nepristatytiems užsakymams
-✓ 100% pinigų grąžinimas
-✓ Be jokių klausimų
-
-✗ Negalioja jei produktas jau pristatytas/sumontuotas
-```
-
-### Prioritetai su money-back:
-
-1. **GARANTIJA MATOMA VISUR**
-   - Hero sekcijoje
-   - Produktų puslapiuose
-   - Checkout'e
-   - "14 dienų - persigalvokite be rizikos"
+- Hero: "14 dienų grąžinimo garantija"
+- Produktai: "5 metų garantija"
+- Checkout: "Nemokamas pristatymas"
 
 2. **KONTAKTAI MATOMI**
    - Telefonas hero sekcijoje
