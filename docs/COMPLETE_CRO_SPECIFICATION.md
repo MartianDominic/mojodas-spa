@@ -5510,23 +5510,111 @@ const validatePhone = (value: string) => {
 
 ---
 
-## G.5 KOMPENSACIJOS STRATEGIJA
+## G.5 GARANTIJOS PLACEMENT STRATEGIJA (Behavioral Psychology)
 
-### Be Social Proof, bet su garantijomis
+### Friction Map: Kur nerimas didžiausias?
 
-| Trūksta | Kompensacija |
-|---------|--------------|
-| Testimonialų | **14d grąžinimo garantija + kontaktai** |
-| Case studies | **Logiškas naudos paaiškinimas** |
-| "X klientų" | **Gamybos kokybė, "Lietuvoje"** |
-| Reitingų | **Sertifikatai** (CE, ISO jei turite) |
-| Urgency | **Tikri gamybos terminai** |
+```
+Hero ─────────────► "Ar galiu pasitikėti?"        [LOW]
+Product Page ─────► "Ar tinkamas pasirinkimas?"   [MEDIUM]
+Price Reveal ─────► "Brangu..."                   [HIGH] ⚠️
+Add to Cart ──────► "Ar tikrai noriu?"            [MEDIUM]
+Cart Page ────────► "Gal pagalvosiu..."           [HIGH] ⚠️
+Checkout Form ────► "Jau rimta..."                [HIGH] ⚠️
+Payment ──────────► "Dabar tikrai"                [VERY HIGH] 🔴
+Submit ───────────► "Point of no return"          [MAXIMUM] 🔴
+```
 
-### Trust badges visur:
+### Psichologijos principai:
 
-- Hero: "14 dienų grąžinimo garantija"
-- Produktai: "5 metų garantija"
-- Checkout: "Nemokamas pristatymas"
+| Principas | Kaip garantija padeda |
+|-----------|----------------------|
+| **Loss Aversion** | Pašalina baimę "o jei suklystu?" |
+| **Risk Reversal** | Rizika → pardavėjui, ne pirkėjui |
+| **Status Quo Bias** | Neutralizuoja "geriau nieko nedaryti" |
+
+### Konkretūs placements:
+
+#### 1. Hero Trust Strip (Low friction - awareness)
+```
+[14d Grąžinimas] [5m Garantija] [0% Išsimokėtinai] [Pristatymas 0€]
+```
+- Formatas: Maži badges eilutėje
+- Tikslas: Iškart sukurti pasitikėjimą
+
+#### 2. Product Page - ŠALIA KAINOS (High friction!) ⚠️
+```tsx
+<div className="price-section">
+  <span className="text-3xl">81 €/mėn.</span>
+  <span className="text-sm">arba 2,890 €</span>
+
+  <div className="trust-badges mt-4">
+    <span>✓ 14 dienų grąžinimo garantija</span>
+    <span>✓ Nemokamas pristatymas</span>
+  </div>
+</div>
+```
+- Tikslas: Neutralizuoti "sticker shock"
+- Pozicija: Iškart po kainos
+
+#### 3. Cart Summary - PO TOTAL (High friction!) ⚠️
+```
+Tarpinė suma         2,388 €
+PVM                    502 €
+Pristatymas       NEMOKAMAI
+─────────────────────────────
+VISO               2,890 €
+
+┌─────────────────────────────┐
+│ ✓ 14 dienų grąžinimo garantija │
+│ ✓ 5 metų garantija korpusui │
+└─────────────────────────────┘
+```
+- Tikslas: Sumažinti cart abandonment
+- Pozicija: Po total, prieš CTA
+
+#### 4. Checkout - VIRŠ BUTTON (Maximum friction!) 🔴
+```
+┌─────────────────────────────────────┐
+│ Jūsų užsakymas apsaugotas:          │
+│                                     │
+│ ✓ 14 dienų grąžinimo garantija      │
+│ ✓ 5 metų garantija korpusui         │
+│ ✓ Saugus mokėjimas (SSL)            │
+└─────────────────────────────────────┘
+
+[      PATVIRTINTI UŽSAKYMĄ      ]
+```
+- Tikslas: Paskutinis reassurance
+- Pozicija: Tiesiai virš submit button
+
+#### 5. Mobile Sticky CTA (Always visible)
+```
+┌───────────────────────────────────────────┐
+│ 81 €/mėn. • 14d grąžinimas    [PIRKTI]   │
+└───────────────────────────────────────────┘
+```
+- Tikslas: Nuolatinis mobile reassurance
+- Pozicija: Fixed bottom
+
+### Placement prioritetai:
+
+| Vieta | Svarba | Friction Level |
+|-------|--------|----------------|
+| Hero trust strip | ★★☆ | Low |
+| **Product page (prie kainos)** | ★★★ | High |
+| **Cart summary (po total)** | ★★★ | High |
+| **Checkout (virš button)** | ★★★ | Maximum |
+| Mobile sticky | ★★☆ | Ongoing |
+| Footer | ★☆☆ | Low |
+
+### Implementacijos checklist:
+
+- [ ] Hero.tsx - pridėti į trust strip
+- [ ] ProductInfo.tsx - pridėti po kaina
+- [ ] CartSummary / krepselis page - pridėti po total
+- [ ] Checkout OrderSummary - pridėti virš CTA
+- [ ] StickyMobileCTA.tsx - pridėti trumpą tekstą
 
 2. **KONTAKTAI MATOMI**
    - Telefonas hero sekcijoje
