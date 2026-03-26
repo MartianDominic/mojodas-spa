@@ -5185,7 +5185,8 @@ const validatePhone = (value: string) => {
 | Produktai | 16 modelių su kainomis, specifikacijomis |
 | Finansavimas | 0% išsimokėtinai, mėnesinės įmokos |
 | Gamyba | Lietuvoje (jei tikra) |
-| Garantijos | 5m korpusui, 2m elektronikai (jei siūlote) |
+| Garantijos | 5m korpusui, 2m elektronikai |
+| **Money-back** | **14d pinigų grąžinimas (iki pristatymo)** ✅ |
 | Medžiagos | AISI 316 plienas, termo mediena |
 | Procesas | Gamyba → Pristatymas → Montavimas |
 | Kontaktai | Telefonas, el. paštas (kai turėsite) |
@@ -5286,24 +5287,21 @@ const validatePhone = (value: string) => {
 │                                                                 │
 │    Faktai apie finansavimą - social proof nereikalingas         │
 ├─────────────────────────────────────────────────────────────────┤
-│ 7. GARANTIJOS (Risk Reversal - KRITIŠKAI SVARBU!)               │
+│ 7. GARANTIJOS (Risk Reversal - STIPRUS!)                        │
 │    ├── H2: "Jūsų ramybei"                                       │
-│    ├── Garantijos (TURIME):                                     │
+│    ├── Garantijos:                                              │
+│    │   ✓ 14 dienų pinigų grąžinimo garantija*                   │
 │    │   ✓ 5 metų garantija korpusui                              │
 │    │   ✓ 2 metų garantija elektronikai                          │
 │    │   ✓ Nemokamas pristatymas ir montavimas                    │
 │    │                                                            │
-│    │   ⚠️ NETURIME (bet rekomenduojama ateityje):               │
-│    │   ✗ Pinigų grąžinimo garantija                             │
+│    │   *Sąlyga: Galioja iki pristatymo. Jei persigalvojote -    │
+│    │   grąžiname 100% sumą be jokių klausimų.                   │
 │    │                                                            │
-│    │   💡 ALTERNATYVA: Stiprus "satisfaction" įsipareigojimas:  │
-│    │   "Jei po montavimo kas nors neveikia - taisysime nemokamai"│
-│    │                                                            │
-│    └── Mažas tekstas: Tikslios garantijos sąlygos               │
+│    └── Mažas tekstas: "Pinigų grąžinimo garantija galioja       │
+│        užsakymams, kurie dar nebuvo pristatyti."                │
 │                                                                 │
-│    ⚠️ BE SOCIAL PROOF IR BE MONEY-BACK = DIDESNIS PASITIKĖJIMO │
-│       BARJERAS. Kompensuokite: detaliais kontaktais, greitu     │
-│       atsakymu, profesionalumu.                                 │
+│    💪 STIPRUS TRUST SIGNALAS - kompensuoja social proof trūkumą │
 ├─────────────────────────────────────────────────────────────────┤
 │ 8. FAQ (5 klausimai)                                            │
 │    ├── H2: "Dažniausi klausimai"                                │
@@ -5521,23 +5519,34 @@ const validatePhone = (value: string) => {
 
 ## G.5 KOMPENSACIJOS STRATEGIJA
 
-### Be Social Proof IR be Money-Back, ką daryti?
+### Be Social Proof, bet SU Money-Back garantija
 
 | Trūksta | Kompensacija |
 |---------|--------------|
-| Testimonialų | **Detalūs kontaktai + greitas atsakymas** |
+| Testimonialų | **14d pinigų grąžinimas + detalūs kontaktai** |
 | Case studies | **Logiškas naudos paaiškinimas** |
 | "X klientų" | **Gamybos kokybė, "Lietuvoje"** |
 | Reitingų | **Sertifikatai** (CE, ISO jei turite) |
-| Money-back | **Stipri gamybos garantija + "satisfaction" pažadas** |
 | Urgency | **Tikri gamybos terminai** |
 
-### Prioritetai be social proof IR be money-back:
+### 14 dienų garantijos sąlygos:
 
-1. **KONTAKTAI TURI BŪTI SUPER MATOMI**
-   - Telefonas hero sekcijoje (kai turėsite)
-   - "Skambinkite bet kada darbo metu"
-   - Greitas atsakymas (per 24h) = trust signalas
+```
+✓ Galioja 14 dienų nuo užsakymo
+✓ Taikoma TIK nepristatytiems užsakymams
+✓ 100% pinigų grąžinimas
+✓ Be jokių klausimų
+
+✗ Negalioja jei produktas jau pristatytas/sumontuotas
+```
+
+### Prioritetai su money-back:
+
+1. **GARANTIJA MATOMA VISUR**
+   - Hero sekcijoje
+   - Produktų puslapiuose
+   - Checkout'e
+   - "14 dienų - persigalvokite be rizikos"
 
 2. **KONTAKTAI MATOMI**
    - Telefonas hero sekcijoje
